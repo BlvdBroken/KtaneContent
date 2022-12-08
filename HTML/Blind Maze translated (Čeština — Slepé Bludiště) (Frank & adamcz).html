@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Slepé Bludiště — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <script src="js/ruleseed.js"></script>
+
+    <script>
+        var cells = [];
+        var cardinal = [ "N", "E", "W", "S" ];
+        var locations = [ [ -1, 0, 0, 1 ], [ 0, 1, -1, 0 ] ];
+
+        var rules = document.getElementsByClassName("rules");
+        var colorNames = [ "red", "green", "blue", "gray", "yellow" ];
+        var indicatorNames = [ "SND", "CLR", "CAR", "IND", "FRQ", "SIG", "NSA", "MSA", "TRN", "BOB", "FRK" ];
+        var rulesCount = [ "red buttons", "batteries", "yellow buttons", "red buttons", "other distinct maze-based modules present on the bomb", "port types", "green buttons", "blue buttons", "gray buttons", "AA batteries", "D batteries", "battery holders", "ports", "port plates", "indicators", "lit indicators", "unlit indicators" ];
+        var rulesCountCopy;
+        var conditionCount = [ 2, 5, 1, 1, 1 ];
+        var conditionCountCopy;
+        var conditionIndicator = 3;
+        var mazeRotation = [ 1, 1, 2, 1, 2, 1 ];
+        var mazeRotationCopy;
+        var clockwise = [ true, true, true, false, true, false ];
+        var clockwiseCopy;
+        var calculate = [ false, true, false, false, true, true ];
+        var calculateCopy;
+        var generated;
+        var pass;
+
+        var rng;
+
+        //Cell class
+        function Cell() {
+            this.visited = false;
+            this.directions = { N: true, E: true, W: true, S: true };
+        }
+
+        //Initializing maze cells
+        function InitializeCells() {
+            for (var i = 0; i < 10; i++) {
+                cells[i] = [];
+
+                for (var j = 0; j < 5; j++) {
+                    cells[i][j] = [];
+
+                    for (var k = 0; k < 5; k++)
+                        cells[i][j][k] = new Cell();
+                }
+            }
+        }
+
+        //Default rules
+        function setDefaultRules() {
+            InitializeCells();
+            var mazes = [
+                [ "UL", "U", "NDR", "LU", "UR",
+                  "LR", "DL", "U", "DR", "LR",
+                  "LD", "UR", "LD", "UR", "LDR",
+                  "LU", "R", "LUR", "DL", "UR",
+                  "DLR", "LD", "DR", "DUL", "RD" ],
+
+                [ "UDL", "UR", "NRL", "UL", "UR",
+                  "UL", "D", "RD", "RL", "RDL",
+                  "L", "U", "UD", "D", "UR",
+                  "RL", "RDL", "URL", "UDL", "R",
+                  "DL", "UD", "RD", "UDL", "RD" ],
+
+                [ "UL", "URD", "GL", "URD", "LUR",
+                  "LD", "UD", "D", "UD", "R",
+                  "LUD", "U", "U", "U", "DR",
+                  "LUR", "RL", "RL", "LD", "UR",
+                  "DL", "DR", "LD", "UDR", "LRD" ],
+
+                [ "ULD", "UR", "GLD", "U", "UR",
+                  "LU", "D", "DU", "DR", "LR",
+                  "L", "UR", "UL", "U", "RD",
+                  "LDR", "LRD", "RL", "L", "UR",
+                  "DLU", "DU", "DR", "LDR", "LDR" ],
+
+                [ "UL", "U", "ND", "UR", "LUR",
+                  "LDR", "LR", "LUR", "LD", "R",
+                  "LU", "D", "DR", "LU", "DR",
+                  "LR", "UDL", "RU", "DL", "RU",
+                  "DL", "UDR", "DL", "UD", "RD" ],
+
+                [ "UL", "UR", "GLD", "UD", "UR",
+                  "LR", "L", "URD", "UL", "DR",
+                  "LR", "L", "UD", "", "UR",
+                  "LRD", "LR", "UL", "RD", "LR",
+                  "DLU", "RD", "DL", "DUR", "LRD" ],
+
+                [ "UL", "U", "GD", "UD", "UR",
+                  "LR", "LDR", "LU", "UR", "LR",
+                  "LR", "UDL", "DR", "L", "R",
+                  "LD", "UR", "UDL", "RD", "LR",
+                  "DLU", "D", "DRU", "DLU", "RD" ],
+
+                [ "ULD", "UR", "GRL", "ULR", "LUR",
+                  "LU", "R", "RL", "L", "DR",
+                  "LR", "LD", "R", "LD", "UR",
+                  "LR", "LRU", "LD", "UR", "LR",
+                  "DLR", "LD", "UD", "D", "RD" ],
+
+                [ "UL", "UD", "GR", "UL", "URD",
+                  "LR", "UL", "D", "D", "UR",
+                  "LR", "LD", "URD", "ULD", "R",
+                  "LD", "URD", "UL", "UR", "LR",
+                  "DLU", "UD", "DR", "LD", "RD" ],
+
+                [ "ULR", "LUD", "GR", "LU", "UR",
+                  "LD", "UR", "LR", "LR", "LRD",
+                  "LUR", "DL", "D", "", "DR",
+                  "L", "UR", "UL", "", "UDR",
+                  "DLR", "DL", "DR", "D", "URD" ]
+            ];
+
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 5; j++) {
+                    for (var k = 0; k < 5; k++) {
+                        cells[i][j][k].directions.N = !mazes[i][5 * j + k].includes("U");
+                        cells[i][j][k].directions.E = !mazes[i][5 * j + k].includes("R");
+                        cells[i][j][k].directions.W = !mazes[i][5 * j + k].includes("L");
+                        cells[i][j][k].directions.S = !mazes[i][5 * j + k].includes("D");
+                    }
+                }
+            }
+
+            var colorTable = [ 1, 5, 2, 2, 3, 3, 1, 5, 5, 2, 3, 2, 4, 3, 2, 2, 5, 3, 1, 4 ];
+            for (var i = 0; i < 4; i++) {
+                Array.from(document.getElementsByClassName("colorTable" + (i + 1))).forEach((x, y) => x.innerHTML = colorTable[y + (5 * i)]);
+            }
+            handleRules(true);
+            if (!pass)
+                generateSVG();
+        }
+
+        //Rule Seed rules
+        function setRules(rnd) {
+            rng = rnd;
+
+            pass = true;
+            setDefaultRules();
+            pass = false;
+
+            for (var i = 0; i < 10; i++)
+                checkCell(i, rng.nextMax(4), rng.nextMax(4));
+
+            var colorTable = [];
+
+            for (var i = 0; i < 20; i++)
+                colorTable.push(rng.next(1, 5));
+
+            for (var i = 0; i < 5; i++) {
+                Array.from(document.getElementsByClassName("colorTable" + (i + 1))).forEach((x, y) => x.innerHTML = colorTable[y + (5 * i)]);
+            }
+            rulesCountCopy = rng.shuffleFisherYates(rulesCountCopy).slice(0, 7);
+            conditionIndicator = rng.nextMax(11);
+
+            for (var i = 0; i < 6; i++) {
+                if (i < 5) conditionCountCopy[i] = rng.next(1, 5);
+
+                mazeRotationCopy[i] = rng.next(1, 4);
+                clockwiseCopy[i] = (rng.nextMax(2) == 1) ? true : false;
+                calculateCopy[i] = (rng.nextMax(2) == 1) ? true : false;
+            }
+
+            handleRules(rng.seed == 1);
+            generateSVG();
+        }
+
+        //Recursive algorithm for the maze generation
+        function checkCell(maze, row, col, prevDir = -1) {
+            if (!inRange(row, 0, 4) || !inRange(col, 0, 4) || cells[maze][row][col].visited) return false;
+
+            cells[maze][row][col].visited = true;
+            var start = rng.nextMax(4);
+
+            for (var i = 0; i < 4; i++) {
+                var point = (start + i) % 4;
+                cells[maze][row][col].directions[cardinal[point]] = checkCell(maze, row + locations[0][point], col + locations[1][point], point);
+            }
+
+            if (prevDir != -1) cells[maze][row][col].directions[cardinal[3 - prevDir]] = true;
+
+            return true;
+        }
+
+        function inRange(value, min, max) { return (value >= min && value <= max); }
+
+        //Handle for the text of the rules and actions
+        function handleRules(original) {
+            var countRule = 0;
+            var countCondition = 0;
+            if (!rulesCountCopy || original) {
+                rulesCountCopy = rulesCount.slice();
+                conditionCountCopy = conditionCount.slice();
+                clockwiseCopy = clockwise.slice();
+                mazeRotationCopy = mazeRotation.slice();
+                calculateCopy = calculate.slice();
+            }
+
+            var ruleTemplates = [
+                "If there are at least {c} {r}, {m}.",
+                "Otherwise, if there are at least {c} {r}, {m}.",
+                "Otherwise, if there is an {i} indicator, {m}.",
+                "Otherwise, if there are no {r1} and at least {c} {r2}, {m}.",
+                "Otherwise, if there is at least {c} {r}, {m}.",
+                "Otherwise, if there is at most {c} {r}, {m}.",
+                "Otherwise, keep the maze as it is."];
+
+            for (var i = 0; i < rules.length; i++) {
+                var ruleText = ruleTemplates[i];
+                if (i != 2) {
+                    if (conditionCount[countCondition] == 1) {
+                        if (countCondition != 2) {
+                            ruleText = ruleText.replace("there are", "there is");
+                            rulesCountCopy[countRule] = makeSingular(rulesCountCopy[countRule]);
+                        } else {
+                            rulesCountCopy[countRule + 1] = makeSingular(rulesCountCopy[countRule + 1]);
+                        }
+                    } else {
+                        ruleText = ruleText.replace("there is", "there are");
+                    }
+
+                    if (i == 3) ruleText = ruleText.replace("{r1}", rulesCountCopy[countRule++]).replace("{c}", conditionCountCopy[countCondition++]).replace("{r2}", rulesCountCopy[countRule++]);
+                    else ruleText = ruleText.replace("{c}", conditionCountCopy[countCondition++]).replace("{r}", rulesCountCopy[countRule++]);
+                } else {
+                    if (conditionIndicator != 3) ruleText = ruleText.replace("an", "a");
+
+                    ruleText = ruleText.replace("{i}", indicatorNames[conditionIndicator]);
+                }
+
+                if (calculateCopy[i]) ruleText = ruleText.replace("{m}", `calculate the starting position, then rotate the maze ${mazeRotationCopy[i] * 90} degrees ${clockwiseCopy[i] ? "clockwise": "counter-clockwise"}`);
+                else ruleText = ruleText.replace("{m}", `rotate the maze ${mazeRotationCopy[i] * 90} degrees ${clockwiseCopy[i] ? "clockwise": "counter-clockwise"}, then calculate the starting position`);
+                rules[i].innerHTML = ruleText;
+            }
+        }
+
+        function makeSingular(text) {
+            if (text.includes("batteries")) text = text.replace("batteries", "battery");
+            else if (text.includes("modules")) text = text.replace("modules", "module");
+            else text = text.substring(0, text.length - 1);
+            return text;
+        }
+
+        function generateSVG() {
+
+            var svg = document.getElementsByClassName("mazes")[0].getElementsByTagName("svg")[0];
+            if (!generated)
+            {
+                var mazes = document.createElementNS("http://www.w3.org/2000/svg", "g");
+                svg.appendChild(mazes);
+            }
+            generated = true;
+            mazes = svg.firstChild;
+            mazes.innerHTML = '';
+
+            for (var i = 0; i < 10; i++) {
+                var text = document.createTextNode(i.toString());
+                var textElement = setElement(document.createElementNS("http://www.w3.org/2000/svg", "text"),
+                [ "x",                     "y" ],
+                [ `${59 + 145 * (i % 5)}`, `${15 + 150 * Math.floor(i / 5)}` ]);
+                textElement.appendChild(text);
+                mazes.appendChild(textElement);
+
+                var highlight = setElement(document.createElementNS("http://www.w3.org/2000/svg", "rect"),
+                [ "class",         "x",                     "y",                                "width", "height", "fill" ],
+                [ "highlightable", `${-9 + 145 * (i % 5)}`, `${1.5 + 150 * Math.floor(i / 5)}`, "145",   "18",     "transparent" ]);
+                mazes.appendChild(highlight);
+
+                var square = setElement(document.createElementNS("http://www.w3.org/2000/svg", "rect"),
+                [ "x",                    "y",                               "width", "height", "fill",        "class" ],
+                [ `${2 + 145 * (i % 5)}`, `${21 + 150 * Math.floor(i / 5)}`, "125",   "125",    "transparent", "wall" ]);
+                mazes.appendChild(square);
+
+                var exit = setElement(document.createElementNS("http://www.w3.org/2000/svg", "rect"),
+                [ "x",                     "y",                               "width", "height", "class" ],
+                [ `${52 + 145 * (i % 5)}`, `${18 + 150 * Math.floor(i / 5)}`, "25",    "6",      "exit" ]);
+                mazes.appendChild(exit);
+            }
+
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 5; j++) {
+                    for (var k = 0; k < 5; k++) {
+                        var x = 2 + 25 * k + 145 * (i % 5);
+                        var y = 21 + 25 * j + 150 * Math.floor(i / 5);
+                        var small = setElement(document.createElementNS("http://www.w3.org/2000/svg", "rect"),
+                        [ "x",          "y",          "width", "height", "class" ],
+                        [ `${x + 9.5}`, `${y + 9.5}`, "5",     "5",      "dots" ]);
+                        mazes.appendChild(small);
+
+                        if (k < 4 && !cells[i][j][k].directions.E) {
+                            var e = setElement(document.createElementNS("http://www.w3.org/2000/svg", "line"),
+                            [ "x1",        "y1",   "x2",        "y2",        "class" ],
+                            [ `${x + 25}`, `${y}`, `${x + 25}`, `${y + 25}`, "wall" ]);
+                            mazes.appendChild(e);
+                        }
+
+                        if (j < 4 && !cells[i][j][k].directions.S) {
+                            var s = setElement(document.createElementNS("http://www.w3.org/2000/svg", "line"),
+                            [ "x1",   "y1",        "x2",        "y2",        "class" ],
+                            [ `${x}`, `${y + 25}`, `${x + 25}`, `${y + 25}`, "wall" ]);
+                            mazes.appendChild(s);
+                        }
+                        var highlight = setElement(document.createElementNS("http://www.w3.org/2000/svg", "rect"),
+                        [ "class",         "x",        "y",    "width", "height", "fill" ],
+                        [ "highlightable", `${x - 1}`, `${y}`, "25",    "25",     "transparent" ]);
+                        mazes.appendChild(highlight);
+                    }
+                }
+            }
+        }
+
+        function setElement(element, names, values) {
+            if (names.length <= 0 || values.length <= 0) return null;
+
+            for (var i = 0; i < names.length; i++)
+                element.setAttribute(names[i], values[i]);
+
+            return element;
+        }
+    </script>
+
+    <style>
+        .dark table, table {
+            border: none;
+            text-align: center;
+        }
+        svg rect.exit { fill: white; }
+        .dark svg rect.exit { fill: #222; }
+        .dark svg line { stroke: #DDD; }
+        svg rect.wall, svg line.wall { stroke-width: 2; }
+        svg rect.wall, svg line.wall { stroke: black; }
+        .dark svg rect.wall, .dark svg line.wall { stroke: #DDD; }
+        svg rect.dots { fill: black; }
+        .dark svg rect.dots, .dark svg text { fill: #DDD; }
+
+        div.mazes {
+            text-align: center;
+        }
+            div.mazes > img {
+                width:90%;
+            }
+
+        div.footnotes {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            font-size: smaller;
+            margin: 0 0 1em;
+        }
+
+            div.footnotes p {
+                margin: .3em 0;
+            }
+        @media screen and (max-width: 900px) {
+            div.footnotes {
+                position: relative;
+            }
+                div.footnotes p {
+                    margin: .3em 0;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Slepé Bludiště (čeština) v1.4</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Blind Maze.svg" class="diagram">
+                <h2>Na téma Slepého Bludiště (čeština)</h2>
+                <p class="flavour-text">Ne jenom že potřebuješ najít cíl, ty potřebuješ najít začátek!</p>
+                <p>
+                  Tento modul obsahuje 4 tlačítka N = Sever E = Východ W = Západ S = Jih.
+                </p>
+                <h3>Krok 1: Najdi správné bludiště</h3>
+                <ul>
+                    <li> Vezmi poslední číslo sériového čísla a přičti počet vyřešených modulů. </li>
+                    <li> Pokud je číslo větší jak 9 tak odečti 10 aby bylo výsledné číslo v rozmezí 0-9.
+                    <li> Výsledné číslo = Vaše bludiště.
+                    <li> Vaše bludiště může být ale otáčeno.
+                </ul>
+                <div class="mazes">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 1.5 725 300"></svg>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">Strana 1 ze 2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Slepé Bludiště (čeština) v1.4</span>
+            </div>
+            <div class="page-content">
+                <h3>Krok 2: Najdi správné otočení </h3>
+                <p>
+                    Použijte první podmínku, která platí, abyste zjistili jak správně otočit bludiště.
+                </p>
+                <ul>
+                    <li> Pokud jsou alespoň 2 červená tlačítka, otočte bludiště o 90° ve směru hodinových ručiček a pak vypočítejte počáteční pozici. </li>
+                    <li> Jinak pokud je na bombě alespoň 5 baterií, vypočítejte počáteční pozici a pak otočte bludiště o 90° ve směru hodinových ručiček. </li>
+                    <li> Jinak pokud je na bombě indikátor IND, otočte bludiště o 180° ve směru hodinových ručiček a pak vypočítejte počáteční pozici. </li>
+                    <li> Jinak pokud nejsou žádná žlutá tlačítka a je 1 červené tlačítko, otočte bludiště o 90° proti směru hodinových ručiček a pak vypočítejte počáteční pozici. </li>
+                    <li> Jinak pokud je na bombě alespoň 1 jiný modul s bludištěm*, vypočítejte počáteční pozici a pak otočte bludiště o 180° ve směru hodinových ručiček. </li>
+                    <li> Jinak pokud je na bombě více jak 1 typ portů na bombě, vypočítejte počáteční pozici a pak otočte bludiště o 90° proti směru hodinových ručiček. </li>
+                    <li> Jinak, nechte bludiště tak jak je. </li>
+                </ul>
+                <h3>Krok 3: Najdi počáteční pozici </h3>
+                <p>
+                  Podívej se na každé tlačítko a použij tabulku aby jsi zjistil jeho hodnotu.
+                  Dále použij pravidla aby jsi zjistil počáteční pozici v bludišti.
+                 </p>
+                <ul>
+                    <li> X pozice : Sečtěte hodnoty Severu a Jihu dohromady.
+                    <li> Y pozice : Sečtěte hodnoty Východu a Západu dohromady.
+                    <li> Pokud je součet větší než 5 tak odečtěte 5 aby číslo bylo v rozmezí 1-5.
+                    <li> Sloupec X je zleva doprava.
+                    <li> Řádka Y je ze shora dolů.
+                    <li> Souřadnice vlevo nahoře jsou [1,1].
+                </ul>
+                <table>
+                    <colgroup>
+                        <col style="width: 80px">
+                        <col style="width: 80px">
+                        <col style="width: 80px">
+                        <col style="width: 80px">
+                        <col style="width: 80px">
+                        <col style="width: 80px">
+                    </colgroup>
+                    <tr>
+                        <td class="corner"></td>
+                        <th>Červená</th>
+                        <th>Zelená</th>
+                        <th>Modrá</th>
+                        <th>Šedivá</th>
+                        <th>Žlutá</th>
+                    </tr>
+                    <tr>
+                        <th>Sever</th>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Východ</th>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>Západ</th>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th>Jih</th>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                </table>
+                <div class='footnote'>
+                  *Moduly s bludištěm = Moduly, které mají v originále slovo Maze a v češtině slovo Bludiště!
+                  Jedná se pouze o moduly: 3D Maze, A-maze-ing Buttons, Boolean Maze, Colored Maze, The Crystal Maze, Factory Maze, Faulty RGB Maze, Hexamaze, Mazes, Mazematics, Maze Scrambler, Maze³, Module Maze, Morse-A-Maze, Mouse In The Maze, Polyhedral Maze, RGB Maze, a USA Maze.
+                  Nepočítá se modul <em>Slepé bludiště</em>!
+                </div>
+            </div>
+            <div class="page-footer relative-footer">Strana 2 ze 2</div>
+        </div>
+    </div>
+</body>
+</html>

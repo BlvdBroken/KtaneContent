@@ -2,7 +2,8 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "GoodHood" ],
-    "Maintainer": [ "AnAverageArceus" ]
+    "Maintainer": [ "AnAverageArceus" ],
+    "Twitch Plays": [ "eXish" ]
   },
   "DefuserDifficulty": "Easy",
   "Description": "Press the push button a lot to get to the number needed. Tags: 2-buttons, mash",
@@ -11,10 +12,14 @@
   "Name": "Standard Button Masher",
   "Origin": "Mods",
   "Published": "2020-11-15",
-  "SortKey": "STANDARDBUTTONORDER",
+  "SortKey": "STANDARDBUTTONMASHER",
   "SourceUrl": "https://github.com/AnAverageArceus/GoodHood-s-Modules",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2606833294",
   "Symbol": "Sbm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/uk55Yg0eukY"
+  } ],
   "Type": "Regular"
 }

@@ -16,5 +16,9 @@
   },
   "SteamID": "2289022494",
   "Symbol": "Tcb",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=5z1y_VkbSNw"
+  } ],
   "Type": "Regular"
 }

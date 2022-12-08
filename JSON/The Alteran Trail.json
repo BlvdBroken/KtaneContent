@@ -2,7 +2,9 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "TracksJosh" ],
-    "Idea": [ "Patrick Dugas" ]
+    "Idea": [ "Patrick Dugas" ],
+    "Manual graphics": [ "JG" ],
+    "Twitch Plays": [ "eXish" ]
   },
   "DefuserDifficulty": "Medium",
   "Description": "Move the jeep 1000km across the planet of Altera, but beware of events along the way. Tags: altera, jeep, algebra, events, oregan-trail, alteran-trail",
@@ -16,5 +18,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2425289605",
   "Symbol": "Alt",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/eQ0rEczPFms"
+  } ],
   "Type": "Regular"
 }

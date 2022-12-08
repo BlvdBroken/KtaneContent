@@ -8,11 +8,15 @@
   "Name": "Planets",
   "Origin": "Mods",
   "Published": "2019-03-10",
+  "RuleSeedSupport": "Supported",
   "SortKey": "PLANETS",
   "SourceUrl": "https://github.com/MrMelon54/ktanemod-planets",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1678785096",
   "Symbol": "Pn",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=24ROMnv8f7E" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=24ROMnv8f7E"
+  } ],
   "Type": "Regular"
 }

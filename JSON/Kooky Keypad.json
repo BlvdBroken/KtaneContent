@@ -16,5 +16,9 @@
   },
   "SteamID": "1869640550",
   "Symbol": "Kkkp",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/4XnxKgOP9qM"
+  } ],
   "Type": "Regular"
 }

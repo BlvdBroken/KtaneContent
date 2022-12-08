@@ -1,6 +1,9 @@
 {
-  "Author": "Royal_Flu$h, Pruz",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Royal_Flu$h" ],
+    "Manual": [ "Pruz" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Calculate and input the correct sequence of moon pieces. Tags: 8-crescents, 8-semicircles, blue-module, circle",
   "ExpertDifficulty": "Hard",
@@ -13,6 +16,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1364758032",
   "Symbol": "Mn",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=E9-xUEIb1u4" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/zlrsct2EhtQ"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/E9-xUEIb1u4"
+    }
+  ],
   "Type": "Regular"
 }

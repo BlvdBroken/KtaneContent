@@ -1,6 +1,9 @@
 {
-  "Author": "TheThirdMan",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "TheThirdMan" ],
+    "Maintainer": [ "VFlyer" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Press the button that corresponds to the constellation that shares a sky quadrant with the one on the display. Tags: 4-buttons, starts, symbols",
   "ExpertDifficulty": "Easy",
@@ -13,6 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1804823585",
   "Symbol": "Cst",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=-xcSu-8ktpI" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=-xcSu-8ktpI"
+  } ],
   "Type": "Regular"
 }

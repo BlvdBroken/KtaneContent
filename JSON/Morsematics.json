@@ -1,6 +1,6 @@
 {
-  "Author": "Hexicube",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "Hexicube" ] },
   "DefuserDifficulty": "Hard",
   "Description": "Decode letters shown as sequences of short and long flashes and perform awkward calculations. Respond by transmitting the answer in the same code. Tags: red-module, 6-blinking-lights, 3-columns, grey-rectangle, white-rectangle",
   "ExpertDifficulty": "Hard",
@@ -13,10 +13,19 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "743198269",
   "Symbol": "Mmt",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=HQxiWU9OLsQ",
-    "default": "https://www.youtube.com/watch?v=ZAXrEc1Ier4",
-    "Français": "https://youtu.be/hmRdcH47ilo"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=HQxiWU9OLsQ"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=ZAXrEc1Ier4"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/hmRdcH47ilo"
+    }
+  ],
   "Type": "Regular"
 }

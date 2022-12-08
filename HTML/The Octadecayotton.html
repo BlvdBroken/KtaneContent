@@ -11,7 +11,7 @@
     <script src="js/ktane-utils.js"></script>
     <style>
         @media screen and (min-width: 900px) {
-            body {
+            body.dark, body {
                 background:
                     linear-gradient(#fff, #444 12.5%),
                     linear-gradient(#fff, #444 100%),
@@ -28,10 +28,6 @@
 
             label {
                 display: none;
-            }
-
-            a[href]:after {
-                content: none !important;
             }
         }
 
@@ -60,9 +56,8 @@
             width: 35%;
         }
 
-        .odd {
-            background-color: #ccc;
-        }
+        .odd { background-color: #ccc; }
+        .dark .odd { background-color: #444; }
 
         .vertical-separator {
             background-color: white;
@@ -78,11 +73,16 @@
             color: black;
             font-weight: bold;
         }
+        .dark .page {
+            filter: invert(0);
+            color: #DDD;
+        }
 
         .first-page {
             filter: invert(0);
             color: #222;
         }
+        .dark .first-page svg text { fill: #DDD; }
 
         .glitch-text {
             -webkit-animation: chromatic-aberration 5s both infinite;
@@ -129,8 +129,8 @@
             <div class="page-content">
                 <img src="img/Component/The Octadecayotton.svg" class="diagram">
                 <h2>On the Subject of The Octadecayotton</h2>
-                <p class="flavour-text">"What could possibly go wrong?" - You, right now.</p>
-                <p class="appendix-reference" id="appendix-reference" style="font-weight: normal;">See Appendix BLANK in <a href="Blind%20Alley.html">Blind Alley</a> for blank modules identification.</p>
+                <p class="flavour-text">“What could possibly go wrong?” - You, right now.</p>
+                <p class="appendix-reference" id="appendix-reference" style="font-weight: normal;">See Appendix BLANK in <a href="Blind%20Alley.html#app-blank-modules">Blind Alley</a> for blank modules identification.</p>
                 <p style="font-size: 17px;">The module's appearance is initially blank.</p>
                 <svg viewBox="0 0 250 275">
                     <path id="curve"
@@ -162,7 +162,7 @@
                 <img src="img/The Octadecayotton/The Octadecayotton 11.svg" class="diagram">
                 <img src="img/The Octadecayotton/The Octadecayotton 12.svg" class="diagram">
                 <h2>The Octadecayotton (<span class="dim-number"></span> Dimensions)</h2>
-                <p class="flavour-text glitch-text">who'll be there when i'm gone?</p>
+                <p class="flavour-text glitch-text">who'll be there when i’m gone?</p>
                 <label for="dimensions">Dimensions used:</label>
                 <select name="dimensions" id="dimensions">
                     <option value="3">3 Dimensions</option>
@@ -234,7 +234,7 @@
                         the viewer when viewed from the front, while any negative axis points away. (left/down/away)
                     </li>
                     <li>The location of a sphere within the viewable 3-dimensional space can be
-                        determined by summing up all the axes' X, Y, and Z values if it's positive.
+                        determined by summing up all the axes' X, Y, and Z values if it’s positive.
                         <ul>
                             <li>For example, take a sphere where the only axis positive is W and another
                                 where the only axis positive is X. Their locations are (0.8, 0.2, 0.5) and (1, 0, 0)
@@ -325,7 +325,7 @@
                         <ul>
                             <li>For example, if a sphere is located exactly (0.8, 0.2, 0.5) left/away/down from
                                 another one, the first sphere is located in -W, because it has a +W neighbour, being
-                                further left/away/down than what could've been with W.</li>
+                                further left/away/down than what could’ve been with W.</li>
                         </ul>
                     </li>
                 </ul>
@@ -350,7 +350,7 @@
                 <img src="img/The Octadecayotton/The Octadecayotton Axes 12.svg" class="diagram example">
                 <h3>Identifying Neighbours</h3>
                 <ul>
-                    <li>To the diagram to the right shows an example of a sphere's <span class="dim-number"></span>
+                    <li>To the diagram to the right shows an example of a sphere’s <span class="dim-number"></span>
                         neighbours as seen from the front, zoomed in to the bottom-left quarter of the cube.
                         <ul>
                             <li>For clarity, the highlighted unfilled spheres are the neighbours of the filled sphere.
@@ -383,7 +383,7 @@
                     <li>Look at any 2 spheres that are neighbours and note down the one axis different from each other.
                     </li>
                     <li>Determine whether the axis is positive or negative by envisioning an arrow going from one sphere
-                        to the other. If the arrow points right/towards/up it's positive, if it's left/away/down it's
+                        to the other. If the arrow points right/towards/up it’s positive, if it’s left/away/down it’s
                         negative.</li>
                 </ul>
             </div>
@@ -415,7 +415,7 @@
                     <li>For any negative initial axis, invert both the initial and new axis. (positive ->
                         negative, negative -> positive)
                         <ul>
-                            <li>Back to the example, "-Y goes to -X" becomes "+Y goes to +X".</li>
+                            <li>Back to the example, “-Y goes to -X” becomes “+Y goes to +X”.</li>
                         </ul>
                     </li>
 
@@ -429,7 +429,7 @@
                     <li>The resulting sequence is called a subtransformation. In a given transformation there can be
                         1 to 5 simulatenous subtransformations happening at the same time.</li>
                     <li>These subtransformations are completely isolated from each other, as while they do have an
-                        effect on the individual sphere's paths, the axes do not, as any axis can only be in 1
+                        effect on the individual sphere’s paths, the axes do not, as any axis can only be in 1
                         subtransformation at any time.</li>
                     <li>Subtransformations have multiple ways to be spelled because they are cylical (they have no
                         beginning or end, and one element affects the next), and subtransformations do not have a
@@ -730,7 +730,7 @@
                         start with
                         the value <span class="dim-a-start"></span>.</li>
                     <li>Set a<sub>x</sub> to be p<sub>x</sub> as binary; In other words, subtract the largest number
-                        equal or less than p<sub>x</sub> found in "Decimal &lt;-&gt; Binary" from it, then set
+                        equal or less than p<sub>x</sub> found in “Decimal &lt;-&gt; Binary” from it, then set
                         a<sub>x</sub>'s Xth digit from the left to 1, where X is the position obtained from that same
                         number that was subtracted with. Keep subtracting and setting digits to 1 until p<sub>x</sub> is
                         0.</li>
@@ -882,7 +882,7 @@
                 </ol>
                 <ul>
                     <li>XOR a<sub>0</sub> with all other a-values; In other words, add a<sub>0</sub> with a<sub>1</sub>,
-                        and then refer to the next a. Don't carry (1+1 ≠ 10) and replace 2's with 0's on each step.</li>
+                        and then refer to the next a. Don’t carry (1+1 ≠ 10) and replace 2's with 0's on each step.</li>
                     <li>Replace every 0 with - and every 1 with +.</li>
                     <li>This is now the <u>anchor sequence</u>. Whenever the anchor sphere is mentioned, it refers to
                         the only 1 sphere that matches all positive/negative attributes of the anchor sequence's axes.
@@ -940,7 +940,7 @@
         </div>
     </div>
     <script>
-        // I am so sorry for this code. I have commited too many sins here. At the very least I didn't use 'var'.
+        // I am so sorry for this code. I have committed too many sins here. At the very least I didn’t use 'var'.
         const dimension = document.getElementById('dimensions');
         const diagrams = document.querySelectorAll('.diagram');
         const horizontalSeparators = document.querySelectorAll('.horizontal-separator');

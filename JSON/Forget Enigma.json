@@ -1,25 +1,29 @@
 {
   "Author": "Sean Obach",
+  "BossStatus": "FullBoss",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
   "Description": "As a module is solved, a new letter is lit up as well as the rotors shifting up. Decrypt the letters and submit them at the very end. Tags: buttons, enigma, rotors",
   "ExpertDifficulty": "VeryHard",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+SolvesWithOthers",
+    "+TimeDependent"
   ],
-  "IsFullBoss": true,
   "ModuleID": "forgetEnigma",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Forget Enigma",
   "Origin": "Mods",
   "Published": "2019-07-15",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd",
   "SortKey": "FORGETENIGMA",
   "SourceUrl": "https://github.com/obachs971/ForgetEnigma",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1804585381",
   "Symbol": "Fen",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=qw76_hnNc6Q" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=qw76_hnNc6Q"
+  } ],
   "Type": "Regular"
 }

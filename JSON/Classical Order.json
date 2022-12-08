@@ -2,7 +2,7 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "jimmythelynx" ],
-    "Twitch Plays": [ "Danny7007" ]
+    "Twitch Plays": [ "tandyCake" ]
   },
   "DefuserDifficulty": "Easy",
   "Description": "Press buttons in the correct order by figuring how to read through a table of greek letters in the right direction. Tags: greek, letters, keypad, stone, buttons",
@@ -16,5 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2450400521",
   "Symbol": "Clo",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/ZA3WuvohKeA"
+  } ],
   "Type": "Regular"
 }

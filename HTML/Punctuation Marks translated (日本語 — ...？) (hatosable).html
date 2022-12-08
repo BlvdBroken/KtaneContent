@@ -14,6 +14,29 @@
         .dark table, table {
             border: none;
         }
+        .red, .pink, .orange, .yellow, .green, .sky, .blue, .purple, .black, .white {
+            width: 30px;
+        }
+        .red { background-color: #dd7e6b; }
+        .pink { background-color: #f4cccc; }
+        .orange { background-color: #f9cb9c; }
+        .yellow { background-color: #ffe599; }
+        .green { background-color: #b6d7a8; }
+        .sky { background-color: #d0e0e3; }
+        .blue { background-color: #9fc5e8; }
+        .purple { background-color: #b4a7d6; }
+        .black { background-color: #808080; }
+        .white { background-color: #fff; }
+        .dkred { background-color: #5b0f00; }
+        .dorange { background-color: #783f04; }
+        .dyellow { background-color: #7f6000; }
+        .dgreen { background-color: #274e13; }
+        .dblue { background-color: #1c4587; }
+        .dpurple { background-color: #4c1130; }
+
+        .corner { color: white; }
+        .corner::after { content: 'boo'; }
+        td { text-align: center; }
     </style>
 </head>
 <body>
@@ -29,7 +52,7 @@
                 <p class="flavour-text">「記憶とは…私達皆が持ち歩いている日記だ」── オスカー・ワイルド。</p>
                 <p class="flavour-text">私はちっとも日記をつけるタイプじゃなかったが。</p>
 
-                <p class="appendix-reference" id="appendix-reference"><a href="Blind%20Alley%20translated%20(日本語%20—%20ブラインド・アレイ%20)%20(tepel).html">ブラインド・アレイ</a>の付録BLANKを参照し、空白モジュールの特定をする。</p>
+                <p class="appendix-reference" id="appendix-reference"><a href="Blind%20Alley%20translated%20(日本語%20—%20ブラインド・アレイ%20)%20(tchen).html">ブラインド・アレイ</a>の付録BLANKを参照し、空白モジュールの特定をする。</p>
                 <p>ここは…どこ？ぼくのしょうたいは？ぼくにはなにがプログラムされているの？</p>
                 <ul>
                     <li>じぶんがなにものか、なにをしなくちゃいけなかったのかはおぼえていないんだけど、ぼくじしんのことについて、ちょっとだけわかることはあるよ。</li>
@@ -38,7 +61,7 @@
                 </ul>
                 <p>もしかしたらそれについてかんがえれば、ぼくのしょうたいがわかるんじゃないかな。</p>
                 <ul>
-                    <li>2回ぼくにふれると、ぼくは2けたのすうじをおもいだしてそれをモジュールにひょうじするよ。
+                    <li>2かいぼくにふれると、ぼくは2けたのすうじをおもいだしてそれをモジュールにひょうじするよ。
                         このすうじは、メモリーバンクでつかうべきかずだよ。
                     </li>
                     <li>メモリーバンクのひだりがわに10のくらいのかずを、うえがわに1のくらいのかずをあてはめて、いろをもとめてね。</li>
@@ -65,7 +88,7 @@
             <div class="page-content">
                 <h2>メモリーバンク</h2>
                 <table>
-                    <tbody><tr>
+                    <tr>
                         <td class="corner"></td>
                         <td>-0</td>
                         <td>-1</td>
@@ -80,135 +103,135 @@
                     </tr>
                     <tr>
                         <td>0-</td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #808080"></td>
-                        <td></td>
+                        <td class="red"></td>
+                        <td class="pink"></td>
+                        <td class="orange"></td>
+                        <td class="yellow"></td>
+                        <td class="green"></td>
+                        <td class="sky"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
                     </tr>
                     <tr>
                         <td>1-</td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #808080"></td>
-                        <td></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #9fc5e8"></td>
+                        <td class="pink"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
+                        <td class="sky"></td>
+                        <td class="red"></td>
+                        <td class="yellow"></td>
+                        <td class="purple"></td>
+                        <td class="green"></td>
+                        <td class="orange"></td>
+                        <td class="blue"></td>
                     </tr>
                     <tr>
                         <td>2-</td>
-                        <td></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #808080"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #d0e0e3"></td>
+                        <td class="white"></td>
+                        <td class="blue"></td>
+                        <td class="yellow"></td>
+                        <td class="black"></td>
+                        <td class="orange"></td>
+                        <td class="green"></td>
+                        <td class="pink"></td>
+                        <td class="red"></td>
+                        <td class="purple"></td>
+                        <td class="sky"></td>
                     </tr>
                     <tr>
                         <td>3-</td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #808080"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #ffe599"></td>
+                        <td class="orange"></td>
+                        <td class="red"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="pink"></td>
+                        <td class="white"></td>
+                        <td class="sky"></td>
+                        <td class="black"></td>
+                        <td class="green"></td>
+                        <td class="yellow"></td>
                     </tr>
                     <tr>
                         <td>4-</td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #808080"></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td></td>
-                        <td style="background-color: #b6d7a8"></td>
+                        <td class="purple"></td>
+                        <td class="sky"></td>
+                        <td class="pink"></td>
+                        <td class="blue"></td>
+                        <td class="black"></td>
+                        <td class="red"></td>
+                        <td class="orange"></td>
+                        <td class="yellow"></td>
+                        <td class="white"></td>
+                        <td class="green"></td>
                     </tr>
                     <tr>
                         <td>5-</td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #808080"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #b4a7d6"></td>
+                        <td class="green"></td>
+                        <td class="yellow"></td>
+                        <td class="black"></td>
+                        <td class="orange"></td>
+                        <td class="white"></td>
+                        <td class="blue"></td>
+                        <td class="red"></td>
+                        <td class="pink"></td>
+                        <td class="sky"></td>
+                        <td class="purple"></td>
                     </tr>
                     <tr>
                         <td>6-</td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #808080"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #f4cccc"></td>
+                        <td class="sky"></td>
+                        <td class="green"></td>
+                        <td class="red"></td>
+                        <td class="white"></td>
+                        <td class="purple"></td>
+                        <td class="black"></td>
+                        <td class="yellow"></td>
+                        <td class="orange"></td>
+                        <td class="blue"></td>
+                        <td class="pink"></td>
                     </tr>
                     <tr>
                         <td>7-</td>
-                        <td style="background-color: #808080"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #dd7e6b"></td>
+                        <td class="black"></td>
+                        <td class="orange"></td>
+                        <td class="purple"></td>
+                        <td class="green"></td>
+                        <td class="sky"></td>
+                        <td class="pink"></td>
+                        <td class="white"></td>
+                        <td class="blue"></td>
+                        <td class="yellow"></td>
+                        <td class="red"></td>
                     </tr>
                     <tr>
                         <td>8-</td>
-                        <td style="background-color: #ffe599"></td>
-                        <td></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #808080"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #f9cb9c"></td>
+                        <td class="yellow"></td>
+                        <td class="white"></td>
+                        <td class="green"></td>
+                        <td class="red"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="black"></td>
+                        <td class="sky"></td>
+                        <td class="pink"></td>
+                        <td class="orange"></td>
                     </tr>
                     <tr>
                         <td>9-</td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #808080"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="sky"></td>
+                        <td class="pink"></td>
+                        <td class="yellow"></td>
+                        <td class="orange"></td>
+                        <td class="green"></td>
+                        <td class="white"></td>
+                        <td class="red"></td>
+                        <td class="black"></td>
                     </tr>
-                </tbody></table>
+                </table>
             </div>
         <div class="page-footer relative-footer">ページ 2/7</div>
     </div>
@@ -218,30 +241,31 @@
             <span class="page-header-section-title">...?</span>
         </div>
         <div class="page-content">
-            <h2>モジュール詳細：3本のワイヤー</h2>
+            <img src="img/Punctuation Marks/PMWires.svg" class="diagram">
+            <h2>モジュール詳細：3本のワイヤ</h2>
             <p class="flavour-text">「記憶は決して単独ではなく、互いに関連性のある何十個もの記憶の軌跡の果てにあるものだ」── ルイス・ラムーア。</p>
             <ul>
-                <li>僕が3本のワイヤーになったとき、僕のワイヤー全部をある順番で切らなくてはならない。</li>
-                <li>このページの下の表に、メモリーバンクから得た色を列、真ん中のワイヤーの色を段として当てはめてね。</li>
-                <li>僕を解除するために、ワイヤーを正しい順番で切ってね。</li>
-                <li>間違った順番で切った場合、切ったワイヤーは全部元の状態に戻って、ワイヤーの色は変わることがあり、ミスが記録されるよ。</li>
+                <li>僕が3本のワイヤになったとき、僕のワイヤ全部をある順番で切らなくてはならない。</li>
+                <li>このページの下の表に、メモリーバンクから得た色を列、真ん中のワイヤの色を段として当てはめてね。</li>
+                <li>僕を解除するために、ワイヤを正しい順番で切ってね。</li>
+                <li>間違った順番で切った場合、切ったワイヤは全部元の状態に戻って、ワイヤの色は変わることがあり、ミスが記録されるよ。</li>
             </ul>
             <table>
-                <tbody><tr>
-                    <td class="corner"><span style="color: white">boo</span></td>
-                    <td style="background-color: #dd7e6b"></td>
-                    <td style="background-color: #f4cccc"></td>
-                    <td style="background-color: #f9cb9c"></td>
-                    <td style="background-color: #ffe599"></td>
-                    <td style="background-color: #b6d7a8"></td>
-                    <td style="background-color: #d0e0e3"></td>
-                    <td style="background-color: #9fc5e8"></td>
-                    <td style="background-color: #b4a7d6"></td>
-                    <td style="background-color: #808080"></td>
-                    <td></td>
+                <tr>
+                    <td class="corner"></td>
+                    <td class="red"></td>
+                    <td class="pink"></td>
+                    <td class="orange"></td>
+                    <td class="yellow"></td>
+                    <td class="green"></td>
+                    <td class="sky"></td>
+                    <td class="blue"></td>
+                    <td class="purple"></td>
+                    <td class="black"></td>
+                    <td class="white"></td>
                 </tr>
                 <tr>
-                    <td style="background-color: #5b0f00"></td>
+                    <td class="dkred"></td>
                     <td>123</td>
                     <td>132</td>
                     <td>213</td>
@@ -254,7 +278,7 @@
                     <td>321</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #783f04"></td>
+                    <td class="dorange"></td>
                     <td>132</td>
                     <td>321</td>
                     <td>123</td>
@@ -267,7 +291,7 @@
                     <td>231</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #7f6000"></td>
+                    <td class="dyellow"></td>
                     <td>213</td>
                     <td>123</td>
                     <td>312</td>
@@ -280,7 +304,7 @@
                     <td>123</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #274e13"></td>
+                    <td class="dgreen"></td>
                     <td>231</td>
                     <td>312</td>
                     <td>132</td>
@@ -293,7 +317,7 @@
                     <td>213</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #1c4587"></td>
+                    <td class="dblue"></td>
                     <td>312</td>
                     <td>231</td>
                     <td>321</td>
@@ -306,7 +330,7 @@
                     <td>132</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #4c1130"></td>
+                    <td class="dpurple"></td>
                     <td>321</td>
                     <td>213</td>
                     <td>231</td>
@@ -318,7 +342,7 @@
                     <td>231</td>
                     <td>312</td>
                 </tr>
-            </tbody></table>
+            </table>
         </div>
         <div class="page-footer relative-footer">ページ 3/7</div>
     </div>
@@ -328,30 +352,31 @@
             <span class="page-header-section-title">...?</span>
         </div>
         <div class="page-content">
+            <img src="img/Punctuation Marks/PMColoredButtons.svg" class="diagram">
             <h2>モジュール詳細：色付きボタン</h2>
             <p class="flavour-text">「記憶なくして、文化なし。記憶なくして、文明なし。社会なくして、未来なし」── エリ・ヴィーゼル。</p>
             <ul>
                 <li>もし僕が色付きのボタンになったとき、6つのボタンのうち2つを押さなければならない。</li>
                 <li>このページの下の表に、メモリーバンクから得た色を列、点滅しているボタンの色を段として当てはめてね。</li>
                 <li>僕を解除するために、読み順でそれぞれの数字の位置のボタンを押してね。(例:51は読み順で5番目のボタンを押して、それから1番目のボタンを押す)</li>
-                <li>間違った順番で切った場合、ボタンは全部押されていない状態に戻って、違うボタンが点滅することがあり、ミスが記録されるよ。</li>
+                <li>間違った順番で押した場合、ボタンは全部押されていない状態に戻って、違うボタンが点滅することがあり、ミスが記録されるよ。</li>
             </ul>
             <table>
-                <tbody><tr>
-                    <td class="corner"><span style="color: white">boo</span></td>
-                    <td style="background-color: #dd7e6b"></td>
-                    <td style="background-color: #f4cccc"></td>
-                    <td style="background-color: #f9cb9c"></td>
-                    <td style="background-color: #ffe599"></td>
-                    <td style="background-color: #b6d7a8"></td>
-                    <td style="background-color: #d0e0e3"></td>
-                    <td style="background-color: #9fc5e8"></td>
-                    <td style="background-color: #b4a7d6"></td>
-                    <td style="background-color: #808080"></td>
-                    <td></td>
+                <tr>
+                    <td class="corner"></td>
+                    <td class="red"></td>
+                    <td class="pink"></td>
+                    <td class="orange"></td>
+                    <td class="yellow"></td>
+                    <td class="green"></td>
+                    <td class="sky"></td>
+                    <td class="blue"></td>
+                    <td class="purple"></td>
+                    <td class="black"></td>
+                    <td class="white"></td>
                 </tr>
                 <tr>
-                    <td style="background-color: #5b0f00"></td>
+                    <td class="dkred"></td>
                     <td>43</td>
                     <td>54</td>
                     <td>33</td>
@@ -364,7 +389,7 @@
                     <td>43</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #783f04"></td>
+                    <td class="dorange"></td>
                     <td>45</td>
                     <td>15</td>
                     <td>64</td>
@@ -377,7 +402,7 @@
                     <td>64</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #7f6000"></td>
+                    <td class="dyellow"></td>
                     <td>45</td>
                     <td>52</td>
                     <td>51</td>
@@ -390,7 +415,7 @@
                     <td>14</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #274e13"></td>
+                    <td class="dgreen"></td>
                     <td>55</td>
                     <td>53</td>
                     <td>25</td>
@@ -403,7 +428,7 @@
                     <td>46</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #1c4587"></td>
+                    <td class="dblue"></td>
                     <td>23</td>
                     <td>65</td>
                     <td>24</td>
@@ -416,7 +441,7 @@
                     <td>63</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #4c1130"></td>
+                    <td class="dpurple"></td>
                     <td>13</td>
                     <td>31</td>
                     <td>36</td>
@@ -428,7 +453,7 @@
                     <td>32</td>
                     <td>36</td>
                 </tr>
-            </tbody></table>
+            </table>
         </div>
         <div class="page-footer relative-footer">ページ 4/7</div>
     </div>
@@ -438,6 +463,7 @@
             <span class="page-header-section-title">...?</span>
         </div>
         <div class="page-content">
+            <img src="img/Punctuation Marks/PMPunctuation.svg" class="diagram">
             <h2>モジュール詳細：約物付きボタン</h2>
             <p class="flavour-text">「何かを忘れようとするまで、自分の記憶力の良さにはまるで気がつけない」── フランクリン・P・ジョーンズ。</p>
             <ul>
@@ -447,21 +473,21 @@
                 <li>間違ったボタンを押した場合、ボタンは元の状態に戻って、ディスプレーの色は変わることがあり、ミスが記録されるよ。</li>
             </ul>
             <table>
-                <tbody><tr>
-                    <td class="corner"><span style="color: white">boo</span></td>
-                    <td style="background-color: #dd7e6b"></td>
-                    <td style="background-color: #f4cccc"></td>
-                    <td style="background-color: #f9cb9c"></td>
-                    <td style="background-color: #ffe599"></td>
-                    <td style="background-color: #b6d7a8"></td>
-                    <td style="background-color: #d0e0e3"></td>
-                    <td style="background-color: #9fc5e8"></td>
-                    <td style="background-color: #b4a7d6"></td>
-                    <td style="background-color: #808080"></td>
-                    <td></td>
+                <tr>
+                    <td class="corner"></td>
+                    <td class="red"></td>
+                    <td class="pink"></td>
+                    <td class="orange"></td>
+                    <td class="yellow"></td>
+                    <td class="green"></td>
+                    <td class="sky"></td>
+                    <td class="blue"></td>
+                    <td class="purple"></td>
+                    <td class="black"></td>
+                    <td class="white"></td>
                 </tr>
                 <tr>
-                    <td style="background-color: #5b0f00"></td>
+                    <td class="dkred"></td>
                     <td>! , .</td>
                     <td>" . ?</td>
                     <td>" ! ?</td>
@@ -474,7 +500,7 @@
                     <td>! ? .</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #783f04"></td>
+                    <td class="dorange"></td>
                     <td>“ , !</td>
                     <td>. ? ,</td>
                     <td>! , “</td>
@@ -487,7 +513,7 @@
                     <td>! ? “</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #7f6000"></td>
+                    <td class="dyellow"></td>
                     <td>, . “</td>
                     <td>? . ,</td>
                     <td>. ! ,</td>
@@ -500,7 +526,7 @@
                     <td>“ ! ?</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #274e13"></td>
+                    <td class="dgreen"></td>
                     <td>! ? .</td>
                     <td>! . ?</td>
                     <td>. “ ,</td>
@@ -513,7 +539,7 @@
                     <td>? ! .</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #1c4587"></td>
+                    <td class="dblue"></td>
                     <td>? ! ,</td>
                     <td>? ! .</td>
                     <td>? . ,</td>
@@ -526,7 +552,7 @@
                     <td>? , .</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #4c1130"></td>
+                    <td class="dpurple"></td>
                     <td>, “ ?</td>
                     <td>. “ !</td>
                     <td>? , !</td>
@@ -538,7 +564,7 @@
                     <td>? , “</td>
                     <td>“ . ?</td>
                 </tr>
-            </tbody></table>
+            </table>
         </div>
         <div class="page-footer relative-footer">ページ 5/7</div>
     </div>
@@ -548,32 +574,33 @@
             <span class="page-header-section-title">...?</span>
         </div>
         <div class="page-content">
+            <img src="img/Punctuation Marks/PMPiano.svg" class="diagram">
             <h2>モジュール詳細：色付きピアノ</h2>
             <p class="flavour-text">「記憶とは素晴らしい芸術家だ。全ての人にとって、それは自分の人生の回想を芸術作品や移ろいゆく記憶にさせる」── アンドレ・モーロワ。</p>
             <ul>
                 <li>もし僕が色付きピアノになったとき、1つの鍵盤だけ弾かなければならない。</li>
                 <li>僕には黒鍵のない6つの鍵盤があるよ。鍵盤はそれぞれある色になっている。</li>
                 <li>音階は左から右に、この様になっているよ：ド、レ、ミ、ファ、ソ、ラ</li>
-                <li>下の表に、メモリーバンクから得た色を列を段として当てはめてね。各列の中には異なる音階が含まれているよ。</li>
+                <li>下の表に、メモリーバンクから得た色を列、鍵盤の色を段として当てはめてね。各列の中には異なる音階が含まれているよ。</li>
                 <li>列内に一つだけモジュールの音階と段の色が同じものがある。僕を解除するために、その鍵盤を押してね。</li>
                 <li>間違ったボタンを押した場合、鍵盤の色は変わることがあり、ミスが記録されるよ。</li>
             </ul>
             <table>
-                <tbody><tr>
-                    <td class="corner"><span style="color: white">boo</span></td>
-                    <td style="background-color: #dd7e6b"><span style="color: #dd7e6b">boo</span></td>
-                    <td style="background-color: #f4cccc"><span style="color: #f4cccc">boo</span></td>
-                    <td style="background-color: #f9cb9c"><span style="color: #f9cb9c">boo</span></td>
-                    <td style="background-color: #ffe599"><span style="color: #ffe599">boo</span></td>
-                    <td style="background-color: #b6d7a8"><span style="color: #b6d7a8">boo</span></td>
-                    <td style="background-color: #d0e0e3"><span style="color: #d0e0e3">boo</span></td>
-                    <td style="background-color: #9fc5e8"><span style="color: #9fc5e8">boo</span></td>
-                    <td style="background-color: #b4a7d6"><span style="color: #b4a7d6">boo</span></td>
-                    <td style="background-color: #808080"><span style="color: #808080">boo</span></td>
-                    <td><span style="color: white">boo</span></td>
+                <tr>
+                    <td class="corner"></td>
+                    <td class="red"></td>
+                    <td class="pink"></td>
+                    <td class="orange"></td>
+                    <td class="yellow"></td>
+                    <td class="green"></td>
+                    <td class="sky"></td>
+                    <td class="blue"></td>
+                    <td class="purple"></td>
+                    <td class="black"></td>
+                    <td class="white"></td>
                 </tr>
                 <tr>
-                    <td style="background-color: #5b0f00"></td>
+                    <td class="dkred"></td>
                     <td>ド</td>
                     <td>ファ</td>
                     <td>ラ</td>
@@ -586,7 +613,7 @@
                     <td>ミ</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #783f04"></td>
+                    <td class="dorange"></td>
                     <td>レ</td>
                     <td>ミ</td>
                     <td>ソ</td>
@@ -599,7 +626,7 @@
                     <td>ファ</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #7f6000"></td>
+                    <td class="dyellow"></td>
                     <td>ミ</td>
                     <td>ソ</td>
                     <td>レ</td>
@@ -612,7 +639,7 @@
                     <td>ソ</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #274e13"></td>
+                    <td class="dgreen"></td>
                     <td>ファ</td>
                     <td>ド</td>
                     <td>ファ</td>
@@ -625,7 +652,7 @@
                     <td>ド</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #1c4587"></td>
+                    <td class="dblue"></td>
                     <td>ソ</td>
                     <td>ラ</td>
                     <td>ミ</td>
@@ -638,7 +665,7 @@
                     <td>ラ</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #4c1130"></td>
+                    <td class="dpurple"></td>
                     <td>ラ</td>
                     <td>レ</td>
                     <td>ド</td>
@@ -650,7 +677,7 @@
                     <td>ミ</td>
                     <td>レ</td>
                 </tr>
-            </tbody></table>
+            </table>
         </div>
         <div class="page-footer relative-footer">ページ 6/7</div>
     </div>
@@ -660,6 +687,7 @@
             <span class="page-header-section-title">...?</span>
         </div>
         <div class="page-content">
+            <img src="img/Punctuation Marks/PMMessage.svg" class="diagram">
             <h2>モジュール詳細：カラフルメッセージ</h2>
             <p class="flavour-text">「永続的な感動に基づく記憶や保有能力はない。私達が記憶と呼ぶものは、繰り返される刺激に対する反応の向上でしかない」── ニコラ・テスラ。</p>
             <ul>
@@ -672,21 +700,21 @@
                 <li>間違ったボタンを押した場合、文字のボタンは再び伏せられ、ディスプレー付近のボタンが復活し、違うメッセージが送信されるかもしれない。そしてミスが記録されるよ。</li>
             </ul>
             <table>
-                <tbody><tr>
-                    <td class="corner"><span style="color: white">boo</span></td>
-                    <td style="background-color: #dd7e6b"><span style="color: #dd7e6b">boo</span></td>
-                    <td style="background-color: #f4cccc"><span style="color: #f4cccc">boo</span></td>
-                    <td style="background-color: #f9cb9c"><span style="color: #f9cb9c">boo</span></td>
-                    <td style="background-color: #ffe599"><span style="color: #ffe599">boo</span></td>
-                    <td style="background-color: #b6d7a8"><span style="color: #b6d7a8">boo</span></td>
-                    <td style="background-color: #d0e0e3"><span style="color: #d0e0e3">boo</span></td>
-                    <td style="background-color: #9fc5e8"><span style="color: #9fc5e8">boo</span></td>
-                    <td style="background-color: #b4a7d6"><span style="color: #b4a7d6">boo</span></td>
-                    <td style="background-color: #808080"><span style="color: #808080">boo</span></td>
-                    <td><span style="color: white">boo</span></td>
+                <tr>
+                    <td class="corner"></td>
+                    <td class="red"></td>
+                    <td class="pink"></td>
+                    <td class="orange"></td>
+                    <td class="yellow"></td>
+                    <td class="green"></td>
+                    <td class="sky"></td>
+                    <td class="blue"></td>
+                    <td class="purple"></td>
+                    <td class="black"></td>
+                    <td class="white"></td>
                 </tr>
                 <tr>
-                    <td style="background-color: #5b0f00"></td>
+                    <td class="dkred"></td>
                     <td>A</td>
                     <td>L</td>
                     <td>E</td>
@@ -699,7 +727,7 @@
                     <td>S</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #783f04"></td>
+                    <td class="dorange"></td>
                     <td>T</td>
                     <td>O</td>
                     <td>C</td>
@@ -712,7 +740,7 @@
                     <td>E</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #7f6000"></td>
+                    <td class="dyellow"></td>
                     <td>M</td>
                     <td>E</td>
                     <td>L</td>
@@ -725,7 +753,7 @@
                     <td>I</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #274e13"></td>
+                    <td class="dgreen"></td>
                     <td>S</td>
                     <td>D</td>
                     <td>A</td>
@@ -738,7 +766,7 @@
                     <td>A</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #1c4587"></td>
+                    <td class="dblue"></td>
                     <td>R</td>
                     <td>O</td>
                     <td>R</td>
@@ -751,7 +779,7 @@
                     <td>L</td>
                 </tr>
                 <tr>
-                    <td style="background-color: #4c1130"></td>
+                    <td class="dpurple"></td>
                     <td>E</td>
                     <td>P</td>
                     <td>L</td>
@@ -763,7 +791,7 @@
                     <td>E</td>
                     <td>D</td>
                 </tr>
-            </tbody></table>
+            </table>
         </div>
         <div class="page-footer relative-footer">ページ 7/7</div>
     </div>

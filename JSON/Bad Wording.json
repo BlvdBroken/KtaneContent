@@ -1,6 +1,13 @@
 {
-  "Author": "BigCrunch22, Asew54321",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "BigCrunch22" ],
+    "Manual": [ "Asew54321" ],
+    "Twitch Plays": [
+      "BigCrunch22",
+      "eXish"
+    ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Determine the button to press based on a weirdly written out sentence and its colors. Tags: buttons, colors, sentence",
   "ExpertDifficulty": "Easy",
@@ -12,5 +19,9 @@
   "SourceUrl": "https://github.com/BigCrunch22/BadWording",
   "SteamID": "2297076608",
   "Symbol": "Bdw",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/i1fRsWSHw7s"
+  } ],
   "Type": "Regular"
 }

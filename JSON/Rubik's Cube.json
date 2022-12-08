@@ -1,6 +1,12 @@
 {
-  "Author": "Timwi, Freelancer1025",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [
+      "Timwi",
+      "Freelancer1025"
+    ],
+    "Maintainer": [ "Timwi" ]
+  },
   "DefuserDifficulty": "Hard",
   "Description": "Solve a popular three-dimensional rotation puzzle. The moves necessary to solve it can be obtained by following rules in the manual. Tags: 6-colors, orange, blue, red, yellow, white, green, 3d, 3x3-grid",
   "ExpertDifficulty": "Hard",
@@ -13,10 +19,19 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "916589421",
   "Symbol": "Rqb",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=oz076QOgLK4",
-    "default": "https://www.youtube.com/watch?v=LnCv4HPyXtk",
-    "Français": "https://youtu.be/XwO5wVoVw0M"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=oz076QOgLK4"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=LnCv4HPyXtk"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/XwO5wVoVw0M"
+    }
+  ],
   "Type": "Regular"
 }

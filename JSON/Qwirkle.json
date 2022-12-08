@@ -2,7 +2,8 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "TheThirdMan" ],
-    "Manual": [ "TasThing" ]
+    "Maintainer": [ "VFlyer" ],
+    "Manual": [ "TasThiluna" ]
   },
   "DefuserDifficulty": "Medium",
   "Description": "Play a mini game of Qwirkle while the board is hidden and shifting. Tags: colors, shapes, tiles, grid",
@@ -19,6 +20,9 @@
   },
   "SteamID": "1800417291",
   "Symbol": "Qw",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=btscKDlKJcg" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=btscKDlKJcg"
+  } ],
   "Type": "Regular"
 }

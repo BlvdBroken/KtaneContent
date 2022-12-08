@@ -4,18 +4,26 @@
   "DefuserDifficulty": "Hard",
   "Description": "Decipher a quadratic equation based on incorrectly displayed digits of its output, then calculate and submit a changing password before the module refreshes. Tags: timer, gray-background, 14-buttons, 8-digit-number, cipher, password, kyber, mwyth",
   "ExpertDifficulty": "VeryHard",
-  "IsTimeSensitive": true,
   "ModuleID": "omegaDestroyer",
   "Name": "OmegaDestroyer",
   "Origin": "Mods",
   "Published": "2020-10-31",
+  "Quirks": "TimeDependent",
   "SortKey": "OMEGADESTROYER",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2272969231",
   "Symbol": "Omd",
-  "TutorialVideoUrl": {
-    "default": "https://www.youtube.com/watch?v=W1TgVvk_7jA",
-    "MWYTH": "https://www.youtube.com/watch?v=woHB9MfnOnk"
-  },
+  "TutorialVideos": [
+    {
+      "Description": "AnAverageArceus",
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=W1TgVvk_7jA"
+    },
+    {
+      "Description": "MWYTH",
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=woHB9MfnOnk"
+    }
+  ],
   "Type": "Regular"
 }

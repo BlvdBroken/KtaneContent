@@ -1,7 +1,7 @@
 {
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "TasThing" ],
+    "Developer": [ "TasThiluna" ],
     "Manual": [ "Vincology" ]
   },
   "DefuserDifficulty": "Hard",
@@ -13,11 +13,12 @@
   "Published": "2021-09-16",
   "SortKey": "IDENTIFICATIONCRISIS",
   "SourceUrl": "https://github.com/tasthing/Identification-Crisis",
-  "Souvenir": {
-    "Explanation": "Souvenir could ask about the 3 shapes or 3 datasets used.",
-    "Status": "Considered"
-  },
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "2603172672",
   "Symbol": "Idc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/De6M2a6JLIk"
+  } ],
   "Type": "Regular"
 }

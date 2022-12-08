@@ -1,6 +1,12 @@
 {
-  "Author": "Willowyn",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Willowyn" ],
+    "Twitch Plays": [
+      "CaitSith2",
+      "eXish"
+    ]
+  },
   "DefuserDifficulty": "Hard",
   "Description": "Observe a fast-changing row of LEDs and cut a wire at the right time. Tags: 5-lights, red-wire, blue-wire, green-wire",
   "ExpertDifficulty": "Medium",
@@ -13,9 +19,19 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "949930700",
   "Symbol": "Bled",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=ryaNFHA1VJk",
-    "default": "https://www.youtube.com/watch?v=oUv4yvYq3Ao"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/ryaNFHA1VJk"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/oUv4yvYq3Ao"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/am7At46fKSs"
+    }
+  ],
   "Type": "Regular"
 }

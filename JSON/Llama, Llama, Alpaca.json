@@ -1,6 +1,9 @@
 {
-  "Author": "TasThing, Blananas2",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [
+    "TasThiluna",
+    "Blananas2"
+  ] },
   "DefuserDifficulty": "Easy",
   "Description": "Identify if a camelid is a llama, an alpaca, or something else. Tags: three-buttons, camel, pufferfish, screen",
   "ExpertDifficulty": "Easy",
@@ -10,8 +13,11 @@
   "Published": "2021-03-23",
   "SortKey": "LLAMALLAMAALPACA",
   "SourceUrl": "https://github.com/tasthing/Llama-Llama-Alpaca",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2433516232",
   "Symbol": "Lla",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/KqXNWFqxzqc"
+  } ],
   "Type": "Needy"
 }

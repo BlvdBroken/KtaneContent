@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>モジュロ操作 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">モジュロ操作</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Modulus Manipulation.svg" class="diagram">
+                <h2>モジュール詳細：モジュロ操作</h2>
+                <p class="flavour-text">選択する数は非常に多いが、正しいのは一つだけである。</p>
+
+                <p>シリアルナンバーの最初の3つを使用し、3桁の数字を作成する。いずれかが英字の場合はアルファベット位置(A=1,B=2...)に変更し、最下位桁を使用する。以下のルールセットを見て該当する<b>全ての</b>条件に従い、最終的な結果の下3桁を送信する。最終的な値が負の場合、000を送信する。</p>
+
+                <ul>
+                    <li>モジュロ(％)は、ある数値を別の数値で除算した余りを求めるものである。</li>
+                    <li><b>他の解除されていないモジュール</b>とは、このモジュール及び特殊モジュールを除いたまだ解除されていないモジュールの総数を示す。</li>
+                </ul>
+
+                <h3>ルールセット</h3>
+                <h4>他の解除されていないモジュール％5＝0</h4>
+                <ol>
+                    <li>爆弾に複数のバッテリーがある場合、400を加算する。</li>
+                    <li>シリアルナンバーの数字に「3」または「6」が含まれている場合、40を減算する。</li>
+                </ol>
+                <h4>他の解除されていないモジュール％4＝0</h4>
+                <ol>
+                    <li>爆弾に少なくとも1つの単3バッテリー及び単1バッテリーがある場合、2を乗算する。</li>
+                    <li>シリアルナンバーに4つの英字がある場合、290を減算する。</li>
+                </ol>
+                <h4>他の解除されていないモジュール％3＝0</h4>
+                <ol>
+                    <li>爆弾に3つを超えるバッテリーがある場合、160を減算する。</li>
+                    <li>爆弾に点灯していないインジケーターよりも点灯しているインジケーターの方が多い場合、75を加算する。</li>
+                </ol>
+                <h4>他の解除されていないモジュール％2＝0</h4>
+                <ol>
+                    <li>シリアルナンバーに母音がある場合、340を加算する。</li>
+                    <li>PS/2、RJ-45、シリアルポートのいずれかがある場合、180を加算する。</li>
+                </ol>
+                <h4>他の解除されていないモジュール％1＝0</h4>
+                <ol>
+                    <li>少なくとも1つのミスが記録されている場合、45を減算する。</li>
+                    <li>点灯していないインジケーターがある場合、15を減算する。</li>
+                    <li>シリアルナンバーの最後の数字が偶数の場合、150を加算する。</li>
+                    <li>カウントダウンタイマーの残り分数が偶数(0を含む)の場合、6を加算する。</li>
+                </ol>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/1</div>
+        </div>
+    </div>
+</body>
+</html>

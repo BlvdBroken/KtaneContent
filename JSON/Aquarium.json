@@ -5,8 +5,10 @@
       "Quinn Wuest",
       "Timwi"
     ],
+    "Maintainer": [ "Timwi" ],
     "Manual": [ "Quinn Wuest" ]
   },
+  "CustomExpertDifficulty": "defuser solo",
   "DefuserDifficulty": "Hard",
   "Description": "Fill a 6×6 grid with water or air in such a way that specific conditions are met. Tags: fish, seaweed, 6x6-grid, 6×6-grid, red-button, numbers",
   "ExpertDifficulty": "VeryEasy",
@@ -19,5 +21,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2539524999",
   "Symbol": "Aq",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/gonRq_mswF4"
+  } ],
   "Type": "Regular"
 }

@@ -14,5 +14,9 @@
   "SortKey": "ALIENFILINGCOLORS",
   "SteamID": "2173307998",
   "Symbol": "Afc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/JYulKdXYUMw"
+  } ],
   "Type": "Regular"
 }

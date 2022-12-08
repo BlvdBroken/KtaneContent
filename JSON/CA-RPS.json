@@ -3,7 +3,7 @@
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
   "Description": "Determine the next iteration of the grid using the rules of Rock, Paper, Scissors. Tags: RGB, game-of-life, 6x8-grid, 6×8-grid, 3-circle-buttons, clear, reset, submit",
-  "ExpertDifficulty": "Medium",
+  "ExpertDifficulty": "VeryHard",
   "ModuleID": "caRPS",
   "Name": "CA-RPS",
   "Origin": "Mods",
@@ -12,5 +12,9 @@
   "SourceUrl": "https://github.com/Speakingevil/ca-rps",
   "SteamID": "2539286605",
   "Symbol": "Ca",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/5efy1WWG6w0"
+  } ],
   "Type": "Regular"
 }

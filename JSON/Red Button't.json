@@ -1,0 +1,22 @@
+{
+  "Author": "boxbomb",
+  "Compatibility": "Compatible",
+  "CustomDefuserDifficulty": "M",
+  "CustomExpertDifficulty": "M",
+  "DefuserDifficulty": "Medium",
+  "Description": "Use info from the display and red cube button to navigate a matrix. Tags: red-button, square-button, display, screen, flashing-words, letters",
+  "ExpertDifficulty": "Medium",
+  "ModuleID": "redbuttont",
+  "Name": "Red Button't",
+  "Origin": "Mods",
+  "Published": "2022-07-09",
+  "SortKey": "REDBUTTONT",
+  "SourceUrl": "https://github.com/boxbomb/BUTTON-T/tree/master/Assets/Modules/RED%20BUTTON'T",
+  "SteamID": "2832651402",
+  "Symbol": "Rbtt",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/0R2U4Lts7qM"
+  } ],
+  "Type": "Regular"
+}

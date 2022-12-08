@@ -7,13 +7,13 @@
     ],
     "Developer": [
       "Blananas2",
-      "Danny7007",
+      "tandyCake",
       "Deaf"
     ],
     "Maintainer": [ "Deaf" ],
     "Manual": [ "Deaf" ],
     "Modeling": [ "Deaf" ],
-    "Twitch Plays": [ "Danny7007" ]
+    "Twitch Plays": [ "tandyCake" ]
   },
   "DefuserDifficulty": "Hard",
   "Description": "Play a sequence of seven cards such that they alternate between sharing colors or numbers. Tags: 7-cards, red-background",
@@ -22,7 +22,7 @@
   "Name": "UNO!",
   "Origin": "Mods",
   "Published": "2021-08-13",
-  "SortKey": "UNO!",
+  "SortKey": "UNO",
   "SourceUrl": "https://github.com/Fartlicker777/UNO-",
   "Souvenir": {
     "Explanation": "Souvenir could ask about the initial card shown.",
@@ -30,5 +30,9 @@
   },
   "SteamID": "2574201595",
   "Symbol": "Uno!",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/fKPJVnZEM7o"
+  } ],
   "Type": "Regular"
 }

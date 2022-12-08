@@ -17,16 +17,16 @@
     "Mystery Module",
     "+SolvesAtEnd",
     "+SolvesBeforeSome",
-    "+TimeSensitive"
+    "+SolvesWithOthers",
+    "+TimeDependent"
   ],
-  "IsSemiBoss": true,
   "ModuleID": "Krit4CardMonte",
   "MysteryModule": "MustNotBeKey",
   "Name": "Four-Card Monte",
-  "NeedsOtherSolves": true,
   "ObsoleteSteamIDs": [ "1691902955" ],
   "Origin": "Mods",
   "Published": "2019-03-24",
+  "Quirks": "NeedsOtherSolves",
   "SortKey": "FOURCARDMONTE",
   "SourceUrl": "https://github.com/Qkrisi/KTaNE-Four-Card-Monte",
   "Souvenir": {
@@ -35,6 +35,9 @@
   },
   "SteamID": "2002660679",
   "Symbol": "4cm",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=g4hF3n7AENU" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=g4hF3n7AENU"
+  } ],
   "Type": "Regular"
 }

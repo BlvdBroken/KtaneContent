@@ -1,6 +1,14 @@
 {
   "Author": "Timwi, Zawu",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Idea": [ "Zawu" ],
+    "Manual": [
+      "Timwi",
+      "Zawu"
+    ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Find a set of three symbols according to rules inspired by the card game Set. Tags: h, up-arrow, pac-man, wavy, x, triangle, star, diamond, t-shirt, filled, 3x3-grid, 3×3-grid, 9-buttons",
   "ExpertDifficulty": "Hard",
@@ -13,9 +21,15 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1143024969",
   "Symbol": "Set",
-  "TutorialVideoUrl": {
-    "Čeština": "https://youtu.be/sOeJ9CVCtf0",
-    "default": "https://youtu.be/jTptF13p_Qc"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/sOeJ9CVCtf0"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/jTptF13p_Qc"
+    }
+  ],
   "Type": "Regular"
 }

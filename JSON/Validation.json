@@ -5,7 +5,7 @@
     "Manual": [ "Pruz" ]
   },
   "DefuserDifficulty": "Easy",
-  "Description": "Move the needle before solves to Valid or Invalid based the LED statuses",
+  "Description": "Move the needle before solves to Valid or Invalid based the LED statuses. Tags: meter, needle, 2-leds",
   "ExpertDifficulty": "VeryEasy",
   "ModuleID": "ValidationNeedy",
   "MysteryModule": "MustNotBeHiddenOrKey",
@@ -16,5 +16,9 @@
   "SourceUrl": "https://github.com/RockDood/YesNoNeedy",
   "SteamID": "2297541858",
   "Symbol": "Va",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/7SDhls8THSg"
+  } ],
   "Type": "Needy"
 }

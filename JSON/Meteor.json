@@ -12,7 +12,10 @@
   "SourceUrl": "https://github.com/Blananas2/ktane-mathGotHarder",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2465134610",
-  "Symbol": "Mtr",
-  "TutorialVideoUrl": { "default": "https://youtu.be/4m9EPiuc2Sw" },
+  "Symbol": "Met",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/4m9EPiuc2Sw"
+  } ],
   "Type": "Regular"
 }

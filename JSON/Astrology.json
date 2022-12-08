@@ -1,6 +1,6 @@
 {
-  "Author": "Spare Wizard",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "Spare Wizard" ] },
   "DefuserDifficulty": "Easy",
   "Description": "Determine an omen score from an element, planet and zodiac symbol. Tags: symbols, poor-omen, no-omen, good-omen",
   "ExpertDifficulty": "Medium",
@@ -13,10 +13,19 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "745341328",
   "Symbol": "As",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=4ZaHHRmp4Rw",
-    "default": "https://www.youtube.com/watch?v=2zJZbUCvbww",
-    "Français": "https://youtu.be/dsgi0KHJqxs"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=4ZaHHRmp4Rw"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=2zJZbUCvbww"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/dsgi0KHJqxs"
+    }
+  ],
   "Type": "Regular"
 }

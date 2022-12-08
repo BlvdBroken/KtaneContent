@@ -1,6 +1,9 @@
 {
-  "Author": "StrangaDanga",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "StrangaDanga" ],
+    "Twitch Plays": [ "eXish" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Continue pressing buttons until they have valid symbols. Tags: 3-buttons, submit",
   "ExpertDifficulty": "Easy",
@@ -13,5 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2222424441",
   "Symbol": "Kc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/Z5qZ-8hcN18?t=1287"
+  } ],
   "Type": "Regular"
 }

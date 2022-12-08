@@ -12,13 +12,16 @@
   "Origin": "Mods",
   "Published": "2019-12-18",
   "SortKey": "NONVERBALSIMON",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/NonverbalSimon",
   "Souvenir": {
     "Explanation": "Souvenir could ask which color flashed on each stage.",
     "Status": "Considered"
   },
   "SteamID": "1940164898",
   "Symbol": "Nvs",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=AUBtWJUUDiA" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=AUBtWJUUDiA"
+  } ],
   "Type": "Regular"
 }

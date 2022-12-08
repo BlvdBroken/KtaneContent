@@ -1,6 +1,9 @@
 {
-  "Author": "Timwi, TheAuthorOfOZ",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Manual": [ "TheAuthorOfOZ" ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Communicate back and forth to light up these 16 colored squares in the correct order. Tags: 4x4-grid, 4×4-grid, colors, colored-squares, 16-buttons",
   "ExpertDifficulty": "VeryEasy",
@@ -14,10 +17,23 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "805590147",
   "Symbol": "Cosq",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=f4Vud-8xP0E",
-    "default": "https://www.youtube.com/watch?v=4oDPORKYWhs",
-    "Français": "https://youtu.be/A8vp3yKDgs8"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=f4Vud-8xP0E"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=4oDPORKYWhs"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/A8vp3yKDgs8"
+    },
+    {
+      "Language": "普通话",
+      "Url": "https://www.bilibili.com/video/BV1kP4y187Mi?t=1344"
+    }
+  ],
   "Type": "Regular"
 }

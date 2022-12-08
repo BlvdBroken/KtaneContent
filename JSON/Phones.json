@@ -1,7 +1,7 @@
 {
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "TasThing" ],
+    "Developer": [ "TasThiluna" ],
     "Maintainer": [ "Deaf" ]
   },
   "DefuserDifficulty": "Easy",
@@ -13,12 +13,16 @@
   "Origin": "Mods",
   "Published": "2021-05-30",
   "SortKey": "PHONES",
-  "SourceUrl": "https://github.com/Fartlicker777/Trivia-Murder-Party",
+  "SourceUrl": "https://github.com/Fartlicker777/Trivia-Murder-Party/tree/master/Trivia%20Murder%20Party/Assets/Modules/Phones",
   "Souvenir": {
     "Explanation": "Souvenir could ask about the correct number dialed.",
     "Status": "Considered"
   },
   "SteamID": "2114337227",
   "Symbol": "Pns",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=ECOnprj64jA"
+  } ],
   "Type": "Regular"
 }

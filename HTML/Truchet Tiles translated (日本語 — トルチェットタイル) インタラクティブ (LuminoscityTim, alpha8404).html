@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>トルチェットタイル — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <script src="js/jquery.3.1.1.min.js"></script>
+    <script>
+    $(function() {
+        const order = [ 3,8,10,13,15,19,21,24,7,9,14,18,20,12, 4,22,25,17,1,2,5,6,11,23,16 ];
+        const rows = 3;
+        const cols = 3;
+        const subcells = 4;
+        // const subcols = 2;
+        var selected;
+        let tilegrid = $(".tiles");
+        let grid = $(".grid");
+        let rotations = [0,0,0,0];
+
+        function updateSelection() {
+            $(".selected").removeClass("selected");
+            if (selected && selected.length > 0) {
+                selected.addClass("selected");
+            }
+        }
+
+        for (let i = 0; i < order.length; i++) {
+            let holder = $("<div>").addClass("optionholder").appendTo(tilegrid);
+            $(`<img class="tile" src="img/Truchet Tiles/Tiles${order[i]}.png">`).click(function() {
+                let elem = $(this);
+                selected = elem;
+                updateSelection();
+                let copy = elem.parent().html();
+                $(".tileholder").html(copy);
+                $(".tileset").text(`タイル番号:${order[i]}`);
+            }).appendTo(holder);
+        }
+
+        for (let y = 0; y < rows; y++) {
+            for (let x = 0; x < cols; x++) {
+                let cell = $("<div>").addClass("cell");
+                for (let i = 0; i < subcells; i++)
+                    $("<div>").addClass(`tileholder tile${i}`).appendTo(cell);
+                cell.appendTo(grid);
+            }
+        }
+        tilegrid.children().eq(0).children().eq(0).click();
+
+        let tools = $(".tools");
+        for (let y = 0; y < 2; y++) {
+            let stack = $("<div>").addClass("hstack").appendTo(tools);
+            for (let x = 0; x < 2; x++) {
+                let idx = y*2 + x;
+                $("<div>").addClass("btn").text("▲").click(function() {
+                    rotations[idx] += 1;
+                    $(this).css("transform", `rotate(${90*rotations[idx]}deg)`);
+                    $(`.tileholder.tile${idx}`).css("transform", `rotate(${90*rotations[idx]}deg)`);
+                }).appendTo(stack);
+            }
+        }
+    });
+    </script>
+    <style>
+        .hstack {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+        }
+        .vstack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tiles { width: 106%; }
+        .dark img.tile { filter: invert(87%); }
+        .cell {
+            width: 160px;
+            height: 160px;
+        }
+        .cell img.tile {
+            width: 80px;
+        }
+        .optionholder {
+            display: inline;
+        }
+        .tileholder, .cell {
+            display: inline-block;
+            transition: 0.6s;
+        }
+
+        .optionholder img.tile {
+            padding: 2px;
+            width: 50px;
+        }
+        .optionholder .tile.selected { background-color: #FF0000AA; }
+        .dark .optionholder .tile.selected { background-color: #00FFFFBB; }
+
+        .grid {
+            margin: 10px 10px 0 0;
+            min-width: 480px;
+            height: 480px;
+        }
+        .tileset { margin-top: 20px; }
+        div.btn {
+            transition: 0.6s;
+            font-family: 'Special Elite';
+            text-align: center;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            font-size: 30px;
+            border-radius: 5px;
+            border: black 3px solid;
+            padding: 7px 7px;
+            transition: color 1s, background-color 1s, transform 0.6s;
+            margin: 2.5px;
+            width: 40px;
+            height: 40px;
+        }
+        div.btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .page {
+            background-repeat: repeat-y;
+            background-position: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">トルチェットタイル</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Truchet Tiles.svg" class="diagram">
+                <h2>モジュール詳細：トルチェットタイル</h2>
+                <p class="flavour-text">リビングの壁紙を作ろう。タイルのセットを作って、家中に配置しよう。ブロックチェーンに画像を鋳造して、暗号帝国を築こう。可能性は無限大だ！</p>
+
+                <p>モジュール上の画像は、下にある25個のタイルの1つを使用し、それを特定の方向に回転させた2×2のグリッドパターンで構成されている。モジュールにはそれを6×6になるように9つ配置されている。</p>
+                <p>4つの矢印ボタンのいずれかを押すと、矢印が時計回りに90°回転する。モジュールを解除するには、構成された2×2の画像の回転方向に合うように矢印ボタンを配置し、Sボタンを押して送信する。間違った方向を送信するとミスが記録され、モジュールがリセットされる。</p>
+                <div class="tiles"></div>
+                <div class="hstack">
+                    <div class="grid"></div>
+                    <div class="vstack">
+                        <div class="tools"></div>
+                        <span class="tileset">タイル番号: 1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/1</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,7 +2,7 @@
   "Author": "TechnoTurquoise, BigCrunch22",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "VeryEasy",
-  "Description": "Enter a sequence of digits displayed backwards. Tags: 0-to-9, 23",
+  "Description": "Enter a sequence of digits displayed backwards. Tags: 0-to-9, numbers, keypad, 10-buttons, 2-displays, question-marks, ?",
   "ExpertDifficulty": "VeryEasy",
   "ModuleID": "GoingBackwards",
   "Name": "Going Backwards",
@@ -13,6 +13,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2277148853",
   "Symbol": "Gbw",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=xAjREKn_EFw" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=xAjREKn_EFw"
+  } ],
   "Type": "Regular"
 }

@@ -1,0 +1,38 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Audio": [
+      "Deaf",
+      "tandyCake"
+    ],
+    "Developer": [
+      "Deaf",
+      "tandyCake"
+    ],
+    "Maintainer": [ "Deaf" ],
+    "Manual": [ "Deaf" ],
+    "Manual graphics": [ "TasThiluna" ],
+    "Modeling": [
+      "Deaf",
+      "Blananas2"
+    ],
+    "Twitch Plays": [ "tandyCake" ]
+  },
+  "DefuserDifficulty": "VeryHard",
+  "Description": "Using each state shown, decrypt a word that is present in the Declaration of Independence.",
+  "ExpertDifficulty": "Hard",
+  "ModuleID": "USACycle",
+  "Name": "USA Cycle",
+  "Origin": "Mods",
+  "Published": "2021-11-25",
+  "SortKey": "USACYCLE",
+  "SourceUrl": "https://github.com/Fartlicker777/USA-Cycle",
+  "Souvenir": { "Status": "Supported" },
+  "SteamID": "2663537346",
+  "Symbol": "Usc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/M4lbGEhcgSQ"
+  } ],
+  "Type": "Regular"
+}

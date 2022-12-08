@@ -1,11 +1,13 @@
 {
-  "Author": "TheThirdMan",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "TheThirdMan" ],
+    "Maintainer": [ "VFlyer" ]
+  },
   "DefuserDifficulty": "VeryHard",
   "Description": "Close a gate to another dimension by finding the correct chapter in The Necronomicon Tags: cthulhu, mythos, lovecraft, handwritting, book",
   "ExpertDifficulty": "Medium",
   "ModuleID": "necronomicon",
-  "MysteryModule": "MustNotBeHidden",
   "Name": "The Necronomicon",
   "Origin": "Mods",
   "Published": "2019-03-20",
@@ -14,6 +16,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1688518678",
   "Symbol": "Nr",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=W9ZnHIETrCs" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=W9ZnHIETrCs"
+  } ],
   "Type": "Regular"
 }

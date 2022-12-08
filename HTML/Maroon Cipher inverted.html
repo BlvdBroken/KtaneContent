@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Inverted Maroon Cipher — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        .dark table, table {
+            margin: 1em auto;
+            border: none;
+        }
+        .strip-change-one td,
+        .strip-change-one th {
+            padding: .3em .5em .2em;
+        }
+        .alpha {
+            font-size: 13px;
+        }
+        @media print {
+            .page-content {
+                font-size: .95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Inverted Maroon Cipher</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Ultimate Cipher.svg" class="diagram">
+                <h2>On the Subject of the Inverted Maroon Cipher</h2>
+                <p class="flavour-text">I bet you will feel like a maroon trying to tackle this cipher.</p>
+                <p>On the module, you will see 3 screens, a keyboard, 2 buttons with a letter on it, and a submit button that displays the current page you’re on.</p>
+                <p>Pressing the right arrow takes you to the next page. Pressing the left arrow takes you to the previous page. There is a total of 3 pages.</p>
+                <p>On page 1, the top screen shows a 6 letter encrypted word, the middle screen shows some numbers, and the bottom screen shows a 3 letter key.</p>
+                <p>Concatenate the words in this order: Page 2 Top Screen, Page 2 Middle Screen, Page 2 Bottom Screen, Page 3 Top Screen, Page 3 Middle Screen, Page 3 Bottom Screen. Remove any duplicate letters from the key (keeping each letter’s first occurrence). This will be referred to as the Alphabet Key.</p>
+                <h3>Step 1: Slidefair Cipher</h3>
+                <p>For this you will need the encrypted word on the top screen on page 1, the Alphabet Key, and the Slidefair Key on the bottom screen on page 1. Write a 2nd alphabet underneath the Alphabet Key.</p>
+                <p>Split the encrypted word into 3 letter pairs and do the following for each letter pair:</p>
+                <ul>
+                    <li>Shift the bottom alphabet so that the Nth letter of the Slidefair Key is in the left most column.</li>
+                    <li>Find the 1st letter of the letter pair in the Alphabet Key.</li>
+                    <li>Find the 2nd letter of the letter pair in the bottom alphabet.</li>
+                    <li>If both letters are in the same column, replace them with the letters in the opposite column within the same row.</li>
+                    <li>Otherwise, replace each letter with the letter that is in the same row but in the column of the other letter.</li>
+                </ul>
+                <h4 class="centered">Example</h4>
+                <p class="centered">
+                    Encrypted Word: PSYOGQ<br>
+                    Alphabet Key: CENTURYSKIMPBLOWFHJXGAZDVQ<br>
+                    Slidefair Key: UIA
+                </p>
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 3</div>
+        </div>
+
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Inverted Maroon Cipher</span>
+            </div>
+            <div class="page-content">
+                <table class = "alpha">
+                    <tr><th>C</th><th>E</th><th>N</th><th>T</th><th>U</th><th>R</th><th>Y</th><th>S</th><th>K</th><th>I</th><th>M</th><th>P</th><th>B</th><th>L</th><th>O</th><th>W</th><th>F</th><th>H</th><th>J</th><th>X</th><th>G</th><th>A</th><th>Z</th><th>D</th><th>V</th><th>Q</th></tr>
+                    <tr><th>U</th><th>V</th><th>W</th><th>X</th><th>Y</th><th>Z</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th><th>P</th><th>Q</th><th>R</th><th>S</th><th>T</th></tr>
+                </table>
+                <p class="centered">PS -> VF</p>
+                <table class = "alpha">
+                    <tr><th>C</th><th>E</th><th>N</th><th>T</th><th>U</th><th>R</th><th>Y</th><th>S</th><th>K</th><th>I</th><th>M</th><th>P</th><th>B</th><th>L</th><th>O</th><th>W</th><th>F</th><th>H</th><th>J</th><th>X</th><th>G</th><th>A</th><th>Z</th><th>D</th><th>V</th><th>Q</th></tr>
+                    <tr><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th><th>P</th><th>Q</th><th>R</th><th>S</th><th>T</th><th>U</th><th>V</th><th>W</th><th>X</th><th>Y</th><th>Z</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr>
+                </table>
+                <p class="centered">YO -> XB</p>
+                <table class = "alpha">
+                    <tr><th>C</th><th>E</th><th>N</th><th>T</th><th>U</th><th>R</th><th>Y</th><th>S</th><th>K</th><th>I</th><th>M</th><th>P</th><th>B</th><th>L</th><th>O</th><th>W</th><th>F</th><th>H</th><th>J</th><th>X</th><th>G</th><th>A</th><th>Z</th><th>D</th><th>V</th><th>Q</th></tr>
+                    <tr><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th><th>P</th><th>Q</th><th>R</th><th>S</th><th>T</th><th>U</th><th>V</th><th>W</th><th>X</th><th>Y</th><th>Z</th></tr>
+                </table>
+                <p class="centered">GQ -> FU</p>
+                <p class="centered">New Encrypted Word: VFXBFU</p>
+                <h3>Step 2: Redefence Transposition</h3>
+                <p>For this, you will need the encrypted word you got from step 1 and the number key from the middle screen of page 1.</p>
+                <p>Place down the letters in a zig zag pattern with the number of rows equal to the length of the number key:</p>
+                <h4 class="centered">Example</h4>
+                <p class="centered">
+                    Encrypted Word: VFXBFU<br>
+                    Key: 213<br>
+                    1: &nbsp;&nbsp;V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;<br>
+                    2: &nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;U<br>
+                    3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                </p>
+                <p>Finally, read the letters in the order of the key number. You should now have a new encrypted word.</p>
+                <h4 class="centered">Example</h4>
+                <p class="centered">
+                    Key: 213<br>
+                    1: &nbsp;&nbsp;V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;<br>
+                    2: &nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;U<br>
+                    3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                    New Encrypted Word: FBUVFX
+                </p>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 3</div>
+        </div>
+
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Inverted Maroon Cipher</span>
+            </div>
+            <div class="page-content">
+                <h3>Step 3: Monoalphabetic Cipher</h3>
+                <p>For this, you’re going to need the encrypted word from step 2 and the Alphabet Key.</p>
+                <p>Write down a 2nd alphabet above the Alphabet Key.</p>
+                <p>For each letter of the encrypted word, find the letter in the top row and replace it with the letter directly below it.</p>
+                <p>The resulting letters will be your decrypted word.</p>
+                <h4 class="centered">Example</h4>
+                <p class="centered">Encrypted Word: FBUVFX</p>
+                <table class = "alpha">
+                    <tr><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th><th>P</th><th>Q</th><th>R</th><th>S</th><th>T</th><th>U</th><th>V</th><th>W</th><th>X</th><th>Y</th><th>Z</th></tr>
+                    <tr><th>C</th><th>E</th><th>N</th><th>T</th><th>U</th><th>R</th><th>Y</th><th>S</th><th>K</th><th>I</th><th>M</th><th>P</th><th>B</th><th>L</th><th>O</th><th>W</th><th>F</th><th>H</th><th>J</th><th>X</th><th>G</th><th>A</th><th>Z</th><th>D</th><th>V</th><th>Q</th></tr>
+                </table>
+                <p class="centered">FBUVFX -> REGARD</p>
+                <p class="centered">Decrypted Word: REGARD</p>
+                <p>Once you finally have your decrypted word, you can submit it. Once you start typing, all the screens will go black and the bottom screen will show what you are typing.</p>
+                <p>To clear it, just click one of the arrows. This goes to one of the pages and clears any input you put in. It will not let you go over 6 letters on input.</p>
+                <p>Once you are satisfied with your input, press the button labeled "SUB" to submit your answer. On a strike, the module will go back to the first page of the module, but it does not regenerate.</p>
+            </div>
+            <div class="page-footer relative-footer">Page 3 of 3</div>
+        </div>
+    </div>
+</body>
+</html>

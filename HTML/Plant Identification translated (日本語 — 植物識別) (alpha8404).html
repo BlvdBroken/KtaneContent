@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>植物識別 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <script src="js/jquery.3.1.1.min.js"></script>
+    <script>
+    $(function() {
+        const names = [
+            "A.K.E.E.", "Acidic Citrus", "Aggro Brocco", "Ail-mint", "Alarm Arrowhead", "Aloe", "Ampthurium", "Angel Starfruit", "Appease-mint", "Apple Mortar", "Arma-mint", "Aspiragus",
+            "Auberninja", "Bamboo-shoot", "Bambrook", "Banana Dancer", "Banana Launcher", "Berry Blaster", "Blastberry Vine", "Bloomerang", "Blooming Heart", "Blover", "Board Beans",
+            "Bombard-mint", "Bombegranate", "Bonk Choy", "Bowling Bulb", "Cabbage-pult", "Cactus", "Carrotillery", "Cattail", "Caulipower", "Celery Stalker", "Chard Guard",
+            "Cherry Bomb", "Chest-nut", "Chili Bean", "Chomper", "Citron", "Cob Cannon", "Coconut Cannon", "Coffee Bean", "Cold Snapdragon", "Conceal-mint", "Contain-mint",
+            "Cryo-shroom", "Cycloque", "Dandelion", "Dartichoke", "Dazey Chain", "Dinonip", "Dragonfruit", "Dual Pistol Pinecone", "Dusk Lobber", "E.M. Peach", "Electric Blueberry",
+            "Electric Currant", "Electric Peashooter", "Electrici-tea", "Enchant-mint", "Endurian", "Enforce-mint", "Enlighten-mint", "Escape Root", "Explode-O-Nut", "Fanilla", "Fila-mint",
+            "Fire Gourd", "Fire Peashooter", "Firebloom Queen", "Flat-shroom", "Frostbloom Queen", "Fume-shroom", "Garlic", "Gatling Pea", "Ghost Pepper", "Gold Bloom", "Gold Leaf",
+            "Goo Peashooter", "Grapeshot", "Grave Buster", "Grimrose", "Guacodile", "Guerrequila", "Gumnut", "Heavenly Peach", "Holly Barrier", "Homing Thistle", "Hot Date",
+            "Hot Potato", "Hurrikale", "Hypno-shroom", "Ice Bloom", "Iceberg Lettuce", "Icy Currant", "Imitater", "Imp Pear", "Infi-nut", "Intensive Carrot", "Jack O' Lantern",
+            "Jackfruit", "Jalapeno", "Kernel-pult", "Kinnikannon", "Kiwibeast", "Lantern Cherry", "Laser Bean", "Lava Guava", "Lightning Reed", "Lily of Alchemy", "Lily Pad",
+            "Lord Bamboo", "Lotus Root", "Lotuspot", "Magic-shroom", "Magnet-shroom", "Magnifying Grass", "Marigold", "Mastercane", "Match Flower", "MC Glory", "Melon-pult", "Missile Toe",
+            "Monkeyfruit", "Moonflower", "Narcissus", "Nightshade", "Oak Archer", "Oil Olive", "Parsnip", "Passionflower", "Pea Pod", "Pea-nut", "Peashooter", "Pepper-mint", "Pepper-pult",
+            "Perfume-shroom", "Phat Beet", "Plantern", "Plumping Plummy", "Pokra", "Pomegunate", "Potato Mine", "Power Lily", "Primal Peashooter", "Primal Potato Mine",
+            "Primal Rafflesia", "Primal Sunflower", "Primal Wall-nut", "Puff-shroom", "Pumpkin Witch", "Pumpkin", "Pyre Vine", "Pyro-shroom", "R.A.D Missiles", "Radish", "Rafflesia",
+            "Red Stinger", "Reinforce-mint", "Repeater", "Rotobaga", "Rotten Red", "Sap-fling", "Saucer Squash", "Shadow Peashooter", "Shadow-shroom", "Shine Vine", "Shrinking Violet",
+            "Sling Pea", "Snap Pea", "Snapdragon", "Snow Pea", "Snowy Cotton", "Solar Tomato", "Spear-mint", "Spikerock", "Spikeweed", "Spinnapple", "Split Pea", "Spore-shroom", "Spring Bean",
+            "Squash", "Stallia", "Starfruit", "Strawburst", "Stunion", "Sumo Melon", "Sun Bean", "Sunflower Singer", "Sunflower", "Sun-shroom", "Sweet Potato", "Tall-nut", "Tangle Kelp",
+            "Thorns", "Threepeater", "Thyme Warp", "Tile Turnip", "Toadstool", "Torchwood", "Tornacorn", "Trump Tulip", "Twin Sunflower", "Ultomato", "Wall-nut", "Wasabi Whip",
+            "Wax Guard", "Winter Melon", "Winter-mint", "Witch Hazel", "Zapdragon", "Zorrose", "Zoybean Pod", "Tumbleweed", "Bud-minton", "Egrett Flower", "Ruby Red", "Shadow Vanilla",
+            "Curling Corms", "Dollarweed Drummer", "Sticky Bomb Rice", "Hocus Crocus", "Puffball", "Olive Pit", "Murkadamia Nut", "Explode-o-Vine", "Headbutter Lettuce", "Boingsetta",
+            "Turkey-pult", "Bromel Blade", "Gloom Vine", "Draftodil", "Pea Vine", "Boom Balloon Flower", "Dripphylleia", "Geisha Flower", "Heath Seeker", "Impaintiens", "Inferno",
+            "Kunai Tupistra", "Noctarine", "Nuclear Earthstar", "Orchid Chef", "Power Vine", "Soda Bottle Palm", "Solar Sage", "Splitting Stephania", "Tiger Claw",
+            "Windbreak Dendrobium", "Hammerflower", "Iceweed", "Bamzooka", "Blockoli", "Bramble Bush", "Buttercup", "Ents", "Fishhook Grass", "Gardenergrass", "Hat Mushroom",
+            "Levitater", "Mangosteen", "Mega Gatling Pea", "Rhubarbarian", "Spring Princess", "Teleportato Mine", "Tiger Grass", "Tigerstool", "Tomb Tangler"
+        ].sort();
+
+        const ROWS_PER_PAGE = 10;
+        const ROWS = names.length;
+        let body = $("div.section");
+        let pageNum = 3;
+
+        for (let p = 0; p < ROWS;) {
+            let page = $("<div>").addClass(`page page-bg-0${pageNum % 7 + 1}`).appendTo(body);
+            $('<div class="page-header"><span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span><span class="page-header-section-title">植物識別</span></div>')
+                .appendTo(page);
+            let content = $("<div>").addClass(`page-content page-0${pageNum}`).appendTo(page);
+            $('<h2>索引：植物一覧</h2><p class="footnote">植物はあなたにとって良いものだ。しかし、あなたは食用のものを食べる必要がある。</p>').appendTo(content);
+            let table = $("<table>").addClass("images").appendTo(content);
+            let i = p;
+            for (; i < (p + ROWS_PER_PAGE) && i < ROWS; i++) {
+                let tr = $("<tr>").appendTo(table);
+                $(`<th><img src="img/Plant Identification/${names[i]}.png"></th>`).appendTo(tr);
+                $("<th>").text(names[i]).appendTo(tr);
+            }
+            p = i;
+            $("<div>").addClass("page-footer relative-footer").text(pageNum).appendTo(page);
+            pageNum++;
+        }
+    });
+    </script>
+    <style>
+        table {
+            margin: 0 auto;
+        }
+        th { padding: .05em .6em .05em; }
+        th img { width: 128px; }
+        .footnote {
+            font-style: italic;
+            font-size: 75%;
+            margin-top: .5em;
+        }
+        .page-footer::before { content: 'ページ '; }
+        .page-footer::after { content: '/29'; }
+        .page {
+            background-repeat: repeat-y;
+            background-position: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">植物識別</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Plant Identification.svg" class="diagram">
+                <h2>モジュール詳細：植物識別</h2>
+                <p class="flavour-text">基本的なゾンビ学習教材だ。何を食べるべきかを学ぼう。</p>
+
+                <p>このモジュールは、キーボード、テキストボックス、ミステリーパケットの画像が表示されたディスプレー、3つのLED、Plants vs Zombies 2のロゴで構成されている。</p>
+
+                <p>ステージを開始するには、ミステリーパケットがある領域を押す。ミステリーパケットは<strong>Plants vs. Zombies 2</strong>または<strong>Plants vs. Zombies 2 (中国版)</strong>の植物を表示する。</p>
+
+                <p>画像は<strong>5秒間</strong>表示され、元の画像に戻る。処理担当者は表示されている植物について出来るだけ多くの情報を分析担当者に伝える必要がある。ステージごとに1度しか画像を表示できない。</p>
+
+                <p>パケットが元の画像に戻ると、テキストボックスにテキストを入力できるようになる。モジュールに表示された植物の名前を<strong>正確に</strong>入力する。キーボードの<strong>Enter</strong>キーを押して入力を送信する。</p>
+
+                <p>正しい入力が送信されるとパケットの横にあるLEDが点灯する。間違った入力が送信されるとミスが記録され、LEDが全て消灯する。</p>
+
+                <p>モジュールを解除するには全てのLEDを点灯させる必要がある。</p>
+            </div>
+            <div class="page-footer relative-footer">1</div>
+        </div>
+
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">植物識別</span>
+            </div>
+            <div class="page-content">
+                <h2 id="keyboard">索引：キーボードガイド</h2>
+                <p class="footnote">このキーボードレプリカは、通常とは少し異なった機能を持っている。</p>
+
+                <img src="img/Plant Identification/Keyboard Layout.png" style="width:100%">
+                <br>
+
+            <h2><strong>機能</strong></h2>
+            <ul>
+                <li>
+                    <strong>Shift</strong> - 現在のキーセットを代替キーに変換する。
+                    <u>両方のキーボードを同時に使用することは推奨しないが、万が一問題が発生した場合、PC上の<strong>Shift</strong>キーが自動的に修正される。</u>
+                    <ul>
+                        <li>モジュール上のキーボードを使用する場合、<strong>Shift</strong>キーを押した後に任意の入力可能なキーを入力してもその状態は元に戻らない。</li>
+                        <li>PC上のキーボードを使用する場合、<strong>Shift</strong>キーは通常通り機能する。</li>
+                    </ul>
+                </li>
+                <li><strong>Backspace</strong> - 入力の右端を削除する。</li>
+                <li><strong>Enter</strong> - テキストボックスの入力を送信する。パケットを押した後にのみ機能する。</li>
+                <li><strong>Caps Lock</strong> - キーボード上のすべての英字を小文字から大文字、大文字から小文字に変更する。</li>
+                <li><strong>入力可能なキー</strong> - テキストボックスに入力する。</li>
+                <li><strong>残りのキー</strong> - 機能しない。装飾品である。</li>
+            </ul>
+        </div>
+            <div class="page-footer relative-footer">2</div>
+        </div>
+
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">植物識別</span>
+            </div>
+            <div class="page-content">
+                <h2>索引：植物一覧</h2>
+                <p class="footnote">植物はあなたにとって良いものだ。しかし、あなたは食用のものを食べる必要がある。</p>
+
+                <table>
+                    <tr><th>A.K.E.E.</th><th><img src="img/Plant Identification/A.K.E.E..png"></th></tr>
+                    <tr><th>Acidic Citrus</th><th><img src="img/Plant Identification/Acidic Citrus.png"></th></tr>
+                    <tr><th>Aggro Brocco</th><th><img src="img/Plant Identification/Aggro Brocco.png"></th></tr>
+                    <tr><th>Ail-mint</th><th><img src="img/Plant Identification/Ail-mint.png"></th></tr>
+                    <tr><th>Alarm Arrowhead</th><th><img src="img/Plant Identification/Alarm Arrowhead.png"></th></tr>
+                    <tr><th>Aloe</th><th><img src="img/Plant Identification/Aloe.png"></th></tr>
+                    <tr><th>Ampthurium</th><th><img src="img/Plant Identification/Ampthurium.png"></th></tr>
+                    <tr><th>Angel Starfruit</th><th><img src="img/Plant Identification/Angel Starfruit.png"></th></tr>
+                    <tr><th>Appease-mint</th><th><img src="img/Plant Identification/Appease-mint.png"></th></tr>
+                    <tr><th>Apple Mortar</th><th><img src="img/Plant Identification/Apple Mortar.png"></th></tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">3</div>
+        </div>
+    </div>
+</body>
+</html>

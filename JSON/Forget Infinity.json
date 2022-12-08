@@ -1,24 +1,30 @@
 {
   "Author": "VFlyer, ry00001, Oshisure",
+  "BossStatus": "SemiBoss",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
   "Description": "Keep track of information given by the module which changes after a module is solved, modify it and input it in sequence. Tags: sequence, numbers, staged, 10-buttons, delete",
   "ExpertDifficulty": "Medium",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+NeedsOtherSolves",
+    "+SolvesWithOthers",
+    "+TimeDependent"
   ],
-  "IsFullBoss": true,
   "ModuleID": "forgetInfinity",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Forget Infinity",
   "Origin": "Mods",
   "Published": "2020-03-31",
-  "SolvesAtEnd": true,
+  "Quirks": "NeedsOtherSolves",
   "SortKey": "FORGETINFINITY",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/ForgetInfinityReborn",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1940164898",
   "Symbol": "Fi",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/nEcZd59OOP8"
+  } ],
   "Type": "Regular"
 }

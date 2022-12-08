@@ -12,19 +12,24 @@
     "+SolvesAtEnd",
     "+NeedsOtherSolves",
     "+SolvesBeforeSome",
-    "+TimeSensitive"
+    "+WillSolveSuddenly",
+    "+SolvesWithOthers",
+    "+TimeDependent"
   ],
   "ModuleID": "simonSemiboss",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Simon",
-  "NeedsOtherSolves": true,
   "Origin": "Mods",
   "Published": "2021-07-05",
-  "SolvesBeforeSome": true,
+  "Quirks": "NeedsOtherSolves, SolvesBeforeSome",
   "SortKey": "SIMON",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/SimonSemiboss",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1940164898",
   "Symbol": "Sm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/7xySKrqk-sQ"
+  } ],
   "Type": "Regular"
 }

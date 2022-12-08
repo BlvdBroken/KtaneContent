@@ -1,19 +1,23 @@
 {
-  "Author": "GhostSalt",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "GhostSalt" ],
+    "Manual graphics": [ "JG" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Press the button to deactivate the module, under a strict time constraint. Tags: needy, purple, magenta, cog, gear",
   "ExpertDifficulty": "VeryEasy",
   "ModuleID": "GSThinkFast",
-  "MysteryModule": "MustNotBeHidden",
   "Name": "Think Fast",
   "Origin": "Mods",
   "Published": "2020-11-21",
   "SortKey": "THINKFAST",
   "SourceUrl": "https://github.com/GhostSalt/ThinkFast",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2293941275",
   "Symbol": "Tnkf",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=FAkAaEYtojE" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=FAkAaEYtojE"
+  } ],
   "Type": "Needy"
 }

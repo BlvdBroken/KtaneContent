@@ -1,7 +1,7 @@
 ﻿{
-  "Author": "tepel",
+  "Author": "t-chen",
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "tepel" ] },
+  "Contributors": { "Developer": [ "t-chen" ] },
   "DefuserDifficulty": "Hard",
   "Description": "Solve a cipher written in hiragana using Kanji written on the buttons. Tags: 4 Buttons, Japanese, cipher, kanji,",
   "ExpertDifficulty": "Hard",
@@ -13,5 +13,9 @@
   "SourceUrl": "https://github.com/tepel-chen/KtaneNotKanji",
   "SteamID": "2608601609",
   "Symbol": "Nkj",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/sW1wgfPJrWM"
+  } ],
   "Type": "Regular"
 }

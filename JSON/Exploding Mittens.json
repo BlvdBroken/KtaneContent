@@ -1,9 +1,11 @@
 {
-  "Author": "EpicToast, McNiko67, Grunkle Squeaky",
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "EpicToast" ],
-    "Manual": [ "McNiko67, Grunkle Squeaky" ]
+    "Manual": [
+      "McNiko67",
+      "Grunkle Squeaky"
+    ]
   },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Play a game of Exploding Mittens until you can defuse an Exploding Mitten. Tags: deck-of-cards, discard-pile, shapes",
@@ -16,5 +18,9 @@
   "SourceUrl": "https://github.com/EpicToastTM/ktaneExplodingMittens",
   "SteamID": "2548229993",
   "Symbol": "Exm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/0GZG9Q-xxp0"
+  } ],
   "Type": "Regular"
 }

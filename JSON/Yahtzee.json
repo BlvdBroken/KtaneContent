@@ -1,6 +1,9 @@
 {
-  "Author": "Timwi, Rexkix",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Idea": [ "Rexkix" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Repeatedly roll the dice until a five-of-a-kind is achieved while avoiding certain invalid states. Tags: 5-dice, roll, green",
   "ExpertDifficulty": "Medium",
@@ -13,9 +16,19 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "961870485",
   "Symbol": "Yz",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=fzQxUyoH2Lc",
-    "default": "https://www.youtube.com/watch?v=4wLfjP2HGic"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=fzQxUyoH2Lc"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=4wLfjP2HGic"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/9Yfnmv8ZAzs"
+    }
+  ],
   "Type": "Regular"
 }

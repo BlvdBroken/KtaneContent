@@ -5,13 +5,21 @@
     <meta name="viewport" content="initial-scale=1">
     <title>Нейтрализация — Keep Talking and Nobody Explodes Module</title>
     <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-cyrillic.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/ktane-utils.js"></script>
     <style>
-        table { margin: 0 auto; }
+        .dark table, table { margin: 0 auto; border: none; }
         p, ul { margin: .5em 0; }
         h3 { margin: .5em 0; }
+        .page {
+            background-repeat: repeat-y;
+            background-position: top;
+        }
+        table.solubility {
+            font-size: 90%;
+        }
     </style>
 </head>
 <body>
@@ -109,10 +117,10 @@
                     <li>Если комбинация кислоты и основания в таблице имеет пометку «НР» (Нерастворимо), тогда перед добавлением основания фильтр должен быть включён.</li>
                     <li>Иначе отключите фильтр.</li>
                 </ul>
-                <table>
+                <table class="solubility">
                     <tbody>
                         <tr>
-                            <th><strong><em></em></strong></th>
+                            <th class="corner"></th>
                             <th><strong><em>NH<sub>3</sub></em></strong></th>
                             <th><strong><em>KOH</em></strong></th>
                             <th><strong><em>LiOH</em></strong></th>

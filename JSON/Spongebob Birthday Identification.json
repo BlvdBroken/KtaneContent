@@ -1,9 +1,9 @@
 {
-  "Author": "Danny7007, Dicey",
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "Danny7007" ],
-    "Manual": [ "Dicey" ]
+    "Developer": [ "tandyCake" ],
+    "Manual": [ "dicey" ],
+    "Manual graphics": [ "Grunkle Squeaky" ]
   },
   "DefuserDifficulty": "Medium",
   "Description": "Identify the Spongebob birthday invitation. Tags: spongebob, keyboard, 3-leds, 3-stages, identify",
@@ -13,12 +13,16 @@
   "Origin": "Mods",
   "Published": "2021-07-09",
   "SortKey": "SPONGEBOBBIRTHDAYIDENTIFICATION",
-  "SourceUrl": "https://github.com/Danny7007/KTANESpongebobBirthdayIdentification",
+  "SourceUrl": "https://github.com/tandyCake/KTANESpongebobBirthdayIdentification",
   "Souvenir": {
     "Explanation": "Souvenir could ask about the child displayed in each stage.",
     "Status": "Considered"
   },
   "SteamID": "2541564160",
   "Symbol": "Sbid",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/r0Odq6Q-6eA"
+  } ],
   "Type": "Regular"
 }

@@ -1,6 +1,12 @@
 {
-  "Author": "Timwi, MarioXTurn, Quinn Wuest",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Manual": [
+      "MarioXTurn",
+      "Quinn Wuest"
+    ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Find the godfather of the mafia and hang them. Tags: noose, gallows, hangman, 8-people, stickman",
   "ExpertDifficulty": "Hard",
@@ -14,9 +20,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1190771256",
   "Symbol": "Mfa",
-  "TutorialVideoUrl": {
-    "Čeština": "https://youtu.be/cvfcvFbWKK0",
-    "default": "https://youtu.be/goBud5VaLro"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/cvfcvFbWKK0"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/goBud5VaLro"
+    }
+  ],
   "Type": "Regular"
 }

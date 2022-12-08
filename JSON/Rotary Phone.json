@@ -10,12 +10,17 @@
   "Published": "2016-08-16",
   "SortKey": "ROTARYPHONE",
   "SourceUrl": "https://github.com/Hexicube/KTANE-Hexi-s-Advanced-Modules/tree/master/Assets/Modules/AdvancedKnob",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "743198269",
-  "Symbol": "Ro",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=6v4gjm9nCpQ",
-    "default": "https://www.youtube.com/watch?v=nnVXJDcfdus"
-  },
+  "Symbol": "Rph",
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=6v4gjm9nCpQ"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=nnVXJDcfdus"
+    }
+  ],
   "Type": "Needy"
 }

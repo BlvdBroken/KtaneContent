@@ -1,7 +1,6 @@
 {
   "Author": "JerryEris",
-  "Compatibility": "Unplayable",
-  "CompatibilityExplanation": "Some characters don't display properly on Mac.",
+  "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
   "Description": "Determine the highest displayed numbers possible that will make the three-element statement true. Tags: logic, operators, 4-buttons, 3-displays, submit-button, symbols, numbers, displays, buttons",
   "ExpertDifficulty": "Hard",
@@ -13,7 +12,10 @@
   "SourceUrl": "https://github.com/JerryArr/Arithmalogic",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1731230630",
-  "Symbol": "Ah",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=Cvc31OJSs3Q" },
+  "Symbol": "Arl",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=Cvc31OJSs3Q"
+  } ],
   "Type": "Regular"
 }

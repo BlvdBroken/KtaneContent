@@ -8,10 +8,14 @@
   "Name": "Mssngv Wls",
   "Origin": "Mods",
   "Published": "2021-03-02",
-  "SortKey": "MISSINGVOWELS",
+  "SortKey": "MSSNGVWLS",
   "SourceUrl": "https://github.com/Fartlicker777/Mssngv-Wls",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2412408380",
   "Symbol": "Msvl",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/Umbmjvq-3eM"
+  } ],
   "Type": "Regular"
 }

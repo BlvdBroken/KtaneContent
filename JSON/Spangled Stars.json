@@ -16,5 +16,9 @@
   },
   "SteamID": "2153722848",
   "Symbol": "Spgs",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/3VV6si_usPM"
+  } ],
   "Type": "Regular"
 }

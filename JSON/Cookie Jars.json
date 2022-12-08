@@ -1,5 +1,6 @@
 {
   "Author": "EpicToast",
+  "BossStatus": "SemiBoss",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
   "Description": "Eat the right cookie every once in a while in order to not starve to death. Tags: cookies, left-arrow, right-arrow, jar, 5-leds",
@@ -8,20 +9,23 @@
     "+SolvesAtEnd",
     "+NeedsOtherSolves",
     "+SolvesBeforeSome",
-    "+TimeSensitive"
+    "+SolvesWithOthers",
+    "+TimeDependent"
   ],
-  "IsSemiBoss": true,
   "ModuleID": "cookieJars",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Cookie Jars",
-  "NeedsOtherSolves": true,
   "Origin": "Mods",
   "Published": "2019-01-03",
+  "Quirks": "NeedsOtherSolves",
   "SortKey": "COOKIEJARS",
   "SourceUrl": "https://github.com/EpicToastTM/ktaneCookieJars",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1613360570",
   "Symbol": "Cj",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=a8Aqh5kNaSo" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=a8Aqh5kNaSo"
+  } ],
   "Type": "Regular"
 }

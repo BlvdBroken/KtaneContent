@@ -1,6 +1,12 @@
 {
-  "Author": "Flamanis, Hendruid, AcrylicStain",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Flamanis" ],
+    "Manual": [
+      "Hendruid",
+      "AcrylicStain"
+    ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Program this coin-operated laundry machine to perform the correct washing, drying, ironing and special instructions. Tags: 2-left-arrows, 2-right-arrows, slider, 2-dials, white-module",
   "ExpertDifficulty": "Hard",
@@ -13,10 +19,19 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "822892956",
   "Symbol": "Ln",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=yMaJQJbh6KM",
-    "default": "https://www.youtube.com/watch?v=iJsH8n6bzaE",
-    "Français": "https://youtu.be/DBcMur4RfHA"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=yMaJQJbh6KM"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=iJsH8n6bzaE"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/DBcMur4RfHA"
+    }
+  ],
   "Type": "Regular"
 }

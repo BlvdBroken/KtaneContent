@@ -1,8 +1,11 @@
 {
-  "Author": "TracksJosh",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "TracksJosh" ],
+    "Twitch Plays": [ "eXish" ]
+  },
   "DefuserDifficulty": "VeryEasy",
-  "Description": "Turn a Base-1 number to a Base-10 number. Tags: 10-buttons, blue-text, 1, ???",
+  "Description": "Turn a Base-1 number to a Base-10 number. Tags: 10-buttons, blue-text, 1, ?????",
   "ExpertDifficulty": "VeryEasy",
   "ModuleID": "base1",
   "Name": "Base-1",
@@ -13,5 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2554746605",
   "Symbol": "Bs1",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/AndnTLV32sQ?t=98"
+  } ],
   "Type": "Regular"
 }

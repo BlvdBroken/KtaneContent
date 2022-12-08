@@ -1,0 +1,23 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Anonymous" ],
+    "Maintainer": [ "eXish" ]
+  },
+  "DefuserDifficulty": "VeryEasy",
+  "Description": "Help your favorite modder disintegrate. Tags: 1-button, ghost, smiley-face",
+  "ExpertDifficulty": "VeryEasy",
+  "ModuleID": "salts",
+  "Name": "Salts",
+  "Origin": "Mods",
+  "Published": "2021-04-06",
+  "SortKey": "SALTS",
+  "Souvenir": { "Status": "NotACandidate" },
+  "SteamID": "2448883829",
+  "Symbol": "Slt",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/INVTMZ4jK5w"
+  } ],
+  "Type": "Regular"
+}

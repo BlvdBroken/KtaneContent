@@ -13,5 +13,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2604427370",
   "Symbol": "Lzc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/dnTPtCfaWFY"
+  } ],
   "Type": "Regular"
 }

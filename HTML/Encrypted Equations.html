@@ -30,6 +30,15 @@
         ul {
             margin-top: 0;
         }
+
+        .character-table tr td:nth-child(2n + 1) {
+            font-family: "501";
+            background-color: white;
+        }
+        .dark .character-table tr td:nth-child(2n + 1) {
+            background-color: #282828;
+        }
+        .dark td img { filter: invert(87%); }
     </style>
 </head>
 <body>
@@ -42,7 +51,7 @@
             <div class="page-content">
                 <img src="img/Component/Encrypted%20Equations.svg" class="diagram">
                 <h2>On the Subject of Encrypted Equations</h2>
-                <p class="flavour-text">The module everyone hated the moment they saw what an "equation" looked like.</p>
+                <p class="flavour-text">The module everyone hated the moment they saw what an “equation” looked like.</p>
                 <ul>
                     <li>This module contains a 12-button keypad, a large display containing an equation, and a clear and submit button above it.</li>
                     <li>The equation has been encrypted in a way where shapes, letters, and symbols represent numbers and operations.</li>
@@ -108,7 +117,7 @@
                     <li>Apply this to the value obtained from the shape.</li>
                     <li><strong>Important:</strong> Round to the nearest thousandth after calculating.</li>
                 </ul>
-                <table class="double-column">
+                <table class="double-column character-table">
                     <tr>
                         <th>L/S</th><th>Value</th>
                         <th>L/S</th><th>Value</th>

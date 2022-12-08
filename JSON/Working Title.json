@@ -13,5 +13,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2183586219",
   "Symbol": "Wt",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/aVolvv2lmMk?t=169"
+  } ],
   "Type": "Regular"
 }

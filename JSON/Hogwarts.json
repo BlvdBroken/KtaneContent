@@ -1,27 +1,37 @@
 {
-  "Author": "Timwi, Mickeylover, Brawlbox",
+  "BossStatus": "SemiBoss",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Manual": [
+      "Mickeylover",
+      "Brawlbox"
+    ]
+  },
   "DefuserDifficulty": "Hard",
   "Description": "Solve other modules on the bomb for each of the Houses of Hogwarts. Then calculate their point scores and determine which House wins the House Cup. Tags: banner, module-name, parchment, scroll, Gryffindor, Hufflepuff, Ravenclaw, Slytherin",
   "ExpertDifficulty": "Medium",
   "Ignore": [
     "+SolvesAtEnd",
     "+NeedsOtherSolves",
-    "+TimeSensitive",
+    "+SolvesWithOthers",
+    "+TimeDependent",
     "The Heart"
   ],
-  "IsSemiBoss": true,
   "ModuleID": "HogwartsModule",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Hogwarts",
-  "NeedsOtherSolves": true,
   "Origin": "Mods",
   "Published": "2018-12-29",
+  "Quirks": "NeedsOtherSolves",
   "SortKey": "HOGWARTS",
   "SourceUrl": "https://github.com/Timwi/KtaneHogwarts",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1607221836",
   "Symbol": "Hw",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=QmEtBFdXgI4" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=QmEtBFdXgI4"
+  } ],
   "Type": "Regular"
 }

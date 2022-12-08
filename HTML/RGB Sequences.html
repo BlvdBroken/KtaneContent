@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/ktane-utils.js"></script>
     <style>
-        table {
+        .dark table, table {
             margin: 1em auto;
+            border: none;
         }
     </style>
 </head>
@@ -35,18 +36,7 @@
 
                 <h2 style="text-align:center">Table of Importance</h2>
                 <table style="text-align:center">
-                    <tr>
-                        <td style="background-color:#000000;color:#000000;">N</td>
-                        <td>01</td>
-                        <td>02</td>
-                        <td>03</td>
-                        <td>04</td>
-                        <td>05</td>
-                        <td>06</td>
-                        <td>07</td>
-                        <td>08</td>
-                        <td>09</td>
-                        <td>10</td>
+                    <tr><td class='corner'></td><td>01</td><td>02</td><td>03</td><td>04</td><td>05</td><td>06</td><td>07</td><td>08</td><td>09</td><td>10</td>
                     </tr>
                     <tr>
                         <td>01</td>
@@ -181,9 +171,10 @@
                 </table>
                 <ul>
                     <li>Take the product of the three row numbers and do the following:
-                    <li>If there is at least one vowel in the serial number, take the sum of each digit until it is one digit.</li>
-                    <li>Otherwise, use the last digit.</li>
-                    </li>
+                    <ul>
+                        <li>If there is at least one vowel in the serial number, take the sum of each digit until it is one digit.</li>
+                        <li>Otherwise, use the last digit.</li>
+                    </ul></li>
                     <li>Press that corresponding LED.</li>
                 </ul>
             </div>

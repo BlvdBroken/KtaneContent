@@ -1,6 +1,9 @@
 {
-  "Author": "Groover, Maca",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [
+    "Groover",
+    "Maca"
+  ] },
   "DefuserDifficulty": "Medium",
   "Description": "Figure out the output of some unlabeled logic gates. Tags: left-arrow, right-arrow, angled-letters, angled-font, green-grey, check",
   "ExpertDifficulty": "Hard",
@@ -13,6 +16,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1352138977",
   "Symbol": "Log",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=lF2jIiZovgM" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/oEUtsF6I884"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/lF2jIiZovgM"
+    }
+  ],
   "Type": "Regular"
 }

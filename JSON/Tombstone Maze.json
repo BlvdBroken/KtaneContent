@@ -1,0 +1,28 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Anonymous" ],
+    "Maintainer": [ "eXish" ]
+  },
+  "DefuserDifficulty": "Medium",
+  "Description": "Navigate two mazes at once to block your opponent and find the goal. Tags: colored-squares, 4x4-grid, 4×4-grid, colors, 16-buttons",
+  "ExpertDifficulty": "Easy",
+  "ModuleID": "TombstoneMazeModule",
+  "Name": "Tombstone Maze",
+  "ObsoleteSteamIDs": [ "2796441641" ],
+  "Origin": "Mods",
+  "Published": "2022-04-18",
+  "SortKey": "TOMBSTONEMAZE",
+  "SourceUrl": "https://github.com/eXish/ktane-tombstonemaze",
+  "Souvenir": {
+    "Explanation": "Souvenir could ask about the initially displayed maze.",
+    "Status": "Considered"
+  },
+  "SteamID": "2801226347",
+  "Symbol": "Tmz",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/OmkWRWVh6Do"
+  } ],
+  "Type": "Regular"
+}

@@ -31,11 +31,6 @@
                 width: 50%;
             }
         }
-        @media print {
-            a[href]:after {
-                content: none !important;
-            }
-        }
         .row:after {
             content: "";
             display: table;
@@ -54,8 +49,18 @@
             text-align: center;
             dominant-baseline: central;
         }
+        .dark .node {
+            fill: #DDD;
+        }
+        .dark line {
+            stroke: #DDD;
+        }
+
         .nodeWhiteText {
             fill: white !important;
+        }
+        .dark .nodeWhiteText { 
+            fill: #222 !important;
         }
         .selectedVertex {
             fill: yellow !important;
@@ -65,8 +70,12 @@
         }
         .vertex {
             fill: white;
-            stroke: #000000;
+            stroke: #000;
             stroke-width: 1;
+        }
+        .dark .vertex {
+            fill: #222;
+            stroke: #DDD;
         }
         .notVisible {
             stroke: none !important;
@@ -92,6 +101,9 @@
             overflow: hidden;
             transition: max-height 0.2s ease-out;
             background-color: #f1f1f1;
+        }
+        .dark .helpMessage li { 
+            color: black;
         }
         .flexContainer {
             display: flex;
@@ -1077,7 +1089,7 @@
                         <li>Copying from the list above will reset everything and everything copied will be inserted into the Start list box.</li>
                         <li>Select a creature and click on left right arrows to simulate movement across the river.</li>
                         <li>Each step can be saved by clicking the Save State button. If you add a new state, the step counter will increase by 1.</li>
-                        <li>There's no default state or state at step 0. You must save this manually.</li>
+                        <li>There’s no default state or state at step 0. You must save this manually.</li>
                         <li>You can cycle between steps by pressing previous or next buttons. Last inputs made in each step will be marked in yellow.</li>
                         <li>You can rewrite any certain step by changing to the step you want and press Save State button after you modify it. Doing this will also delete all subsequent states.</li>
                         <li>If there is no changes to the step you are modifying, clicking Save State button will do nothing.</li>

@@ -1,6 +1,10 @@
 {
-  "Author": "Blananas2",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Blananas2" ],
+    "Manual": [ "Blananas2" ],
+    "Manual graphics": [ "LuminoscityTim" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Navigate a maze that is filled with phrases akin to the letter K. Tags: phrase, circle, four-arrows",
   "ExpertDifficulty": "Easy",
@@ -13,5 +17,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2267055569",
   "Symbol": "Kmzt",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/cz2wit-Hm2c"
+  } ],
   "Type": "Regular"
 }

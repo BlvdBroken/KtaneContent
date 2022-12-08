@@ -10,12 +10,17 @@
   "Published": "2017-01-24",
   "SortKey": "HTTPRESPONSE",
   "SourceUrl": "https://github.com/Sirawit7205/ktanehttp",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "849369200",
   "Symbol": "Http",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=-unHj2e3HTU",
-    "default": "https://www.youtube.com/watch?v=wCeurHfKOeE"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=-unHj2e3HTU"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=wCeurHfKOeE"
+    }
+  ],
   "Type": "Needy"
 }

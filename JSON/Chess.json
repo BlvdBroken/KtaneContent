@@ -1,6 +1,9 @@
 {
-  "Author": "Flamanis, MoMo",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Flamanis" ],
+    "Manual": [ "MoMo" ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Find out which square on a 6×6 chess board is not attacked by any piece. Tags: 1-to-6, a-to-f, 6-lights, 12-buttons, display, hyphen, dash",
   "ExpertDifficulty": "Medium",
@@ -14,10 +17,19 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "751202722",
   "Symbol": "Ch",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=ZaS9pxy0J1E",
-    "default": "https://www.youtube.com/watch?v=k37Pf8dYn6g",
-    "Français": "https://youtu.be/OHVp35_nD8I"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=ZaS9pxy0J1E"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=k37Pf8dYn6g"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/OHVp35_nD8I"
+    }
+  ],
   "Type": "Regular"
 }

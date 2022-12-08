@@ -2,7 +2,7 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "jimmythelynx" ],
-    "Twitch Plays": [ "Danny7007" ]
+    "Twitch Plays": [ "tandyCake" ]
   },
   "DefuserDifficulty": "Medium",
   "Description": "Identify a hazard and form a number triangle to figure out the correct time to unscrew a warning sign. Tags: hazard, black, yellow, triangle, three, screws",
@@ -11,7 +11,7 @@
   "Name": "Warning Signs",
   "Origin": "Mods",
   "Published": "2021-05-24",
-  "SortKey": "WARNINGSINGS",
+  "SortKey": "WARNINGSIGNS",
   "SourceUrl": "https://github.com/jimmythelynx/WarningSigns",
   "Souvenir": {
     "Explanation": "Souvenir could ask about the time each screw was unscrewed.",
@@ -19,5 +19,9 @@
   },
   "SteamID": "2496247474",
   "Symbol": "Wrn",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/USRPwo8358s"
+  } ],
   "Type": "Regular"
 }

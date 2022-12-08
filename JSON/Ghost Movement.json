@@ -2,7 +2,7 @@
   "Author": "Blananas2",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "VeryEasy",
-  "Description": "Calculate the directions in which the 4 Pac-Man ghosts move in. Tags: 5-circles, 5-screens, 5-buttons",
+  "Description": "Calculate the directions in which the 4 Pac-Man ghosts move. Tags: 5-circles, 5-screens, 5-buttons",
   "ExpertDifficulty": "Medium",
   "ModuleID": "ghostMovement",
   "Name": "Ghost Movement",
@@ -12,5 +12,9 @@
   "SourceUrl": "https://github.com/Blananas2/ktane-ghostMovement",
   "SteamID": "2400323193",
   "Symbol": "Gmm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/6tajFd6kZQA"
+  } ],
   "Type": "Regular"
 }

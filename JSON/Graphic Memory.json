@@ -1,6 +1,9 @@
 {
-  "Author": "TheThirdMan",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "TheThirdMan" ],
+    "Maintainer": [ "VFlyer" ]
+  },
   "DefuserDifficulty": "Hard",
   "Description": "Press buttons showing squares and triangles of various colors and remember all the graphical properties of all previously pressed buttons to progress. Tags: 4-buttons, squares, triangles, colors",
   "ExpertDifficulty": "Medium",
@@ -14,6 +17,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2360669324",
   "Symbol": "Gmem",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=ssBpjBdF0PY" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=ssBpjBdF0PY"
+  } ],
   "Type": "Regular"
 }

@@ -1,6 +1,21 @@
 {
-  "Author": "Timwi, Livio, DanielL, Rexkix",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [
+      "Timwi",
+      "Livio"
+    ],
+    "Idea": [
+      "Timwi",
+      "Livio",
+      "DanielL",
+      "Rexkix"
+    ],
+    "Manual": [
+      "DanielL",
+      "Timwi"
+    ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Diagnose an illness and determine the correct drug, dose, and follow-up appointment. Tags: medical, blue-module, 6-displays, 12-buttons, 8-buttons, 7-segment-display",
   "ExpertDifficulty": "Medium",
@@ -14,6 +29,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1978024508",
   "Symbol": "Drdr",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=pyN8Fvs3gWQ" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/Q_0DwcJiSHo"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/pyN8Fvs3gWQ"
+    }
+  ],
   "Type": "Regular"
 }

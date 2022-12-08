@@ -4,16 +4,18 @@
   "DefuserDifficulty": "Medium",
   "Description": "The module is connected to a network that you need to break down. Tags: console, black, amogus, sus, impostor",
   "ExpertDifficulty": "Medium",
-  "IsSolveOrderSensitive": true,
   "ModuleID": "susadmin",
-  "MysteryModule": "MustNotBeHidden",
   "Name": "SUSadmin",
   "Origin": "Mods",
   "Published": "2021-04-29",
-  "SolvesBeforeSome": true,
+  "Quirks": "SolvesBeforeSome",
   "SortKey": "SUSADMIN",
   "SourceUrl": "https://github.com/nicklatkovich/ktane_susadmin",
   "SteamID": "2471672316",
   "Symbol": "Sud",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/VAMCConVoqQ"
+  } ],
   "Type": "Regular"
 }

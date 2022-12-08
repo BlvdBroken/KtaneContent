@@ -1,6 +1,13 @@
 {
-  "Author": "Royal_Flu$h, WhiteShadowZz",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Royal_Flu$h" ],
+    "Manual": [ "WhiteShadowZz" ],
+    "Twitch Plays": [
+      "eXish",
+      "red031000"
+    ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Bring a series of numbers into alphabetical order according to their English name. Tags: circle, 6-numbers, 4-segments",
   "ExpertDifficulty": "Medium",
@@ -16,6 +23,9 @@
   },
   "SteamID": "1429305542",
   "Symbol": "Anum",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=oU0RcO62SbY" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=oU0RcO62SbY"
+  } ],
   "Type": "Regular"
 }

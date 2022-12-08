@@ -1,18 +1,34 @@
 {
-  "Author": "SillyPuppy",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "SillyPuppy" ],
+    "Maintainer": [
+      "Deaf",
+      "Quinn Wuest"
+    ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Close out a certain number of points by placing darts on a dartboard in the correct locations to get an exact score determined by edgework. Tags: red, green, black, white, bullseye",
   "ExpertDifficulty": "Hard",
   "ModuleID": "X01",
   "Name": "X01",
+  "ObsoleteSteamIDs": [ "1381875427" ],
   "Origin": "Mods",
   "Published": "2018-05-09",
   "SortKey": "X01",
-  "SourceUrl": "https://github.com/SillyPuppy/KTaNE_X01",
+  "SourceUrl": "https://github.com/Fartlicker777/KtaneX01",
   "Souvenir": { "Status": "NotACandidate" },
-  "SteamID": "1381875427",
+  "SteamID": "2833612078",
   "Symbol": "X",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=pRicQkivpAg" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/rrstEuh24LY"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/pRicQkivpAg"
+    }
+  ],
   "Type": "Regular"
 }

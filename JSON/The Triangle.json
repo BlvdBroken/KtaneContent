@@ -1,6 +1,9 @@
 {
-  "Author": "Royal_Flu$h",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Royal_Flu$h" ],
+    "Twitch Plays": [ "eXish" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Press a sequence of triangular buttons based on a rotating triangle and a piece of triangular artwork. Tags: triangles, art, rotating",
   "ExpertDifficulty": "Easy",
@@ -13,6 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1580139420",
   "Symbol": "Tri",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=WdJVX3YChJk" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=WdJVX3YChJk"
+  } ],
   "Type": "Regular"
 }

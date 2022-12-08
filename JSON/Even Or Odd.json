@@ -1,5 +1,4 @@
 {
-  "Author": "VFlyer, BigCrunch22",
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "VFlyer" ],
@@ -13,9 +12,13 @@
   "Origin": "Mods",
   "Published": "2020-09-21",
   "SortKey": "EVENORODD",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/EvenOrOdd",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1940164898",
   "Symbol": "Eoo",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/-kA3zf9aZ_0"
+  } ],
   "Type": "Regular"
 }

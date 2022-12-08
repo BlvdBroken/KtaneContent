@@ -3,7 +3,7 @@
   "Contributors": {
     "Developer": [ "VFlyer" ],
     "Maintainer": [ "VFlyer" ],
-    "Manual": [ "Kusane" ]
+    "Manual": [ "Kusane Hexaku" ]
   },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Press some buttons based on the labels on said buttons, and a chart. Tags: numbers, 16-buttons, grid",
@@ -14,9 +14,13 @@
   "Published": "2020-11-05",
   "RuleSeedSupport": "Supported",
   "SortKey": "NUMBEREDBUTTONS",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/Numbered%20Buttons",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1940164898",
   "Symbol": "Numb",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/H4Fgb_2YNfM"
+  } ],
   "Type": "Regular"
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/ktane-utils.js"></script>
-    <style type="text/css">
+    <style>
         .compress-h3 h3 {
             margin-top: 0.7em;
         }
@@ -54,6 +54,17 @@
         }
         .dark table, table {
             border: none;
+        }
+        .half-column li {
+            font-size: 11pt;
+        }
+        .footnote {
+            font-style: italic;
+            font-size: 75%;
+        }
+        .meal-headers {
+            font-size: 32px;
+            text-align: center;
         }
     </style>
 </head>
@@ -162,7 +173,6 @@
                         <li>Quail</li>
                         <li>Filet Mignon</li>
                     </ul>
-
                     <h3>Fish and Seafood</h3>
                     <ul>
                         <li>Crab</li>
@@ -200,7 +210,7 @@
                     </ul>
 
                     <br>
-                    <p class="flavour-text">*Consult Appendix KH-3 (available at your local video game retailer) for more information on what makes these fruits &ldquo;special.&rdquo;</p>
+                    <p class="footnote">*Consult Appendix KH-3 (available at your local video game retailer) for more information on what makes these fruits &ldquo;special.&rdquo;</p>
                 </div>
                 <div class="half-column">
                     <h3>Herbs and Spices</h3>
@@ -260,7 +270,7 @@
 
                 <p class="compress">This module uses the following recipes from the world-famous Le Grand Bistrot, headed by executive chef Remy (a.k.a. Little Chef).  The icon to the left of each dish name indicates which technique is needed to cook the dish.  The italicized descriptions of each dish should not have any bearing on which ingredients are needed for them, even if they may imply the use of additional ingredients beyond those listed.</p>
 
-                <h3>Les Entr&eacute;es (Starters)</h3>
+                <h3 class="meal-headers">Les Entr&eacute;es (Starters)</h3>
 
                 <h4><img src="img/Ingredients/egg32.png" class="recipe-icon">Mushroom Terrine</h4>
                 <div class="recipe-description">A lavish mushroom medley, complex in texture and aroma.</div>
@@ -282,7 +292,7 @@
                 <div class="recipe-description">Juicy tomato meets bright strawberry in this wonderfully balanced mix of sweet and acidic flavors.</div>
                 <div class="recipe-list">Strawberry, Tomato, Cheese, Basil</div>
 
-                <h3>Les Potages (Soups)</h3>
+                <h3 class="meal-headers">Les Potages (Soups)</h3>
 
                 <h4><img src="img/Ingredients/knife32.png" class="recipe-icon">Consomm&eacute;</h4>
                 <div class="recipe-description">This translucent amber soup is pure umami magic on the palate.</div>
@@ -312,7 +322,7 @@
                 <div class="recipe-description">The juiciness of ripe tomato and watermelon mingle in this delightful chilled soup.</div>
                 <div class="recipe-list">Watermelon, Tomato, Dill</div>
 
-                <h3>Les Poissons (Fish)</h3>
+                <h3 class="meal-headers">Les Poissons (Fish)</h3>
 
                 <h4><img src="img/Ingredients/pepper32.png" class="recipe-icon">Sole Meuni&egrave;re</h4>
                 <div class="recipe-description">Prime sole filet, dredged in flour and pan-fried in golden butter.</div>
@@ -346,7 +356,7 @@
                 <span class="page-header-section-title">Ingredients</span>
             </div>
             <div class="page-content compress-ul">
-                <h3>Les Viandes (Meats)</h3>
+                <h3 class="meal-headers">Les Viandes (Meats)</h3>
 
                 <h4><img src="img/Ingredients/fire32.png" class="recipe-icon">Sweetbread Po&ecirc;l&eacute;</h4>
                 <div class="recipe-description">The dense flavor and airy texture of sweetbread, paired with a breezy lemon butter sauce.</div>
@@ -368,7 +378,7 @@
                 <div class="recipe-description">The refined taste of filet mignon, enhanced by a cherry sauce artfully balancing sour and sweet.</div>
                 <div class="recipe-list">Sour Cherry, Butter, Black Truffle, Rosemary, Cloves, Filet Mignon</div>
 
-                <h3>Les Desserts (Desserts)</h3>
+                <h3 class="meal-headers">Les Desserts (Desserts)</h3>
 
                 <h4><img src="img/Ingredients/egg32.png" class="recipe-icon">Chocolate Mousse</h4>
                 <div class="recipe-description">Luxe, fragrant chocolate, whipped into a light mousse that melts in your mouth.</div>

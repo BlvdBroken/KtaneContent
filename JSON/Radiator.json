@@ -1,6 +1,9 @@
 {
-  "Author": "red031000, Inova",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "red031000" ],
+    "Manual": [ "Inova" ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Control the temperature of a radiator by inputting the temperature and the amount of water on the module. Tags: red-reset, green-submit, keypad, 0-to-9, 7-segment-display",
   "ExpertDifficulty": "Easy",
@@ -14,6 +17,15 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1291601109",
   "Symbol": "Rdt",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=KKrX9nXgaSY" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/buUeg6bAxps"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/KKrX9nXgaSY"
+    }
+  ],
   "Type": "Regular"
 }

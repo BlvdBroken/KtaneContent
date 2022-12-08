@@ -9,15 +9,17 @@
   "Description": "Drink the non-poisoned chalice based on an arbitrary flowchart. Tags: cups",
   "ExpertDifficulty": "Medium",
   "ModuleID": "Chalices",
-  "MysteryModule": "MustNotBeHidden",
   "Name": "Chalices",
   "Origin": "Mods",
   "Published": "2020-07-13",
   "SortKey": "CHALICES",
-  "SourceUrl": "https://github.com/Fartlicker777/Trivia-Murder-Party",
+  "SourceUrl": "https://github.com/Fartlicker777/Trivia-Murder-Party/tree/master/Trivia%20Murder%20Party/Assets/Modules/Chalices",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2114337227",
   "Symbol": "Ccs",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=xBgo7Odb_WY" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=xBgo7Odb_WY"
+  } ],
   "Type": "Regular"
 }

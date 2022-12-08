@@ -1,0 +1,20 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "Eltrick" ] },
+  "DefuserDifficulty": "VeryEasy",
+  "Description": "From a set of modular equations, find a valid value that satisfies all of them. Tags: keypad, red-button, green-button, display",
+  "ExpertDifficulty": "Medium",
+  "ModuleID": "ChineseRemainderTheoremModule",
+  "Name": "Chinese Remainder Theorem",
+  "Origin": "Mods",
+  "Published": "2022-06-10",
+  "SortKey": "CHINESEREMAINDERTHEOREM",
+  "SourceUrl": "https://github.com/Eltrick/ChineseRemainderTheoremModule",
+  "SteamID": "2819132332",
+  "Symbol": "Crt",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/l-Mo_Pc0HLo"
+  } ],
+  "Type": "Regular"
+}

@@ -1,7 +1,7 @@
 {
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "TasThing" ],
+    "Developer": [ "TasThiluna" ],
     "Manual": [ "Procyon" ]
   },
   "DefuserDifficulty": "Easy",
@@ -17,5 +17,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1892878540",
   "Symbol": "Mnm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/le3-Ln6UclM"
+  } ],
   "Type": "Regular"
 }

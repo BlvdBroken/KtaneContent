@@ -10,7 +10,12 @@
   "Published": "2021-04-18",
   "SortKey": "SYSADMIN",
   "SourceUrl": "https://github.com/nicklatkovich/ktane_sysadmin",
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "2460596419",
   "Symbol": "Sad",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/-kL9YvZen1E"
+  } ],
   "Type": "Regular"
 }

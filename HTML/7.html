@@ -15,6 +15,7 @@
             width: 100%;
             font-size: 150%;
         }
+        .dark img:not(.diagram) { filter: invert(85%); }
     </style>
 </head>
 <body>
@@ -26,7 +27,7 @@
             </div>
             <div class="page-content">
                 <img src="img/Component/7.svg" class="diagram">
-                <h2>The Subject of 7</h2>
+                <h2>On the Subject of 7</h2>
                 <p class="flavour-text">It got half as many lines as its counterpart. But double the problems as the counterpart.</p>
                 <p>The module shows a 7-segment display, a rotated diamond consisting of 8 unique RGB colors, a stage indicator, and an LED, which is pressable.<br>
                 If the LED is not pressable, there are more segments, the diamond is not rotated, or the stage indicator is showing more than 1 digit, you are looking at the wrong module.</p>
@@ -89,7 +90,7 @@
                     </tr>
                     <tr>
                         <th>White</th>
-                        <td></td>
+                        <td style="background-color: white"></td>
                         <td>T<sub>n</sub> = T<sub>n-1</sub> &times; D<sub>n</sub></td>
                         <td>T<sub>n</sub> = T<sub>n-1</sub> &times; (-D<sub>n</sub>)</td>
                     </tr>

@@ -1,6 +1,9 @@
 {
-  "Author": "Andrio Celos, Kusane",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Andrio Celos" ],
+    "Manual": [ "Kusane Hexaku" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Press the correct button depending on the phrase and punctuation shown in this Venting Gas lookalike. Tags: 2-buttons, timer, N, Y, needy, hazard, warning",
   "ExpertDifficulty": "Easy",
@@ -9,9 +12,12 @@
   "Origin": "Mods",
   "Published": "2020-03-31",
   "SortKey": "NOTVENTINGGAS",
-  "SourceUrl": "https://github.com/AndrioCelos/KtaneNotVanillaModules",
-  "Souvenir": { "Status": "NotACandidate" },
+  "SourceUrl": "https://github.com/AndrioCelos/KtaneNotVanillaModules/tree/main/Assets/Modules/Not%20Venting%20Gas",
   "SteamID": "2003251353",
   "Symbol": "Nvg",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/swxCga9KRnQ"
+  } ],
   "Type": "Needy"
 }

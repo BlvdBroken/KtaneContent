@@ -5,7 +5,7 @@
     "Modeling": [ "Blananas2" ]
   },
   "DefuserDifficulty": "Easy",
-  "Description": "Find the chosen sequences based on how they mix via RGB color addition. Tags: red, green, blue, ovals, elipse",
+  "Description": "Find the chosen sequences based on how they mix via RGB color addition. Tags: red, green, blue, ovals, ellipse",
   "ExpertDifficulty": "Medium",
   "ModuleID": "RGBSequences",
   "Name": "RGB Sequences",
@@ -16,6 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2136722123",
   "Symbol": "Rgbs",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=CIK6s7lfgv0" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=CIK6s7lfgv0"
+  } ],
   "Type": "Regular"
 }

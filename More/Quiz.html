@@ -1,200 +1,10 @@
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Quiz</title>
+    <script src="QuizData.js"></script>
     <script>
-        let everything = {
-            'General': {
-                'Semaphores': {
-                    'CSS': 'semaphores',
-                    'RandomizeRight': true,
-                    'Groups': [ 'letters', 'images' ],
-                    'Items': [
-                        [
-                            [ 'A', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Alpha.svg" />' ],
-                            [ 'B', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Bravo.svg" />' ],
-                            [ 'C', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Charlie.svg" />' ],
-                            [ 'D', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Delta.svg" />' ],
-                            [ 'E', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Echo.svg" />' ],
-                            [ 'F', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Foxtrot.svg" />' ],
-                            [ 'G', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Golf.svg" />' ],
-                            [ 'H', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Hotel.svg" />' ],
-                            [ 'I', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_India.svg" />' ],
-                            [ 'J', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Juliet.svg" />' ],
-                            [ 'K', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Kilo.svg" />' ],
-                            [ 'L', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Lima.svg" />' ],
-                            [ 'M', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Mike.svg" />' ],
-                            [ 'N', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_November.svg" />' ],
-                            [ 'O', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Oscar.svg" />' ],
-                            [ 'P', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Papa.svg" />' ],
-                            [ 'Q', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Quebec.svg" />' ],
-                            [ 'R', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Romeo.svg" />' ],
-                            [ 'S', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Sierra.svg" />' ],
-                            [ 'T', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Tango.svg" />' ],
-                            [ 'U', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Uniform.svg" />' ],
-                            [ 'V', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Victor.svg" />' ],
-                            [ 'W', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Whiskey.svg" />' ],
-                            [ 'X', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_X-ray.svg" />' ],
-                            [ 'Y', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Yankee.svg" />' ],
-                            [ 'Z', '<img src="https://ktane.timwi.de/HTML/img/Semaphore/Semaphore_Zulu.svg" />' ]
-                        ]
-                    ]
-                },
-                'Morse Code': {
-                    'CSS': 'morse',
-                    'RandomizeRight': true,
-                    'Groups': [ 'letters', 'Morse code' ],
-                    'Items': [
-                        [
-                            [ 'A', '.-' ],
-                            [ 'B', '-...' ],
-                            [ 'C', '-.-.' ],
-                            [ 'D', '-..' ],
-                            [ 'E', '.' ],
-                            [ 'F', '..-.' ],
-                            [ 'G', '--.' ],
-                            [ 'H', '....' ],
-                            [ 'I', '..' ],
-                            [ 'J', '.---' ],
-                            [ 'K', '-.-' ],
-                            [ 'L', '.-..' ],
-                            [ 'M', '--' ],
-                            [ 'N', '-.' ],
-                            [ 'O', '---' ],
-                            [ 'P', '.--.' ],
-                            [ 'Q', '--.-' ],
-                            [ 'R', '.-.' ],
-                            [ 'S', '...' ],
-                            [ 'T', '-' ],
-                            [ 'U', '..-' ],
-                            [ 'V', '...-' ],
-                            [ 'W', '.--' ],
-                            [ 'X', '-..-' ],
-                            [ 'Y', '-.--' ],
-                            [ 'Z', '--..' ],
-                            [ '0', '-----' ],
-                            [ '1', '.----' ],
-                            [ '2', '..---' ],
-                            [ '3', '...--' ],
-                            [ '4', '....-' ],
-                            [ '5', '.....' ],
-                            [ '6', '-....' ],
-                            [ '7', '--...' ],
-                            [ '8', '---..' ],
-                            [ '9', '----.' ]
-                        ]
-                    ]
-                },
-                'Zoni': {
-                    'CSS': 'zoni',
-                    'RandomizeRight': true,
-                    'Groups': [ 'letters', 'Zoni' ],
-                    'Items': [
-                        [
-                            [ 'A', '<div class="baseline-adjust">A</div>' ],
-                            [ 'B', '<div class="baseline-adjust">B</div>' ],
-                            [ 'C', '<div class="baseline-adjust">C</div>' ],
-                            [ 'D', '<div class="baseline-adjust">D</div>' ],
-                            [ 'E', '<div class="baseline-adjust">E</div>' ],
-                            [ 'F', '<div class="baseline-adjust">F</div>' ],
-                            [ 'G', '<div class="baseline-adjust">G</div>' ],
-                            [ 'H', '<div class="baseline-adjust">H</div>' ],
-                            [ 'I', '<div class="baseline-adjust">I</div>' ],
-                            [ 'J', '<div class="baseline-adjust">J</div>' ],
-                            [ 'K', '<div class="baseline-adjust">K</div>' ],
-                            [ 'L', '<div class="baseline-adjust">L</div>' ],
-                            [ 'M', '<div class="baseline-adjust">M</div>' ],
-                            [ 'N', '<div class="baseline-adjust">N</div>' ],
-                            [ 'O', '<div class="baseline-adjust">O</div>' ],
-                            [ 'P', '<div class="baseline-adjust">P</div>' ],
-                            [ 'Q', '<div class="baseline-adjust">Q</div>' ],
-                            [ 'R', '<div class="baseline-adjust">R</div>' ],
-                            [ 'S', '<div class="baseline-adjust">S</div>' ],
-                            [ 'T', '<div class="baseline-adjust">T</div>' ],
-                            [ 'U', '<div class="baseline-adjust">U</div>' ],
-                            [ 'V', '<div class="baseline-adjust">V</div>' ],
-                            [ 'W', '<div class="baseline-adjust">W</div>' ],
-                            [ 'X', '<div class="baseline-adjust">X</div>' ],
-                            [ 'Y', '<div class="baseline-adjust">Y</div>' ],
-                            [ 'Z', '<div class="baseline-adjust">Z</div>' ]
-                        ]
-                    ]
-                },
-            },
-            'Skyrim': {
-                'Cities': {
-                    'CSS': 'skyrim',
-                    'RandomizeRight': true,
-                    'Groups': [ 'names', 'images' ],
-                    'Items': [
-                        [
-                            [ 'Dawnstar', '<img src="../HTML/img/Skyrim/Color/Cities/Dawnstar.png" />' ],
-                            [ 'Ivarstead', '<img src="../HTML/img/Skyrim/Color/Cities/Ivarstead.png" />' ],
-                            [ 'Markarth', '<img src="../HTML/img/Skyrim/Color/Cities/Markarth.png" />' ],
-                            [ 'Riverwood', '<img src="../HTML/img/Skyrim/Color/Cities/Riverwood.png" />' ],
-                            [ 'Rorikstead', '<img src="../HTML/img/Skyrim/Color/Cities/Rorikstead.png" />' ],
-                            [ 'Solitude', '<img src="../HTML/img/Skyrim/Color/Cities/Solitude.png" />' ],
-                            [ 'Whiterun', '<img src="../HTML/img/Skyrim/Color/Cities/Whiterun.png" />' ],
-                            [ 'Windhelm', '<img src="../HTML/img/Skyrim/Color/Cities/Windhelm.png" />' ],
-                            [ 'Winterhold', '<img src="../HTML/img/Skyrim/Color/Cities/Winterhold.png" />' ]
-                        ]
-                    ]
-                },
-                'Enemies': {
-                    'CSS': 'skyrim',
-                    'RandomizeRight': true,
-                    'Groups': [ 'names', 'images' ],
-                    'Items': [
-                        [
-                            [ 'Alduin', '<img src="../HTML/img/Skyrim/Color/Enemies/Alduin.png" />' ],
-                            [ 'Blood Dragon', '<img src="../HTML/img/Skyrim/Color/Enemies/Blood Dragon.png" />' ],
-                            [ 'Cave Bear', '<img src="../HTML/img/Skyrim/Color/Enemies/Cave Bear.png" />' ],
-                            [ 'Dragon Priest', '<img src="../HTML/img/Skyrim/Color/Enemies/Dragon Priest.png" />' ],
-                            [ 'Draugr', '<img src="../HTML/img/Skyrim/Color/Enemies/Draugr.png" />' ],
-                            [ 'Draugr Overlord', '<img src="../HTML/img/Skyrim/Color/Enemies/Draugr Overlord.png" />' ],
-                            [ 'Frost Troll', '<img src="../HTML/img/Skyrim/Color/Enemies/Frost Troll.png" />' ],
-                            [ 'Frostbite Spider', '<img src="../HTML/img/Skyrim/Color/Enemies/Frostbite Spider.png" />' ],
-                            [ 'Mudcrab', '<img src="../HTML/img/Skyrim/Color/Enemies/Mudcrab.png" />' ]
-                        ]
-                    ]
-                },
-                'Races': {
-                    'CSS': 'skyrim',
-                    'RandomizeRight': true,
-                    'Groups': [ 'names', 'images' ],
-                    'Items': [
-                        [
-                            [ 'Altmer', '<img src="../HTML/img/Skyrim/Color/Races/Altmer.png" />' ],
-                            [ 'Argonian', '<img src="../HTML/img/Skyrim/Color/Races/Argonian.png" />' ],
-                            [ 'Breton', '<img src="../HTML/img/Skyrim/Color/Races/Breton.png" />' ],
-                            [ 'Dunmer', '<img src="../HTML/img/Skyrim/Color/Races/Dunmer.png" />' ],
-                            [ 'Imperial', '<img src="../HTML/img/Skyrim/Color/Races/Imperial.png" />' ],
-                            [ 'Khajiit', '<img src="../HTML/img/Skyrim/Color/Races/Khajiit.png" />' ],
-                            [ 'Nord', '<img src="../HTML/img/Skyrim/Color/Races/Nord.png" />' ],
-                            [ 'Orc', '<img src="../HTML/img/Skyrim/Color/Races/Orc.png" />' ],
-                            [ 'Redguard', '<img src="../HTML/img/Skyrim/Color/Races/Redguard.png" />' ]
-                        ]
-                    ]
-                },
-                'Weapons': {
-                    'CSS': 'skyrim',
-                    'RandomizeRight': true,
-                    'Groups': [ 'names', 'images' ],
-                    'Items': [
-                        [
-                            [ 'Axe of Whiterun', '<img src="../HTML/img/Skyrim/Color/Weapons/Axe of Whiterun.png" />' ],
-                            [ 'Blade of Woe', '<img src="../HTML/img/Skyrim/Color/Weapons/Blade of Woe.png" />' ],
-                            [ 'Bow of the Hunt', '<img src="../HTML/img/Skyrim/Color/Weapons/Bow of the Hunt.png" />' ],
-                            [ 'Chillrend', '<img src="../HTML/img/Skyrim/Color/Weapons/Chillrend.png" />' ],
-                            [ 'Dawnbreaker', '<img src="../HTML/img/Skyrim/Color/Weapons/Dawnbreaker.png" />' ],
-                            [ 'Firiniel’s End', '<img src="../HTML/img/Skyrim/Color/Weapons/Firiniel%27s End.png" />' ],
-                            [ 'Mace of Molag Bal', '<img src="../HTML/img/Skyrim/Color/Weapons/Mace of Molag Bal.png" />' ],
-                            [ 'Volendrung', '<img src="../HTML/img/Skyrim/Color/Weapons/Volendrung.png" />' ],
-                            [ 'Windshear', '<img src="../HTML/img/Skyrim/Color/Weapons/Windshear.png" />' ]
-                        ]
-                    ]
-                }
-            },
-        };
-
         let timeout;
         let mode = 2;
 
@@ -222,25 +32,33 @@
         function startQuiz(thing, inf)
         {
             mode = 2;
-            let itemGroups = inf.Items;
-            let numTotalItems = itemGroups.reduce((p, n) => p + n.length, 0);
+            const itemGroups = inf.Items;
+            const numTotalItems = itemGroups.reduce((p, n) => p + n.length, 0);
+            const hasSounds = inf.SoundPath;
+            const hasVideos = inf.VideoPath;
 
-            document.getElementById('quiz').innerHTML = `
+            const quiz = document.getElementById('quiz');
+            quiz.innerHTML = `
                 <h1 id='header'>${thing}<${''}/h1>
                 <div id='challenge'><${''}/div>
                 <div id='answers'><${''}/div>
                 <button id='back-button'>&lt; Back<${''}/button>
-                <button id='mode-button'><${''}/button>
             `;
-            document.getElementById('quiz').className = inf.CSS;
+            if (!hasSounds) quiz.innerHTML += "<button id='mode-button'></button>";
+            quiz.className = inf.CSS;
 
             function updateModeButton() {
-                document.getElementById('mode-button').innerHTML = mode === 2 ? 'Display both' : `Display only ${inf.Groups[mode]}`;
+                const btn = document.getElementById('mode-button');
+                if (btn) btn.innerHTML = mode === 2 ? 'Display both' : `Display only ${inf.Groups[mode]}`;
             }
             updateModeButton();
 
             function showQuestion()
             {
+                window.location.hash = thing;
+                const limitLeftAnswers = inf.LimitLeftAnswers;
+                const limitRightAnswers = inf.LimitRightAnswers;
+
                 clearTimeout(timeout);
                 timeout = null;
                 let itemIx = (Math.random() * numTotalItems) | 0;
@@ -249,12 +67,45 @@
                     itemIx -= itemGroups[groupIx].length;
                     groupIx++;
                 }
-                let item = itemGroups[groupIx][itemIx];
+                const item = itemGroups[groupIx][itemIx];
                 let first = mode < 2 ? (1 - mode) : ((Math.random() * 2) | 0);
+                if (hasSounds) first = 0;
 
-                document.getElementById('challenge').innerHTML = item [ first ? 0 : 1 ];
+                let ansIx = ((Math.random() * (item.length - 1)) | 0) + 1;
+                document.getElementById('challenge').innerHTML = item [ first ? 0 : ansIx ];
 
-                let answers = itemGroups[groupIx].map((item, ix) => ({ correct: ix === itemIx, item: item [ first ? 1 : 0 ] }));
+                let answers = [];
+                for (let i = 1; i < item.length; ++i) {
+                    const a = itemGroups[groupIx].map((item, ix) => ({ correct: ix === itemIx, item: item [ first ? i : 0 ] }));
+                    for (let j = 0; j < a.length; ++j)
+                        if (answers)
+                            answers.push(a[j]);
+                }
+                function onlyUnique(value, index, arr) {
+                    for (let i = 0; i < arr.length; ++i) {
+                        if (arr[i].correct == value.correct && arr[i].item == value.item)
+                            if (i === index)
+                                return true;
+                            else
+                                return false;
+                    }
+                    return false;
+                }
+                answers = answers.filter(onlyUnique);
+
+                let answerLimit = first ? limitRightAnswers : limitLeftAnswers;
+                function limitQuantity(value) {
+                    if (value.correct || this.count < answerLimit) {
+                        this.count++;
+                        return true;
+                    }
+                    return false;
+                }
+                if (answerLimit) {
+                    answers = answers.filter(limitQuantity, {count: 0});
+                    if (answers.length > answerLimit)
+                        answers.shift();
+                }
 
                 if (first ? inf.RandomizeRight : inf.RandomizeLeft)
                     for (let i = answers.length - 1; i > 0; i--) {
@@ -277,8 +128,19 @@
                             timeout = setTimeout(showQuestion, 700);
                         } else {
                             btn.classList.add('wrong');
-                            document.getElementById('answers').querySelector('button.correct-answer').classList.add('correct');
-                            timeout = setTimeout(showQuestion, 1500);
+                            document.getElementById('answers').querySelectorAll('button.correct-answer').forEach((item) => {
+                                item.classList.add('correct');
+                            });
+                            if (inf.DelayShowWrongRight && first) {
+                                let t = Math.floor(inf.DelayShowWrongRight * 1000);
+                                timeout = setTimeout(showQuestion, t);
+                            }
+                            else if (inf.DelayShowWrongLeft && !first) {
+                                let t = Math.floor(inf.DelayShowWrongLeft * 1000);
+                                timeout = setTimeout(showQuestion, t);
+                            }
+                            else
+                                timeout = setTimeout(showQuestion, 1500);
                         }
                         return false;
                     };
@@ -286,11 +148,70 @@
 
                 document.getElementById('challenge').className = first ? 'left' : 'right';
                 document.getElementById('answers').className = first ? 'right' : 'left';
+
+                if (hasSounds) {
+                    const audio = document.createElement("audio");
+                    const buttons = document.getElementsByTagName("a");
+                    for (button of buttons)
+                    {
+                        const sound = button.dataset.sound;
+                        button.href = "#";
+                        button.classList.add("play-button");
+                        button.innerHTML = "\u25b6";
+                        button.onclick = () =>
+                        {
+                            if (button.classList.contains("playing"))
+                            {
+                                audio.pause();
+                                audio.currentTime = 0;
+                                for (btn of buttons)
+                                    btn.classList.remove("playing");
+                            }
+                            else
+                            {
+                                audio.src = `../HTML/audio/${inf.SoundPath}/${sound}`;
+                                audio.onerror = () => { button.classList.remove("playing"); button.classList.add("failed"); };
+                                audio.onended = () => button.classList.remove("playing");
+                                audio.play();
+                                button.classList.add("playing");
+                            }
+
+                            return false;
+                        };
+                    }
+                }
+                else if (hasVideos) {
+                    const shouldLoop = inf.VideoLoops;
+                    // const video = document.createElement("video");
+                    const videos = document.getElementsByTagName("video");
+                    for (video of videos)
+                    {
+                        const vid = video.dataset.vid;
+                        video.src = `../HTML/video/${inf.VideoPath}/${vid}`;
+                        if (shouldLoop) {
+                            video.play();
+                        }
+                        else {
+                            video.controls = "controls";
+                        }
+                    }
+                    if (shouldLoop) {
+                        videos[videos.length - 1].onended = () => {
+                            for (video of videos) {
+                                video.play();
+                            }
+                        }
+                    }
+                }
             }
             showQuestion();
 
-            document.getElementById('back-button').addEventListener('click', showMenuScreen);
-            document.getElementById('mode-button').addEventListener('click', () => {
+            document.getElementById('back-button').addEventListener('click', () => {
+                window.location.hash = '';
+                showMenuScreen();
+            });
+            const modeBtn = document.getElementById('mode-button');
+            if (modeBtn) modeBtn.addEventListener('click', () => {
                 mode = (mode + 1) % 3;
                 updateModeButton();
                 showQuestion();
@@ -298,6 +219,10 @@
         }
 
         window.addEventListener('load', showMenuScreen);
+        window.onhashchange = function() {
+            if (window.location.hash.length < 1)
+                showMenuScreen();
+        }
     </script>
     <link rel="stylesheet" type="text/css" href="../HTML/css/font.css">
     <style>
@@ -377,16 +302,104 @@
                 box-shadow: 0 0 .25cm rgba(255, 255, 255, 1);
             }
 
+        .flags #answers { font-size: 16pt; }
+        .flags #answers img, .flags #answers svg { width: 2cm; }
+        .flags #challenge { font-size: 64pt; }
+        .flags #challenge img, .flags #challenge svg { width: 3cm; margin: .25cm 0; }
+
+        .flags.facerecog #answers, .flags.facerecog #challenge {
+            font-family: "zoftfrakt eYe/FS";
+        }
+        .flags.facerecog #answers { font-size: 24pt; }
+        .flags.facerecog #answers img { width: 3cm; }
+        .flags.facerecog #challenge img { width: 4cm; }
+
+
+        .hypercube #answers video { width: 9cm; }
+        .hypercube #challenge video { width: 12cm; }
+
+        .gadgetron #answers img { width: 20mm; }
+        .gadgetron #challenge { font-size: 40pt; }
+        .gadgetron #challenge img { width: 30mm; }
+
+        .textonly #answers { font-size: 16pt; }
+        .textonly #challenge {font-size: 50pt;}
+        .textonly.logic #answers { font-size: 25pt; }
+        .textonly.logic #challenge { font-size: 40pt; }
+
+        .laundry #answers { font-size: 15pt; }
+        .laundry #answers button { background: #fff; color: #04a; }
+        .laundry #challenge { font-size: 64pt; background: #fff; color: #04a; }
+        .laundry #challenge img { width: 5cm; margin: .25cm 0; }
+
         .morse #answers { font-size: 32pt; }
+        .morse #answers.left button, .morse #challenge.left { font-family: 'Inconsolata'; }
 
         .semaphores #answers { font-size: 32pt; }
         .semaphores #answers button { background: #04a; }
         .semaphores #answers img { width: 2cm; }
         .semaphores #challenge img { width: 10cm; margin: .25cm 0; }
 
+        .cube #answers button { font-family: 'KRA'; font-size: 50px; }
+        .cube #answers button span { font-family: 'Georgia'; font-size: 30px; }
+        .cube #challenge { font-family: 'KRA'; }
+        .cube #challenge span { font-family: 'Georgia'; }
+
+        .fontana #answers button { font-family: 'Fontana'; font-size: 60px; }
+        .fontana #answers button span { font-family: 'Georgia'; font-size: 30px; }
+        .fontana #challenge { font-family: 'Fontana'; font-size: 80px; }
+        .fontana #challenge span { font-family: 'Georgia'; font-size: 50px; }
+
+        .nypoint #answers button { font-family: 'New York Point'; font-size: 60px; }
+        .nypoint #answers button span { font-family: 'Georgia'; font-size: 30px; }
+        .nypoint #challenge { font-family: 'New York Point'; font-size: 70px; }
+        .nypoint #challenge span { font-family: 'Georgia'; }
+
+        .necronom #answers button { font-family: 'rlyehian'; font-size: 70px; }
+        .necronom #answers button span { font-family: 'Inconsolata'; font-size: 24px; }
+        .necronom #challenge { font-family: 'rlyehian'; font-size: 100px; }
+        .necronom #challenge span { font-family: 'Inconsolata'; }
+
+        .galactic #answers button { font-family: 'SGA'; font-size: 70px; }
+        .galactic #answers button span { font-family: 'Georgia'; font-size: 24px; }
+        .galactic #challenge { font-family: 'SGA'; font-size: 100px; }
+        .galactic #challenge span { font-family: 'Georgia'; }
+
+        .lombax #answers button { font-family: 'Lombax'; font-size: 50px; padding-top: 15px; }
+        .lombax #answers button span { font-family: 'Georgia'; font-size: 30px; padding-top: 0; }
+        .lombax #challenge { font-family: 'Lombax'; padding-top: 15px; }
+        .lombax #challenge span { font-family: 'Georgia'; padding-top: 0; }
+
+        svg.braille-pattern circle { stroke-width: .1; }
+        svg.braille-pattern circle.emptydot { fill: transparent; stroke: #55C; }
+        svg.braille-pattern circle.dot { fill: black; stroke: "none"; }
+        .zoo.braille #answers svg { width: 1.2cm; }
+        .zoo.braille #challenge svg { width: 2cm; }
+
         .zoni #answers { font-size: 32pt; }
         .zoni #challenge.right { font-family: 'Zoni'; font-size: 100pt; height: 150pt; padding-bottom: 25pt; }
         .zoni #answers.right button { font-family: 'Zoni'; font-size: 32pt; height: 50pt; padding-bottom: 8pt; padding-top: 0; }
+
+        .zoo #answers { font-size: 15pt; }
+        .zoo #answers svg { width: 2cm; }
+        .zoo #challenge { font-size: 64pt; }
+        .zoo #challenge svg { width: 5cm; margin: .25cm 0; }
+
+        .ipa #answers button { font-family: "Courier New"; font-weight: bold; }
+
+        .play-button { color: #fff; text-decoration: none; }
+        a.audio:hover:not(.failed):not(.playing) {
+            color: #ff8;
+        }
+
+        a.audio.playing {
+            color: #7f7;
+        }
+
+        a.audio.failed {
+            cursor: not-allowed;
+            color: red;
+        }
 
         /* Pseudo-class magic to adjust the baseline of the font. Requires the element to also have a height set */
         .baseline-adjust::after {
@@ -401,6 +414,11 @@
         .skyrim #answers { font-size: 16pt; }
         .skyrim #answers.right button { background: none; }
         .skyrim #answers img { height: 4.4cm; }
+
+        .boozleglyphs #answers { font-size: 25pt; }
+        .boozleglyphs #answers img { width: 1cm; }
+        .boozleglyphs #challenge {font-size: 64pt; }
+        .boozleglyphs #challenge img { width: 5cm; margin: .25cm 0; }
     </style>
 </head>
 <body>

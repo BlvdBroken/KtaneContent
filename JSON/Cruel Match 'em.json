@@ -13,5 +13,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2156817530",
   "Symbol": "Cmch",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/aQI667bjje8"
+  } ],
   "Type": "Regular"
 }

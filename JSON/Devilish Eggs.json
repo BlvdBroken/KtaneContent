@@ -1,7 +1,7 @@
 {
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "TasThing" ],
+    "Developer": [ "TasThiluna" ],
     "Manual": [ "Vincology" ]
   },
   "DefuserDifficulty": "Hard",
@@ -17,5 +17,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2225927411",
   "Symbol": "Dgg",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/quHACt8Zfi0"
+  } ],
   "Type": "Regular"
 }

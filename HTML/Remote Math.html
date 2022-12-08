@@ -9,9 +9,20 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/ktane-utils.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            var f = document.getElementById("remote-math-frame");
+            if(localStorage.getItem("ktane-dark-mode") == "true") {
+                f.src = "https://remote-math.mrmelon54.xyz/?dark=true";
+            } else {
+                f.src = "https://remote-math.mrmelon54.xyz";
+            }
+        });
+    </script>
     <style>
-        table {
+        .dark table, table {
             margin: 1em auto;
+			border: none;
         }
 
         .strip-change-one td,
@@ -31,16 +42,16 @@
             <div class="page-content">
                 <img src="img/Component/Remote Math.svg" class="diagram">
                 <h2>On the Subject of Remote Math</h2>
-                <p class="flavour-text">You're telling me bombs now connect to the internet?</p>
+                <p class="flavour-text">You’re telling me bombs now connect to the internet?</p>
                 <p>
                     This module consists of a button and two fruit pictures.
                 </p>
                 <h3>Step 1:</h3>
                 <ul>
-                    <li>Take the top fruit's number on the defuser's module and multiply by 13.</li>
+                    <li>Take the top fruit’s number on the defuser's module and multiply by 13.</li>
                     <li>Add 21 if the fruit image from the top fruit on the defuser's module matches the text below the fruit.</li>
                     <li>Minus the number of ports.</li>
-                    <li>Divide by the right hand side fruit's number on the expert's module.</li>
+                    <li>Divide by the right hand side fruit’s number on the expert's module.</li>
                     <li>Round down to the closest integer.</li>
                     <li>Take the absolute value of this number.</li>
                     <li>Modulo this number by 20</li>
@@ -48,7 +59,7 @@
                 </ul>
                 <h3>Step 2:</h3>
                 <ul>
-                    <li>Take the right hand side fruit's number on the expert's module and multiply by the right hand side fruit's number on the defuser's module.</li>
+                    <li>Take the right hand side fruit’s number on the expert's module and multiply by the right hand side fruit’s number on the defuser's module.</li>
                     <li>Minus 54 if both fruit image's on the expert's module match the text below them.</li>
                     <li>Divide by the amount of batteries. (Ignore this step if there are no batteries.)</li>
                     <li>Round down to the closest integer.</li>
@@ -61,9 +72,9 @@
                 <ul>
                     <li>Take the total of the amount of times you pressed the two fruits on the expert's module and type in that number using the keypad.</li>
                     <li>Press plus.</li>
-                    <li>Take the top fruit's number on the defuser's module and type it in.</li>
+                    <li>Take the top fruit’s number on the defuser's module and type it in.</li>
                     <li>Press minus if the total number of batteries is more than 5. Otherwise press multiply.</li>
-                    <li>Take the right fruit's number on the defuser's module and type it in.</li>
+                    <li>Take the right fruit’s number on the defuser's module and type it in.</li>
                     <li>Press equals and then type the answer to this equation.</li>
                 </ul>
             </div>
@@ -83,7 +94,7 @@
                 <h3>Fruit Number Reference</h3>
                 <table>
                     <tr>
-                        <td colspan="2" rowspan="2"></td>
+                        <td class='corner' colspan="2" rowspan="2"></td>
                         <th colspan="6">Text</th>
                     </tr>
                     <tr>
@@ -174,7 +185,7 @@
             <div class="page-content">
                 <h3>Remote Math Expert Module</h3>
                 <center>
-                    <iframe width="600px" height="600px" style="border:0;" src="https://remote-math.onpointcoding.net"></iframe>
+                    <iframe id="remote-math-frame" width="600px" height="600px" style="border:0;" src="about:blank"></iframe>
                 </center>
             </div>
             <div class="page-footer relative-footer">Page 3 of 3</div>

@@ -13,10 +13,32 @@
         .dark table, table {
             border: none;
         }
-        @media print {
-            a[href]:after {
-                content: none !important;
-            }
+        .red, .pink, .orange, .yellow, .green, .sky, .blue, .purple, .black, .white {
+            width: 30px;
+        }
+        .red { background-color: #dd7e6b; }
+        .pink { background-color: #f4cccc; }
+        .orange { background-color: #f9cb9c; }
+        .yellow { background-color: #ffe599; }
+        .green { background-color: #b6d7a8; }
+        .sky { background-color: #d0e0e3; }
+        .blue { background-color: #9fc5e8; }
+        .purple { background-color: #b4a7d6; }
+        .black { background-color: #808080; }
+        .white { background-color: #fff; }
+        .dkred { background-color: #5b0f00; }
+        .dorange { background-color: #783f04; }
+        .dyellow { background-color: #7f6000; }
+        .dgreen { background-color: #274e13; }
+        .dblue { background-color: #1c4587; }
+        .dpurple { background-color: #4c1130; }
+
+        .corner { color: white; }
+        .corner::after { content: 'boo'; }
+        td { text-align: center; }
+        .footnote {
+            font-style: italic;
+            font-size: 75%;
         }
     </style>
 </head>
@@ -32,7 +54,7 @@
                 <h2>On the Subject of...?</h2>
                 <p class="flavour-text">“Memory… is the diary we all keep with us.” ~Oscar Wilde.</p>
                 <p class="flavour-text">I never was the type to keep a diary.</p>
-                <p class="appendix-reference" id="appendix-reference">See Appendix BLANK in <a href="Blind%20Alley.html">Blind Alley</a> for blank modules identification.</p>
+                <p class="appendix-reference" id="appendix-reference">See Appendix BLANK in <a href="Blind%20Alley.html#app-blank-modules">Blind Alley</a> for blank modules identification.</p>
 
                 <p>Where… am I? What is my purpose? What am I programmed to do?</p>
                 <p>Though I don’t remember what I am or what I was meant to do, I do know a few things about myself.</p>
@@ -45,7 +67,7 @@
                 <ul>
                     <li>When I am tapped for the second time, I’ll remember a two-digit number and display it on the module. This number should be used in The Memory Banks.</li>
                     <li>Use the tens digit along the left and the ones digit along the top of The Memory Banks to get a color.</li>
-                    <li>If I am pressed again after I remember the two-digit number, I will go into a logic dive. My mental process will show up on the module as a 3x3 grid of colored squares. The colors of the squares will shuffle every other second.</li>
+                    <li>If I am pressed again after I remember the two-digit number, I will go into a logic dive. My mental process will show up on the module as a 3×3 grid of colored squares. The colors of the squares will shuffle every other second.</li>
                     <li>The color from The Memory Banks that you got earlier is on the module. This square should be clicked. If done correctly, I should remember what my purpose was, and I should become a solvable module. </li>
                     <li>If an incorrect color is selected, I can sense it. I’ll strike, and I’ll forget everything I’ve done so far. I’ll go back to my completely forgetful state and will display another number upon two clicks. I will also strike if six seconds go by since I start my logic dive, as my memory fades rather quickly.</li>
                     <li>Instructions on what to do when I am complete start on page 3.</li>
@@ -61,7 +83,7 @@
             <div class="page-content">
                 <h2>The Memory Banks</h2>
                     <table>
-                        <tbody><tr>
+                        <tr>
                             <td class="corner"></td>
                             <td>-0</td>
                             <td>-1</td>
@@ -76,135 +98,135 @@
                         </tr>
                         <tr>
                             <td>0-</td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td style="background-color: #ffe599"></td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #808080"></td>
-                            <td></td>
+                            <td class="red"></td>
+                            <td class="pink"></td>
+                            <td class="orange"></td>
+                            <td class="yellow"></td>
+                            <td class="green"></td>
+                            <td class="sky"></td>
+                            <td class="blue"></td>
+                            <td class="purple"></td>
+                            <td class="black"></td>
+                            <td class="white"></td>
                         </tr>
                         <tr>
                             <td>1-</td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td style="background-color: #808080"></td>
-                            <td></td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td style="background-color: #ffe599"></td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td style="background-color: #9fc5e8"></td>
+                            <td class="pink"></td>
+                            <td class="black"></td>
+                            <td class="white"></td>
+                            <td class="sky"></td>
+                            <td class="red"></td>
+                            <td class="yellow"></td>
+                            <td class="purple"></td>
+                            <td class="green"></td>
+                            <td class="orange"></td>
+                            <td class="blue"></td>
                         </tr>
                         <tr>
                             <td>2-</td>
-                            <td></td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #ffe599"></td>
-                            <td style="background-color: #808080"></td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #d0e0e3"></td>
+                            <td class="white"></td>
+                            <td class="blue"></td>
+                            <td class="yellow"></td>
+                            <td class="black"></td>
+                            <td class="orange"></td>
+                            <td class="green"></td>
+                            <td class="pink"></td>
+                            <td class="red"></td>
+                            <td class="purple"></td>
+                            <td class="sky"></td>
                         </tr>
                         <tr>
                             <td>3-</td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td></td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #808080"></td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td style="background-color: #ffe599"></td>
+                            <td class="orange"></td>
+                            <td class="red"></td>
+                            <td class="blue"></td>
+                            <td class="purple"></td>
+                            <td class="pink"></td>
+                            <td class="white"></td>
+                            <td class="sky"></td>
+                            <td class="black"></td>
+                            <td class="green"></td>
+                            <td class="yellow"></td>
                         </tr>
                         <tr>
                             <td>4-</td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #808080"></td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td style="background-color: #ffe599"></td>
-                            <td></td>
-                            <td style="background-color: #b6d7a8"></td>
+                            <td class="purple"></td>
+                            <td class="sky"></td>
+                            <td class="pink"></td>
+                            <td class="blue"></td>
+                            <td class="black"></td>
+                            <td class="red"></td>
+                            <td class="orange"></td>
+                            <td class="yellow"></td>
+                            <td class="white"></td>
+                            <td class="green"></td>
                         </tr>
                         <tr>
                             <td>5-</td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td style="background-color: #ffe599"></td>
-                            <td style="background-color: #808080"></td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td></td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #b4a7d6"></td>
+                            <td class="green"></td>
+                            <td class="yellow"></td>
+                            <td class="black"></td>
+                            <td class="orange"></td>
+                            <td class="white"></td>
+                            <td class="blue"></td>
+                            <td class="red"></td>
+                            <td class="pink"></td>
+                            <td class="sky"></td>
+                            <td class="purple"></td>
                         </tr>
                         <tr>
                             <td>6-</td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td></td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #808080"></td>
-                            <td style="background-color: #ffe599"></td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #f4cccc"></td>
+                            <td class="sky"></td>
+                            <td class="green"></td>
+                            <td class="red"></td>
+                            <td class="white"></td>
+                            <td class="purple"></td>
+                            <td class="black"></td>
+                            <td class="yellow"></td>
+                            <td class="orange"></td>
+                            <td class="blue"></td>
+                            <td class="pink"></td>
                         </tr>
                         <tr>
                             <td>7-</td>
-                            <td style="background-color: #808080"></td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td></td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #ffe599"></td>
-                            <td style="background-color: #dd7e6b"></td>
+                            <td class="black"></td>
+                            <td class="orange"></td>
+                            <td class="purple"></td>
+                            <td class="green"></td>
+                            <td class="sky"></td>
+                            <td class="pink"></td>
+                            <td class="white"></td>
+                            <td class="blue"></td>
+                            <td class="yellow"></td>
+                            <td class="red"></td>
                         </tr>
                         <tr>
                             <td>8-</td>
-                            <td style="background-color: #ffe599"></td>
-                            <td></td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #808080"></td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td style="background-color: #f9cb9c"></td>
+                            <td class="yellow"></td>
+                            <td class="white"></td>
+                            <td class="green"></td>
+                            <td class="red"></td>
+                            <td class="blue"></td>
+                            <td class="purple"></td>
+                            <td class="black"></td>
+                            <td class="sky"></td>
+                            <td class="pink"></td>
+                            <td class="orange"></td>
                         </tr>
                         <tr>
                             <td>9-</td>
-                            <td style="background-color: #9fc5e8"></td>
-                            <td style="background-color: #b4a7d6"></td>
-                            <td style="background-color: #d0e0e3"></td>
-                            <td style="background-color: #f4cccc"></td>
-                            <td style="background-color: #ffe599"></td>
-                            <td style="background-color: #f9cb9c"></td>
-                            <td style="background-color: #b6d7a8"></td>
-                            <td></td>
-                            <td style="background-color: #dd7e6b"></td>
-                            <td style="background-color: #808080"></td>
+                            <td class="blue"></td>
+                            <td class="purple"></td>
+                            <td class="sky"></td>
+                            <td class="pink"></td>
+                            <td class="yellow"></td>
+                            <td class="orange"></td>
+                            <td class="green"></td>
+                            <td class="white"></td>
+                            <td class="red"></td>
+                            <td class="black"></td>
                         </tr>
-                    </tbody></table>
+                    </table>
                 </div>
             <div class="page-footer relative-footer">Page 2 of 7</div>
         </div>
@@ -214,9 +236,9 @@
                 <span class="page-header-section-title">...?</span>
             </div>
             <div class="page-content">
-				<img src="img/Punctuation Marks/PMWires.svg" class="diagram">
+                <img src="img/Punctuation Marks/PMWires.svg" class="diagram">
                 <h2>On the Subject of Becoming Three Wires</h2>
-                <p class="flavour-text">“No memory is ever alone; it’s at the end of a trail of memories, a dozen trails that each have their own associations.” ~Louis L'Amour</p>
+                <p class="footnote">“No memory is ever alone; it’s at the end of a trail of memories, a dozen trails that each have their own associations.” ~Louis L'Amour</p>
                 <ul>
                     <li>If I become three wires, all of my wires must be cut in a certain order.</li>
                     <li>Use the color from The Memory Banks as the column and the color of the middle wire for the row on the table on this page. This will tell you the order to cut the wires with wire 1 being the top wire, wire 2 being the middle wire, and wire 3 being the bottom wire.</li>
@@ -224,21 +246,21 @@
                     <li>Upon an incorrect wire cut, all cut wires will re-form into uncut wires, the colors of the wires may change, and a strike is issued.</li>
                 </ul>
                 <table>
-                    <tbody><tr>
-                        <td class="corner"><span style="color: white">boo</span></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #808080"></td>
-                        <td></td>
+                    <tr>
+                        <td class="corner"></td>
+                        <td class="red"></td>
+                        <td class="pink"></td>
+                        <td class="orange"></td>
+                        <td class="yellow"></td>
+                        <td class="green"></td>
+                        <td class="sky"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #5b0f00"></td>
+                        <td class="dkred"></td>
                         <td>123</td>
                         <td>132</td>
                         <td>213</td>
@@ -251,7 +273,7 @@
                         <td>321</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #783f04"></td>
+                        <td class="dorange"></td>
                         <td>132</td>
                         <td>321</td>
                         <td>123</td>
@@ -264,7 +286,7 @@
                         <td>231</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #7f6000"></td>
+                        <td class="dyellow"></td>
                         <td>213</td>
                         <td>123</td>
                         <td>312</td>
@@ -277,7 +299,7 @@
                         <td>123</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #274e13"></td>
+                        <td class="dgreen"></td>
                         <td>231</td>
                         <td>312</td>
                         <td>132</td>
@@ -290,7 +312,7 @@
                         <td>213</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #1c4587"></td>
+                        <td class="dblue"></td>
                         <td>312</td>
                         <td>231</td>
                         <td>321</td>
@@ -303,7 +325,7 @@
                         <td>132</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #4c1130"></td>
+                        <td class="dpurple"></td>
                         <td>321</td>
                         <td>213</td>
                         <td>231</td>
@@ -315,7 +337,7 @@
                         <td>231</td>
                         <td>312</td>
                     </tr>
-                </tbody></table>
+                </table>
             </div>
             <div class="page-footer relative-footer">Page 3 of 7</div>
         </div>
@@ -325,9 +347,9 @@
                 <span class="page-header-section-title">...?</span>
             </div>
             <div class="page-content">
-				<img src="img/Punctuation Marks/PMColoredButtons.svg" class="diagram">
+                <img src="img/Punctuation Marks/PMColoredButtons.svg" class="diagram">
                 <h2>On the Subject of Becoming Colored Buttons</h2>
-                <p class="flavour-text">“Without memory, there is no culture. Without memory, there would be no civilization, no society, no future.” ~Elie Wiesel</p>
+                <p class="footnote">“Without memory, there is no culture. Without memory, there would be no civilization, no society, no future.” ~Elie Wiesel</p>
                 <ul>
                     <li>If I become colored buttons, two of my six buttons must be pressed.</li>
                     <li>Use the color from The Memory Banks as the column and the color of the flashing button for the row on the table on this page. You should get a two-digit number from the table. </li>
@@ -335,21 +357,21 @@
                     <li>Upon an incorrect button press, all buttons become unpressed, a different button may flash, and a strike will be issued.</li>
                 </ul>
                 <table>
-                    <tbody><tr>
-                        <td class="corner"><span style="color: white">boo</span></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #808080"></td>
-                        <td></td>
+                    <tr>
+                        <td class="corner"></td>
+                        <td class="red"></td>
+                        <td class="pink"></td>
+                        <td class="orange"></td>
+                        <td class="yellow"></td>
+                        <td class="green"></td>
+                        <td class="sky"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #5b0f00"></td>
+                        <td class="dkred"></td>
                         <td>43</td>
                         <td>54</td>
                         <td>33</td>
@@ -362,7 +384,7 @@
                         <td>43</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #783f04"></td>
+                        <td class="dorange"></td>
                         <td>45</td>
                         <td>15</td>
                         <td>64</td>
@@ -375,7 +397,7 @@
                         <td>64</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #7f6000"></td>
+                        <td class="dyellow"></td>
                         <td>45</td>
                         <td>52</td>
                         <td>51</td>
@@ -388,7 +410,7 @@
                         <td>14</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #274e13"></td>
+                        <td class="dgreen"></td>
                         <td>55</td>
                         <td>53</td>
                         <td>25</td>
@@ -401,7 +423,7 @@
                         <td>46</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #1c4587"></td>
+                        <td class="dblue"></td>
                         <td>23</td>
                         <td>65</td>
                         <td>24</td>
@@ -414,7 +436,7 @@
                         <td>63</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #4c1130"></td>
+                        <td class="dpurple"></td>
                         <td>13</td>
                         <td>31</td>
                         <td>36</td>
@@ -426,7 +448,7 @@
                         <td>32</td>
                         <td>36</td>
                     </tr>
-                </tbody></table>
+                </table>
             </div>
             <div class="page-footer relative-footer">Page 4 of 7</div>
         </div>
@@ -436,9 +458,9 @@
                 <span class="page-header-section-title">...?</span>
             </div>
             <div class="page-content">
-				<img src="img/Punctuation Marks/PMPunctuation.svg" class="diagram">
+                <img src="img/Punctuation Marks/PMPunctuation.svg" class="diagram">
                 <h2>On the Subject of Becoming Punctuation Buttons</h2>
-                <p class="flavour-text">“You never realize what a good memory you have until you try to forget something.” ~Franklin P. Jones</p>
+                <p class="footnote">“You never realize what a good memory you have until you try to forget something.” ~Franklin P. Jones</p>
                 <ul>
                     <li>If I become punctuation buttons, I will have a colored display and six buttons with three punctuation marks on them. One of these six buttons needs to be pressed.</li>
                     <li>Use the color from The Memory Banks for the column and the displayed color for the rows of the table on this page. You should get three punctuation marks from the table.</li>
@@ -446,21 +468,21 @@
                     <li>Upon an incorrect button press, the buttons will change what they have on them, the display may change color, and a strike will be issued.</li>
                 </ul>
                 <table>
-                    <tbody><tr>
-                        <td class="corner"><span style="color: white">boo</span></td>
-                        <td style="background-color: #dd7e6b"></td>
-                        <td style="background-color: #f4cccc"></td>
-                        <td style="background-color: #f9cb9c"></td>
-                        <td style="background-color: #ffe599"></td>
-                        <td style="background-color: #b6d7a8"></td>
-                        <td style="background-color: #d0e0e3"></td>
-                        <td style="background-color: #9fc5e8"></td>
-                        <td style="background-color: #b4a7d6"></td>
-                        <td style="background-color: #808080"></td>
-                        <td></td>
+                    <tr>
+                        <td class="corner"></td>
+                        <td class="red"></td>
+                        <td class="pink"></td>
+                        <td class="orange"></td>
+                        <td class="yellow"></td>
+                        <td class="green"></td>
+                        <td class="sky"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #5b0f00"></td>
+                        <td class="dkred"></td>
                         <td>! , .</td>
                         <td>" . ?</td>
                         <td>" ! ?</td>
@@ -473,7 +495,7 @@
                         <td>! ? .</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #783f04"></td>
+                        <td class="dorange"></td>
                         <td>“ , !</td>
                         <td>. ? ,</td>
                         <td>! , “</td>
@@ -486,7 +508,7 @@
                         <td>! ? “</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #7f6000"></td>
+                        <td class="dyellow"></td>
                         <td>, . “</td>
                         <td>? . ,</td>
                         <td>. ! ,</td>
@@ -499,7 +521,7 @@
                         <td>“ ! ?</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #274e13"></td>
+                        <td class="dgreen"></td>
                         <td>! ? .</td>
                         <td>! . ?</td>
                         <td>. “ ,</td>
@@ -512,7 +534,7 @@
                         <td>? ! .</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #1c4587"></td>
+                        <td class="dblue"></td>
                         <td>? ! ,</td>
                         <td>? ! .</td>
                         <td>? . ,</td>
@@ -525,7 +547,7 @@
                         <td>? , .</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #4c1130"></td>
+                        <td class="dpurple"></td>
                         <td>, “ ?</td>
                         <td>. “ !</td>
                         <td>? , !</td>
@@ -537,7 +559,7 @@
                         <td>? , “</td>
                         <td>“ . ?</td>
                     </tr>
-                </tbody></table>
+                </table>
             </div>
             <div class="page-footer relative-footer">Page 5 of 7</div>
         </div>
@@ -547,9 +569,9 @@
                 <span class="page-header-section-title">...?</span>
             </div>
             <div class="page-content">
-				<img src="img/Punctuation Marks/PMPiano.svg" class="diagram">
+                <img src="img/Punctuation Marks/PMPiano.svg" class="diagram">
                 <h2>On the Subject of Becoming a Colored Piano</h2>
-                <p class="flavour-text">“Memory is a great artist. For every man and for every woman it makes the recollection of his or her life a work of art and an unfaithful record.” ~Andre Maurois</p>
+                <p class="footnote">“Memory is a great artist. For every man and for every woman it makes the recollection of his or her life a work of art and an unfaithful record.” ~Andre Maurois</p>
                 <ul>
                     <li>If I become a colored piano, one of my notes will need to be played.</li>
                     <li>I will have six piano keys without any sharp or flat keys. They will each be a certain color. </li>
@@ -559,21 +581,21 @@
                     <li>If an incorrect key is pressed, the keys may change color, and a strike is issued.</li>
                 </ul>
                 <table>
-                    <tbody><tr>
-                        <td class="corner"><span style="color: white">boo</span></td>
-                        <td style="background-color: #dd7e6b"><span style="color: #dd7e6b">boo</span></td>
-                        <td style="background-color: #f4cccc"><span style="color: #f4cccc">boo</span></td>
-                        <td style="background-color: #f9cb9c"><span style="color: #f9cb9c">boo</span></td>
-                        <td style="background-color: #ffe599"><span style="color: #ffe599">boo</span></td>
-                        <td style="background-color: #b6d7a8"><span style="color: #b6d7a8">boo</span></td>
-                        <td style="background-color: #d0e0e3"><span style="color: #d0e0e3">boo</span></td>
-                        <td style="background-color: #9fc5e8"><span style="color: #9fc5e8">boo</span></td>
-                        <td style="background-color: #b4a7d6"><span style="color: #b4a7d6">boo</span></td>
-                        <td style="background-color: #808080"><span style="color: #808080">boo</span></td>
-                        <td><span style="color: white">boo</span></td>
+                    <tr>
+                        <td class="corner"></td>
+                        <td class="red"></td>
+                        <td class="pink"></td>
+                        <td class="orange"></td>
+                        <td class="yellow"></td>
+                        <td class="green"></td>
+                        <td class="sky"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #5b0f00"></td>
+                        <td class="dkred"></td>
                         <td>C</td>
                         <td>F</td>
                         <td>A</td>
@@ -586,7 +608,7 @@
                         <td>E</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #783f04"></td>
+                        <td class="dorange"></td>
                         <td>D</td>
                         <td>E</td>
                         <td>G</td>
@@ -599,7 +621,7 @@
                         <td>F</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #7f6000"></td>
+                        <td class="dyellow"></td>
                         <td>E</td>
                         <td>G</td>
                         <td>D</td>
@@ -612,7 +634,7 @@
                         <td>G</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #274e13"></td>
+                        <td class="dgreen"></td>
                         <td>F</td>
                         <td>C</td>
                         <td>F</td>
@@ -625,7 +647,7 @@
                         <td>C</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #1c4587"></td>
+                        <td class="dblue"></td>
                         <td>G</td>
                         <td>A</td>
                         <td>E</td>
@@ -638,7 +660,7 @@
                         <td>A</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #4c1130"></td>
+                        <td class="dpurple"></td>
                         <td>A</td>
                         <td>D</td>
                         <td>C</td>
@@ -650,7 +672,7 @@
                         <td>E</td>
                         <td>D</td>
                     </tr>
-                </tbody></table>
+                </table>
             </div>
             <div class="page-footer relative-footer">Page 6 of 7</div>
         </div>
@@ -660,9 +682,9 @@
                 <span class="page-header-section-title">...?</span>
             </div>
             <div class="page-content">
-				<img src="img/Punctuation Marks/PMMessage.svg" class="diagram">
+                <img src="img/Punctuation Marks/PMMessage.svg" class="diagram">
                 <h2>On the Subject of Becoming a Colorful Message</h2>
-                <p class="flavour-text">“There is no memory or retentive faculty based on lasting impression. What we designate as memory is but increased responsiveness to repeated stimuli.” ~Nikola Tesla</p>
+                <p class="footnote">“There is no memory or retentive faculty based on lasting impression. What we designate as memory is but increased responsiveness to repeated stimuli.” ~Nikola Tesla</p>
                 <ul>
                     <li>If I become a colorful message, I will have a small, circular display along with six buttons with question marks written on them and a small button below the display.</li>
                     <li>Press the button beside the display to begin transmitting the message.</li>
@@ -672,21 +694,21 @@
                     <li>Upon an incorrect button press, the lettered buttons will become blank again, the button next to the display will come back, a different message may flash, and a strike will be issued.</li>
                 </ul>
                 <table>
-                    <tbody><tr>
-                        <td class="corner"><span style="color: white">boo</span></td>
-                        <td style="background-color: #dd7e6b"><span style="color: #dd7e6b">boo</span></td>
-                        <td style="background-color: #f4cccc"><span style="color: #f4cccc">boo</span></td>
-                        <td style="background-color: #f9cb9c"><span style="color: #f9cb9c">boo</span></td>
-                        <td style="background-color: #ffe599"><span style="color: #ffe599">boo</span></td>
-                        <td style="background-color: #b6d7a8"><span style="color: #b6d7a8">boo</span></td>
-                        <td style="background-color: #d0e0e3"><span style="color: #d0e0e3">boo</span></td>
-                        <td style="background-color: #9fc5e8"><span style="color: #9fc5e8">boo</span></td>
-                        <td style="background-color: #b4a7d6"><span style="color: #b4a7d6">boo</span></td>
-                        <td style="background-color: #808080"><span style="color: #808080">boo</span></td>
-                        <td><span style="color: white">boo</span></td>
+                    <tr>
+                        <td class="corner"></td>
+                        <td class="red"></td>
+                        <td class="pink"></td>
+                        <td class="orange"></td>
+                        <td class="yellow"></td>
+                        <td class="green"></td>
+                        <td class="sky"></td>
+                        <td class="blue"></td>
+                        <td class="purple"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #5b0f00"></td>
+                        <td class="dkred"></td>
                         <td>A</td>
                         <td>L</td>
                         <td>E</td>
@@ -699,7 +721,7 @@
                         <td>S</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #783f04"></td>
+                        <td class="dorange"></td>
                         <td>T</td>
                         <td>O</td>
                         <td>C</td>
@@ -712,7 +734,7 @@
                         <td>E</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #7f6000"></td>
+                        <td class="dyellow"></td>
                         <td>M</td>
                         <td>E</td>
                         <td>L</td>
@@ -725,7 +747,7 @@
                         <td>I</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #274e13"></td>
+                        <td class="dgreen"></td>
                         <td>S</td>
                         <td>D</td>
                         <td>A</td>
@@ -738,7 +760,7 @@
                         <td>A</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #1c4587"></td>
+                        <td class="dblue"></td>
                         <td>R</td>
                         <td>O</td>
                         <td>R</td>
@@ -751,7 +773,7 @@
                         <td>L</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #4c1130"></td>
+                        <td class="dpurple"></td>
                         <td>E</td>
                         <td>P</td>
                         <td>L</td>
@@ -763,7 +785,7 @@
                         <td>E</td>
                         <td>D</td>
                     </tr>
-                </tbody></table>
+                </table>
             </div>
             <div class="page-footer relative-footer">Page 7 of 7</div>
         </div>

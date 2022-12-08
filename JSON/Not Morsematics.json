@@ -10,12 +10,12 @@
   "Published": "2021-03-09",
   "SortKey": "NOTMORSEMATICS",
   "SourceUrl": "https://github.com/Speakingevil/not-mods/tree/main/Assets/!Mor",
-  "Souvenir": {
-    "Explanation": "Souvenir could ask about the flashed letters.",
-    "Status": "Considered"
-  },
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "2419865723",
   "Symbol": "Nmm",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=JwhPeWB71jg" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=JwhPeWB71jg"
+  } ],
   "Type": "Regular"
 }

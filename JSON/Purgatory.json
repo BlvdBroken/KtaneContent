@@ -6,15 +6,15 @@
   "ExpertDifficulty": "Medium",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+SolvesWithOthers",
+    "+TimeDependent"
   ],
-  "IsFullBoss": true,
   "ModuleID": "PurgatoryModule",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Purgatory",
   "Origin": "Mods",
   "Published": "2019-02-20",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd",
   "SortKey": "PURGATORY",
   "SourceUrl": "https://github.com/red031000/ktane-purgatory",
   "Souvenir": {
@@ -23,6 +23,9 @@
   },
   "SteamID": "1661121197",
   "Symbol": "Pu",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=ywtfeHLn81Y" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=ywtfeHLn81Y"
+  } ],
   "Type": "Regular"
 }

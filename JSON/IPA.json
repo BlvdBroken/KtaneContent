@@ -1,7 +1,7 @@
 {
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "TasThing" ],
+    "Developer": [ "TasThiluna" ],
     "Manual": [ "ItzShaun" ]
   },
   "DefuserDifficulty": "Hard",
@@ -16,5 +16,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2114321021",
   "Symbol": "Ipa",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/UO5K7-7YZ5Q"
+  } ],
   "Type": "Regular"
 }

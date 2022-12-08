@@ -1,0 +1,20 @@
+{
+  "Author": "Speakingevil",
+  "Compatibility": "Compatible",
+  "DefuserDifficulty": "VeryEasy",
+  "Description": "Decompose the displayed fraction into the sum of four reciprocals of integers.",
+  "ExpertDifficulty": "Medium",
+  "ModuleID": "egyptianFractions",
+  "Name": "Egyptian Fractions",
+  "Origin": "Mods",
+  "Published": "2022-04-01",
+  "SortKey": "EGYPTIANFRACTIONS",
+  "SourceUrl": "https://github.com/Speakingevil/egyptian-fractions",
+  "SteamID": "2787719658",
+  "Symbol": "Egf",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/w8FW2z2HyVo"
+  } ],
+  "Type": "Regular"
+}

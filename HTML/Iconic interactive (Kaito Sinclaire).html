@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/ktane-utils.js"></script>
-</head>
 <style>
     .containers {
         display: flex;
@@ -28,6 +27,7 @@
         width: 100%;
         position: absolute;
         bottom: 0;
+        color: #000;
     }
     .result {
         font-size: 72pt;
@@ -75,7 +75,7 @@
     };
     /*
      * Aliases for module that is hard to search in English alphabet.
-     * Module such as Vigenère Cipher doesn't need one as it can be
+     * Module such as Vigenère Cipher doesn’t need one as it can be
      * searched relatively easily.
      */
     module_aliases = {
@@ -138,6 +138,7 @@
         document.getElementById("icon").addEventListener("click", clickedIcon);
     }
 </script>
+</head>
 <body onload="addEventHandlers()">
     <div class="section">
         <div class="page page-bg-01">

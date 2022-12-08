@@ -1,6 +1,6 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "TasThing" ] },
+  "Contributors": { "Developer": [ "TasThiluna" ] },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Solve a simple color identification puzzle equipped with minigames to pass the time. Tags: exclamation-point, C-button, 4-buttons, wood-background",
   "ExpertDifficulty": "VeryEasy",
@@ -13,5 +13,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2544873191",
   "Symbol": "Ats",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/AndnTLV32sQ?t=191"
+  } ],
   "Type": "Regular"
 }

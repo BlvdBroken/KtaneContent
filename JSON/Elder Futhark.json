@@ -8,7 +8,6 @@
   "Description": "Encode names of runes using Vigenère cipher and press the correct runestones in the correct order. Tags: 23-buttons, runes, elder-futhark",
   "ExpertDifficulty": "Hard",
   "ModuleID": "elderFuthark",
-  "MysteryModule": "MustNotBeHidden",
   "Name": "Elder Futhark",
   "Origin": "Mods",
   "Published": "2019-02-09",
@@ -18,6 +17,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1649318054",
   "Symbol": "Ef",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=Kx8DSJFCPrs" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=Kx8DSJFCPrs"
+  } ],
   "Type": "Regular"
 }

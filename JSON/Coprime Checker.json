@@ -1,6 +1,6 @@
 {
+  "Author": "VFlyer",
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "VFlyer" ] },
   "DefuserDifficulty": "Easy",
   "Description": "Determine if the two numbers displayed do not share common prime factors by taking the prime factorization of these numbers. Tags: coprime, not-coprime, numbers",
   "ExpertDifficulty": "Medium",
@@ -9,9 +9,13 @@
   "Origin": "Mods",
   "Published": "2021-05-24",
   "SortKey": "COPRIMECHECKER",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/Coprime%20Checker",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1940164898",
   "Symbol": "Cpc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/cWKXwUEZkbw?t=724"
+  } ],
   "Type": "Regular"
 }

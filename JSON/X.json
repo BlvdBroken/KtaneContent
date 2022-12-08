@@ -1,20 +1,27 @@
 {
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "BakersDozenBagels" ],
+    "Developer": [ "Anonymous" ],
+    "Maintainer": [ "Quinn Wuest" ],
     "Manual": [ "AnAverageArceus" ]
   },
   "DefuserDifficulty": "Easy",
-  "Description": "Use the alarm clock to submit an answer.",
+  "Description": "Use the alarm clock to submit an answer. Tags: wooden-plate",
   "ExpertDifficulty": "Easy",
   "ModuleID": "xModule",
   "Name": "X",
+  "ObsoleteSteamIDs": [ "2325719404" ],
   "Origin": "Mods",
   "Published": "2020-12-27",
+  "Quirks": "SolvesWithOthers",
   "SortKey": "X",
-  "SourceUrl": "https://github.com/BakersDozenBagels/KTANEXandY",
+  "SourceUrl": "https://github.com/QuinnWuest/KtaneXYZModules",
   "Souvenir": { "Status": "NotACandidate" },
-  "SteamID": "2325719404",
+  "SteamID": "2857769105",
   "Symbol": "Xm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/XIkPj0fryh0?t=17"
+  } ],
   "Type": "Regular"
 }

@@ -12,8 +12,12 @@
   "Origin": "Mods",
   "Published": "2020-04-02",
   "SortKey": "MINECRAFTPARODY",
-  "SourceUrl": "https://github.com/Limeboy0603/Minecraft-Parody",
+  "SourceUrl": "https://github.com/Limeboy0603/ktaneMinecraftParody-master",
   "SteamID": "2257451274",
   "Symbol": "Mcp",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/Kqta3hJwAKE?t=1023"
+  } ],
   "Type": "Regular"
 }

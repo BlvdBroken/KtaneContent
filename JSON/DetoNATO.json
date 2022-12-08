@@ -3,7 +3,7 @@
   "Contributors": {
     "Developer": [ "DVD" ],
     "Maintainer": [ "eXish" ],
-    "Manual": [ "Kusane" ]
+    "Manual": [ "Kusane Hexaku" ]
   },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Press the correct button at each stage based on words sounding confusingly similar to the NATO Phonetic Alphabet. Tags: 4-buttons, display, words, letters, 6-squares",
@@ -21,6 +21,9 @@
   },
   "SteamID": "1833642284",
   "Symbol": "Deto",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=JIza76ubEAM" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=JIza76ubEAM"
+  } ],
   "Type": "Regular"
 }

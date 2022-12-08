@@ -19,5 +19,9 @@
   },
   "SteamID": "2416640196",
   "Symbol": "Plm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=H7lXO_xRiAM"
+  } ],
   "Type": "Regular"
 }

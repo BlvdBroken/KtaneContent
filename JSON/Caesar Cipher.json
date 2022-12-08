@@ -1,6 +1,10 @@
 {
   "Author": "Eluminate",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Eluminate" ],
+    "Maintainer": [ "Timwi" ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Translate a five-letter message by shifting the letters in the alphabet. Tags: 12-buttons, display, random",
   "ExpertDifficulty": "VeryEasy",
@@ -13,10 +17,19 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "804644203",
   "Symbol": "Caci",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=oIUXzg4d7vI",
-    "default": "https://www.youtube.com/watch?v=01-rZOr-xeI",
-    "Français": "https://youtu.be/IUPdnCxJax8"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=oIUXzg4d7vI"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=01-rZOr-xeI"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/IUPdnCxJax8"
+    }
+  ],
   "Type": "Regular"
 }

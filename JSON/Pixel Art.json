@@ -9,10 +9,13 @@
   "Origin": "Mods",
   "Published": "2020-07-14",
   "SortKey": "PIXELART",
-  "SourceUrl": "https://github.com/Fartlicker777/Trivia-Murder-Party",
+  "SourceUrl": "https://github.com/Fartlicker777/Trivia-Murder-Party/tree/master/Trivia%20Murder%20Party/Assets/Modules/PixelArt",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2114337227",
   "Symbol": "Pa",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=32EsVvQdcnA" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=32EsVvQdcnA"
+  } ],
   "Type": "Regular"
 }

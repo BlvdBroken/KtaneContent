@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>ロックマン２ — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <script src="js/ruleseed.js"></script>
+    <style>
+        table {
+            margin: 1em auto;
+        }
+
+        img.robot-master {
+            width: 1.5cm;
+        }
+
+        img.weapon {
+            width: 1.5cm;
+        }
+
+        .robot-master-name {
+            font-weight: bold;
+        }
+
+        .ruleseed-active #etanks-rule {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function setDefaultRules(rnd) { setRules(rnd); }
+
+        function setRules(rnd)
+        {
+            let robotMasters = rnd.seed === 1 ? [
+                "Air Man",
+                "Bubble Man",
+                "Crash Man",
+                "Flash Man",
+                "Heat Man",
+                "Metal Man",
+                "Quick Man",
+                "Wood Man"
+            ] : rnd.shuffleFisherYates([ "Cold Man", "Magma Man", "Dust Man", "Sword Man", "Splash Woman", "Ice Man", "Quick Man", "Hard Man", "Pharaoh Man", "Charge Man", "Pirate Man", "Pump Man", "Galaxy Man", "Grenade Man", "Snake Man", "Burst Man", "Cut Man", "Air Man", "Magnet Man", "Toad Man", "Gyro Man", "Tomahawk Man", "Wood Man", "Strike Man", "Blade Man", "Aqua Man", "Shade Man", "Flash Man", "Flame Man", "Concrete Man", "Metal Man", "Needle Man", "Wave Man", "Knight Man", "Slash Man", "Shadow Man", "Sheep Man", "Ground Man", "Wind Man", "Fire Man", "Stone Man", "Tengu Man", "Bright Man", "Centaur Man", "Cloud Man", "Frost Man", "Dynamo Man", "Chill Man", "Turbo Man", "Napalm Man", "Jewel Man", "Drill Man", "Freeze Man", "Blizzard Man", "Gravity Man", "Junk Man", "Clown Man", "Hornet Man", "Skull Man", "Solar Man", "Commando Man", "Yamato Man", "Dive Man", "Search Man", "Gemini Man", "Bubble Man", "Guts Man", "Tornado Man", "Astro Man", "Plug Man", "Elec Man", "Crystal Man", "Nitro Man", "Burner Man", "Spark Man", "Spring Man", "Plant Man", "Star Man", "Ring Man", "Top Man", "Crash Man", "Bomb Man", "Heat Man", "Magic Man" ]);
+
+            let presetCoordinates = {
+                "Air Man":    { coord1: "B2", coord2: "E1" },
+                "Bubble Man": { coord1: "D5", coord2: "D2" },
+                "Crash Man":  { coord1: "D4", coord2: "B1" },
+                "Flash Man":  { coord1: "C5", coord2: "B3" },
+                "Heat Man":   { coord1: "C1", coord2: "E4" },
+                "Metal Man":  { coord1: "B4", coord2: "E5" },
+                "Quick Man":  { coord1: "C3", coord2: "D3" },
+                "Wood Man":   { coord1: "E2", coord2: "C4" }
+            };
+
+            let jpNames = {
+                "Cold Man": "コールドマン",
+                "Magma Man": "マグママン",
+                "Dust Man": "ダストマン",
+                "Sword Man": "ソードマン",
+                "Splash Woman": "スプラッシュウーマン",
+                "Ice Man": "アイスマン",
+                "Quick Man": "クイックマン",
+                "Hard Man": "ハードマン",
+                "Pharaoh Man": "ファラオマン",
+                "Charge Man": "チャージマン",
+                "Pirate Man": "パイレーツマン",
+                "Pump Man": "ポンプマン",
+                "Galaxy Man": "ギャラクシーマン",
+                "Grenade Man": "グレネードマン",
+                "Snake Man": "スネークマン",
+                "Burst Man": "バーストマン",
+                "Cut Man": "カットマン",
+                "Air Man": "エアーマン",
+                "Magnet Man": "マグネットマン",
+                "Toad Man": "トードマン",
+                "Gyro Man": "ジャイロマン",
+                "Tomahawk Man": "トマホークマン",
+                "Wood Man": "ウッドマン",
+                "Strike Man": "ストライクマン",
+                "Blade Man": "ブレイドマン",
+                "Aqua Man": "アクアマン",
+                "Shade Man": "シェードマン",
+                "Flash Man": "フラッシュマン",
+                "Flame Man": "フレイムマン",
+                "Concrete Man": "コンクリートマン",
+                "Metal Man": "メタルマン",
+                "Needle Man": "ニードルマン",
+                "Wave Man": "ウェーブマン",
+                "Knight Man": "ナイトマン",
+                "Slash Man": "スラッシュマン",
+                "Shadow Man": "シャドーマン",
+                "Sheep Man": "シープマン",
+                "Ground Man": "グランドマン",
+                "Wind Man": "ウインドマン",
+                "Fire Man": "ファイヤーマン",
+                "Stone Man": "ストーンマン",
+                "Tengu Man": "テングマン",
+                "Bright Man": "ブライトマン",
+                "Centaur Man": "ケンタウロスマン",
+                "Cloud Man": "クラウドマン",
+                "Frost Man": "フロストマン",
+                "Dynamo Man": "ダイナモマン",
+                "Chill Man": "チルドマン",
+                "Turbo Man": "ターボマン",
+                "Napalm Man": "ナパームマン",
+                "Jewel Man": "ジュエルマン",
+                "Drill Man": "ドリルマン",
+                "Freeze Man": "フリーズマン",
+                "Blizzard Man": "ブリザードマン",
+                "Gravity Man": "グラビティーマン",
+                "Junk Man": "ジャンクマン",
+                "Clown Man": "クラウンマン",
+                "Hornet Man": "ホーネットマン",
+                "Skull Man": "スカルマン",
+                "Solar Man": "ソーラーマン",
+                "Commando Man": "コマンドマン",
+                "Yamato Man": "ヤマトマン",
+                "Dive Man": "ダイブマン",
+                "Search Man": "サーチマン",
+                "Gemini Man": "ジェミニマン",
+                "Bubble Man": "バブルマン",
+                "Guts Man": "ガッツマン",
+                "Tornado Man": "トルネードマン",
+                "Astro Man": "アストロマン",
+                "Plug Man": "プラグマン",
+                "Elec Man": "エレキマン",
+                "Crystal Man": "クリスタルマン",
+                "Nitro Man": "ニトロマン",
+                "Burner Man": "バーナーマン",
+                "Spark Man": "スパークマン",
+                "Spring Man": "スプリングマン",
+                "Plant Man": "プラントマン",
+                "Star Man": "スターマン",
+                "Ring Man": "リングマン",
+                "Top Man": "タップマン",
+                "Crash Man": "クラッシュマン",
+                "Bomb Man": "ボンバーマン",
+                "Heat Man": "ヒートマン",
+                "Magic Man": "マジックマン"
+            }
+
+            let coordinates = [];
+            for (let row = 1; row < 5; row++)
+                for (let col = 0; col < 5; col++)
+                    coordinates.push(String.fromCharCode(65 + row) + (col+1));
+
+            let robotMasterImgs = document.getElementsByClassName('robot-master');
+            let robotMasterNames = document.getElementsByClassName('robot-master-name');
+            let weaponImgs = document.getElementsByClassName('weapon');
+            for (let i = 0; i < 8; i++)
+            {
+                robotMasterImgs[i].src = `img/Mega Man 2/Robot Masters/${robotMasters[i]}.png`;
+                robotMasterNames[i].innerText = jpNames[robotMasters[i]];
+                weaponImgs[i].src = `img/Mega Man 2/Weapons/${robotMasters[i]}.png`;
+                if (robotMasters[i] in presetCoordinates)
+                {
+                    coordinates.splice(coordinates.indexOf(presetCoordinates[robotMasters[i]].coord1), 1);
+                    coordinates.splice(coordinates.indexOf(presetCoordinates[robotMasters[i]].coord2), 1);
+                }
+            }
+
+            rnd.shuffleFisherYates(coordinates);
+
+            let coordinatesIx = 0;
+            let coordinateTds = document.getElementsByClassName('coordinates');
+            for (let i = 0; i < 8; i++)
+            {
+                if (robotMasters[i] in presetCoordinates)
+                {
+                    coordinateTds[2*i  ].innerText = presetCoordinates[robotMasters[i]].coord1;
+                    coordinateTds[2*i+1].innerText = presetCoordinates[robotMasters[i]].coord2;
+                }
+                else
+                {
+                    coordinateTds[2*i  ].innerText = coordinates[coordinatesIx];
+                    coordinateTds[2*i+1].innerText = coordinates[coordinatesIx+1];
+                    coordinatesIx += 2;
+                }
+            }
+
+            // These must all have at least 4 because each of them can potentially occur 4 times.
+            // Some used to have only 3, which was a bug, but we want to retain the Seed 1 rules from before the fix
+            let brules = [ "バッテリーの数", "単1バッテリーの数", "単3バッテリーの数", "バッテリーホルダーの数" ];
+            let irules = [ "インジケータの数", "点灯するインジケータの数", "消灯するインジケータの数" ];
+            let prules = [ "ポートの数", "ポートの種類の数", "ポートプレートの数" ];
+            let srules = [ "シリアルナンバーの最初の数字", "シリアルナンバーの二番目の数字", "シリアルナンバーの最後の数字" ];
+            let inds = [ "SND", "CLR", "CAR", "IND", "FRQ", "SIG", "NSA", "MSA", "TRN", "BOB", "FRK" ];
+            let ports = [ "DVI-D", "パラレルポート", "PS/2", "RJ-45", "シリアルポート", "ステレオRCA" ];
+
+            if (rnd.seed !== 1)
+            {
+                irules.push("インジケータに母音がある数");
+                prules.push("複数あるポートの種類の数");
+                srules.push("シリアルナンバーの数字の合計");
+            }
+
+            rnd.shuffleFisherYates(brules);
+            rnd.shuffleFisherYates(irules);
+            rnd.shuffleFisherYates(prules);
+            rnd.shuffleFisherYates(srules);
+            rnd.shuffleFisherYates(inds);
+            rnd.shuffleFisherYates(ports);
+
+            let possibleAliveConditions = [
+                { text: "「{ind}」インジケーターが{presence}" },
+                { text: "点灯する「{ind}」インジケーターが{presence}" },
+                { text: "消灯する「{ind}」インジケーターが{presence}" },
+                { text: "Eタンクスポット {op} A{num:1-5}", etanks: true },
+                { text: "{brule} {op} {num:1-10}" },
+                { text: "{irule} {op} {num:2-5}" },
+                { text: "{prule} {op} {num:2-7}" },
+                { text: "{srule} {op} {num:0-9}" },
+                { text: "{port}が{presence}" },
+                { text: "{brule} {op} {irule}" },
+                { text: "{brule} {op} {prule}" },
+                { text: "{brule} {op} {srule}" },
+                { text: "{irule} {op} {prule}" },
+                { text: "{irule} {op} {srule}" },
+                { text: "{prule} {op} {srule}" }
+            ];
+            if (rnd.seed !== 1)
+            {
+                possibleAliveConditions.push({ text: "爆弾のモジュール数 {op} {num:5-30}" });
+                possibleAliveConditions.push({ text: "爆弾起動時の時間 {op} {num:10-60} 分" });
+            }
+            rnd.shuffleFisherYates(possibleAliveConditions);
+
+            let conditionTds = document.getElementsByClassName('alive-condition');
+            let anyETanks = false;
+            for (let i = 0; i < 8; i++)
+            {
+                let ruleInfo = possibleAliveConditions[i];
+                let op = ["=", "≤", "≥", "≠"][rnd.next(0, 4)];
+                let presence = ["ある", "ない"][rnd.next(0, 2)];
+                let ruleText = ruleInfo.text
+                    .replace(/\{op\}/g, op)
+                    .replace(/\{ind\}/g, () => inds.shift())
+                    .replace(/\{presence\}/g, presence)
+                    .replace(/\{port\}/g, () => ports.shift())
+                    .replace(/\{num:(\d+)-(\d+)\}/g, (_, min, max) => rnd.next(+min, +max + 1))
+                    .replace(/\{brule\}/g, () => brules.shift())
+                    .replace(/\{irule\}/g, () => irules.shift())
+                    .replace(/\{prule\}/g, () => prules.shift())
+                    .replace(/\{srule\}/g, () => srules.shift());
+                conditionTds[i].innerText = ruleText;
+                if (ruleInfo.etanks)
+                    anyETanks = true;
+            }
+
+            let possibleETanksRules = rnd.seed === 1 ? [
+                "シリアルナンバーの数字の合計",
+            ] : [
+                "シリアルナンバーの数字の合計",
+                "シリアルナンバーの文字をアルファベットでの位置に変換したものの合計",
+                "全てのインジケーターの文字をアルファベットでの位置に変換したものの合計",
+                "インジケーターの値の合計。点滅={0}、 消灯={1}",
+                "ポートの値の合計。パラレル={0}、シリアル={1}、DVI-D={2}、ステレオRCA={3}、PS/2={4}、RJ-45={5} (その他のポートは 0)",
+                "バッテリーの値の合計。単3={0}、単1={1}",
+                "爆弾のモジュール数 (特殊モジュールを含む)",
+                "爆弾のモジュール数 (特殊モジュールを含まない)",
+                "爆弾起動時の暦の月",
+                "爆弾起動時の暦の日",
+                "爆弾に付いているロックマン2のモジュール数"
+            ];
+            if (rnd.seed !== 1 && !anyETanks)
+            {
+                possibleETanksRules.push("ロボットマスターの生存者数");
+                possibleETanksRules.push("ロボットマスターの死亡者数");
+            }
+
+            let numbers = rnd.shuffleFisherYates([ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]);
+            let eTankRuleIx = rnd.next(0, possibleETanksRules.length);
+            document.getElementById('etanks-rule').innerText = possibleETanksRules[eTankRuleIx]
+                .replace(/\{(\d+)\}/g, (_, x) => numbers[x]);
+        }
+    </script>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">ロックマン２</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Mega Man 2.svg" class="diagram">
+                <h2>モジュール詳細：ロックマン２</h2>
+                <p class="flavour-text">200X年には、ロックマンというスーパーロボットが誕生した。ライト博士は、ワイリー博士の邪悪な欲望を止めるためにロックマンを作成した。しかし敗北後、ワイリー博士はロックマンに対抗するために自分のロボットを８台作成した。</p>
+                <p>ロックマン２では、９つの赤い点を使用してパスワードを入力することができる。モジュールを解除するには正しいパスワードを作成する。</p>
+                <p>モジュールに表示されている武器を使用しているマスターは死んでおり、表示されているマスターは生きている。残りのマスターは、<strong>生存条件</strong>が該当する場合のみ生きている。そうでない場合は死んでいる。</p>
+                <p>自分が保有している<strong>Eタンク</strong>の数は、<span id='etanks-rule'>シリアルナンバーの数字の合計</span>である。１～５の範囲になるまで繰り返し５を減算する。Eタンクスポットは<strong>"A-#"</strong>である。</p>
+                <table>
+                    <tr>
+                        <th>ロボットマスター</th>
+                        <th>武器</th>
+                        <th>名前</th>
+                        <th>死</th>
+                        <th>生</th>
+                        <th>生存条件</th>
+                    </tr>
+                    <tr>
+                        <th><img class="robot-master" src="img/Mega Man 2/Robot Masters/Air Man.png"></th>
+                        <th><img class="weapon" src="img/Mega Man 2/Weapons/Air Man.png"></th>
+                        <th class='robot-master-name'>エアーマン</th>
+                        <th class='coordinates'>B2</th>
+                        <th class='coordinates'>E1</th>
+                        <td class='alive-condition'><strong>バッテリーホルダー</strong> ≥ <strong>インジケーター</strong></td>
+                    </tr>
+                    <tr>
+                        <th><img class="robot-master" src="img/Mega Man 2/Robot Masters/Bubble Man.png"></th>
+                        <th><img class="weapon" src="img/Mega Man 2/Weapons/Bubble Man.png"></th>
+                        <th class='robot-master-name'>バブルマン</th>
+                        <th class='coordinates'>D5</th>
+                        <th class='coordinates'>D2</th>
+                        <td class='alive-condition'><strong>Eタンク</strong> ≠ 2</td>
+                    </tr>
+                    <tr>
+                        <th><img class="robot-master" src="img/Mega Man 2/Robot Masters/Crash Man.png"></th>
+                        <th><img class="weapon" src="img/Mega Man 2/Weapons/Crash Man.png"></th>
+                        <th class='robot-master-name'>クラッシュマン</th>
+                        <th class='coordinates'>D4</th>
+                        <th class='coordinates'>B1</th>
+                        <td class='alive-condition'><strong>CAR</strong><strong>インジケーター</strong>がある</td>
+                    </tr>
+                    <tr>
+                        <th><img class="robot-master" src="img/Mega Man 2/Robot Masters/Flash Man.png"></th>
+                        <th><img class="weapon" src="img/Mega Man 2/Weapons/Flash Man.png"></th>
+                        <th class='robot-master-name'>フラッシュマン</th>
+                        <th class='coordinates'>C5</th>
+                        <th class='coordinates'>B3</th>
+                        <td class='alive-condition'><strong>シリアルナンバー</strong>の最後の数字 ≤ 5</td>
+                    </tr>
+                    <tr>
+                        <th><img class="robot-master" src="img/Mega Man 2/Robot Masters/Heat Man.png"></th>
+                        <th><img class="weapon" src="img/Mega Man 2/Weapons/Heat Man.png"></th>
+                        <th class='robot-master-name'>ヒートマン</th>
+                        <th class='coordinates'>C1</th>
+                        <th class='coordinates'>E4</th>
+                        <td class='alive-condition'><strong>モジュールの総数</strong> ≥ 11</td>
+                    </tr>
+                    <tr>
+                        <th><img class="robot-master" src="img/Mega Man 2/Robot Masters/Metal Man.png"></th>
+                        <th><img class="weapon" src="img/Mega Man 2/Weapons/Metal Man.png"></th>
+                        <th class='robot-master-name'>メタルマン</th>
+                        <th class='coordinates'>B4</th>
+                        <th class='coordinates'>E5</th>
+                        <td class='alive-condition'><strong>バッテリー</strong> = <strong>シリアルナンバー</strong>の最初の数字</td>
+                    </tr>
+                    <tr>
+                        <th><img class="robot-master" src="img/Mega Man 2/Robot Masters/Quick Man.png"></th>
+                        <th><img class="weapon" src="img/Mega Man 2/Weapons/Quick Man.png"></th>
+                        <th class='robot-master-name'>クイックマン</th>
+                        <th class='coordinates'>C3</th>
+                        <th class='coordinates'>D3</th>
+                        <td class='alive-condition'><strong>RJ-45</strong>がある</td>
+                    </tr>
+                    <tr>
+                        <th><img class="robot-master" src="img/Mega Man 2/Robot Masters/Wood Man.png"></th>
+                        <th><img class="weapon" src="img/Mega Man 2/Weapons/Wood Man.png"></th>
+                        <th class='robot-master-name'>ウッドマン</th>
+                        <th class='coordinates'>E2</th>
+                        <th class='coordinates'>C4</th>
+                        <td class='alive-condition'><strong>爆弾</strong>の開始時間 ≥ 40分</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/1</div>
+        </div>
+    </div>
+</body>
+</html>

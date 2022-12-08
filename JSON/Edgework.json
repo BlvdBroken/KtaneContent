@@ -1,6 +1,9 @@
 {
-  "Author": "ZekNikZ, Ion Lee",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "ZekNikZ" ],
+    "Manual": [ "Ion Lee" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Answer questions about the edgework on the bomb. Tags: hazard, warning, timer, display, 3-buttons, needy",
   "ExpertDifficulty": "VeryEasy",
@@ -10,12 +13,17 @@
   "Published": "2017-05-14",
   "SortKey": "EDGEWORK",
   "SourceUrl": "https://github.com/ZekNikZ/KTANE_Edgework",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "926122787",
   "Symbol": "Ew",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=9J5mwI2XuNQ",
-    "default": "https://www.youtube.com/watch?v=9dbGsotHhaM"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=9J5mwI2XuNQ"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=9dbGsotHhaM"
+    }
+  ],
   "Type": "Needy"
 }

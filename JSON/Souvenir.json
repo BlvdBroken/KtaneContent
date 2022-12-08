@@ -1,32 +1,48 @@
 {
-  "Author": "Timwi, Andrio Celos, and many contributors",
+  "BossStatus": "FullBoss",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [
+      "Timwi",
+      "Andrio Celos",
+      "and many contributors"
+    ],
+    "Maintainer": [ "Timwi" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Answer questions about some of the other modules on the same bomb which you already solved. Requires keeping more notes than usual. Tags: question, 4-answers, 6-answers, black-display",
   "ExpertDifficulty": "Hard",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive",
+    "+TimeDependent",
     "-pwDestroyer",
     "-omegaDestroyer"
   ],
-  "IsFullBoss": true,
   "ModuleID": "SouvenirModule",
   "MysteryModule": "MustNotBeKey",
   "Name": "Souvenir",
   "ObsoleteSteamIDs": [ "2018009170" ],
   "Origin": "Mods",
   "Published": "2016-12-02",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd",
   "SortKey": "SOUVENIR",
   "SourceUrl": "https://github.com/Timwi/KtaneSouvenir",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "810934485",
   "Symbol": "Sv",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=m-yJ4su_DPM",
-    "default": "https://www.youtube.com/watch?v=2WWtQdQEkbo",
-    "Français": "https://youtu.be/GidTT8_fqII"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=m-yJ4su_DPM"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=2WWtQdQEkbo"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/GidTT8_fqII"
+    }
+  ],
   "Type": "Regular"
 }

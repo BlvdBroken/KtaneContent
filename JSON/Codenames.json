@@ -1,6 +1,6 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "TasThing" ] },
+  "Contributors": { "Developer": [ "TasThiluna" ] },
   "DefuserDifficulty": "Easy",
   "Description": "Identify which cards you need to select based on a cycling 5×5 grid. Tags: red, blue, cycle, pink-text, black-text",
   "ExpertDifficulty": "Hard",
@@ -13,6 +13,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1935171870",
   "Symbol": "Cnm",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=DG_G_xOe_Vc" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=DG_G_xOe_Vc"
+  } ],
   "Type": "Regular"
 }

@@ -2,7 +2,7 @@
   "Author": "Speakingevil",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Hard",
-  "Description": "Swap tiles so that each is adjacent to the correct number of mines.",
+  "Description": "Swap tiles so that each is adjacent to the correct number of mines. Tags: mines, 6x6-grid, 6×6-grid",
   "ExpertDifficulty": "Hard",
   "ModuleID": "mineswapper",
   "Name": "Mineswapper",
@@ -12,5 +12,9 @@
   "SourceUrl": "https://github.com/Speakingevil/mineswapper",
   "SteamID": "2311171949",
   "Symbol": "Msa",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/Zd99S_DR0V0"
+  } ],
   "Type": "Regular"
 }

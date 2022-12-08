@@ -1,6 +1,9 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "TasThing" ] },
+  "Contributors": {
+    "Developer": [ "TasThiluna" ],
+    "Manual graphics": [ "JG" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Select a syrup to flavor the shaved ice by calculating two numbers. Tags: bottle, puerto-rican-flag, cup, ice-cream",
   "ExpertDifficulty": "Easy",
@@ -13,5 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2573203445",
   "Symbol": "Pira",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/KEZnIfa2iZs"
+  } ],
   "Type": "Regular"
 }

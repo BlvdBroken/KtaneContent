@@ -1,6 +1,12 @@
 {
-  "Author": "Sean Obach",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Sean Obach" ],
+    "Twitch Plays": [
+      "eXish",
+      "Sean Obach"
+    ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "A 3 step module using different ciphers. Tags: yellow, qwerty-keyboard",
   "ExpertDifficulty": "Hard",
@@ -10,10 +16,13 @@
   "Origin": "Mods",
   "Published": "2019-09-22",
   "SortKey": "YELLOWCIPHER",
-  "SourceUrl": "https://github.com/obachs971/YellowCipher",
+  "SourceUrl": "https://github.com/obachs971/UltimateCipher/",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1932944041",
   "Symbol": "Yci",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=fMMQMLQT3ps" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=fMMQMLQT3ps"
+  } ],
   "Type": "Regular"
 }

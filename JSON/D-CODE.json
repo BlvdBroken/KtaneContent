@@ -13,5 +13,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2140352980",
   "Symbol": "Dcd",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/Es6QHeA_6bY"
+  } ],
   "Type": "Regular"
 }

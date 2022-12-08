@@ -7,16 +7,20 @@
   "DefuserDifficulty": "Medium",
   "Description": "Keep an eye on this one to figure out which shape is needed to be pressed.",
   "ExpertDifficulty": "VeryEasy",
-  "IsTimeSensitive": true,
   "ModuleID": "kataZenerCards",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Zener Cards",
   "Origin": "Mods",
   "Published": "2020-11-27",
+  "Quirks": "TimeDependent",
   "SortKey": "ZENERCARDS",
   "SourceUrl": "https://github.com/SmexyKatarina/Zener-Cards",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2299600206",
   "Symbol": "Zc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/TD-8IlSiiHU"
+  } ],
   "Type": "Regular"
 }

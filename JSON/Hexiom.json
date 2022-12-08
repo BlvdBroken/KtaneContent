@@ -9,9 +9,13 @@
   "Origin": "Mods",
   "Published": "2020-12-16",
   "SortKey": "HEXIOM",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/NeedyPuzzleLeague",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1940164898",
   "Symbol": "Hxm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/T7ZshMsm0l4"
+  } ],
   "Type": "Regular"
 }

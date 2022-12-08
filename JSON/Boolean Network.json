@@ -1,16 +1,20 @@
-﻿{
-  "Author": "tepel",
+{
+  "Author": "t-chen",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Easy",
-  "Description": "Derive the states of each buttons using boolean operation and a network. tags: 6-buttons, graph, binary, network",
+  "Description": "Derive the states of each buttons using boolean operation and a network. Tags: 6-buttons, graph, binary, network",
   "ExpertDifficulty": "Medium",
   "ModuleID": "BooleanNetwork",
   "Name": "Boolean Network",
   "Origin": "Mods",
   "Published": "2021-09-27",
-  "SortKey": "BooleanNetwork",
+  "SortKey": "BOOLEANNETWORK",
   "SourceUrl": "https://github.com/tepel-chen/KtaneBooleanNetwork",
   "SteamID": "2612949131",
   "Symbol": "Bnt",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/P-BRMaIqvL0"
+  } ],
   "Type": "Regular"
 }

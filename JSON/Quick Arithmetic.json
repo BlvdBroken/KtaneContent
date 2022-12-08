@@ -15,5 +15,10 @@
     "Status": "Considered"
   },
   "SteamID": "2025078800",
+  "Symbol": "Qa",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/XTMW066K7S4"
+  } ],
   "Type": "Regular"
 }

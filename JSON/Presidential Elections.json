@@ -1,6 +1,10 @@
 {
-  "Author": "EpicToast",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "EpicToast" ],
+    "Manual": [ "EpicToast" ],
+    "Twitch Plays": [ "Konoko" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Determine the results of an election using a certain voting system. Tags: symbols, keypad, 4-buttons, screen",
   "ExpertDifficulty": "Medium",
@@ -12,5 +16,9 @@
   "SourceUrl": "https://github.com/EpicToastTM/ktanePresidentialElections",
   "SteamID": "2613435051",
   "Symbol": "Pe",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/YM1lNOVamcw"
+  } ],
   "Type": "Regular"
 }

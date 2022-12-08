@@ -1,6 +1,9 @@
 {
-  "Author": "Timwi, Moon",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Manual": [ "Moon" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Place Xs and Os in a 3×3 grid, but avoid completing a line of three. Tags: pass, up-next, noughts, crosses, numbers",
   "ExpertDifficulty": "Hard",
@@ -14,10 +17,19 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "776667407",
   "Symbol": "Ttt",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=3p71y-aysK0",
-    "default": "https://www.youtube.com/watch?v=mUtcJTYh91s",
-    "Français": "https://youtu.be/6Ne6dIpEwhk"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=3p71y-aysK0"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=mUtcJTYh91s"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/6Ne6dIpEwhk"
+    }
+  ],
   "Type": "Regular"
 }

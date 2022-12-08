@@ -1,0 +1,24 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "eXish" ],
+    "Maintainer": [ "Quinn Wuest" ]
+  },
+  "DefuserDifficulty": "Medium",
+  "Description": "Move around a 6×6 grid and find a pen and a pineapple to make a pineapple-pen while avoiding all apples. Tags: yellow-background, arrow-buttons, solve-button, pineapple, pen",
+  "ExpertDifficulty": "Easy",
+  "ModuleID": "PineapplePenModule",
+  "Name": "Pineapple Pen",
+  "Origin": "Mods",
+  "Published": "2022-09-24",
+  "Quirks": "SolvesWithOthers",
+  "SortKey": "PINEAPPLEPEN",
+  "SourceUrl": "https://github.com/QuinnWuest/KtanePenPineappleApplePen",
+  "SteamID": "2867345154",
+  "Symbol": "Ppen",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/nqwXWLaHxcQ?t=34"
+  } ],
+  "Type": "Regular"
+}

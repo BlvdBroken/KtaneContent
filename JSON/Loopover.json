@@ -1,9 +1,9 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "TasThing" ] },
+  "Contributors": { "Developer": [ "TasThiluna" ] },
   "DefuserDifficulty": "Hard",
   "Description": "Use the arrow buttons to shift the rows and columns to arrange the 25 tiles into alphabetical order. Tags: arrows, tiles, alphabet",
-  "ExpertDifficulty": "VeryEasy",
+  "ExpertDifficulty": "Hard",
   "ModuleID": "loopover",
   "Name": "Loopover",
   "Origin": "Mods",
@@ -13,6 +13,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1904259050",
   "Symbol": "Lov",
-  "TutorialVideoUrl": { "default": "https://youtu.be/3mWUH52LWbg" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/3mWUH52LWbg"
+  } ],
   "Type": "Regular"
 }

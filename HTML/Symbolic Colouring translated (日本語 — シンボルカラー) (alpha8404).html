@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>シンボルカラー — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <script src="js/jquery.3.1.1.min.js"></script>
+    <script>
+    $(function() {
+        $(".colorblind-mode").click(function(event) {
+            $(this).toggleClass("enable");
+            $("body").toggleClass("cblind");
+        });
+    });
+    </script>
+    <style>
+        body{
+            -webkit-print-color-adjust:exact;
+        }
+
+        .dark table, table {
+            margin: 1em 0.2em;
+            border:none;
+            text-align: center;
+            vertical-align: middle;
+        }
+            table.color-table, table.color-table-2 {
+                float: left;
+            }
+                table.color-table td, table.color-table th {
+                    padding: .3em .2em .2em;
+                }
+                table.color-table td {
+                    font-family: 'Times New Roman';
+                    font-size: 1.3em;
+                    padding: 0;
+                }
+
+        .hstack {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .hstack.just-left {
+            justify-content: left;
+        }
+        .red { background-color: #F00; color: #FFF; }
+        .white { background-color: #FFF; color: #000; }
+        .black { background-color: #000; color: #FFF; }
+        .green { background-color: #0F0; color: #000; }
+        .blue { background-color: #00F; color: #FFF; }
+        .yellow { background-color: #FF0; color: #000; }
+        .orange { background-color: #FF8000; color: #000; }
+        .purple { background-color: #7F12AA; color: #FFF; }
+        body.cblind .red::after { content: 'R' }
+        body.cblind .white::after { content: 'W' }
+        body.cblind .black::after { content: 'K' }
+        body.cblind .green::after { content: 'G' }
+        body.cblind .blue::after { content: 'B' }
+        body.cblind .yellow::after { content: 'Y' }
+        body.cblind .orange::after { content: 'O' }
+        body.cblind .purple::after { content: 'P' }
+        body.cblind .color-table td:not(:first-child) {
+            font-size: 1em;
+            padding: 0;
+        }
+
+        button.colorblind-mode:not(.enable)::before {
+            content: 'Colorblind\00a0Off';
+        }
+        button.colorblind-mode.enable::before {
+            content: 'Colorblind\00a0On';
+        }
+        button {
+            font-family: 'Special Elite';
+            background-color: white;
+            color: black;
+            font-size: 15px;
+            border-radius: 5px;
+            border: black 3px solid;
+            padding: 4px 7px 0;
+            transition: color 1s, background-color 1s;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">シンボルカラー</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Symbolic Colouring.svg" class="diagram">
+                <h2>モジュール詳細：シンボルカラー</h2>
+                <p class="flavour-text">あなたの自然な色を自慢してみてくれ。</p>
+                <ul>
+                    <li>モジュールには８つのボタンがある。</li>
+                    <li>上の段には、それぞれ異なる記号がある。</li>
+                    <li>下の段には、それぞれ色が付いている。</li>
+                    <li>白いボタンを押すと、現在の色が白にリセットされる。</li>
+                    <li>他の色を押すと、その色が現在の色に追加される。</li>
+                    <li>モジュールを解除するには、４つの記号ボタン全てを正しい順序で押す必要がある。</li>
+                    <li>ただし、各ボタンは色に対応しており、現在の色が指定された色と一致しないときに押すとミスが記録される。</li>
+                    <li>シンボルボタンの順序は左から順に１～４である。</li>
+                </ul>
+
+                <p><i>色のボタンの使い方は、「色ボタンのチャート」を参照する。</i></p>
+                <p>下の表を使用し、記号ボタンの押す順序を決定する。</p>
+                <table style='margin: 0 auto'>
+                    <tr>
+                        <th class="corner"></th>
+                        <th colspan='2'>シリアルナンバーの最後の数字</th>
+                    </tr>
+                    <tr><th>バッテリー</th><th>奇数</th><th>偶数</th></tr>
+                    <tr><th>0</th><td>3,1,2,4</td><td>3,4,1,2</td></tr>
+                    <tr><th>1</th><td>1,3,2,4</td><td>2,1,3,4</td></tr>
+                    <tr><th>2</th><td>2,4,3,1</td><td>1,4,2,3</td></tr>
+                    <tr><th>3</th><td>3,4,2,1</td><td>3,1,4,2</td></tr>
+                    <tr><th>4</th><td>2,1,4,3</td><td>4,1,2,3</td></tr>
+                    <tr><th>5</th><td>1,4,3,2</td><td>2,3,4,1</td></tr>
+                    <tr><th>6</th><td>4,2,1,3</td><td>1,2,4,3</td></tr>
+                    <tr><th>7</th><td>1,3,4,2</td><td>4,2,3,1</td></tr>
+                    <tr><th>8</th><td>3,2,1,4</td><td>2,4,1,3</td></tr>
+                    <tr><th>9</th><td>2,3,1,4</td><td>3,2,4,1</td></tr>
+                    <tr><th>それ以外</th><td>4,3,2,1</td><td>1,2,3,4</td></tr>
+                </table>
+            </div>
+           <div class="page-footer relative-footer">ページ 1/2</div>
+        </div>
+
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">シンボルカラー</span>
+            </div>
+            <div class="page-content">
+                <p>以下の表を使用し、各記号の色を決定する。</p>
+                <div class="hstack">
+                    <table class='color-table'>
+                        <tr><th class="corner"></th><th colspan="4">ボタンの位置</th></tr>
+                        <tr><th>シンボル</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+                        <tr><td>α</td><td class="red"></td><td class="white"></td><td class="black"></td><td class="green"></td></tr>
+                        <tr><td>β</td><td class="blue"></td><td class="yellow"></td><td class="orange"></td><td class="purple"></td></tr>
+                        <tr><td>γ</td><td class="yellow"></td><td class="red"></td><td class="white"></td><td class="orange"></td></tr>
+                        <tr><td>δ</td><td class="black"></td><td class="yellow"></td><td class="red"></td><td class="white"></td></tr>
+                        <tr><td>ε</td><td class="red"></td><td class="purple"></td><td class="blue"></td><td class="yellow"></td></tr>
+                        <tr><td>ζ</td><td class="green"></td><td class="black"></td><td class="yellow"></td><td class="orange"></td></tr>
+                        <tr><td>η</td><td class="orange"></td><td class="white"></td><td class="purple"></td><td class="red"></td></tr>
+                        <tr><td>θ</td><td class="green"></td><td class="red"></td><td class="purple"></td><td class="black"></td></tr>
+                        <tr><td>ϑ</td><td class="green"></td><td class="black"></td><td class="yellow"></td><td class="white"></td></tr>
+                        <tr><td>ι</td><td class="green"></td><td class="red"></td><td class="yellow"></td><td class="blue"></td></tr>
+                        <tr><td>κ</td><td class="yellow"></td><td class="purple"></td><td class="white"></td><td class="orange"></td></tr>
+                        <tr><td>λ</td><td class="black"></td><td class="green"></td><td class="red"></td><td class="blue"></td></tr>
+                        <tr><td>μ</td><td class="orange"></td><td class="blue"></td><td class="green"></td><td class="purple"></td></tr>
+                        <tr><td>ν</td><td class="blue"></td><td class="black"></td><td class="yellow"></td><td class="green"></td></tr>
+                        <tr><td>ξ</td><td class="red"></td><td class="white"></td><td class="orange"></td><td class="green"></td></tr>
+                        <tr><td>π</td><td class="purple"></td><td class="white"></td><td class="blue"></td><td class="green"></td></tr>
+                        <tr><td>ρ</td><td class="blue"></td><td class="green"></td><td class="red"></td><td class="yellow"></td></tr>
+                        <tr><td>σ</td><td class="green"></td><td class="orange"></td><td class="orange"></td><td class="white"></td></tr>
+                    </table>
+                    <table class='color-table'>
+                        <tr><th class="corner"></th><th colspan="4">ボタンの位置</th></tr>
+                        <tr><th>シンボル</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+                        <tr><td>ς</td><td class="red"></td><td class="purple"></td><td class="red"></td><td class="blue"></td></tr>
+                        <tr><td>τ</td><td class="purple"></td><td class="yellow"></td><td class="green"></td><td class="red"></td></tr>
+                        <tr><td>υ</td><td class="red"></td><td class="orange"></td><td class="white"></td><td class="green"></td></tr>
+                        <tr><td>φ</td><td class="white"></td><td class="green"></td><td class="blue"></td><td class="purple"></td></tr>
+                        <tr><td>ϕ</td><td class="green"></td><td class="orange"></td><td class="red"></td><td class="black"></td></tr>
+                        <tr><td>χ</td><td class="black"></td><td class="blue"></td><td class="green"></td><td class="yellow"></td></tr>
+                        <tr><td>ψ</td><td class="white"></td><td class="purple"></td><td class="red"></td><td class="red"></td></tr>
+                        <tr><td>ω</td><td class="orange"></td><td class="red"></td><td class="black"></td><td class="orange"></td></tr>
+                        <tr><td>ϖ</td><td class="purple"></td><td class="blue"></td><td class="yellow"></td><td class="black"></td></tr>
+                        <tr><td>Γ</td><td class="red"></td><td class="orange"></td><td class="purple"></td><td class="purple"></td></tr>
+                        <tr><td>∆</td><td class="red"></td><td class="white"></td><td class="purple"></td><td class="blue"></td></tr>
+                        <tr><td>Θ</td><td class="green"></td><td class="red"></td><td class="black"></td><td class="orange"></td></tr>
+                        <tr><td>Λ</td><td class="red"></td><td class="yellow"></td><td class="white"></td><td class="blue"></td></tr>
+                        <tr><td>Ξ</td><td class="purple"></td><td class="yellow"></td><td class="purple"></td><td class="white"></td></tr>
+                        <tr><td>Π</td><td class="orange"></td><td class="white"></td><td class="yellow"></td><td class="green"></td></tr>
+                        <tr><td>Σ</td><td class="black"></td><td class="yellow"></td><td class="orange"></td><td class="red"></td></tr>
+                        <tr><td>ϒ</td><td class="white"></td><td class="green"></td><td class="yellow"></td><td class="white"></td></tr>
+                    </table>
+                    <table class='color-table'>
+                        <tr><th class="corner"></th><th colspan="4">ボタンの位置</th></tr>
+                        <tr><th>シンボル</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+                        <tr><td>Φ</td><td class="white"></td><td class="blue"></td><td class="green"></td><td class="red"></td></tr>
+                        <tr><td>Ψ</td><td class="white"></td><td class="black"></td><td class="green"></td><td class="red"></td></tr>
+                        <tr><td>Ω</td><td class="green"></td><td class="orange"></td><td class="blue"></td><td class="black"></td></tr>
+                        <tr><td>⌠</td><td class="yellow"></td><td class="red"></td><td class="purple"></td><td class="white"></td></tr>
+                        <tr><td>ℑ</td><td class="blue"></td><td class="green"></td><td class="orange"></td><td class="black"></td></tr>
+                        <tr><td>ℜ</td><td class="yellow"></td><td class="purple"></td><td class="yellow"></td><td class="orange"></td></tr>
+                        <tr><td>℘</td><td class="purple"></td><td class="orange"></td><td class="blue"></td><td class="green"></td></tr>
+                        <tr><td>⊥</td><td class="orange"></td><td class="red"></td><td class="yellow"></td><td class="red"></td></tr>
+                        <tr><td>⊕</td><td class="yellow"></td><td class="orange"></td><td class="blue"></td><td class="green"></td></tr>
+                        <tr><td>ฯ</td><td class="purple"></td><td class="green"></td><td class="red"></td><td class="yellow"></td></tr>
+                        <tr><td>∋</td><td class="black"></td><td class="red"></td><td class="white"></td><td class="orange"></td></tr>
+                        <tr><td>∀</td><td class="red"></td><td class="white"></td><td class="purple"></td><td class="green"></td></tr>
+                        <tr><td>∞</td><td class="purple"></td><td class="black"></td><td class="blue"></td><td class="red"></td></tr>
+                        <tr><td>ƒ</td><td class="orange"></td><td class="blue"></td><td class="yellow"></td><td class="green"></td></tr>
+                        <tr><td>א</td><td class="black"></td><td class="purple"></td><td class="blue"></td><td class="white"></td></tr>
+                        <tr><td>∝</td><td class="yellow"></td><td class="red"></td><td class="white"></td><td class="black"></td></tr>
+                        <tr><td>∅</td><td class="blue"></td><td class="green"></td><td class="red"></td><td class="orange"></td></tr>
+                    </table>
+                </div>
+
+                <div class="hstack just-left">
+                    <h3>色ボタンのチャート</h3>
+                    <button class="colorblind-mode"></button>
+                </div>
+                <div class="hstack">
+                    <table class='color-table-2'>
+                        <tr><th>ボタン</th><th>色</th></tr>
+                        <tr><td>白</td><td>白にリセット</td></tr>
+                        <tr><td>赤</td><td>赤のみ</td></tr>
+                        <tr><td>黄</td><td>黄のみ</td></tr>
+                        <tr><td>青</td><td>青のみ</td></tr>
+                    </table>
+
+                    <table class='color-table-2'>
+                        <tr><th>ボタン</th><th>色</th></tr>
+                        <tr><td>赤 + 黄</td><td>オレンジ</td></tr>
+                        <tr><td>赤 + 青</td><td>紫</td></tr>
+                        <tr><td>黄 + 青</td><td>緑</td></tr>
+                        <tr><td>赤 + 黄 + 青</td><td>黒</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/2</div>
+        </div>
+    </div>
+</body>
+</html>

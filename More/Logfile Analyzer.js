@@ -1,3 +1,8 @@
+// Dark mode
+if (localStorage.getItem("theme") == "dark") {
+    document.documentElement.classList.add("dark-mode");
+}
+
 class Groups {
     constructor() {
         this.groups = [];
@@ -203,6 +208,7 @@ class BombGroup {
         this.LoggedSerials = [];
         this.Events = [];
         this.RuleSeed = 1;
+        this.CompetitiveLogger = false;
     }
 
     get loggedBombs() {
@@ -274,6 +280,8 @@ class BombGroup {
             missionInfoTree.push("State: " + this.State);
         }
 
+        if (this.CompetitiveLogger) missionInfoTree.push("Competitive Logger enabled.")
+
         // Copy DMG string
         const dmgString =
         `/// ${this.MissionName}\n\n` +
@@ -325,7 +333,7 @@ class BombGroup {
         // Graph
         if (this.Events.length !== 0 && this.isSingleBomb)
         {
-            const graph = $SVG(`<svg viewBox="-0.1 -0.1 2.3 1.4">`);
+            const graph = $SVG(`<svg viewBox="-1 -1 23 14">`);
 
             const totalRealTime = this.Events[this.Events.length - 1].realTime;
 
@@ -342,7 +350,7 @@ class BombGroup {
                     name: "Solves",
                     color: "rgb(0, 225, 0)",
                     max: totalModules,
-                    final: this.Bombs[0].Solves,
+                    final: this.Bombs[0].Solved,
                     invert: true,
                     type: "PASS"
                 },
@@ -355,7 +363,7 @@ class BombGroup {
             };
 
             for (const stat of Object.values(stats)) {
-                stat.line = "M 0 1 ";
+                stat.line = "M 0 10 ";
                 stat.value = 0;
             }
 
@@ -367,7 +375,7 @@ class BombGroup {
                         continue;
                 }
 
-                const baseCommand = `L ${(event.realTime / totalRealTime * 2)} `;
+                const baseCommand = `L ${(event.realTime / totalRealTime * 2 * 10)} `;
 
                 for (const stat of Object.values(stats)) {
                     if (stat.type == event.type || stat.type == undefined) {
@@ -376,7 +384,7 @@ class BombGroup {
 
                         if (stat.name != "Time")
                         {
-                            stat.line += baseCommand + beforeRatio;
+                            stat.line += baseCommand + (beforeRatio * 10);
                             stat.value++;
                         }
                         else
@@ -387,7 +395,7 @@ class BombGroup {
                         let afterRatio = stat.value / stat.max;
                         if (stat.invert) afterRatio = 1 - afterRatio;
 
-                        stat.line += baseCommand + afterRatio;
+                        stat.line += baseCommand + (afterRatio * 10);
                     }
                 }
             }
@@ -398,25 +406,25 @@ class BombGroup {
                 {
                     let beforeRatio = stat.value / stat.max;
                     if (stat.invert) beforeRatio = 1 - beforeRatio;
-                    stat.line += `L 2 ${beforeRatio}`;
+                    stat.line += `L 20 ${beforeRatio * 10}`;
                 }
 
                 let afterRatio = stat.final / stat.max;
                 if (stat.invert) afterRatio = 1 - afterRatio;
-                stat.line += `L 2 ${afterRatio}`;
+                stat.line += `L 20 ${afterRatio * 10}`;
 
                 // Draw line and preprend it to make sure lines are drawn in the right order.
-                $SVG(`<path stroke="${stat.color}" stroke-width=0.01 fill=none d="${stat.line}">`).prependTo(graph);
+                $SVG(`<path stroke="${stat.color}" stroke-width=0.1 fill=none d="${stat.line}">`).prependTo(graph);
 
                 // Legend
-                $SVG(`<rect fill="${stat.color}" x=0.02 width=0.075 height=0.075 y=${i * 0.1}>`).appendTo(graph);
-                $SVG(`<text font-size=0.05 x=0.11 dominant-baseline=middle y=${i * 0.1 + 0.0375}>${stat.name}`).appendTo(graph);
+                $SVG(`<rect fill="${stat.color}" x=0.2 width=0.75 height=0.75 y=${i}>`).appendTo(graph);
+                $SVG(`<text font-size=0.5 x=1.1 dominant-baseline=middle y=${i + 0.375}>${stat.name}`).appendTo(graph);
 
                 i++;
             }
 
             // Graph lines
-            $SVG(`<path stroke=black stroke-width=0.01 fill=none d="M 0 0 0 1.01 2.01 1.01">`).appendTo(graph);
+            $SVG(`<path stroke=black stroke-width=0.1 fill=none d="M 0 0 0 10.1 20.1 10.1">`).appendTo(graph);
 
             function printTime(num) {
                 num = Math.floor(num);
@@ -448,20 +456,20 @@ class BombGroup {
             let group = $SVG(`
             <g>
                 <defs>
-                    <path id='left-label' stroke=black stroke-width=0.01 fill=none d="M 0 1.06 .2 1.26"/>
-                    <path id='right-label' stroke=black stroke-width=0.01 fill=none d="M 2.01 1.06 2.21 1.26"/>
+                    <path id='left-label' stroke=black stroke-width=0.1 fill=none d="M 0 10.6 2 12.6"/>
+                    <path id='right-label' stroke=black stroke-width=0.1 fill=none d="M 20.1 10.6 22.1 12.6"/>
                 </defs>
                 <text>
-                    <textpath href='#left-label' style="font-size: .05;">0:00</textpath>
-                    <textpath href='#right-label' style="font-size: .05;">${printTime(totalRealTime)}</textpath>
+                    <textpath href='#left-label' font-size=".5">0:00</textpath>
+                    <textpath href='#right-label' font-size=".5">${printTime(totalRealTime)}</textpath>
                 </text>
-                <text x='1' y='1.2' style="font-size: .05;text-anchor: middle;">Real Time</text>
+                <text x='10' y='12' font-size=".5" style="text-anchor: middle;">Real Time</text>
             </g>
             `);
 
             for (const item of timerLabels) {
-                $SVG(`<text transform='translate(${item * 2 / totalRealTime}, 0)'><textpath href='#left-label' style="font-size: .05;">${printTime(item)}</textpath></text>`).appendTo(group);
-                $SVG(`<path stroke='#ccc' stroke-width='.005' d='M${item * 2 / totalRealTime} 0v1.01'/>`).appendTo(group);
+                $SVG(`<text transform='translate(${item * 2 / totalRealTime * 10}, 0)'><textpath href='#left-label' font-size=".5">${printTime(item)}</textpath></text>`).appendTo(group);
+                $SVG(`<path stroke='#ccc' stroke-width='.05' d='M${item * 2 / totalRealTime * 10} 0v10.1'/>`).appendTo(group);
             }
 
             group.prependTo(graph);
@@ -1012,12 +1020,15 @@ function Bomb(seed) {
             return 0;
         });
 
+        const preferredManuals = JSON.parse(localStorage.getItem("preferredManuals") ?? "{}");
         function GetManual(parseData) {
             const moduleData = parseData.moduleData;
-            let manual = (moduleData.repo?.FileName || moduleData.repo?.Name || moduleData.displayName)
+            const repoName = moduleData.repo?.Name;
+            let manual = (moduleData.repo?.FileName || repoName || moduleData.displayName)
                 .replace("'", "’")
                 .replace(/[<>:"/\\|?*]/g, "");
 
+            let preferredManual = preferredManuals[repoName];
             if (parseData.tree && parseData.tree.length != 0 && typeof parseData.tree[0] === "string" && parseData.tree[0].startsWith("Language is ")) {
                 manual += ` (${parseData.tree[0].split(" ")[2]} — *)`;
 
@@ -1026,12 +1037,15 @@ function Bomb(seed) {
                     .replace("Vent Gas", "Venting Gas")
                     .replace("Passwords", "Password")
                     .replace("Who's on First", "Who’s on First")
-                    .replace(" Translated", " translated");
+                    .replace(" Translated", " translated")
+                    + ".html";
+            } else if (preferredManual !== undefined) {
+                manual = repoName + " " + preferredManual.replace(/ \((HTML|PDF)\)$/, (_, type) => "." + type.toLowerCase());
+            } else {
+                manual += ".html";
             }
 
-            manual += ".html";
-
-            if (ruleSeed != 1)
+            if (ruleSeed != 1 && manual.endsWith(".html"))
                 manual += "#" + ruleSeed;
 
             return manual;
@@ -1057,6 +1071,12 @@ function Bomb(seed) {
                         return false;
                     }))
                     .append(' as the information for this module cannot be automatically parsed.')
+                    .appendTo(moduleInfo);
+            }
+
+            if (parseData.moduleData.error) {
+                $("<p>")
+                    .html(parseData.moduleData.error)
                     .appendTo(moduleInfo);
             }
 
@@ -1134,7 +1154,7 @@ function Bomb(seed) {
             const faceParent = $("<div>").css("position", "relative");
             caseHTML.replaceWith(faceParent);
 
-            const faceStyle = { width: "50%", "transform-origin": "center", "backface-visibility": "hidden", "transition": "transform 0.5s" };
+            const faceStyle = { width: "50%", "transform-origin": "center", "backface-visibility": "hidden", "transition": "transform 0.5s", "will-change": "transform" };
             let svg = $SVG("<svg>")
                 .css(faceStyle)
                 .appendTo(faceParent);
@@ -1165,22 +1185,27 @@ function Bomb(seed) {
 
                 // The X axis needs to be flipped for the back face, so we multiply it by -1.
                 // And the Y axis is always upside down, so we always multiply it by -1.
-                const x = this.Anchors[moduleIndex][0] * (moduleIndex < this.ModuleOrder.length / 2 ? 1 : -1);
-                const y = this.Anchors[moduleIndex][1] * -1;
-                const image = $SVG(`<image x=${x} y=${y} xlink:href="../Icons/${encodeURI(module.moduleData.icon)}.png" width=.22 height=.22>`).appendTo(svg);
-                $SVG(`<rect x=${x} y=${y} width=.22 height=.22 stroke=black stroke-width=0.005 fill=none>`).appendTo(svg);
+                const x = this.Anchors[moduleIndex][0] * (moduleIndex < this.ModuleOrder.length / 2 ? 1 : -1) * 100;
+                const y = this.Anchors[moduleIndex][1] * -1 * 100;
+
+                let image;
+                if (module.iconPosition !== undefined) {
+                    const imageSVG = $SVG(`<svg viewBox="0 0 32 32" x=${x} y=${y} width=22 height=22>`).appendTo(svg);
+                    image = $SVG(`<image x=${-module.moduleData.iconPosition.X * 32} y=${-module.moduleData.iconPosition.Y * 32} href="../iconsprite">`).appendTo(imageSVG);
+                } else {
+                    image = $SVG(`<image x=${x} y=${y} href="../Icons/${encodeURI(module.moduleData.icon)}.png" width=22 height=22>`).appendTo(svg);
+                }
+
+                $SVG(`<rect x=${x} y=${y} width=22 height=22 stroke=black stroke-width=0.5 fill=none>`).appendTo(svg);
 
                 for (let j = 0; j < 4; j++) {
-                    viewBox[j] = Math[j < 2 ? "min" : "max"](viewBox[j], (j % 2 == 0 ? x : y) + (j < 2 ? 0 : 0.22));
+                    viewBox[j] = Math[j < 2 ? "min" : "max"](viewBox[j], (j % 2 == 0 ? x : y) + (j < 2 ? 0 : 22));
                 }
                 svg.attr("viewBox", `${viewBox[0]} ${viewBox[1]} ${Math.abs(viewBox[0]) + viewBox[2]} ${Math.abs(viewBox[1]) + viewBox[3]}`);
                 svg.width(`${0.5 * Math.min(Math.abs(viewBox[0]) + viewBox[2] / 0.66, 1) * 100}%`);
 
-                // Attempt to make the image pixelated
-                image.css("image-rendering", "crisp-edges");
-                if (image.css("image-render") == null) {
-                    image.css("image-rendering", "pixelated");
-                }
+                image.css("image-rendering", "pixelated");
+                image.on("error", () => image.attr("href", "../Icons/blank.png"));
             }
             const backFace = svg;
 
@@ -1242,8 +1267,6 @@ function generateParseDataKeys(field)
     parseData.forEach((moduleData, index) => {
         if (parseKeys[field][moduleData[field]] !== undefined) {
             return;
-        } else if (Array.isArray(moduleData[field])) {
-            moduleData[field].forEach((individual, secondIndex) => parseKeys[field][individual] = [index, secondIndex]);
         } else if (moduleData[field] !== undefined) {
             parseKeys[field][moduleData[field]] = index;
         }
@@ -1257,28 +1280,39 @@ function getModuleData(value, field = "loggingTag") {
         generateParseDataKeys(field);
 
 
-    if (Array.isArray(parseKeys[field][value])) {
-        const singleModuleData = Object.assign({}, parseData[parseKeys[field][value][0]]);
-        const index = parseKeys[field][value][1];
-        const fields = ["loggingTag", "moduleID", "displayName", "icon", "iconPosition"];
-
-        for (const field of fields) {
-            if (!Array.isArray(singleModuleData[field])) continue;
-
-            singleModuleData[field] = singleModuleData[field][index];
-        }
-        return singleModuleData;
-    } else if (parseKeys[field][value] !== undefined) {
+    if (parseKeys[field][value] !== undefined) {
         return Object.assign({}, parseData[parseKeys[field][value]]);
     }
 
     return null;
 }
 
+parseData = parseData.flatMap(data => {
+    if (!Array.isArray(data.moduleID)) {
+        return [data];
+    }
+
+    const multiple = [];
+    const fields = ["loggingTag", "moduleID", "displayName", "icon", "iconPosition"];
+    for (let i = 0; i < data.moduleID.length; i++) {
+        const singleData = {};
+        for (const field of fields) {
+            if (!Array.isArray(data[field])) continue;
+
+            singleData[field] = data[field][i];
+        }
+
+        singleData.matches = data.matches;
+        multiple.push(singleData);
+    }
+
+    return multiple;
+});
+
 // Read Logfile
 var readwarning = false;
 var buildwarning = false;
-var debugging = (window.location.protocol == "file:" || window.location.hostname == "127.0.0.1");
+var debugging = (window.location.protocol == "file:" || window.location.hostname == "127.0.0.1" || window.location.hostname == "localhost");
 var linen = 0;
 var lines = [];
 var bombgroup;
@@ -1316,6 +1350,13 @@ function readLines(count) {
         lines.push(readLine());
     return lines;
 }
+function readTaggedLines(count) {
+    var lines = [];
+    for (var i = 0; i < count; i++)
+        lines.push(readTaggedLine());
+    return lines;
+}
+
 
 function readDirectly(line, name, id) {
     if (line instanceof Array) {
@@ -1394,7 +1435,7 @@ function parseLog(opt) {
 
         $.get("../json/raw", function(websiteData) {
             for (const module of websiteData.KtaneModules) {
-                const matches = parseData.filter(data => Array.isArray(data.moduleID) ? data.moduleID.includes(module.ModuleID) : data.moduleID == module.ModuleID);
+                const matches = parseData.filter(data => data.moduleID == module.ModuleID);
                 if (matches.length === 0) {
                     websiteParseData.push({
                         moduleID: module.ModuleID,
@@ -1403,19 +1444,13 @@ function parseLog(opt) {
                         iconPosition: { X: module.X, Y: module.Y },
                         repo: module
                     });
-                } else if (matches.length === 1) {
-                    const match = matches[0];
-                    if (match.matches == null && match.hasLogging !== false && (match.displayName == module.Name || match.displayName == null) && (match.loggingTag == module.Name || match.loggingTag == null) && (match.icon == module.Name || match.icon == null)) {
-                        console.warn(`Unnecessary module: ${module.Name}`);
-                    }
+                } else if (matches.length >= 1) {
+                    for (const match of matches) {
+                        if (match.matches == null && match.hasLogging !== false && (match.displayName == module.Name || match.displayName == null) && (match.loggingTag == module.Name || match.loggingTag == null) && (match.icon == module.Name || match.icon == null)) {
+                            console.warn(`Unnecessary module: ${module.Name}`);
+                        }
 
-                    match.repo = module;
-                    if (Array.isArray(match.moduleID)) {
-                        if (match.iconPosition == null)
-                            match.iconPosition = [];
-
-                        match.iconPosition[match.moduleID.indexOf(module.ModuleID)] = { X: module.X, Y: module.Y };
-                    } else {
+                        match.repo = module;
                         match.iconPosition = { X: module.X, Y: module.Y };
                     }
                 }
@@ -1475,13 +1510,8 @@ function parseLog(opt) {
                 // The Rules module runs into this edge case and so we need to make sure we find the one that has a module ID (if it exists).
                 if (id !== null && obj?.moduleID == undefined) {
                     var potentialModules = parseData.filter(data => data.loggingTag == loggingTag && data.moduleID !== undefined);
-                    switch (potentialModules.length) {
-                        case 1:
-                            obj = potentialModules[0];
-                            break;
-                        default:
-                            obj = null;
-                            break;
+                    if (potentialModules.length === 1) {
+                        obj = potentialModules[0];
                     }
                 }
 
@@ -1693,6 +1723,19 @@ $(function() {
         readPaste(clipText);
         pasteButton.show();
         pasteBox.hide();
+    }).on("keydown", function(event) {
+        if (!event.altKey || event.shiftKey || event.ctrlKey || event.metaKey)
+            return;
+        let k = event.key.toLowerCase();
+        if (k == "w" || event.keyCode === 87)
+        {
+            if(!confirm("Refresh to toggle dark mode?")) return;
+            if(document.documentElement.classList.contains("dark-mode"))
+                localStorage.removeItem('theme');
+            else
+                localStorage.setItem('theme', "dark");
+            location.reload();
+        }
     });
 
     pasteBox.on("blur", function() {

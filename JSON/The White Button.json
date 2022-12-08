@@ -1,17 +1,24 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "Quinn Wuest" ] },
-  "DefuserDifficulty": "Hard",
-  "Description": "Set the colors of five blobs to the correct color values. Tags: white-button, ring, red-green-blue, five-blobs, 10-lights, 10-LEDs",
+  "Contributors": {
+    "Developer": [ "Quinn Wuest" ],
+    "Maintainer": [ "Quinn Wuest" ]
+  },
+  "DefuserDifficulty": "Easy",
+  "Description": "Identify and submit the difference of RGB values between two colors. Tags: white-button, 2-blobs, 4-screens",
   "ExpertDifficulty": "Easy",
   "ModuleID": "WhiteButtonModule",
   "Name": "The White Button",
   "Origin": "Mods",
   "Published": "2021-09-09",
   "SortKey": "WHITEBUTTON",
-  "SourceUrl": "https://github.com/JakkOfKlubs/KtaneBundleOfABunchOfButtons",
+  "SourceUrl": "https://github.com/QuinnWuest/KtaneBundleOfABunchOfButtons/tree/master/Assets/Modules/White",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2597569498",
   "Symbol": "Wbtn",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/yMpx87Fg3lw?t=747"
+  } ],
   "Type": "Regular"
 }

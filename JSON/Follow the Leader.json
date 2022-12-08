@@ -1,6 +1,9 @@
 {
-  "Author": "Timwi, TheAuthorOfOZ",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Manual": [ "TheAuthorOfOZ" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Cut wires according to rules that refer to the previous wires. Tags: 1-to-12, red, green, blue, black, white, yellow, hexagon",
   "ExpertDifficulty": "Medium",
@@ -14,9 +17,15 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "783004078",
   "Symbol": "Ftl",
-  "TutorialVideoUrl": {
-    "default": "https://www.youtube.com/watch?v=h6nGZS83yWk",
-    "Français": "https://youtu.be/o-QLRHKpb4w"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=h6nGZS83yWk"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/o-QLRHKpb4w"
+    }
+  ],
   "Type": "Regular"
 }

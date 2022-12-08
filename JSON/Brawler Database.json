@@ -16,5 +16,9 @@
   },
   "SteamID": "2108386209",
   "Symbol": "Brd",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/aVolvv2lmMk?t=646"
+  } ],
   "Type": "Regular"
 }

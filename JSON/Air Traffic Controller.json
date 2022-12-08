@@ -1,6 +1,9 @@
 {
-  "Author": "Incognito",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Incognito" ],
+    "Twitch Plays": [ "eXish" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Determine whether a plane should be departing, landing, or cruising, based on the origin and destination locations for the flight. Tags: needy, planes, colors, matching",
   "ExpertDifficulty": "Hard",
@@ -10,9 +13,11 @@
   "Published": "2019-01-12",
   "SortKey": "AIRTRAFFICCONTROLLER",
   "SourceUrl": "https://github.com/Incognito357/ktane-NeedyAirTrafficController",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1623157334",
   "Symbol": "Atc",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=-0xcEDWSADU" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=-0xcEDWSADU"
+  } ],
   "Type": "Needy"
 }

@@ -1,0 +1,22 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Anonymous" ],
+    "Maintainer": [ "eXish" ]
+  },
+  "DefuserDifficulty": "Medium",
+  "Description": "Deal with different Prankster Comets in this needy module. Tags: Star, Super-Mario-Galaxy",
+  "ExpertDifficulty": "VeryEasy",
+  "ModuleID": "prankster",
+  "Name": "Prankster",
+  "Origin": "Mods",
+  "Published": "2021-07-21",
+  "SortKey": "PRANKSTER",
+  "SteamID": "2553518309",
+  "Symbol": "Ps",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/TPVlWzXBY1s"
+  } ],
+  "Type": "Needy"
+}

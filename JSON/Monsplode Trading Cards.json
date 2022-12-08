@@ -1,6 +1,9 @@
 {
-  "Author": "clutterArranger, Grybo",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "clutterArranger" ],
+    "Manual": [ "Grybo" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Identify the value of a trading card and decide whether to trade it or keep it. Tags: monster, animal, symbol, left-arrow, right-arrow",
   "ExpertDifficulty": "Hard",
@@ -13,9 +16,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "777164508",
   "Symbol": "Mtc",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=fMR5AaiSjyU",
-    "default": "https://www.youtube.com/watch?v=zWcNmrZkaN0"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=fMR5AaiSjyU"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=zWcNmrZkaN0"
+    }
+  ],
   "Type": "Regular"
 }

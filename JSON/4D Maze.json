@@ -1,6 +1,12 @@
 {
-  "Author": "NickLatkovich",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "NickLatkovich" ],
+    "Manual": [
+      "Piissii",
+      "NickLatkovich"
+    ]
+  },
   "DefuserDifficulty": "Hard",
   "Description": "Navigate a 4D maze which the defuser sees in a first-person perspective. Tags: hyperspace, maze, lines, walls, points, coordinates, eye",
   "ExpertDifficulty": "Hard",
@@ -13,5 +19,9 @@
   "SourceUrl": "https://github.com/nicklatkovich/4DMaze",
   "SteamID": "2543296359",
   "Symbol": "4dmz",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/wy2b5jRYXTk"
+  } ],
   "Type": "Regular"
 }

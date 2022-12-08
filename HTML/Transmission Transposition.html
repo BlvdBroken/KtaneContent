@@ -9,17 +9,12 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/ktane-utils.js"></script>
     <style>
-        table {
+         #morse-chart{
+            width: 70%;
+            display: block;
             margin: 1em auto;
         }
-        @media print {
-            .img-morse {
-                display: block;
-                margin: 0 auto;
-                width: 82%;
-            }
-        }
-        .dark img.img-morse {
+        .dark #morse-chart {
             filter: invert(90%);
         }
     </style>
@@ -34,13 +29,13 @@
             <div class="page-content">
                 <img src="img/Component/Transmission Transposition.svg" class="diagram">
                 <h2>On the Subject of Transmission Transposition</h2>
-                <p class="flavour-text">Fun Fact!: Samuel "Sam-a-grams" Morse invented Morse code as a result of the tragic death of his wife.</p>
+                <p class="flavour-text">Fun Fact!: Did you know that if you rearrange the letters in “morse”, you get “sroem”?</p>
 
                 <p>There will be a five-letter word on the upper display. To solve the module, input a 5-letter English word which has the same number of dots and the same number of dashes when converted into Morse code.</p>
                 <p>The submitted word cannot have more than 2 characters which are also present in the displayed word.</p>
                     <p>Inputting a word which is not an English word but has the same number of dots and dashes will incur a warning flash.</p>
                   <p>Inputting a word which does not have the same total number of dots and dashes will incur a strike.</p>
-                <img class="img-morse" src="img/Transmission Transposition/Morse Chart.svg">
+                <img id="morse-chart" src="img/Morse Code/morse-signals.svg">
             </div>
             <div class="page-footer relative-footer">Page 1 of 1</div>
 

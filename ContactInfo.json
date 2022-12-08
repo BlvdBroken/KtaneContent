@@ -1,8 +1,15 @@
 {
+  "AAces": {
+    "Discord": "AAces#2652",
+    "GitHub": "AAces",
+    "Steam": "id/aaces17",
+    "YouTube": "channel/UCFGVX7odMK4_xqTXV7C1OVQ",
+    "Twitch": "AAces17"
+  },
   "AceAttorneyMaster111": {
     "Discord": "AceAttorneyMaster111#4489",
     "GitHub": "AceAttorneyMaaster111",
-    "Reddit": "u/AceAttorneyMaster111",
+    "Reddit": "AceAttorneyMaster111",
     "Steam": "id/AceAttorneyMaster111",
     "Twitch": "AceAttorneyMaster111"
   },
@@ -14,7 +21,31 @@
     "Twitch": "AnAverageArceus"
   },
   "Blananas2": {
-    "Discord": "Blananas2#6835"
+    "Discord": "Blananas2#6835",
+    "GitHub": "Blananas2"
+  },
+  "BlvdBroken": {
+    "Discord": "BlvdBroken#1633",
+    "GitHub": "BlvdBroken",
+    "YouTube": "channel/UCKaruwFTPVSj0xrB79p4w4Q",
+    "Steam": "id/BlvdBroken/"
+  },
+  "cameron": {
+    "Discord": "cameron#9361",
+    "GitHub": "cameronos",
+    "Steam": "id/cameronos/",
+    "Website": "cameronos.github.io/"
+  },
+  "Cooldoom5": {
+    "Discord": "Cooldoom5#0789",
+    "GitHub": "Cooldoom5",
+    "Steam": "id/Cooldoom5/",
+    "Twitter": "cooldoom5"
+  },
+  "CrazyCaleb": {
+    "Discord": "Crazycaleb#5765",
+    "Twitch": "crazycaleb1246",
+    "YouTube": "channel/UCeoXRoWXns6dckqLs5fiuug"
   },
   "BlvdBroken": {
     "Discord": "Norville Rogers#1633",
@@ -26,18 +57,18 @@
     "Discord": "Cyber28#2864",
     "Steam": "id/Cyber28"
   },
-  "Danny7007": {
-    "Discord": "Danny7007#1377",
-    "GitHub": "Danny7007",
-    "Steam": "id/danny7007",
-    "Twitter": "FemboyMonky"
-  },
   "Deaf": {
     "Discord": "Fartlicker777#9169",
     "Steam": "id/Fartlicker777",
     "GitHub": "Fartlicker777",
     "Twitch": "Fartlicker777",
     "YouTube": "channel/UCXhnHhsKWjlfL-bO2_mkEMg"
+  },
+  "Depresso": {
+    "Discord": "Depresso#7788",
+    "Steam": "id/NinaBestGirl",
+    "Twitch": "not_depresso",
+    "YouTube": "channel/UCQtPcSwu-vbNAjXIH4rqoqg"
   },
   "DJHero2903": {
     "Discord": "DJHero2903#0388",
@@ -52,14 +83,14 @@
     "GitHub": "Eltrick",
     "Steam": "id/Eltrick01",
     "Twitter": "eltrick__",
-    "YouTube": "/channel/UCh_SCfT8KIbyAmXI6YnApAw"
+    "YouTube": "channel/UCh_SCfT8KIbyAmXI6YnApAw"
   },
   "Emik": {
     "Discord": "Emik#0001",
     "GitHub": "Emik03",
     "Steam": "id/emik03",
     "Twitter": "chordstreams",
-    "YouTube": "/channel/UC_ZGMLkuryHez-shYtPtwsw"
+    "YouTube": "channel/UC_ZGMLkuryHez-shYtPtwsw"
   },
   "Espik": {
     "Discord": "Espik#5448"
@@ -70,6 +101,9 @@
     "Steam": "id/eXish",
     "Twitch": "exish",
     "YouTube": "channel/UCerPO9A8pQ0Wb2mgDdLqvuQ"
+  },
+  "ferd": {
+    "Discord": "ferd#8839"
   },
   "Finder": {
     "Discord": "Jon123276#9338",
@@ -84,11 +118,32 @@
     "YouTube": "channel/UCWnNbrPSzY_WfuhfERXkWHw",
     "Twitch": "GhostSalt12"
   },
+  "GoodHood": {
+    "Discord": "GoodHood#0001",
+    "GitHub": "stuff32",
+    "Steam": "profiles/76561198799654225"
+  },
+  "Goofy": {
+    "Discord": "Goofy#4567",
+    "Twitch": "goofy1807",
+    "Steam": "id/Goofy1807"
+  },
   "Grunkle Squeaky": {
     "Discord": "Grunkle Squeaky#0001",
     "Steam": "id/GrunkleSqueaky/",
     "YouTube": "channel/UCpvzJYhg1bRZfhAADnEze9g",
     "Venmo": "GrunkleSqueaky"
+  },
+  "JG": {
+    "DeviantArt": "lilshadow1997",
+    "Discord": "JankoGoos Gaming Den#5204",
+    "GitHub": "GamingWithJanko",
+    "Newgrounds": "lilshadow1997",
+    "Reddit": "JankoGoo",
+    "Steam": "id/gamingwithjanko",
+    "Twitch": "JankoGoo",
+    "Twitter": "GamingWithJanko",
+    "YouTube": "channel/UC6ZDjKytynopwMG_WTUx1VA"
   },
   "Katarina": {
     "Discord": "Smexy Ahri#5259",
@@ -102,6 +157,11 @@
     "Steam": "id/kavinkul",
     "Twitch": "kavinkul"
   },
+  "Kilo Bites": {
+    "Discord": "Kilo Bites#0041",
+    "GitHub": "KiloBites",
+    "Twitch": "kilobitesofficial"
+  },
   "ktane1": {
     "Discord": "recovered#9930"
   },
@@ -110,6 +170,14 @@
     "Steam": "id/lordkabewm/",
     "Twitch": "lord_kabewm"
   },
+  "LotsOfS": {
+    "Discord": "LotsOfS#3003",
+    "GitHub": "lotsofs",
+    "Steam": "id/LotsOfS",
+    "Twitch": "lotsofs",
+    "Twitter": "lotsofs",
+    "YouTube": "user/lotsofs"
+  },
   "LuminoscityTim": {
     "Discord": "Luminoscity#3252",
     "GitHub": "Luminoscity",
@@ -117,14 +185,29 @@
     "Website": "lightsofluminoscity.com/",
     "YouTube": "channel/UCgLPaGtIPPiFu2YBlhyo-HA"
   },
-  "Marksam32": {
+  "MageMage": {
+    "Discord": "MageMage#4892",
+    "GitHub": "MageoMage",
+    "Twitch": "magemage81",
+    "YouTube": "channel/UCiKpR8d5EuNhAsCqlnKzufQ"
+  },
+  "MarioXTurn": {
+    "Discord": "MarioXTurn#3791"
+  },
+  "Marksam": {
     "Discord": "Marksam#6669",
     "GitHub": "marksam32",
     "Steam": "id/marksam32",
     "Twitch": "marksam32"
   },
   "MásQuéÉlite": {
-    "Discord": "MásQuéÉlite#2406"
+    "Discord": "MásQuéÉlite#2406",
+    "Email": "masqueelite@gmail.com",
+    "GitHub": "MasQueElite",
+    "Steam": "id/MasQueElite/",
+    "Twitch": "masqueelite",
+    "Website": "masqueelite.github.io/MQEsBox/",
+    "YouTube": "channel/UCTw5xAnSamJ_j9xeNZHaXKg"
   },
   "mcd573": {
     "Discord": "mcd573#4414",
@@ -136,6 +219,11 @@
     "Discord": "Thomas the Real Person#3956",
     "GitHub": "MrPeanut1028",
     "Twitch": "mrpeanut1028"
+  },
+  "noi2coco": {
+    "Discord": "noi2coco#7304",
+    "GitHub": "noi2coco",
+    "Email": "noideuxcoco@gmail.com"
   },
   "Obvious": {
     "Discord": "Obvious#5283",
@@ -152,10 +240,14 @@
     "YouTube": "channel/UCTVQxO7cCPB1oFBi26M7bYQ"
   },
   "Panoptes (Xel)": {
-    "Discord": "PANOPTES (Formerly Mirage Xel)#9614",
+    "Discord": "PANOPTES#9614",
     "GitHub": "Mirage-Xel",
     "Twitch": "joekinguyr",
     "Steam": "profiles/76561198125558355/"
+  },
+  "PoisonGreen": {
+    "Discord": "PoisonGreen#7916",
+    "GitHub": "Ethepi"
   },
   "Qkrisi": {
     "Discord": "Qkrisi#4982",
@@ -166,9 +258,9 @@
   "Quinn Wuest": {
     "Discord": "Quinn Wuest#7429",
     "Steam": "profiles/76561198161518336",
-    "YouTube": "channel/UCnODWIrlZMrT2c59RbKWBOA",
+    "YouTube": "channel/UCVH7CE4m1MJnxiuFdg9N64w",
     "Twitch": "QuinnWuest",
-    "GitHub": "JakkOfKlubs"
+    "GitHub": "QuinnWuest"
   },
   "red031000": {
     "Discord": "red031000#2155",
@@ -188,17 +280,9 @@
   "RockDood": {
     "Discord": "RockDood#8675",
     "GitHub": "RockDood",
-    "Reddit": "u/Rockdood",
+    "Reddit": "Rockdood",
     "Steam": "id/RockDood/",
     "Twitch": "RockDood"
-  },
-  "S.": {
-    "Discord": "S.#3003",
-    "GitHub": "lotsofs",
-    "Steam": "id/LotsOfS",
-    "Twitch": "lotsofs",
-    "Twitter": "lotsofs",
-    "YouTube": "user/lotsofs"
   },
   "samfundev": {
     "Discord": "samfundev#8972",
@@ -206,9 +290,11 @@
     "Reddit": "samfundev",
     "Steam": "id/samfundev"
   },
-  "Samloper": {
-    "GitHub": "stuff32",
-    "Steam": "profiles/76561198799654225"
+  "Sean Obach": {
+    "Discord": "Sean#6512",
+    "GitHub": "obachs971",
+    "Steam": "id/SeanThePianoMan",
+    "YouTube": "channel/UC-EE_RD7MlgAtbt2xsHB5jw"
   },
   "StarryFolf": {
     "Discord": "StarryTheFolf#8668"
@@ -216,8 +302,13 @@
   "Tachatat18": {
     "Discord": "tachatat18#4507"
   },
-  "tepel": {
-    "Discord": "tepel#5876",
+  "tandyCake": {
+    "Discord": "tandyCake#1377",
+    "GitHub": "tandyCake",
+    "Steam": "id/tandyCake"
+  },
+  "t-chen": {
+    "Discord": "t-chen#5876",
     "Github": "tepel-chen",
     "Steam": "profiles/76561199055700490"
   },
@@ -228,7 +319,7 @@
     "Twitch": "TheDarkSid4r",
     "Twitter": "Sid3rDark",
     "Website": "sid3r.net/",
-    "YouTube": "channel/UCt5nJJzKpfq57RdZnDDqCfQ"
+    "YouTube": "TheDarkSid3r_JBG"
   },
   "The-nth-Term": {
     "Discord": "mathman111#5081",
@@ -275,5 +366,11 @@
     "Steam": "id/ZekNikZ",
     "Twitch": "zeknikzofficial",
     "YouTube": "channel/UCTBWspD0UuKDOdY4WXC9tmA"
+  },
+  "Želvík (Tortoise)": {
+    "Discord": "Želvík#3030",
+    "GitHub": "ZelvikTortoise",
+    "Steam": "id/polobuh/",
+    "YouTube": "channel/UC-7XCPrApXmS93Hm350SUVQ"
   }
 }

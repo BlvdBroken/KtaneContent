@@ -167,8 +167,9 @@
 
             .side-morse.one { left: 1.5cm; }
             .side-morse.two { right: 1.25cm; }
+            .dark svg.morse circle, .dark svg.morse rect { fill: #DDD; }
 
-        .flavour-text {
+        .flavour-text, .footnote {
             position: absolute;
             top: 15cm;
             transform: translate(-50%, 0);
@@ -176,16 +177,20 @@
             text-align: center;
         }
             .flavour-text.one { left: 100%; }
-            .flavour-text.two { left: 0; }
+            .footnote {
+                left: 0;
+                font-style: italic;
+                font-size: 75%;
+            }
 
         @media screen and (max-width: 900px) {
-            .flavour-text {
+            .flavour-text, .footnote {
                 position: static;
                 transform: none;
                 width: auto;
                 text-align: left;
             }
-            .flavour-text.two {
+            .footnote {
                 display: none;
             }
             .side-morse {
@@ -212,7 +217,7 @@
 
                 <h2>On the Subject of Simon Shouts</h2>
                 <p class="flavour-text one">Try to wrap your head around this one.</p>
-                <p class="flavour-text two">Try to wrap your head around this one.</p>
+                <p class="footnote two">Try to wrap your head around this one.</p>
 
                 <table class='table-a'>
                     <caption>Table A</caption>
@@ -231,7 +236,7 @@
                 </table>
 
                 <ul>
-                    <li>Rotate the four buttons clock&shy;wise by an angle obtained from Table A and the number of <span class='rule' id='goal-rule'>ports</span> modulo 4. This 2×2 arrangement of colors is your goal position in the grid below.</li>
+                    <li>Rotate the four buttons clock&shy;wise by an angle obtained from Table A using the number of <span class='rule' id='goal-rule'>ports</span> modulo 4. This 2×2 arrangement of colors is your goal position in the grid below.</li>
                     <li>Rotate the squares in the module’s center similarly, but using the number of <span class='rule' id='position-rule'>batteries</span> modulo 4. This arrangement is your current position in the grid.</li>
                     <li>Each button flashes a letter in Morse code that indicates, as described by Diagram B, what movement in the grid this button will perform.</li>
                     <li>The grid wraps around in both dimensions (it’s a De&nbsp;Bruijn torus).</li>

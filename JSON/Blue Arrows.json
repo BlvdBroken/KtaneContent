@@ -2,7 +2,7 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "eXish" ],
-    "Manual": [ "Kusane" ]
+    "Manual": [ "Kusane Hexaku" ]
   },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Determine which blue directional arrows to press through a modified alphabet string. Tags: blue, arrows, alphabet, rules, display, 4-buttons",
@@ -17,6 +17,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1762883309",
   "Symbol": "Barr",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=YOtuhxr93sQ" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=YOtuhxr93sQ"
+  } ],
   "Type": "Regular"
 }

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>二進数グリッド — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        .dark table, table { border: none; }
+        .sqr {
+            width: 1px;
+            height: 13px;
+        }
+        td.black { background-color: #000; }
+        .dark td.black { background-color: #DDD; }
+        span.black::before { content: "黒"; }
+        .dark span.black::before { content: "白"; }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">二進数グリッド</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Binary Grid.svg" class="diagram">
+                <h2>モジュール詳細：二進数グリッド</h2>
+                <p class="flavour-text">世の中には<em>10</em>種類の人がいる:二進数を理解できる人と、理解できない人だ。</p>
+
+                <ul>
+                    <li>モジュールは、0と1の5×5グリッドで構成されている。</li>
+                    <li>各マスを押すと0と1を切り替えることができ、「RESET」ボタンを押すことでグリッドを元の状態に戻すことができる。</li>
+                    <li>モジュールを解除するには、3つのステージにおいて送信すべきセルを特定する必要がある。</li>
+                    <li>回答を送信するには、「SUBMIT」ボタンを押して、選択したセルを押す。</li>
+                    <li>回答を送信するか、「SUBMIT」ボタンをもう一度押すことで送信モードが終了する。</li>
+                    <li>回答は、段番号と列番号の交差地点である。</li>
+                </ul>
+
+                <h3>キーの作成</h3>
+                <h4>プライマリキー</h4>
+
+                <p>現在のステージを完了するためには、そのステージのプライマリキーを作成するところからである。キーは一連の6つの0と1で構成されている。次の各条件において、真であれば1、それ以外は0を配置する。</p>
+
+                <table>
+                    <tr>
+                        <td>1桁目</td>
+                        <td>グリッド内の1の数は<strong>偶数</strong>である。</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">2桁目</td>
+                        <td>ステージ1 : バッテリーの数が<strong>偶数</strong>である。</td>
+                    </tr>
+                    <tr>
+                        <td>ステージ2 : ポートプレートの数が<strong>2つ以上</strong>である。</td>
+                    </tr>
+                    <tr>
+                        <td>ステージ3 : 点灯したインジケーターが<strong>2つ未満</strong>である。</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">3桁目</td>
+                        <td>ステージ1 : グリッド内の1の数が0の数より多い。</td>
+                    </tr>
+                    <tr>
+                        <td>ステージ2 : グリッド内の0の数が1の数より多い。</td>
+                    </tr>
+                    <tr>
+                        <td>ステージ3 : グリッドの真ん中のセルの数字が1である。</td>
+                    </tr>
+                </table>
+                <br>
+
+                <p>残りの3桁は最初の3桁の1及び0を反転させたものである。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">二進数グリッド</span>
+            </div>
+            <div class="page-content">
+                <h4>セカンダリキー</h4>
+
+                <p>プライマリキーを使用して、セカンダリキーを作成する必要がある。以下は、特定のセルを<span class="black"></span>で色付けしたグリッドである。プライマリキーに対応するグリッドを使用し、そのグリッドをモジュールのグリッドと関連付けることでセカンダリキーを作成することができる。<span class="black"></span>で色付けされたセルを<strong>読み順</strong>で見つけ、そのセルに書かれた数字を順番に取ってセカンダリキーを取得する。</p>
+
+                <table class="centered">
+                    <tr>
+                        <td class="corner">
+                            <table>
+                                <tr>
+                                    <td colspan="5">111000</td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="corner">
+                            <table>
+                                <tr>
+                                    <td colspan="5">110001</td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="corner">
+                            <table>
+                                <tr>
+                                    <td colspan="5">100011</td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="corner">
+                            <table>
+                                <tr>
+                                    <td colspan="5">000111</td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="corner">
+                            <table>
+                                <tr>
+                                    <td colspan="5">001110</td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="corner">
+                            <table>
+                                <tr>
+                                    <td colspan="5">011100</td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="corner">
+                            <table>
+                                <tr>
+                                    <td colspan="5">101010</td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="corner">
+                            <table>
+                                <tr>
+                                    <td colspan="5">010101</td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr"> </td>
+                                    <td class="sqr black"> </td>
+                                    <td class="sqr"> </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h3>解除パート1:段番号</h3>
+                <p>両方のキーを作成することで解除パートに移行することができる。段番号については、2つのキーに含まれている0と1の数を数え、それら2つのうちの最小値を取得する。次に、その数字からxを減算した結果が段番号になる。xは次の要に決定される:</p>
+                <ul>
+                    <li>ミスがある… x = 1 </li>
+                    <li>それ以外… x = 2</li>
+                </ul>
+                <p><i>注:ミスは、ステージが作成されるときに数えられる。つまり、ステージ生成後にミスが発生した場合は回答は変更されず、次のステージ以降はミスがカウントされる。</i></p>
+
+                <h3>解除パート2:列番号</h3>
+                <p>列番号を特定するには、セカンダリキーを取得する際に黒で示されたセルに読み順でプライマリキーを入力する。入力したら「Check」ボタンを押す。正しく入力されている場合は、列のいずれか1つのライトが点灯し、回答するセルがある列を示す。その後、回答を送信できる。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/2</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -9,7 +9,6 @@
   "Description": "Get your boss a lunch or he will explode you. Tags: lunch, boss, food",
   "ExpertDifficulty": "Hard",
   "ModuleID": "lunchtime",
-  "MysteryModule": "MustNotBeHidden",
   "Name": "Lunchtime",
   "Origin": "Mods",
   "Published": "2019-11-23",
@@ -18,6 +17,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1919064546",
   "Symbol": "Lt",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=hrC82bBcccc" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=hrC82bBcccc"
+  } ],
   "Type": "Regular"
 }

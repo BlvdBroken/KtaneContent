@@ -12,7 +12,7 @@
     .dotabove {
         position: relative;
     }
-    
+
     .dotabove::after {
         content: '.';
         position: absolute;
@@ -33,7 +33,7 @@
             <div class="page-content">
                 <img src="img/Component/The Great Void.svg" class="diagram">
                 <h2>On the Subject of The Great Void</h2>
-                <p class="flavour-text">"I have to click <strong>SIX TIMES</strong> in <strong>ONE SECOND</strong>?!"</p>
+                <p class="flavour-text">“I have to click <b>SIX TIMES</b> in <b>ONE SECOND</b>?!”</p>
                 <p>On the module, there is a rotating black sphere with six colored disks. Each disk has a number from 0 to 6 on it.</p>
                 <p>Identify the first face, which contains a symbol with an adjacent black dot. This black dot is face up for that face.</p>
                 <p>Next, identify the color and number of each face, in the order of the table below. Note that the dots represent face up.</p>
@@ -59,7 +59,7 @@
                 </table>
                 <p>On each face there is an encrypted number from 0-6. (leftmost = 0, rightmost = 6) <span style="font-family:'stupid';font-size:1.5em;letter-spacing:0.1em;">0123456</span></p>
                 <p>The colors on each face has its own number. In order, from 0 to 6, they are: <span style="color:Red">Red</span>, <span style="color:Green">Green</span>, <span style="color:Blue">Blue</span>, <span style="color:Magenta">Magenta</span>, <span style="color:Yellow">Yellow</span>, <span style="color:Cyan">Cyan</span>, and <span style="background-color:Black;color:White">White</span>.</p>
-                <p>Using the number as the row and the color as the column, find your position in the <strong>center 7x7 table, where the top left is 0,0</strong>.</p>
+                <p>Using the number as the row and the color as the column, find your position in the <strong>center 7×7 table, where the top left is 0,0</strong>.</p>
                 <p>You need to obtain 3 digits for each face. The first is the position you are on.</p>
                 <p>The second is obtained by moving up 1, rotating <strong>&lt;face number&gt;</strong> times clockwise in 45 degree increments, then moving forward one. Sum both digits you crossed, subtracting 3 if greater than 2.</p>
                 <p>The third is the same process, starting from the last position of Digit 2, moving forward 1, rotating like in Digit 2, then moving forward 2, and summing all of the digits you moved onto, subtracting 3 until it is less than 3.</p>
@@ -219,27 +219,27 @@
                 <table>
                     <tr>
                         <th rowspan="3">0</th>
-                        <td>If there is not a 'p' directly before this, this is a 'p'.</td>
+                        <td>If there is not a 'p' immediately before this, this is a 'p'.</td>
                     </tr>
                     <tr>
-                        <td>Otherwise, if there is an unclosed '[' before this, this is a ']'.</td>
+                        <td>Otherwise, if there is an unclosed '[' immediately before this, this is a ']'.</td>
                     </tr>
                     <tr>
                         <td>Otherwise, this is a '['.</td>
                     </tr>
                     <tr>
                         <th rowspan="2">1</th>
-                        <td>If there is are no unclosed '[' in the sequence, this is a '['.</td>
+                        <td>If there is an unclosed '[' earlier in the sequence, this is a ']'.</td>
                     </tr>
                     <tr>
-                        <td>Otherwise, this is a ']'.</td>
+                        <td>Otherwise, this is a '['.</td>
                     </tr>
                     <tr>
                         <th rowspan="3">2</th>
-                        <td>If there is an unclosed '[' in the sequence, this is a ']'.</td>
+                        <td>If there is an unclosed '[' earlier in the sequence, this is a ']'.</td>
                     </tr>
                     <tr>
-                        <td>Otherwise, if there is a 'p' directly before this, this is a '['.</td>
+                        <td>Otherwise, if there is a 'p' immediately before this, this is a '['.</td>
                     </tr>
                     <tr>
                         <td>Otherwise, this is a 'p'.</td>

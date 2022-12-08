@@ -1,0 +1,21 @@
+{
+  "Author": "NickLatkovich",
+  "Compatibility": "Compatible",
+  "DefuserDifficulty": "VeryHard",
+  "Description": "Deduce the location and orientation of symbols on the hypersurfaces of a HYPERCUBE! Tags: cube, colors, lines, submit, x, y, z, 3d, 4d, arrows, dark-gray-background",
+  "ExpertDifficulty": "Hard",
+  "ModuleID": "pattern_hypercube",
+  "Name": "Pattern Hypercube",
+  "Origin": "Mods",
+  "Published": "2022-01-23",
+  "RuleSeedSupport": "Supported",
+  "SortKey": "PATTERNHYPERCUBE",
+  "SourceUrl": "https://github.com/nicklatkovich/PatternHypercube",
+  "SteamID": "2729334393",
+  "Symbol": "Phqb",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/09cgCrSiFR8"
+  } ],
+  "Type": "Regular"
+}

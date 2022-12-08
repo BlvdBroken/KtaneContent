@@ -2,7 +2,8 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "Timwi" ],
-    "Modeling": [ "BakersDozenBagels" ]
+    "Maintainer": [ "Quinn Wuest" ],
+    "Modeling": [ "Anonymous" ]
   },
   "DefuserDifficulty": "VeryHard",
   "Description": "Identify the ratio of timings and hold/release the button to input the fraction. Tags: orange-button, spinning, ring, 8-bulbs",
@@ -12,9 +13,13 @@
   "Origin": "Mods",
   "Published": "2021-09-09",
   "SortKey": "ORANGEBUTTON",
-  "SourceUrl": "https://github.com/JakkOfKlubs/KtaneBundleOfABunchOfButtons",
+  "SourceUrl": "https://github.com/QuinnWuest/KtaneBundleOfABunchOfButtons/tree/master/Assets/Modules/Orange",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2597569498",
   "Symbol": "Obtn",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/_absVIcfJLI"
+  } ],
   "Type": "Regular"
 }

@@ -6,19 +6,22 @@
   "ExpertDifficulty": "VeryEasy",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+TimeDependent"
   ],
-  "IsPseudoNeedy": true,
   "ModuleID": "qkUCN",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Ultimate Custom Night",
   "Origin": "Mods",
   "Published": "2019-12-16",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd, PseudoNeedy",
   "SortKey": "ULTIMATECUSTOMNIGHT",
   "SourceUrl": "https://github.com/Qkrisi/ktanemod-ultimate-custom-night",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1938371134",
   "Symbol": "Ucn",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/LZ7i8VNkJfY"
+  } ],
   "Type": "Regular"
 }

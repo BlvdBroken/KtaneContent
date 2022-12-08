@@ -8,9 +8,14 @@
   "Name": "Hole in One",
   "Origin": "Mods",
   "Published": "2020-12-15",
+  "RuleSeedSupport": "Supported",
   "SortKey": "HOLEINONE",
   "SourceUrl": "https://github.com/BigCrunch22/HoleInOne",
   "SteamID": "2320771148",
   "Symbol": "Hio",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/u69mt8HHdmI?t=404"
+  } ],
   "Type": "Regular"
 }

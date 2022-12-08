@@ -1,7 +1,7 @@
 {
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "TasThing" ],
+    "Developer": [ "TasThiluna" ],
     "Manual": [ "Vincology" ]
   },
   "DefuserDifficulty": "Easy",
@@ -13,11 +13,12 @@
   "Published": "2021-04-11",
   "SortKey": "CARTINESE",
   "SourceUrl": "https://github.com/tasthing/Cartinese",
-  "Souvenir": {
-    "Explanation": "Souvenir could ask about the lyrics played, ending position, or button colors.",
-    "Status": "Considered"
-  },
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "2453529949",
   "Symbol": "Cart",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/55l3WLpwZZg"
+  } ],
   "Type": "Regular"
 }

@@ -16,5 +16,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2340300985",
   "Symbol": "Stsq",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/GSZeb7NGZw8"
+  } ],
   "Type": "Regular"
 }

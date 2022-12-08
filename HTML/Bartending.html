@@ -32,16 +32,53 @@
                 width: 100%;
             }
 
-        .page-bg-01 {
+        body:not(.dark) .page-bg-01 {
             background-image: url("img/Bartending/page-bg-noise-01.png");
         }
-
-        .page-bg-02 {
+        body:not(.dark) .page-bg-02 {
             background-image: url("img/Bartending/page-bg-noise-02.png");
         }
-
-        .page-bg-03 {
+        body:not(.dark) .page-bg-03 {
             background-image: url("img/Bartending/page-bg-noise-03.png");
+        }
+        .page-bg-01, .page-bg-02, .page-bg-03 {
+            position: relative;
+            overflow: hidden;
+            background-repeat: repeat-y;
+            background-position: top;
+        }
+        .dark .page-bg-01::before {
+            content: "";
+            position: absolute;
+            /* top: 0; left: 0;
+            width: 100%; height: 100%; */
+            top: -42mm; left: -35mm;
+            width: 310mm; height: 375mm;
+            background-image: url("img/Bartending/page-bg-noise-01.png");
+            filter: invert(85%);
+            transform: scale(0.775);
+        }
+        .dark .page-bg-02::before {
+            content: "";
+            position: absolute;
+            top: -42mm; left: -35mm;
+            width: 310mm; height: 365mm;
+            background-image: url("img/Bartending/page-bg-noise-02.png");
+            filter: invert(85%);
+            transform: scale(0.775);
+        }
+        .dark .page-bg-03::before {
+            content: "";
+            position: absolute;
+            top: -45mm; left: -35mm;
+            width: 310mm; height: 402mm;
+            background-image: url("img/Bartending/page-bg-noise-03.png");
+            filter: invert(85%);
+            transform: scale(0.775);
+        }
+        .page-content, .page-header, .page-footer {
+        /* This will make it stack on top of the ::before */
+            position: relative;
         }
 
         #chaser-o, #chaser-0, #chaser-o0, #big-o, #big-0, #big-o0 {
@@ -49,7 +86,7 @@
         }
 
         @media screen and (min-width: 900px) {
-            body {
+            body.dark, body {
                 background: url('img/Bartending/web-background.jpg');
             }
         }
@@ -236,7 +273,7 @@
                     <li>Blue = Powdered Delta</li>
                 </ul>
                 <p>The ingredient numbers that are used for the calculations are listed above each ingredient on the Drinktionary.</p>
-                <p>To finalize a drink that must be ‘Mixed’ or ‘Blended’, the bartender (the defuser) must mix the drink by pressing the button labeled ‘M’ to begin mixing the drink. If a recipe calls for a drink to be “Mixed”, the drink must be mixed for 4–6 seconds or if a recipe calls for a drink to be “Blended”, it must be mixed for 7–9 seconds. You can tell it's being blended when the shaker starts moving faster. Mixing a drink for less than 4 seconds or more than 10 seconds will result in an invalid drink. These timings are counted in real time.</p>
+                <p>To finalize a drink that must be ‘Mixed’ or ‘Blended’, the bartender (the defuser) must mix the drink by pressing the button labeled ‘M’ to begin mixing the drink. If a recipe calls for a drink to be “Mixed”, the drink must be mixed for 4–6 seconds or if a recipe calls for a drink to be “Blended”, it must be mixed for 7–9 seconds. You can tell it’s being blended when the shaker starts moving faster. Mixing a drink for less than 4 seconds or more than 10 seconds will result in an invalid drink. These timings are counted in real time.</p>
             </div>
             <div class="page-footer relative-footer">Page 1 of 3</div>
         </div>

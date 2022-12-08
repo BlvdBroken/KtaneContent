@@ -1,6 +1,9 @@
 {
-  "Author": "Xtrouble835",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Xtrouble835" ],
+    "Twitch Plays": [ "eXish" ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Figure out a 4 or 6 digit passcode based on edgework and then translate the passcode into letters. Tags: 10-buttons, keypad, 6-leds, two-types",
   "ExpertDifficulty": "Easy",
@@ -13,6 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1944044273",
   "Symbol": "Pcs",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=wi72IUiGISE" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=wi72IUiGISE"
+  } ],
   "Type": "Regular"
 }

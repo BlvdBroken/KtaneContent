@@ -1,6 +1,9 @@
 {
-  "Author": "Blananas2",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Blananas2" ],
+    "Twitch Plays": [ "eXish" ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Select pairs of stacks which add up to the number on the display. Tags: screen, 6-stacks, 7-numbers",
   "ExpertDifficulty": "VeryEasy",
@@ -10,9 +13,11 @@
   "Published": "2019-08-03",
   "SortKey": "BLOCKSTACKS",
   "SourceUrl": "https://github.com/Blananas2/ktane-blockStacks",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1824146763",
   "Symbol": "Bstk",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=d-jTpNCzHFo" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=d-jTpNCzHFo"
+  } ],
   "Type": "Needy"
 }

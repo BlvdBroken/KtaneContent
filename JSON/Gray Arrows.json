@@ -2,8 +2,8 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "VFlyer" ],
-    "Idea": [ "Danny7007" ],
-    "Manual": [ "Danny7007" ]
+    "Idea": [ "tandyCake" ],
+    "Manual": [ "tandyCake" ]
   },
   "DefuserDifficulty": "Easy",
   "Description": "Using the starting location, move based on the arrow displayed and press the arrow corresponding to the tile after the movement. Tags: gray, grey, arrows, needy",
@@ -14,8 +14,11 @@
   "Published": "2021-07-23",
   "SortKey": "GRAYARROWS",
   "SourceUrl": "https://github.com/VFlyer/ktane-multi-uncolored-arrows",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2303374775",
   "Symbol": "Gyar",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/mihH8MTKKxg"
+  } ],
   "Type": "Needy"
 }

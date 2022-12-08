@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>句読点 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <script src="js/jquery.3.1.1.min.js"></script>
+    <script src="js/ruleseed.js"></script>
+    <script>
+        function setDefaultRules() {
+            setTable([ '(', ',', '>', '/', '}', ']', '_', '-', '\"', '|', '»', ':', '.', '{', '<', '”', '«', '`', '[', '?', ')', '!', '\\', '\'', ';' ]);
+        }
+        function setRules(rnd) {
+            let possibleSymbols = [
+                '(', ',', '>', '/', '}', ']', '_', '-', '\"', '|', '»', ':', '.', '{', '<', '”', '«',
+                '`', '[', '?', ')', '!', '\\', '\'', ';', '&', '#', '^', '+', '~', '¡', '‽', '*', '°'
+            ];
+            rnd.shuffleFisherYates(possibleSymbols);
+            setTable(possibleSymbols);
+        }
+        function setTable(arr) {
+            let cells = $("table td");
+            for (let i = 0; i < 25; i++)
+                cells[i].innerText = arr[i];
+        }
+    </script>
+    <style>
+        table {
+            margin: 1em auto;
+            width: 3.5in;
+            height: 3.5in;
+        }
+        td, .dark td {
+            text-align: center;
+            font-size: 24pt;
+            font-family: Arial;
+            font-weight: bold;
+            width:  20%;
+            height: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">句読点</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Interpunct.svg" class="diagram">
+                <h2>モジュール詳細：句読点</h2>
+                <p class="flavour-text">. .</p>
+                <p class="flavour-text">\/</p>
+
+                <p>左下のディスプレーの句読点を表で見つける。上の３つの句読点から、左下のディスプレーの句読点に<em>直接</em>隣接しているボタンを押す。モジュールを解除するには３回行う必要がある。</p>
+                <table>
+                 <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                 <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                 <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                 <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                 <tr><td></td><td></td><td></td><td></td><td></td></tr>
+             </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/1</div>
+        </div>
+    </div>
+</body>
+</html>

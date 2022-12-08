@@ -15,11 +15,7 @@
         .page {
             overflow: hidden;
         }
-        @media print {
-            a[href]:after {
-                content: "";
-            }
-        }
+        .flavour-text { display: none; }
     </style>
 </head>
 <body>
@@ -34,6 +30,7 @@
                 <h2 style="font-size: 8px; margin-top: 4px; color: #888888;">On the Subject of Metapuzzles</h2>
                 <h2 style="font-size: 4px; margin-top: 4px; color: #AAAAAA;">On the Subject of Metapuzzles</h2>
                 <h2 style="font-size: 2px; margin-top: 4px; color: #CCCCCC;">On the Subject of Metapuzzles</h2>
+                <p class="flavour-text">On the Subject of Metapuzzles</p>
 
                 <p>To solve the module, press the button at the top to enter submission mode and enter the answer to the metapuzzle.</p>
                 <p>Once you enter submission mode, you can exit it by pressing the button at the top again.</p>
@@ -52,7 +49,7 @@
                         <ul style="margin-top: 10px;">
                             <li>The name of a module on the bomb will be given as a Hangman puzzle.</li>
                             <li>The module can only have letters and spaces. It can be a solvable or a needy module.</li>
-                            <li>You can make a total of 10 incorrect guesses. Once you go past 10, every incorect guess will strike you. Guess every letter in the module name.</li>
+                            <li>You can make a total of 10 incorrect guesses. Once you go past 10, every incorrect guess will strike you. Guess every letter in the module name.</li>
                         </ul></li>
                 </ul>
             </div>
@@ -74,7 +71,7 @@
                         </ul></li>
                     <li style="margin-top: 10px;">Nonogram
                         <ul style="margin-top: 10px;">
-                            <li>There will be a 6x6 nonogram to solve.</li>
+                            <li>There will be a 6×6 nonogram to solve.</li>
                             <li>Each numbered clue tells you what squares are in their row/column.</li>
                             <li>Each digit represents a set of adjacent squares that must be filled in that row/column.</li>
                             <li>When there are multiple digits in one clue, there need to be multiple sets of squares that have unfilled squares between them.</li>
@@ -94,7 +91,7 @@
                         </ul></li>
                     <li style="margin-top: 10px;">Spot the Difference
                         <ul style="margin-top: 10px;">
-                            <li>There will be two mostly identical 5x5 grids, each with colored symbols and backgrounds.</li>
+                            <li>There will be two mostly identical 5×5 grids, each with colored symbols and backgrounds.</li>
                             <li>You will have 30 seconds to press the three cells (on either side) whose cells differ between the two tables before it resets.</li>
                         </ul></li>
                 </ul>

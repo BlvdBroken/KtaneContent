@@ -2,9 +2,9 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "VFlyer" ],
-    "Idea": [ "Kusane" ],
+    "Idea": [ "Kusane Hexaku" ],
     "Maintainer": [ "VFlyer" ],
-    "Manual": [ "Kusane" ]
+    "Manual": [ "Kusane Hexaku" ]
   },
   "DefuserDifficulty": "Easy",
   "Description": "Determine the correct sequence of buttons to press by examining the phrases shown on the module, and in the table provided. Tags: label, priorities, 4-button, phrases",
@@ -14,9 +14,13 @@
   "Origin": "Mods",
   "Published": "2021-07-05",
   "SortKey": "LABELPRIORITIES",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/Labeled%20Priorities%20Plus",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1940164898",
   "Symbol": "Lp",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/088bPL29zCE?t=1416"
+  } ],
   "Type": "Regular"
 }

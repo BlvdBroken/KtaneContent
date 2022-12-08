@@ -10,7 +10,7 @@
     <script src="js/ktane-utils.js"></script>
     <script src="js/jquery.3.1.1.min.js"></script>
     <style>
-        a {
+        .dark a, a {
             display: inline-block;
             margin-right: .5em;
             text-decoration: none;
@@ -43,6 +43,7 @@
     </style>
     <script>
         $(function() {
+            // Based on code from Samfundev's Listening interactive
             $(".sound").each(function() {
                 var elem = $(this);
                 var audio = $("<audio>")

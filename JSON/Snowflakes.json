@@ -1,6 +1,6 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "TasThing" ] },
+  "Contributors": { "Developer": [ "TasThiluna" ] },
   "DefuserDifficulty": "VeryHard",
   "Description": "Identify four snowflakes and move through a maze. Tags: 4-buttons, 4-screens, winter, cyan",
   "ExpertDifficulty": "Hard",
@@ -16,6 +16,9 @@
   },
   "SteamID": "2037486083",
   "Symbol": "Sfk",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=OWp17Kxbgiw" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=OWp17Kxbgiw"
+  } ],
   "Type": "Regular"
 }

@@ -10,8 +10,12 @@
   "Published": "2021-06-30",
   "SortKey": "NOTWORDSEARCH",
   "SourceUrl": "https://github.com/Speakingevil/not-mods/tree/main/Assets/!WS",
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "2419865723",
   "Symbol": "Nwos",
-  "TutorialVideoUrl": { "default": "https://youtu.be/jZ1l8VTtoH8" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/jZ1l8VTtoH8"
+  } ],
   "Type": "Regular"
 }

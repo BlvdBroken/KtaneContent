@@ -1,5 +1,5 @@
 {
-  "Author": "Marksam32",
+  "Author": "Marksam",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Hard",
   "Description": "Press the four buttons in the correct order throughout 3 stages to disarm the module. Tags: red-module, keypads, seven-segment-display",
@@ -8,7 +8,7 @@
   "Name": "Cruel Keypads",
   "Origin": "Mods",
   "Published": "2019-12-29",
-  "SortKey": "CRUELKEYPAD",
+  "SortKey": "CRUELKEYPADS",
   "SourceUrl": "https://github.com/marksam32/ktaneCruelKeypads",
   "Souvenir": {
     "Explanation": "Souvenir could ask about the color of the strip for every stage and the symbols in every stage.",
@@ -16,6 +16,9 @@
   },
   "SteamID": "1950736574",
   "Symbol": "Ckp",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=-ByFidUB5Zo" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=-ByFidUB5Zo"
+  } ],
   "Type": "Regular"
 }

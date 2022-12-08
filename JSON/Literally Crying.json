@@ -5,7 +5,7 @@
   "Description": "Press the play button to make TracksJosh, I mean, the emoji cry to sleep. Tags: play-button, one-button, emoji",
   "ExpertDifficulty": "VeryEasy",
   "ModuleID": "literallyCrying",
-  "MysteryModule": "MustNotBeHiddenOrKey",
+  "MysteryModule": "MustNotBeKey",
   "Name": "Literally Crying",
   "Origin": "Mods",
   "Published": "2020-09-11",
@@ -13,5 +13,9 @@
   "SourceUrl": "https://github.com/TracksJosh/ktaneLiterallyCrying-master",
   "SteamID": "2226425124",
   "Symbol": "Cry",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/9XBjnbA1qyo?t=731"
+  } ],
   "Type": "Needy"
 }

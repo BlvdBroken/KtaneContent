@@ -1,6 +1,12 @@
 {
-  "Author": "Royal_Flu$h",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Royal_Flu$h" ],
+    "Twitch Plays": [
+      "eXish",
+      "samfundev"
+    ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Find a way across the grid using only legal lettered tiles. Tags: letters, tiles, hexagons, grid, maze, honeycomb",
   "ExpertDifficulty": "Easy",
@@ -13,6 +19,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1558199912",
   "Symbol": "Blkb",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=S5ljGjQriuE" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=S5ljGjQriuE"
+  } ],
   "Type": "Regular"
 }

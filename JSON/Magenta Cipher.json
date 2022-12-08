@@ -1,0 +1,27 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Sean Obach" ],
+    "Twitch Plays": [
+      "eXish",
+      "Sean Obach"
+    ]
+  },
+  "DefuserDifficulty": "Easy",
+  "Description": "A 3 step module using different ciphers. Tags: magenta, qwerty-keyboard",
+  "ExpertDifficulty": "Hard",
+  "ModuleID": "magentaCipher",
+  "Name": "Magenta Cipher",
+  "Origin": "Mods",
+  "Published": "2021-12-31",
+  "SortKey": "MAGENTACIPHER",
+  "SourceUrl": "https://github.com/obachs971/UltimateCipher",
+  "Souvenir": { "Status": "Supported" },
+  "SteamID": "1932944041",
+  "Symbol": "Mgci",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/9J1eOC10BWU"
+  } ],
+  "Type": "Regular"
+}

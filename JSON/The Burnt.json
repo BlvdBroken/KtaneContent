@@ -1,17 +1,25 @@
 {
-  "Author": "BakersDozenBagels",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Anonymous" ],
+    "Maintainer": [ "eXish" ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Perform the ritual. Tags: Fire, Soot",
   "ExpertDifficulty": "Easy",
   "ModuleID": "burnt",
   "Name": "The Burnt",
+  "ObsoleteSteamIDs": [ "2385365851" ],
   "Origin": "Mods",
   "Published": "2021-02-05",
   "SortKey": "BURNT",
-  "SourceUrl": "https://github.com/BakersDozenBagels/KTANE-Burnt",
+  "SourceUrl": "https://github.com/eXish/ktane-burnt",
   "Souvenir": { "Status": "NotACandidate" },
-  "SteamID": "2385365851",
+  "SteamID": "2851421888",
   "Symbol": "Brnt",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/QLAs0VytVas"
+  } ],
   "Type": "Regular"
 }

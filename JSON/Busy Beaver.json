@@ -1,26 +1,37 @@
 {
-  "Author": "Cooldoom5",
+  "BossStatus": "FullBoss",
   "Compatibility": "Compatible",
-  "Contributors": { "Maintainer": [ "VFlyer" ] },
+  "Contributors": {
+    "Developer": [
+      "Cooldoom5",
+      "VFlyer"
+    ],
+    "Maintainer": [ "VFlyer" ],
+    "Manual": [ "Cooldoom5" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Run a Turing Machine based on 2-letter combinations. Tags: 2-letter, binary, cardboard",
   "ExpertDifficulty": "Medium",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+SolvesWithOthers",
+    "+TimeDependent"
   ],
-  "IsFullBoss": true,
   "ModuleID": "busyBeaver",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Busy Beaver",
   "ObsoleteSteamIDs": [ "2154136518" ],
   "Origin": "Mods",
   "Published": "2020-07-04",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd",
   "SortKey": "BUSYBEAVER",
-  "SourceUrl": "https://github.com/Cooldoom5/BusyBeaver",
+  "SourceUrl": "https://github.com/VFlyer/BusyBeaver",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2226418044",
   "Symbol": "Busy",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=cbivhadWHpo"
+  } ],
   "Type": "Regular"
 }

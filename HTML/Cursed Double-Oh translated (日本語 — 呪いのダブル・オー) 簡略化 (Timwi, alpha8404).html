@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Cursed Double-Oh — Keep Talking and Nobody Explodes</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        table.double-oh {
+            margin: 0;
+            border: 2mm solid;
+            font-size: 32pt;
+            width: 100%;
+        }
+        table.double-oh td {
+            text-align: center;
+            white-space: nowrap;
+            border-right: .5mm dotted;
+            border-bottom: .5mm dotted;
+            padding: 0;
+        }
+        table.double-oh tr:nth-child(3n) td {
+            border-bottom: 1.5mm solid;
+        }
+        table.double-oh td:nth-child(3n) {
+            border-right: 1.5mm solid;
+        }
+        .goal {
+            font-weight: bold;
+            background: #afa;
+            color: #000;
+        }
+        .page-content.double-oh-content {
+            font-size: 11pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">呪いのダブル・オー</span>
+            </div>
+            <div class="page-content double-oh-content">
+                <h2>モジュール詳細：呪いのダブル・オー</h2>
+                <img class="diagram" src="img/Component/Double-Oh.svg">
+                <p class="flavour-text">前見た時はこんなんじゃなかったのに。</p>
+                <ul>
+                    <li>4つの矢印ボタンには、ランダムな順序で次の機能が搭載されている:
+                        <ul>
+                            <li>3スペース上/下に移動する</li>
+                            <li>3スペース左/右に移動する</li>
+                            <li>3×3グリッド内で上/下に移動する</li>
+                            <li>3×3グリッド内で左/右に移動する</li>
+                        </ul>
+                    </li>
+                    <li>モジュールはグリッド内のランダムなセルから開始する。中央の0に移動し、送信ボタン(右下)を押してモジュールを解除する。</li>
+                    <li>既に訪れたセルに再度訪れるとミスが記録される。</li>
+                    <li>モジュールをリセットするには、0以外のセルにいるときに送信ボタンを押す。そうするとミスは記録されずに新しい開始位置が選択され、ボタンの機能が再編成される。</li>
+                </ul>
+                <table class="double-oh">
+                    <tr><td>6</td><td>0</td><td>1</td><td>5</td><td>3</td><td>8</td><td>4</td><td>7</td><td>2</td></tr>
+                    <tr><td>8</td><td>4</td><td>3</td><td>7</td><td>2</td><td>6</td><td>0</td><td>5</td><td>1</td></tr>
+                    <tr><td>7</td><td>2</td><td>5</td><td>0</td><td>4</td><td>1</td><td>8</td><td>3</td><td>6</td></tr>
+                    <tr><td>5</td><td>1</td><td>0</td><td>4</td><td>8</td><td>3</td><td>6</td><td>2</td><td>7</td></tr>
+                    <tr><td>3</td><td>6</td><td>7</td><td>2</td><td class="goal">0</td><td>5</td><td>1</td><td>4</td><td>8</td></tr>
+                    <tr><td>4</td><td>8</td><td>2</td><td>6</td><td>1</td><td>7</td><td>5</td><td>0</td><td>3</td></tr>
+                    <tr><td>0</td><td>3</td><td>4</td><td>8</td><td>6</td><td>2</td><td>7</td><td>1</td><td>5</td></tr>
+                    <tr><td>2</td><td>7</td><td>6</td><td>1</td><td>5</td><td>0</td><td>3</td><td>8</td><td>4</td></tr>
+                    <tr><td>1</td><td>5</td><td>8</td><td>3</td><td>7</td><td>4</td><td>2</td><td>6</td><td>0</td></tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/1</div>
+        </div>
+    </div>
+</body>
+</html>

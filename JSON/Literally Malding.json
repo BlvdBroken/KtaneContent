@@ -5,7 +5,7 @@
   "Description": "Press the Fez to give it back to Grunkle Squeaky. Tags: fez, one-button, gurnkle",
   "ExpertDifficulty": "VeryEasy",
   "ModuleID": "literallyMalding",
-  "MysteryModule": "MustNotBeHiddenOrKey",
+  "MysteryModule": "MustNotBeKey",
   "Name": "Literally Malding",
   "Origin": "Mods",
   "Published": "2021-05-12",
@@ -13,5 +13,9 @@
   "SourceUrl": "https://github.com/TracksJosh/ktaneLiterallyCrying-master",
   "SteamID": "2226425124",
   "Symbol": "Mald",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/38ipHN-heHo"
+  } ],
   "Type": "Needy"
 }

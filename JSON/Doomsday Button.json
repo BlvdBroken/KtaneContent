@@ -4,17 +4,20 @@
   "DefuserDifficulty": "Hard",
   "Description": "Disarm the module and press the button to reset the clock before time runs out. Tags: skull, timer, blinking-led",
   "ExpertDifficulty": "VeryEasy",
-  "IsTimeSensitive": true,
   "ModuleID": "doomsdayButton",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Doomsday Button",
   "Origin": "Mods",
   "Published": "2021-04-01",
+  "Quirks": "TimeDependent",
   "SortKey": "DOOMSDAYBUTTON",
   "SourceUrl": "https://github.com/Speakingevil/doomsday-button",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2442987169",
   "Symbol": "Dmb",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=NaYZqDTEl9k" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=NaYZqDTEl9k"
+  } ],
   "Type": "Regular"
 }

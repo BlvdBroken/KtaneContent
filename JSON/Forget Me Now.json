@@ -5,7 +5,6 @@
   "Description": "Take note of a series of numbers that flash one at a time, and submit a calculated sequence. Tags: forget, keypad, 10-buttons, green-background",
   "ExpertDifficulty": "VeryHard",
   "ModuleID": "ForgetMeNow",
-  "MysteryModule": "MustNotBeHidden",
   "Name": "Forget Me Now",
   "Origin": "Mods",
   "Published": "2019-08-24",
@@ -14,6 +13,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1844292544",
   "Symbol": "Fmw",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=hEjr4Our4wg" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=hEjr4Our4wg"
+  } ],
   "Type": "Regular"
 }

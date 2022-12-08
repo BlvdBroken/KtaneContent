@@ -1,6 +1,9 @@
 {
-  "Author": "Andrio Celos, Kusane",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Andrio Celos" ],
+    "Manual": [ "Kusane Hexaku" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Press, hold or mash the button on this more complex Button lookalike module. Tags: word, text, push",
   "ExpertDifficulty": "Medium",
@@ -8,11 +11,14 @@
   "Name": "Not the Button",
   "Origin": "Mods",
   "Published": "2020-03-06",
-  "SortKey": "NOTBUTTON",
-  "SourceUrl": "https://github.com/AndrioCelos/KtaneNotVanillaModules",
+  "SortKey": "NOTTHEBUTTON",
+  "SourceUrl": "https://github.com/AndrioCelos/KtaneNotVanillaModules/tree/main/Assets/Modules/Not%20Button",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2003251353",
   "Symbol": "Nb",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=0HzB_q1twHg" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=0HzB_q1twHg"
+  } ],
   "Type": "Regular"
 }

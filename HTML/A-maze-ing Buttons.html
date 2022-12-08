@@ -22,6 +22,8 @@
             text-align: center;
             float: none;
         }
+        .dark .maze svg line { stroke: #CCC; }
+        .dark .maze svg text { fill: #CCC; }
         @media screen and (min-width: 720px), print {
             .maze
             {
@@ -42,7 +44,7 @@
             <div class="page-content">
                 <img src="img/Component/A-maze-ing Buttons.svg" class="diagram">
                 <h2>On the Subject of A-maze-ing Buttons</h2>
-                <p class="flavour-text">What's so amazing about these buttons? I've been pressing ones just like them for ages!</p>
+                <p class="flavour-text">What’s so amazing about these buttons? I’ve been pressing ones just like them for ages!</p>
                 <ul>
                     <li>This module contains four buttons in each cardinal direction, and a seven-segment display in the middle. Each button can vary in both color and label.</li>
                     <li>Find the starting location using the colors and labels of all four buttons.  Only one square will be adjacent to all four buttons; this square is the starting location.</li>
@@ -228,7 +230,7 @@
                         }
                     }
                 </script>
-                <p>Attemping to move past a solid line, or navigating in the incorrect manner (tapping instead of holding, or vice versa) will result in a strike without movement.</p>
+                <p>Attempting to move past a solid line, or navigating in the incorrect manner (tapping instead of holding, or vice versa) will result in a strike without movement.</p>
                 <p>If a move crosses a solid line, the center segment of the seven-segment display will flash red.</p>
                 <p>If a tap is used in place of a hold, the center segment will flash yellow.</p>
                 <p>If a hold is used in place of a tap, the center segment will flash green.</p>

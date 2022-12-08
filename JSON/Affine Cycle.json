@@ -1,6 +1,12 @@
 {
-  "Author": "Speakingevil",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Speakingevil" ],
+    "Twitch Plays": [
+      "eXish",
+      "Speakingevil"
+    ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Decipher the message written on the dials and submit the encrypted response, using affine cipher. Tags: keyboard, yellow-text, red-button, a*b+c=e",
   "ExpertDifficulty": "Medium",
@@ -13,6 +19,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1826123147",
   "Symbol": "Afcy",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=QB0-ENDV6A4" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=QB0-ENDV6A4"
+  } ],
   "Type": "Regular"
 }

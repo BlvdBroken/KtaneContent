@@ -1,27 +1,30 @@
 {
   "Author": "Piissii",
+  "BossStatus": "FullBoss",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Easy",
   "Description": "Calculate the color and press the screen correctly. Tags: boss-module",
   "ExpertDifficulty": "Medium",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive",
-    "The Swan",
-    "The Heart"
+    "+SolvesWithOthers",
+    "+TimeDependent",
+    "+WillSolveSuddenly"
   ],
-  "IsFullBoss": true,
   "ModuleID": "whiteout",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Whiteout",
   "Origin": "Mods",
   "Published": "2020-09-27",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd",
   "SortKey": "WHITEOUT",
   "SourceUrl": "https://github.com/PIISSI/Whiteout",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2240743367",
   "Symbol": "Wout",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=hdVilJsAF-k" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=hdVilJsAF-k"
+  } ],
   "Type": "Regular"
 }

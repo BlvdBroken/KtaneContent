@@ -1,6 +1,6 @@
 {
-  "Author": "Quinn Wuest",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "Quinn Wuest" ] },
   "DefuserDifficulty": "Medium",
   "Description": "Place black and white stones in a way that results in a capture. Tags: go, stone, black, white, capture",
   "ExpertDifficulty": "VeryEasy",
@@ -9,9 +9,13 @@
   "Origin": "Mods",
   "Published": "2021-06-30",
   "SortKey": "GO",
-  "SourceUrl": "https://github.com/JakkOfKlubs/KtaneGo",
+  "SourceUrl": "https://github.com/QuinnWuest/KtaneGo",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2532497935",
   "Symbol": "Go",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/1JY19gmCTQM"
+  } ],
   "Type": "Regular"
 }

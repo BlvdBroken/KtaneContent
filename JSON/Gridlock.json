@@ -1,6 +1,9 @@
 {
-  "Author": "Timwi, Elias",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Manual": [ "Elias" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Constant back and forth to fill a 4×4 grid until gridlock occurs. Tags: next, arrows, colored-squares, hexagon, diamond, triangle, star",
   "ExpertDifficulty": "Medium",
@@ -13,9 +16,19 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1107709535",
   "Symbol": "Gl",
-  "TutorialVideoUrl": {
-    "Čeština": "https://youtu.be/SEBYTTVUZO0",
-    "default": "https://www.youtube.com/watch?v=XKLl8hCs2-0"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/SEBYTTVUZO0"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=XKLl8hCs2-0"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/6SkJ-Y8rh0w"
+    }
+  ],
   "Type": "Regular"
 }

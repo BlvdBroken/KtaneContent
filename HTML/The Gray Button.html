@@ -154,9 +154,9 @@
 
             return `
                 <svg viewBox='-.1 -.1 ${w+.2} ${h+.2}'>
-                    <path d='${path}' fill='#ddd' stroke='none' />
-                    <path d='${svg.join('')}' fill='none' stroke='black' stroke-width='.05' />
-                    <path d='M0 0h${w}v${h}H0z' fill='none' stroke='black' stroke-width='.1' />
+                    <path class='shape' d='${path}' fill='#ddd' stroke='none' />
+                    <path class='walls' d='${svg.join('')}' fill='none' stroke='black' stroke-width='.05' />
+                    <path class='walls' d='M0 0h${w}v${h}H0z' fill='none' stroke='black' stroke-width='.1' />
                     ${Array(w*h).fill(null).map((_, c) => `<rect class='highlightable' x='${c % w}' y='${(c / w) | 0}' width='1' height='1' fill='transparent' />`).join('')}
                 <${''}/svg>
             `;
@@ -175,6 +175,8 @@
             #gray-button-mazes .symbol > svg {
                 display: inline;
             }
+        .dark .maze-td svg path.walls { stroke: #DDD; }
+        .dark .maze-td svg path.shape { fill: #444; }
     </style>
 </head>
 <body>
@@ -187,7 +189,7 @@
             <div class="page-content">
                 <img src="img/Component/The Gray Button.svg" class="diagram">
                 <h2>On the Subject of The Gray Button</h2>
-                <p class="flavour-text">This is a button. It is gray.</p>
+                <p class="flavour-text">Look, I don’t care about actually getting there, just tell me how long the trip is.</p>
                 <p>In the maze corresponding to the symbol on the button, find the position given by the third and sixth character of the serial number, as well as the position displayed on the screen (column 0–9 from left to right, then row 0–9 from top to bottom). Calculate the distance between these positions, modulo 60. Tap the button when the seconds on the bomb timer equal this value, or the total seconds equal a tenth of it (rounded down).</p>
 
                 <div id='gray-button-mazes'></div>

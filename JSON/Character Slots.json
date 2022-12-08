@@ -1,0 +1,25 @@
+{
+  "Author": "Konoko",
+  "Compatibility": "Compatible",
+  "DefuserDifficulty": "Hard",
+  "Description": "Check if characters are meant to be kept or not depending on a lot of stuff. Tags: 4-buttons, KEEP, CRANK, smash-bros, 6-lights, 3-slots",
+  "ExpertDifficulty": "Hard",
+  "ModuleID": "characterSlots",
+  "MysteryModule": "MustNotBeKey",
+  "Name": "Character Slots",
+  "Origin": "Mods",
+  "Published": "2021-10-02",
+  "SortKey": "CHARACTERSLOTS",
+  "SourceUrl": "https://github.com/Gameplushy/Character-Slots",
+  "Souvenir": {
+    "Explanation": "Souvenir could ask for which character appeared in which slot on which stage.",
+    "Status": "Considered"
+  },
+  "SteamID": "2617527219",
+  "Symbol": "Chs",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/mmdGIGQS5E0"
+  } ],
+  "Type": "Regular"
+}

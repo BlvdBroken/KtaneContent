@@ -16,8 +16,12 @@
   "Published": "2021-04-07",
   "SortKey": "ALFABRAVO",
   "SourceUrl": "https://github.com/nicklatkovich/ktane_alfa_bravo",
-  "Souvenir": { "Status": "NotACandidate" },
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "2448978294",
   "Symbol": "Albv",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/3ziQ6vXtoBk"
+  } ],
   "Type": "Regular"
 }

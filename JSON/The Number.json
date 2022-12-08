@@ -1,6 +1,9 @@
 {
-  "Author": "red031000, Felix",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "red031000" ],
+    "Manual": [ "Felix" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Input the correct sequence depending on the location of the numbers and the condition of the edgework. Tags: display, keypad, c, e",
   "ExpertDifficulty": "Medium",
@@ -14,6 +17,15 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1360126644",
   "Symbol": "Num",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=_4XY-zl6f34" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/FG_FsYsj36I"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/_4XY-zl6f34"
+    }
+  ],
   "Type": "Regular"
 }

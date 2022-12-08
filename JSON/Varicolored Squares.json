@@ -1,6 +1,9 @@
 {
-  "Author": "ZekNikZ",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "ZekNikZ" ],
+    "Maintainer": [ "Timwi" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Communicate back and forth to change the color of these 16 colored squares to the same color in this Colored Squares lookalike module. Tags: 4x4-grid, 4×4-grid, colors, colored-squares, 16-buttons",
   "ExpertDifficulty": "Medium",
@@ -15,6 +18,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "805590147",
   "Symbol": "Vasq",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=thYk9Ylksuo" },
+  "TutorialVideos": [
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=thYk9Ylksuo"
+    },
+    {
+      "Language": "普通话",
+      "Url": "https://www.bilibili.com/video/BV1kP4y187Mi?t=2147"
+    }
+  ],
   "Type": "Regular"
 }

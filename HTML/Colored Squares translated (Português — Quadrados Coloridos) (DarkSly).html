@@ -45,11 +45,6 @@
         }
     </script>
     <style>
-        @media print {
-            a[href]:after {
-                content: "";
-            }
-        }
         .brother {
             clear: both;
             margin: 1em 0;
@@ -59,6 +54,7 @@
             float: right;
             margin-left: .5cm;
         }
+        .dark .brother > .component { background-color: #DDD; }
         .brother > .component > img {
             width: 3cm;
         }

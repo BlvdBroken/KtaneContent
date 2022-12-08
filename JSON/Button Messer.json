@@ -24,22 +24,25 @@
     "Word Search",
     "",
     "Dimension Disruption",
-    "English test",
+    "English Test",
     "Extended Password",
     "Friendship",
     "Password"
   ],
-  "IsSolveOrderSensitive": true,
   "ModuleID": "qkButtonMesser",
   "MysteryModule": "RequiresAutoSolve",
   "Name": "Button Messer",
-  "NeedsOtherSolves": true,
   "Origin": "Mods",
   "Published": "2020-10-17",
+  "Quirks": "NeedsOtherSolves",
   "SortKey": "BUTTONMESSER",
   "SourceUrl": "https://github.com/Qkrisi/ktanemod-button-messer",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2260210604",
   "Symbol": "Bm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/hQaN54l2h0E"
+  } ],
   "Type": "Regular"
 }

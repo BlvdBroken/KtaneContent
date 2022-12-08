@@ -1,6 +1,9 @@
 {
-  "Author": "VFlyer, Kusane",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "VFlyer" ],
+    "Manual": [ "Kusane Hexaku" ]
+  },
   "DefuserDifficulty": "Hard",
   "Description": "A needy based on the trope of cutting it as close to zero as possible. Many times. Tags: needy, 1-button",
   "ExpertDifficulty": "Easy",
@@ -8,10 +11,13 @@
   "Name": "Time Accumulation",
   "Origin": "Mods",
   "Published": "2019-12-18",
-  "SortKey": "TIME ACCUMULATION",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
-  "Souvenir": { "Status": "NotACandidate" },
+  "SortKey": "TIMEACCUMULATION",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/Time%20Accumulation",
   "SteamID": "1940164898",
   "Symbol": "Ta",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/mD7WyKmT5KE"
+  } ],
   "Type": "Needy"
 }

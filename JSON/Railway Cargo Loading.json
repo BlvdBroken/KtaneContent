@@ -1,5 +1,5 @@
 {
-  "Author": "S.",
+  "Author": "LotsOfS",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
   "Description": "Couple the correct railroad cars to the train to disarm the module. Tags: 3-buttons, trains, hazard, big-car",
@@ -13,5 +13,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1977063810",
   "Symbol": "Rcl",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/e2X9amxZpXo"
+  } ],
   "Type": "Regular"
 }

@@ -2,8 +2,8 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "Riverbui" ],
-    "Maintainer": [ "Riverbui" ],
-    "Manual": [ "Pruz" ]
+    "Manual": [ "Pruz" ],
+    "Modeling": [ "ThatGuyCalledJules" ]
   },
   "DefuserDifficulty": "Medium",
   "Description": "Navigate a maze in which locations are identified by very similar-looking icons of cartoon bombs. Tags: up-arrow, left-arrow, right-arrow, down-arrow, submit, colors",
@@ -17,6 +17,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1422870701",
   "Symbol": "Msk",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=EvR1Jr9xftg" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=EvR1Jr9xftg"
+  } ],
   "Type": "Regular"
 }

@@ -1,23 +1,12 @@
 {
-  "Author": "Blananas2, TasThing, Riverbui",
+  "BossStatus": "FullBoss",
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [
       "Blananas2",
-      "Major fixes and updates: Riverbui",
-      "Icon to string converter: MrMelon",
-      "String contributors: TasThing",
-      "Danny7007",
-      "Deaf",
-      "draket333",
-      "Nico",
-      "MrPeanut1028",
-      "Crazycaleb",
-      "Timwi",
-      "mcd573",
-      "xmaster",
-      "Kiki",
-      "EpicToast"
+      "Riverbui",
+      "TasThiluna",
+      "and many contributors"
     ],
     "Maintainer": [ "Blananas2" ],
     "Manual": [ "Blananas2" ],
@@ -28,20 +17,22 @@
   "ExpertDifficulty": "VeryEasy",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+TimeDependent"
   ],
-  "IsFullBoss": true,
   "ModuleID": "iconic",
   "MysteryModule": "MustNotBeKey",
   "Name": "Iconic",
   "Origin": "Mods",
   "Published": "2020-04-22",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd",
   "SortKey": "ICONIC",
   "SourceUrl": "https://github.com/Blananas2/ktane-iconic",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2070071164",
   "Symbol": "Icn",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=q377YdRS_qA" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=q377YdRS_qA"
+  } ],
   "Type": "Regular"
 }

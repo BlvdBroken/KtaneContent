@@ -1,6 +1,9 @@
 {
-  "Author": "Obvious",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Obvious" ],
+    "Manual": [ "Eltrick" ]
+  },
   "DefuserDifficulty": "VeryHard",
   "Description": "Figure out the seed of a 3d fractal. Tags: fractal, 3d",
   "ExpertDifficulty": "Medium",
@@ -12,5 +15,9 @@
   "SourceUrl": "https://github.com/Ob3vious/KTaNE_FractalMaze",
   "SteamID": "2343691887",
   "Symbol": "Idfr",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/B4iN5d2KLe4"
+  } ],
   "Type": "Regular"
 }

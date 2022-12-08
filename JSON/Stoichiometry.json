@@ -9,7 +9,7 @@
       "LuminoscityTim"
     ],
     "Manual graphics": [ "LuminoscityTim" ],
-    "Twitch Plays": [ "Danny7007" ]
+    "Twitch Plays": [ "tandyCake" ]
   },
   "DefuserDifficulty": "Easy",
   "Description": "Neutralize two acids and account for their reactions by calculating salts and possible gas byproducts. Tags: three-screens, chemical-formulas, titrate, neutralization, chemistry, acid, base",
@@ -23,5 +23,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2449157046",
   "Symbol": "Stoi",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/bMwWgNQUSAA"
+  } ],
   "Type": "Regular"
 }

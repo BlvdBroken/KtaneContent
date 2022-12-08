@@ -10,12 +10,17 @@
   "Published": "2017-09-28",
   "SortKey": "SHAPEMEMORY",
   "SourceUrl": "https://github.com/UltraCboy/ktane-needy-shape-memory",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1439537292",
   "Symbol": "Smem",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=ebL779c9QLw",
-    "default": "https://www.youtube.com/watch?v=2JflRMC6scA"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=ebL779c9QLw"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=2JflRMC6scA"
+    }
+  ],
   "Type": "Needy"
 }

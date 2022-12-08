@@ -1,6 +1,9 @@
 {
-  "Author": "Andrio Celos, Kusane",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Andrio Celos" ],
+    "Manual": [ "Kusane Hexaku" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Submit five words encoded in Morse Code in the correct order. Tags: blinking-orange-light, frequency, radio, xt",
   "ExpertDifficulty": "Easy",
@@ -9,9 +12,13 @@
   "Origin": "Mods",
   "Published": "2020-03-06",
   "SortKey": "NOTMORSECODE",
-  "SourceUrl": "https://github.com/AndrioCelos/KtaneNotVanillaModules",
+  "SourceUrl": "https://github.com/AndrioCelos/KtaneNotVanillaModules/tree/main/Assets/Modules/Not%20Morse%20Code",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2003251353",
   "Symbol": "Nm",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/AtL3aDuAZX0"
+  } ],
   "Type": "Regular"
 }

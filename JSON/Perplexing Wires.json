@@ -1,6 +1,10 @@
 {
-  "Author": "Timwi, MarAyzex, Quinn Wuest",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Idea": [ "MarAyzex" ],
+    "Manual": [ "Quinn Wuest" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Cut one or more wires according to elaborate rules laid out in a five-way Venn diagram. Tags: 6-wires, colored-arrows, 3-circles, stars",
   "ExpertDifficulty": "Hard",
@@ -13,9 +17,15 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1129411945",
   "Symbol": "Pw",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=DvNlE710IG8",
-    "default": "https://www.youtube.com/watch?v=OEmuqMcl-pQ"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=DvNlE710IG8"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=OEmuqMcl-pQ"
+    }
+  ],
   "Type": "Regular"
 }

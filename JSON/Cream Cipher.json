@@ -1,0 +1,27 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Sean Obach" ],
+    "Twitch Plays": [
+      "eXish",
+      "Sean Obach"
+    ]
+  },
+  "DefuserDifficulty": "Easy",
+  "Description": "A 3 step module using different ciphers. Tags: cream, qwerty-keyboard",
+  "ExpertDifficulty": "Hard",
+  "ModuleID": "creamCipher",
+  "Name": "Cream Cipher",
+  "Origin": "Mods",
+  "Published": "2022-01-09",
+  "SortKey": "CREAMCIPHER",
+  "SourceUrl": "https://github.com/obachs971/UltimateCipher",
+  "Souvenir": { "Status": "Supported" },
+  "SteamID": "1932944041",
+  "Symbol": "Cmci",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/MdU6Vj0saNI"
+  } ],
+  "Type": "Regular"
+}

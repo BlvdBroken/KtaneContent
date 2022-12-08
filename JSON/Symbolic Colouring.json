@@ -1,6 +1,11 @@
 {
-  "Author": "TheThirdMan, Kusane",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "TheThirdMan" ],
+    "Maintainer": [ "VFlyer" ],
+    "Manual": [ "Kusane Hexaku" ],
+    "Manual graphics": [ "LuminoscityTim" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Press each symbol button in the correct order and when your current color is right. Tags: 8-buttons, 4-colors, symbols",
   "ExpertDifficulty": "Easy",
@@ -13,6 +18,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1779657027",
   "Symbol": "Syco",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=YOZz_1PtGZI" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=YOZz_1PtGZI"
+  } ],
   "Type": "Regular"
 }

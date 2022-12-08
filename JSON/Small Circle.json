@@ -1,8 +1,8 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "TasThing" ] },
+  "Contributors": { "Developer": [ "TasThiluna" ] },
   "DefuserDifficulty": "Easy",
-  "Description": "Use the amount by which a rotating sequence of colors shifts to find rules that dicate which colors to press. Tags: 8-buttons, wedges, colors, spinning",
+  "Description": "Use the amount by which a rotating sequence of colors shifts to find rules that dictate which colors to press. Tags: 8-buttons, wedges, colors, spinning",
   "ExpertDifficulty": "Medium",
   "ModuleID": "smallCircle",
   "Name": "Small Circle",
@@ -10,11 +10,12 @@
   "Published": "2020-12-30",
   "SortKey": "SMALLCIRCLE",
   "SourceUrl": "https://github.com/tasthing/Small-Circle",
-  "Souvenir": {
-    "Explanation": "Souvenir could ask about the color used in the table, the number the sequence shifted by, or the solution.",
-    "Status": "Considered"
-  },
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "2342073206",
   "Symbol": "Smc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/sVAnfcTYVIo"
+  } ],
   "Type": "Regular"
 }

@@ -10,8 +10,11 @@
   "Published": "2019-12-15",
   "SortKey": "LOGICSTATEMENT",
   "SourceUrl": "https://github.com/shortc1rcuit/LogicStatement",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1937777727",
   "Symbol": "Los",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/fF7uA2YGWls?t=419"
+  } ],
   "Type": "Needy"
 }

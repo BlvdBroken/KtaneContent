@@ -1,6 +1,9 @@
 {
-  "Author": "Timwi, TheAuthorOfOZ",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Manual": [ "TheAuthorOfOZ" ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Find a word that is hidden in a 6×6 jungle of letters backwards, forwards or diagonally, while avoiding the many decoy words also present in the grid. Tags: 6x6-grid, green-on-black",
   "ExpertDifficulty": "Easy",
@@ -13,10 +16,19 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "814168200",
   "Symbol": "Wos",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=dUdjMq_Ima8",
-    "default": "https://www.youtube.com/watch?v=o8qK4Om32b8",
-    "Français": "https://youtu.be/H_PNfaSrGYQ"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=dUdjMq_Ima8"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=o8qK4Om32b8"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/H_PNfaSrGYQ"
+    }
+  ],
   "Type": "Regular"
 }

@@ -1,6 +1,9 @@
 {
-  "Author": "Timwi, Elias",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Timwi" ],
+    "Manual": [ "Elias" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Based on MBTI personality type, decide which employee to fire and which applicant to hire. Tags: name, left-arrow, right-arrow",
   "ExpertDifficulty": "Medium",
@@ -13,6 +16,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1314359857",
   "Symbol": "Hr",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=R9xGV8CtqX0" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/dNUcfWceMg8"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/R9xGV8CtqX0"
+    }
+  ],
   "Type": "Regular"
 }

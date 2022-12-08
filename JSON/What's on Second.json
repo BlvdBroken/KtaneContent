@@ -8,10 +8,15 @@
   "Name": "What's on Second",
   "Origin": "Mods",
   "Published": "2020-11-18",
+  "RuleSeedSupport": "Supported",
   "SortKey": "WHATSONSECOND",
   "SourceUrl": "https://github.com/BigCrunch22/WhatsOnSecond",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2291066848",
   "Symbol": "Wosc",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=weLfWk6SMcs"
+  } ],
   "Type": "Regular"
 }

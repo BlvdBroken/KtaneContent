@@ -16,5 +16,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2593780121",
   "Symbol": "Fis",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/0xChWqj6tp0"
+  } ],
   "Type": "Regular"
 }

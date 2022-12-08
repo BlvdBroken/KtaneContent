@@ -16,5 +16,9 @@
   },
   "SteamID": "2209216269",
   "Symbol": "Hbns",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/8oiw8kvubQQ"
+  } ],
   "Type": "Regular"
 }

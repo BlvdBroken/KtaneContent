@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>灯台下暗し — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <script src="js/jquery.3.1.1.min.js"></script>
+    <style>
+       .interactive-container {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+
+       table.interactive, table.interactive tr, table.interactive th, table.interactive td:nth-child(1) {
+           border: none;
+           background: none;
+           font-family: Arial;
+           font-weight: 600;
+           font-size: 31px;
+           width: 30px;
+           padding: 0em .3em 0em;
+       }
+
+       table.interactive td {
+           border: rgb(51, 77, 108) 1px solid;
+           padding: 0;
+           width: 50px;
+           height: 50px;
+       }
+
+       table.interactive td>.box {
+           background: white;
+           transition: background 0.2s;
+           position: relative;
+           width: 50px;
+           height: 50px;
+       }
+
+       table.interactive td.red>.box {
+           background: rgba(255,0,0,0.6);
+       }
+
+       table.interactive td>.box::after {
+           position: absolute;
+           content: '';
+           width: 0px;
+           height: 0px;
+           transition: background 0.2s;
+       }
+
+       table.interactive td.blue>.box::after{
+        background: rgba(0,0,255,0.5);
+           width: 50px;
+           height: 50px;
+       }
+
+       button {
+           margin: 5px;
+           border: black 2px solid;
+           border-radius: 3px;
+           transition: color 1s, background-color 1s;
+           display: block;
+       }
+
+       button:hover {
+           color: white;
+           background-color: black;
+       }
+
+       .buttons {
+           display: flex;
+           flex-direction: row;
+       }
+        .hideText {
+            color: #000;
+            color: rgba(0, 0, 0, 0.2);
+        }
+
+        .dark table, table {
+            border: none;
+            margin: 1em auto;
+        }
+        img { width: 100%; }
+
+        @media print {
+            a[href]:after {
+                content: none !important;
+            }
+        }
+    </style>
+    <script>
+     //based on game of life cruel
+     $(function() {
+        const interactive = $("table.interactive");
+        const symbol=["◼","◆","▲","▼","◉","◍","◈","Ж","Ӝ","Җ"];
+        let saveStates = [];
+        let currentState = 0;
+
+        function removeFutureSaves() {
+            if (currentState < saveStates.length - 1) {
+                for (let i = currentState + 1; i < saveStates.length; i++) {
+                    saveStates[i].remove();
+                }
+
+                saveStates.splice(currentState + 1, saveStates.length - currentState);
+            }
+        }
+
+        for (let y = 0; y < 11; y++) {
+            const row = $("<tr>").appendTo(interactive);
+            for (let x = 0; x < 11; x++) {
+                if (x == 0 && y == 0) {
+                    $("<th>").appendTo(row);
+                } else if (y == 0 && x > 0) {
+                    $("<th>").text(symbol[x-1]).appendTo(row);
+                } else if (y > 0 && x == 0) {
+                    $("<th>").text(y-1).appendTo(row);
+                } else {
+                    $("<td>").click(function() {
+                        $(this).toggleClass("red");
+                        removeFutureSaves();
+                    }).contextmenu(function() {
+                        $(this).toggleClass("blue");
+                        removeFutureSaves();
+                        return false;
+                    }).append('<div class="box"></div>').appendTo(row);
+                }
+            }
+        }
+
+        $("button.reset").click(function() {
+            $("table.interactive td").removeClass("red blue");
+            saveStates.forEach(x => x.remove());
+            saveStates = [];
+            currentState = 0;
+        });
+
+        $("button.reset-grid").click(function() {
+            $("table.interactive td").removeClass("red blue");
+        });
+
+        $("button.save").click(function() {
+            removeFutureSaves();
+
+            let saveState = Array.from($("table.interactive td")).map(x => $(x)).map(x => x.attr("class") || "");
+            console.log(saveStates);
+            let stateNumber = saveStates.length;
+            currentState = stateNumber;
+
+            let button = $("<button>").text(stateNumber + 1).click(function() {
+                $("table.interactive td").each((i, x) => $(x).attr("class", saveState[i]));
+                currentState = stateNumber;
+            }).appendTo(".saves");
+
+            saveStates.push(button);
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">灯台下暗し</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Component.svg" class="diagram">
+                <h2>モジュール詳細：灯台下暗し</h2>
+                <p class="flavour-text">見えないのかい?<br><span class="hideText">違う、いやそうか。</span></p>
+                <p class="appendix-reference" id="appendix-reference">空白モジュールの特定については、<a href="Blind%20Alley%20translated%20(日本語%20—%20ブラインド・アレイ%20)%20(tchen).html">ブラインド・アレイ</a>の付録BLANKを参照する。</p>
+
+                <p>モジュールには3つの数字と図形が含まれるが、そのままでは確認する事ができない。それらは、その上にカーソルをあわせる事によって徐々に浮かび上がってくる。</p>
+                <p>図形と3つの数字の中央値を利用して、以下の表のセルを特定する。中央値以外の2つの数字を小さい方から順に<strong>数字 - パターン変換</strong>に当てはめて、すべてのセルの色を決定する。グリッドを同じ大きさの2×2に分割したときに黒のセルが最も少ない区分の白のセルの数がタイマーの秒数と一致するときに、ステータスライトにカーソルを合わせ始める。黒のセルが最も多い区分の白のセルの数がタイマーの秒数と一致するときにカーソルを合わせることをやめると、モジュールは解除される。</p>
+                <p>右クリックで、セルを青色にできる。左クリックで、セルを赤色にできる。2つの色は重ね合わせて紫色にすることができる。</p>
+                <div class="interactive-container">
+                 <table class="interactive"></table>
+                 <div class="buttons">
+                     <button class="reset">全てリセット</button>
+                     <button class="reset-grid">グリッドリセット</button>
+                 </div>
+                 <div class="saves buttons">
+                     <button class="save">保存</button>
+                 </div>
+             </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">灯台下暗し</span>
+            </div>
+            <div class="page-content">
+                <h3>数字 - パターン変換</h3>
+                <p>数字を表に当てはめるとき、その数字と関連するパターンと現在の表の状態を考える。次のルールに従って色を決定する。</p>
+                <table>
+                    <tr><th>パターン上のセルの色</th><th>表のセルの色</th><th>結果</th></tr>
+                    <tr><td>白</td><td>白</td><td>白</td></tr>
+                    <tr><td>黒</td><td>白</td><td>黒</td></tr>
+                    <tr><td>白</td><td>黒</td><td>黒</td></tr>
+                    <tr><td>黒</td><td>黒</td><td>白</td></tr>
+                </table>
+                <p>以下のパターンにおいて、特定された位置のセルと同じ位置のセルの色が黒である場合、パターンの全てのセルの色を反転してから入力する。</p>
+
+                <table>
+                    <tr>
+                        <td><img src="img/Hidden In Plain Sight/grid0.png"></td>
+                        <td><img src="img/Hidden In Plain Sight/grid1.png"></td>
+                        <td><img src="img/Hidden In Plain Sight/grid2.png"></td>
+                        <td><img src="img/Hidden In Plain Sight/grid3.png"></td>
+                        <td><img src="img/Hidden In Plain Sight/grid4.png"></td>
+                    </tr>
+                    <tr>
+                        <td class="shapes">0</td>
+                        <td class="shapes">1</td>
+                        <td class="shapes">2</td>
+                        <td class="shapes">3</td>
+                        <td class="shapes">4</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/Hidden In Plain Sight/grid5.png"></td>
+                        <td><img src="img/Hidden In Plain Sight/grid6.png"></td>
+                        <td><img src="img/Hidden In Plain Sight/grid7.png"></td>
+                        <td><img src="img/Hidden In Plain Sight/grid8.png"></td>
+                        <td><img src="img/Hidden In Plain Sight/grid9.png"></td>
+                    </tr>
+                    <tr>
+                        <td class="shapes">5</td>
+                        <td class="shapes">6</td>
+                        <td class="shapes">7</td>
+                        <td class="shapes">8</td>
+                        <td class="shapes">9</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/2</div>
+        </div>
+    </div>
+</body>
+</html>

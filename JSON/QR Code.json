@@ -10,12 +10,17 @@
   "Published": "2017-07-17",
   "SortKey": "QRCODE",
   "SourceUrl": "https://github.com/Sirawit7205/ktaneQRCode",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1078276453",
   "Symbol": "Qr",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=5vq_UNw3lJo",
-    "default": "https://www.youtube.com/watch?v=krVDV1sXNU0"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=5vq_UNw3lJo"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=krVDV1sXNU0"
+    }
+  ],
   "Type": "Needy"
 }

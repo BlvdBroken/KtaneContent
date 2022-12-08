@@ -1,6 +1,7 @@
 {
   "Author": "Royal_Flu$h",
-  "Compatibility": "Compatible",
+  "Compatibility": "Unplayable",
+  "CompatibilityExplanation": "The module does not correctly calculate the solution if the hold and release occured at different solve counts.",
   "DefuserDifficulty": "VeryEasy",
   "Description": "Hold and release a big red button at certain times. Tags: 1-button, red-button, black-background",
   "ExpertDifficulty": "Easy",
@@ -13,6 +14,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1544816895",
   "Symbol": "Plb",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=8acYY16lCFM" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=8acYY16lCFM"
+  } ],
   "Type": "Regular"
 }

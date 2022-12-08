@@ -6,20 +6,31 @@
   "ExpertDifficulty": "Easy",
   "Ignore": [
     "+SolvesBeforeSome",
-    "+TimeSensitive",
-    "The Troll"
+    "+TimeDependent",
+    "+WillSolveSuddenly",
+    "-Custom Keys",
+    "-SUSadmin",
+    "-Turn The Keys",
+    "-Bamboozling Time Keeper",
+    "-OmegaDestroyer",
+    "-Password Destroyer",
+    "-The Time Keeper",
+    "-Zener Cards"
   ],
-  "IsSolveOrderSensitive": true,
   "ModuleID": "GSAccessCodes",
-  "MysteryModule": "RequiresAutoSolve",
+  "MysteryModule": "MustNotBeHidden",
   "Name": "Access Codes",
   "Origin": "Mods",
   "Published": "2021-02-07",
-  "SolvesBeforeSome": true,
+  "Quirks": "SolvesBeforeSome",
   "SortKey": "ACCESSCODES",
   "SourceUrl": "https://github.com/GhostSalt/AccessCodes",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2387360571",
   "Symbol": "Acds",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=zoPP3vbunIQ"
+  } ],
   "Type": "Regular"
 }

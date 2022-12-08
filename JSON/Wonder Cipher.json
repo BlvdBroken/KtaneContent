@@ -16,5 +16,9 @@
   },
   "SteamID": "2061443698",
   "Symbol": "Woci",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/UNvi9rY2TXo"
+  } ],
   "Type": "Regular"
 }

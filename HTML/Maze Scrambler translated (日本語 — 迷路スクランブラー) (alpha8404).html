@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>迷路スクランブラー — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        img {
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            font-size: 20px;
+        }
+
+            table th {
+                background: #000000;
+                font-weight: bold;
+                color: #FFFFFF;
+                text-align: center;
+                border-left: 2px solid #D0E4F5;
+            }
+        .dark svg text { fill: #DDD; }
+        .dark svg path { stroke: #DDD; }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span> <span class="page-header-section-title">迷路スクランブラー</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Maze%20Scrambler.svg" class="diagram">
+                <h2>モジュール詳細：迷路スクランブラー</h2>
+                <p class="flavour-text">
+                    上を何度か押しても上にしか行かない。それは、数字付きのモジュールがランダムに数字を並び替えたときに7が左下になるのと同じくらい最悪だ。
+                </p>
+                <p>
+                    このモジュールには、4つの色付きボタンと9つのLED、及びリセットボタンがある。
+                </p>
+                <p>
+                    黄色のLEDの位置を使用し、どの迷路が使用されているかを特定する。青のLED(現在地)を赤のLED(ゴール)に移動させる必要がある。現在地やゴールが黄のLEDと同じ位置にある場合はそれらの色が合成された色が表示される。<br>
+                    <i>緑＝黄・青　オレンジ＝黄・赤</i>
+                </p>
+                <p>
+                    表を使用し、各ボタンの進む方向を特定する。段1から開始し、1回移動するごとに1段下に移動する。一番下の段に到達したら段1に戻る。
+                </p>
+                <p>
+                    壁にぶつかるとミスが記録され、青のLEDの位置がリセットされる。表は段1にリセットされる。
+                </p>
+                <table class="blueTable">
+                    <tr><th></th><th>赤</th><th>青</th><th>緑</th><th>黄</th></tr>
+                    <tr><td>1</td><td>上</td><td>左</td><td>右</td><td>下</td></tr>
+                    <tr><td>2</td><td>左</td><td>右</td><td>上</td><td>下</td></tr>
+                    <tr><td>3</td><td>右</td><td>左</td><td>上</td><td>右</td></tr>
+                    <tr><td>4</td><td>下</td><td>上</td><td>左</td><td>右</td></tr>
+                    <tr><td>5</td><td>下</td><td>右</td><td>左</td><td>上</td></tr>
+                    <tr><td>6</td><td>右</td><td>上</td><td>下</td><td>左</td></tr>
+                    <tr><td>7</td><td>上</td><td>左</td><td>右</td><td>下</td></tr>
+                    <tr><td>8</td><td>上</td><td>右</td><td>左</td><td>下</td></tr>
+                    <tr><td>9</td><td>下</td><td>上</td><td>右</td><td>左</td></tr>
+                    <tr><td>0</td><td>左</td><td>下</td><td>上</td><td>右</td></tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span> <span class="page-header-section-title">迷路スクランブラー</span>
+            </div>
+            <div class="page-content">
+                <p>「X」が黄のLEDと同じ位置にある迷路を使用する。</p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2 -2 904 904" font-size="51.813" font-family="Special Elite">
+                    <path fill="none" stroke="#000" stroke-width="2" d="M0 200h100m100 0h100M100 100h100V0m200 300V200m100 0h100M300 100h100m100 0h100m0 100h100V100h100m0 100v100M100 600V400m100 0v100h100m100 100V500h100M300 400h200m200 200V500m100 0h100M700 300v100m100 0V300M0 800h200M100 600v100m100 0V600m200 300V800h100M400 700h100V600m200 300V800m100 0h100M700 600v100m100 0h100M300 900V0M0 600h900M600 900V0M0 300h900M0 0h900v900H0V0" />
+                    <text x="34.616" y="264.22">X</text>
+                    <text x="334.353" y="63.396">X</text>
+                    <text x="532.179" y="264.22">X</text>
+                    <text x="733.003" y="162.309">X</text>
+                    <text x="831.916" y="264.22">X</text>
+                    <text x="34.616" y="465.043">X</text>
+                    <text x="232.442" y="465.043">X</text>
+                    <text x="433.266" y="363.133">X</text>
+                    <text x="433.266" y="563.956">X</text>
+                    <text x="634.089" y="462.046">X</text>
+                    <text x="831.916" y="363.133">X</text>
+                    <text x="34.616" y="863.694">X</text>
+                    <text x="232.442" y="662.87">X</text>
+                    <text x="331.355" y="662.87">X</text>
+                    <text x="331.355" y="863.694">X</text>
+                    <text x="733.003" y="761.783">X</text>
+                    <text x="733.003" y="863.694">X</text>
+                    <text x="133.529" y="63.396">X</text>
+                    <rect class='highlightable' fill='transparent' x='0' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='0' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='0' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='100' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='0' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='200' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='0' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='300' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='0' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='400' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='0' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='500' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='0' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='600' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='0' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='700' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='0' y='800' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='100' y='800' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='200' y='800' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='300' y='800' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='400' y='800' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='500' y='800' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='600' y='800' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='700' y='800' width='100' height='100' />
+                    <rect class='highlightable' fill='transparent' x='800' y='800' width='100' height='100' />
+                </svg>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/2</div>
+        </div>
+    </div>
+</body>
+</html>

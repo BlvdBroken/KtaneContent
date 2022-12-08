@@ -3,16 +3,18 @@
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
   "Description": "Click the buttons before they reach zero. Tags: 6-buttons, display, number",
-  "ExpertDifficulty": "Medium",
+  "ExpertDifficulty": "VeryEasy",
   "ModuleID": "10seconds",
   "Name": "Ten Seconds",
   "Origin": "Mods",
   "Published": "2019-07-08",
   "SortKey": "TENSECONDS",
   "SourceUrl": "https://github.com/nasko222/nasko-ktane-mods",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1796863112",
   "Symbol": "10s",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=mVDr1HDD5lk" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=mVDr1HDD5lk"
+  } ],
   "Type": "Needy"
 }

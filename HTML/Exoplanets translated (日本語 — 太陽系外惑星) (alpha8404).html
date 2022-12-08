@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>太陽系外惑星 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        td {
+            text-align: center;
+        }
+        .letter {
+            background-color: black;
+            color: white;
+            font-size: 18px;
+        }
+        .surface {
+            width: 75%;
+        }
+        .table {
+            width: 100%;
+        }
+        .small {
+            font-size: 12px;
+        }
+        svg text { font-family: 'Special Elite'; }
+        svg circle, svg ellipse { fill: transparent; }
+        .dark svg circle, .dark svg ellipse { stroke: #DDD; }
+        .dark svg text { fill: #DDD; }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">太陽系外惑星</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Exoplanets.svg" class="diagram">
+                <h2>モジュール詳細：太陽系外惑星</h2>
+                <p class="flavour-text">バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’、 バレンシ’。</p>
+                <ul>
+                    <li>モジュール上には恒星(中央)があり、３つの惑星が恒星の周りを周回している。カウンドダウンタイマーの最後の数字が「ターゲット数字」のときに「ターゲット惑星」を押す。</li>
+                    <li>開始ターゲット惑星は、他の惑星とは異なる方向に周回している惑星である。すべての惑星が時計回りに周回している場合、開始ターゲット惑星は星に一番近い惑星である。すべての惑星が反時計回りに周回している場合、開始ターゲット惑星は恒星から最も遠い惑星である。開始ターゲット数字は、惑星の外観によって決定される、ターゲット惑星の<u>表面値</u>である。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td><img src='img/Exoplanets/surface1.png' class='surface'></td>
+                        <td><img src='img/Exoplanets/surface2.png' class='surface'></td>
+                        <td><img src='img/Exoplanets/surface3.png' class='surface'></td>
+                        <td><img src='img/Exoplanets/surface4.png' class='surface'></td>
+                        <td><img src='img/Exoplanets/surface5.png' class='surface'></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td><img src='img/Exoplanets/surface6.png' class='surface'></td>
+                        <td><img src='img/Exoplanets/surface7.png' class='surface'></td>
+                        <td><img src='img/Exoplanets/surface8.png' class='surface'></td>
+                        <td><img src='img/Exoplanets/surface9.png' class='surface'></td>
+                        <td><img src='img/Exoplanets/surface10.png' class='surface'></td>
+                    </tr>
+                </table>
+                <ul>
+                    <li>次に、次のページのチャートを使用し、ターゲット惑星とターゲット数字を変更する。「Start」というラベルのセルから北を向いて開始し、バッテリーの数分を恒星が回転している方向に４５度回転する。その方向の開始ターゲット惑星の外周の位置のセルに移動する。(例えば開始ターゲット惑星が一番外側なら外側のセルに移動する)。</li>
+                    <li>惑星の公転周期*にその惑星の表面値を加えたものをバッテリーホルダーの数で割り、余りを求める。バッテリーホルダーがない場合は５で割った余りを求める。結果にポートの数を加算し、惑星が回転している方向にその数の分移動する。到達した地点のルールを適用する。</li>
+                    <li>現在のセル／惑星から１つ内側(一番内側にいる場合は一番外側)に移動し、３つの惑星全てのルール変更が行われるまで1つ上の手順を実行する。</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/4</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">太陽系外惑星</span>
+            </div>
+            <div class="page-content">
+                <svg class="table" xmlns="http://www.w3.org/2000/svg" viewBox="4 47 203 203" font-size="10" text-anchor="middle">
+                    <text x="106" y="151" font-size="8">start</text>
+                    <text x="106" y="63">Q</text>
+                    <text x="106" y="91">I</text>
+                    <text x="106" y="118">A</text>
+                    <text x="168" y="90">R</text>
+                    <text x="149" y="109">J</text>
+                    <text x="130" y="128">B</text>
+                    <text x="194" y="152">S</text>
+                    <text x="167" y="152">K</text>
+                    <text x="140" y="152">C</text>
+                    <text x="43" y="214">V</text>
+                    <text x="62.5" y="195">N</text>
+                    <text x="82" y="176">F</text>
+                    <text x="106" y="240">U</text>
+                    <text x="106" y="213">M</text>
+                    <text x="106" y="186">E</text>
+                    <text x="168.5" y="214">T</text>
+                    <text x="149.5" y="195">L</text>
+                    <text x="130" y="176">D</text>
+                    <text x="17.5" y="152">W</text>
+                    <text x="45" y="152">O</text>
+                    <text x="72" y="152">G</text>
+                    <text x="43.5" y="89">X</text>
+                    <text x="62.5" y="108.5">P</text>
+                    <text x="82" y="128">H</text>
+                    <circle class="highlightable" cx="106.022" cy="148.469" r="13.94" stroke="#000" stroke-width=".983"></circle>
+                    <circle class="highlightable" cx="106.081" cy="114.254" r="12.086" stroke="#000" stroke-width=".962"></circle>
+                    <circle class="highlightable" cx="-148.303" cy="71.892" r="12.086" transform="rotate(-90)" stroke="#000" stroke-width=".962"></circle>
+                    <circle class="highlightable" cx="-105.884" cy="-182.602" r="12.086" transform="scale(-1)" stroke="#000" stroke-width=".962"></circle>
+                    <circle class="highlightable" cx="148.553" cy="-140.072" r="12.086" transform="rotate(90)" stroke="#000" stroke-width=".962"></circle>
+                    <circle class="highlightable" cx="-30.126" cy="145.781" r="12.086" transform="rotate(-45)" stroke="#000" stroke-width=".962"></circle>
+                    <circle class="highlightable" cx="-179.829" cy="-64.315" r="12.086" transform="rotate(-135)" stroke="#000" stroke-width=".962"></circle>
+                    <circle class="highlightable" cx="30.323" cy="-214.129" r="12.086" transform="rotate(135)" stroke="#000" stroke-width=".962"></circle>
+                    <circle class="highlightable" cx="180.08" cy="-3.865" r="12.086" transform="rotate(45)" stroke="#000" stroke-width=".962"></circle>
+                    <ellipse class="highlightable" cx="106.052" cy="87.115" rx="12.085" ry="12.111" stroke="#000" stroke-width=".963"></ellipse>
+                    <ellipse class="highlightable" cx="-148.137" cy="44.779" transform="rotate(-90)" rx="12.111" ry="12.085" stroke="#000" stroke-width=".963"></ellipse>
+                    <ellipse class="highlightable" cx="-105.699" cy="-209.609" transform="scale(-1)" rx="12.085" ry="12.111" stroke="#000" stroke-width=".963"></ellipse>
+                    <ellipse class="highlightable" cx="148.587" cy="-166.972" transform="rotate(90)" rx="12.111" ry="12.085" stroke="#000" stroke-width=".963"></ellipse>
+                    <circle class="highlightable" cx="-30.116" cy="118.6" r="12.101" transform="rotate(-45.062)" stroke="#000" stroke-width=".963"></circle>
+                    <circle class="highlightable" cx="-179.556" cy="-91.324" r="12.101" transform="rotate(-134.938)" stroke="#000" stroke-width=".963"></circle>
+                    <circle class="highlightable" cx="30.337" cy="-241.094" r="12.101" transform="rotate(134.938)" stroke="#000" stroke-width=".963"></circle>
+                    <circle class="highlightable" cx="180.137" cy="-30.87" r="12.101" transform="rotate(45.062)" stroke="#000" stroke-width=".963"></circle>
+                    <ellipse class="highlightable" cx="105.998" cy="59.804" rx="12.085" ry="12.111" stroke="#000" stroke-width=".963"></ellipse>
+                    <circle class="highlightable" cx="180.406" cy="-57.763" r="12.101" transform="rotate(45.062)" stroke="#000" stroke-width=".963"></circle>
+                    <ellipse class="highlightable" cx="148.641" cy="-194.013" transform="rotate(90)" rx="12.111" ry="12.085" stroke="#000" stroke-width=".963"></ellipse>
+                    <circle class="highlightable" cx="30.493" cy="-268.092" r="12.101" transform="rotate(134.938)" stroke="#000" stroke-width=".963"></circle>
+                    <ellipse class="highlightable" cx="-105.557" cy="-236.678" transform="scale(-1)" rx="12.085" ry="12.111" stroke="#000" stroke-width=".963"></ellipse>
+                    <circle class="highlightable" cx="-179.326" cy="-118.623" r="12.101" transform="rotate(-134.938)" stroke="#000" stroke-width=".963"></circle>
+                    <ellipse class="highlightable" cx="-148.204" cy="17.542" transform="rotate(-90)" rx="12.111" ry="12.085" stroke="#000" stroke-width=".963"></ellipse>
+                    <circle class="highlightable" cx="-30.11" cy="91.383" r="12.101" transform="rotate(-45.062)" stroke="#000" stroke-width=".963"></circle>
+                </svg>
+                <p><strong>注：</strong>公転周期とは、恒星の周りを１周するのにかかる時間である。このモジュールでは５／１０／２０／４０のいずれかであり、すべて秒単位である。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/4</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">太陽系外惑星</span>
+            </div>
+            <div class="page-content">
+                <table>
+                    <tr>
+                        <th>英字</th>
+                        <th>変更</th>
+                    </tr>
+                    <tr>
+                        <td class='letter'>A</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星よりも大きい中の最小の惑星に変更する。現在のターゲット惑星が最大の場合、ターゲット惑星を最小の惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>B</td>
+                        <td>ターゲット数字を、現在のターゲット数字に開始ターゲットの値を加算した結果の最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>C</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星よりも小さい中の最大の惑星に変更する。現在のターゲット惑星が最小の場合、ターゲット惑星を最大の惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>D</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星の表面値から最も差が大きい表面値の惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>E</td>
+                        <td>ターゲット数字を、９から現在のターゲット数字を減算したものを使用する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>F</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星の反対方向に周回している中の最も恒星に近い惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>G</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星と同じ方向に周回している中の最も恒星に近い惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>H</td>
+                        <td>ターゲット数字を、現在のターゲット数字に全てのシリアルナンバーの数字を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>I</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星の表面値よりも大きい中の最小の表面値の惑星に変更する。現在のターゲット惑星の表面値が最大の場合、ターゲット惑星を最も表面値が低い惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>J</td>
+                        <td>ターゲット数字を、現在のターゲット数字に爆弾のモジュール数を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>K</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星から１つ内側の惑星に変更する。現在のターゲット惑星が最も内側の場合、ターゲット惑星をもっとも外側の惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>L</td>
+                        <td>ターゲット数字を、現在のターゲット数字にシリアルナンバーの最初の数字を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>M</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星の表面値から最も差が少ない表面値の惑星に変更する。*</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 3/4</div>
+        </div>
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">太陽系外惑星</span>
+            </div>
+            <div class="page-content">
+                <table>
+                    <tr>
+                        <th>英字</th>
+                        <th>変更</th>
+                    </tr>
+                    <tr>
+                        <td class='letter'>N</td>
+                        <td>ターゲット数字を、現在のターゲット数字にシリアルナンバーの2番目の数字を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>O</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星よりも公転周期が早い中の最も遅い惑星に変更する。現在のターゲット惑星の公転周期が最も早い場合、ターゲット惑星を最も遅い惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>P</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星から最も遠い惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>Q</td>
+                        <td>ターゲット数字を、現在のターゲット数字にポートの数を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>R</td>
+                        <td>ターゲット数字を、現在のターゲット数字に５を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>S</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星よりも公転周期が遅い中の最も早い惑星に変更する。現在のターゲット惑星の公転周期が最も遅い場合、ターゲット惑星を最も早い惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>T</td>
+                        <td>ターゲット数字を、現在のターゲット数字にシリアルナンバーの最後の数字を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>U</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星から１つ外側の惑星に変更する。現在のターゲット惑星が最も外側の場合、ターゲット惑星をもっとも内側の惑星に変更する。*</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>V</td>
+                        <td>ターゲット数字を、現在のターゲット数字にバッテリーの数を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>W</td>
+                        <td>ターゲット数字を、現在のターゲット数字に各インジケーターの子音の数を加算した最下位桁に変更する。</td>
+                    </tr>
+                    <tr>
+                        <td class='letter'>X</td>
+                        <td>ターゲット惑星を、現在のターゲット惑星の表面値よりも小さい中の最大の表面値の惑星に変更する。現在のターゲット惑星の表面値が最小の場合、ターゲット惑星を最も表面値が高い惑星に変更する。*</td>
+                    </tr>
+                </table>
+                <p class='small'>*該当する惑星が複数ある場合、それらの惑星のうち最も恒星に近い惑星を選択する。該当する惑星がない場合、最も内側の惑星を使用する。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 4/4</div>
+        </div>
+    </div>
+</body>
+</html>

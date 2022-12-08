@@ -10,9 +10,11 @@
     <script src="js/ktane-utils.js"></script>
 
     <style>
-        .centered-image {
-            display: block;
-            margin: 0 auto;
+        img.venn { width: 52%; }
+        .dark img.venn { filter: invert(90%); }
+        .page {
+            background-repeat: repeat-y;
+            background-position: top;
         }
     </style>
 </head>
@@ -26,7 +28,7 @@
             <div class="page-content">
                 <img src="img/Component/Tax Returns.svg" class="diagram">
                 <h2>On the Subject of Tax Returns</h2>
-                <p class="flavour-text">I'm not going to lie; now is probably not the best time to be getting on top of your paperwork...</p>
+                <p class="flavour-text">I’m not going to lie; now is probably not the best time to be getting on top of your paperwork...</p>
 
                 <ul>
                     <li>The module consists of two sections. The first contains financial records for the year. The second contains the HMRC tax returns terminal. Alternate between the two sections by pressing the toggle switch.</li>
@@ -56,7 +58,7 @@
                     <li>Calculate your <b>tax-free investments</b> using the Venn diagram and table.</li>
                     <li>Multiply the investment by the number of distinct port types on the bomb.</li>
                 </ul>
-                <img class="centered-image" src="img/Tax Returns/Investment Venn.png" width="350">
+                <img class="centered-img venn" src="img/Tax Returns/Investment Venn.png">
             </div>
             <div class="page-footer relative-footer">Page 1 of 3</div>
         </div>
@@ -138,7 +140,7 @@
                     <li>
                         Remember that pension contributions and tax-free investments are subject to National Insurance.
                         <ul>
-                            <li>The Standard Rate is 9% of gross turnover (less expenses) between £8,424 and £46,350.</li>
+                            <li>The Standard Rate is 9% of gross turnover (less expenses) between £8,423 and £46,350.</li>
                             <li>The Excess Rate is 2% of gross turnover (less expenses) over £46,350.</li>
                         </ul>
                     </li>

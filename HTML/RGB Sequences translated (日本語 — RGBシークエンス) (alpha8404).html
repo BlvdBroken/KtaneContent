@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>RGBシークエンス — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        .dark table, table {
+            margin: 1em auto;
+            border: none;
+        }
+        svg { width: 80%; }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">RGBシークエンス</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/RGB Sequences.svg" class="diagram">
+                <h2>モジュール詳細：RGBシークエンス</h2>
+                <p class="flavour-text">これが自分の体の部位数の合計より少なくないとしたら、どう思う？</p>
+
+                <ul>
+                    <li>10個のLEDは、RGBを利用して色を表示する。</li>
+                    <li>以下の表を使用し、LEDの色付けに使用されている3つの段を特定する。</li>
+                    <li>左上から右下に0～9のLEDは、全ての色を混合した下の表の列に対応している。</li>
+                    <li>同じ色が2つある場合はその色が表示され、黒は他の色に影響しない。</li>
+                </ul>
+                <p><small>表を読む際にのみ、左上は1になり右下は10になる。</small></p>
+
+                <h2 style="text-align:center">色のグリッド</h2>
+                <table style="text-align:center">
+                    <tr><td class='corner'></td><td>01</td><td>02</td><td>03</td><td>04</td><td>05</td><td>06</td><td>07</td><td>08</td><td>09</td><td>10</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td style="background-color:#FF0000"></td> <!--1-->
+                        <td style="background-color:#000000;color:#000000;">E</td> <!--2-->
+                        <td style="background-color:#0000FF"></td> <!--3-->
+                        <td style="background-color:#000000;color:#000000;">1</td> <!--4-->
+                        <td style="background-color:#00FF00"></td> <!--5-->
+                        <td style="background-color:#0000FF"></td> <!--6-->
+                        <td style="background-color:#00FF00"></td> <!--7-->
+                        <td style="background-color:#FF0000"></td> <!--8-->
+                        <td style="background-color:#000000;color:#000000;">-</td> <!--9-->
+                        <td style="background-color:#00FF00"></td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td style="background-color:#0000FF"></td> <!--1-->
+                        <td style="background-color:#0000FF"></td> <!--2-->
+                        <td style="background-color:#00FF00"></td> <!--3-->
+                        <td style="background-color:#000000;color:#000000;">d</td> <!--4-->
+                        <td style="background-color:#000000;color:#000000;">K</td> <!--5-->
+                        <td style="background-color:#FF0000"></td> <!--6-->
+                        <td style="background-color:#000000;color:#000000;">c</td> <!--7-->
+                        <td style="background-color:#FF0000"></td> <!--8-->
+                        <td style="background-color:#00FF00"></td> <!--9-->
+                        <td style="background-color:#0000FF"></td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td style="background-color:#000000;color:#000000;">6</td> <!--1-->
+                        <td style="background-color:#FF0000"></td> <!--2-->
+                        <td style="background-color:#000000;color:#000000;">R</td> <!--3-->
+                        <td style="background-color:#00FF00"></td> <!--4-->
+                        <td style="background-color:#00FF00"></td> <!--5-->
+                        <td style="background-color:#00FF00"></td> <!--6-->
+                        <td style="background-color:#FF0000"></td> <!--7-->
+                        <td style="background-color:#FF0000"></td> <!--8-->
+                        <td style="background-color:#FF0000"></td> <!--9-->
+                        <td style="background-color:#0000FF"></td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td style="background-color:#FF0000"></td> <!--1-->
+                        <td style="background-color:#00FF00"></td> <!--2-->
+                        <td style="background-color:#00FF00"></td> <!--3-->
+                        <td style="background-color:#0000FF"></td> <!--4-->
+                        <td style="background-color:#000000;color:#000000;">_</td> <!--5-->
+                        <td style="background-color:#000000;color:#000000;">I</td> <!--6-->
+                        <td style="background-color:#000000;color:#000000;">6</td> <!--7-->
+                        <td style="background-color:#00FF00"></td> <!--8-->
+                        <td style="background-color:#FF0000"></td> <!--9-->
+                        <td style="background-color:#00FF00"></td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td style="background-color:#FF0000"></td> <!--1-->
+                        <td style="background-color:#FF0000"></td> <!--2-->
+                        <td style="background-color:#000000;color:#000000;">t</td> <!--3-->
+                        <td style="background-color:#0000FF"></td> <!--4-->
+                        <td style="background-color:#FF0000"></td> <!--5-->
+                        <td style="background-color:#0000FF"></td> <!--6-->
+                        <td style="background-color:#00FF00"></td> <!--7-->
+                        <td style="background-color:#0000FF"></td> <!--8-->
+                        <td style="background-color:#00FF00"></td> <!--9-->
+                        <td style="background-color:#000000;color:#000000;">p</td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td style="background-color:#00FF00"></td> <!--1-->
+                        <td style="background-color:#000000;color:#000000;">C</td> <!--2-->
+                        <td style="background-color:#0000FF"></td> <!--3-->
+                        <td style="background-color:#FF0000"></td> <!--4-->
+                        <td style="background-color:#FF0000"></td> <!--5-->
+                        <td style="background-color:#000000;color:#000000;">J</td> <!--6-->
+                        <td style="background-color:#0000FF"></td> <!--7-->
+                        <td style="background-color:#0000FF"></td> <!--8-->
+                        <td style="background-color:#0000FF"></td> <!--9-->
+                        <td style="background-color:#00FF00"></td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td style="background-color:#FF0000"></td> <!--1-->
+                        <td style="background-color:#0000FF"></td> <!--2-->
+                        <td style="background-color:#FF0000"></td> <!--3-->
+                        <td style="background-color:#0000FF"></td> <!--4-->
+                        <td style="background-color:#00FF00"></td> <!--5-->
+                        <td style="background-color:#FF0000"></td> <!--6-->
+                        <td style="background-color:#0000FF"></td> <!--7-->
+                        <td style="background-color:#000000;color:#000000;">2</td> <!--8-->
+                        <td style="background-color:#00FF00"></td> <!--9-->
+                        <td style="background-color:#000000;color:#000000;">z</td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td style="background-color:#00FF00"></td> <!--1-->
+                        <td style="background-color:#FF0000"></td> <!--2-->
+                        <td style="background-color:#000000;color:#000000;">A</td> <!--3-->
+                        <td style="background-color:#0000FF"></td> <!--4-->
+                        <td style="background-color:#0000FF"></td> <!--5-->
+                        <td style="background-color:#0000FF"></td> <!--6-->
+                        <td style="background-color:#FF0000"></td> <!--7-->
+                        <td style="background-color:#FF0000"></td> <!--8-->
+                        <td style="background-color:#0000FF"></td> <!--9-->
+                        <td style="background-color:#00FF00"></td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td style="background-color:#000000;color:#000000;">A</td> <!--1-->
+                        <td style="background-color:#0000FF"></td> <!--2-->
+                        <td style="background-color:#FF0000"></td> <!--3-->
+                        <td style="background-color:#FF0000"></td> <!--4-->
+                        <td style="background-color:#0000FF"></td> <!--5-->
+                        <td style="background-color:#FF0000"></td> <!--6-->
+                        <td style="background-color:#00FF00"></td> <!--7-->
+                        <td style="background-color:#000000;color:#000000;">b</td> <!--8-->
+                        <td style="background-color:#000000;color:#000000;">Y</td> <!--9-->
+                        <td style="background-color:#0000FF"></td> <!--0-->
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td style="background-color:#0000FF"></td> <!--1-->
+                        <td style="background-color:#0000FF"></td> <!--2-->
+                        <td style="background-color:#00FF00"></td> <!--3-->
+                        <td style="background-color:#0000FF"></td> <!--4-->
+                        <td style="background-color:#FF0000"></td> <!--5-->
+                        <td style="background-color:#0000FF"></td> <!--6-->
+                        <td style="background-color:#FF0000"></td> <!--7-->
+                        <td style="background-color:#0000FF"></td> <!--8-->
+                        <td style="background-color:#0000FF"></td> <!--9-->
+                        <td style="background-color:#FF0000"></td> <!--0-->
+                    </tr>
+                </table>
+                <ul>
+                    <li>3つの段の数を乗算し、次のようにする。
+                    <ul>
+                        <li>シリアルナンバーに母音が含まれている場合、数字根を取る(各桁を合計し、1桁になるまで続ける)。</li>
+                        <li>それ以外の場合、最後の桁を使用する。</li>
+                    </ul></li>
+                    <li>対応するLEDを押す。</li>
+                </ul>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">RGBシークエンス</span>
+            </div>
+            <div class="page-content">
+                <svg xmlns="http://www.w3.org/2000/svg" class="centered-img" viewBox="0 0 125 86.59">
+                  <path d="M-1-1h92v88H-1z"/>
+                  <path fill="#00f" d="M70.12 33.4 50 51.6l-4.66 24.72a25 25 0 0 0 40.34-19.72A25.06 25.06 0 0 0 70.12 33.4z" color="#000"/>
+                  <path fill="red" d="M45.34 5a25 25 0 0 0-24.78 28.4L45 41.6l25.12-8.19A25 25 0 0 0 45.34 5z" color="#000"/>
+                  <path fill="#0f0" d="M20.56 33.4A25.06 25.06 0 0 0 5 56.6 25 25 0 0 0 45.34 76.3L40 51.6z" color="#000"/>
+                  <path fill="#ff0" d="M30 31.6c-3.35 0-6.53.61-9.44 1.8a25.02 25.02 0 0 0 15.37 19.75l9.38-16.28A24.85 24.85 0 0 0 30 31.6z" color="#000"/>
+                  <path fill="#f0f" d="M60.68 31.6a25.04 25.04 0 0 0-15.37 5.27l9.44 16.28A25.02 25.02 0 0 0 70.12 33.4a24.87 24.87 0 0 0-9.44-1.8z" color="#000"/>
+                  <path fill="#0ff" d="M35.93 53.15a25.22 25.22 0 0 0-.25 3.44c0 8.02 3.78 15.15 9.66 19.72a24.93 24.93 0 0 0 9.4-23.16z" color="#000"/>
+                  <path fill="#fff" d="M45.3 36.87a24.95 24.95 0 0 0-9.37 16.28A24.9 24.9 0 0 0 45.34 55c3.33 0 6.5-.66 9.4-1.85a24.92 24.92 0 0 0-9.43-16.28z" color="#000"/>
+                  <path fill="none" stroke="gray" stroke-width=".4" d="M75 11.59h25M45 21.59h55m-70 15h70m-40 5h40m-55 10h55m-80 5h80m-55 10h55m-40 10h40" color="#000"/>
+                  <text x="102.5" y="23.22" stroke-width=".2" color="#000" font-size="5">赤</text>
+                  <text x="102.5" y="38.22" stroke-width=".2" color="#000" font-size="5">黄</text>
+                  <text x="102.5" y="43.22" stroke-width=".2" color="#000" font-size="5">マゼンタ</text>
+                  <text x="102.5" y="53.22" stroke-width=".2" color="#000" font-size="5">白</text>
+                  <text x="102.5" y="58.22" stroke-width=".2" color="#000" font-size="5">緑</text>
+                  <text x="102.5" y="68.22" stroke-width=".2" color="#000" font-size="5">シアン</text>
+                  <text x="102.5" y="78.22" stroke-width=".2" color="#000" font-size="5">青</text>
+                  <text x="102.5" y="13.22" stroke-width=".2" color="#000" font-size="5">黒</text>
+                </svg>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/2</div>
+        </div>
+    </div>
+</body>
+</html>

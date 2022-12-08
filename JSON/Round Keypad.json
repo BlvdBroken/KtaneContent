@@ -1,6 +1,6 @@
 {
-  "Author": "Hexicube",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "Hexicube" ] },
   "DefuserDifficulty": "Easy",
   "Description": "Find the module’s symbols in the manual, then press all the symbols that aren’t in the correct column. Tags: circle, 8-segments, wedge",
   "ExpertDifficulty": "Easy",
@@ -13,10 +13,19 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "743198269",
   "Symbol": "Rkp",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=azc1dLzh9_g",
-    "default": "https://www.youtube.com/watch?v=jgVBDVOo6ak",
-    "Français": "https://youtu.be/NKXeC0hckHE"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=azc1dLzh9_g"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=jgVBDVOo6ak"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/NKXeC0hckHE"
+    }
+  ],
   "Type": "Regular"
 }

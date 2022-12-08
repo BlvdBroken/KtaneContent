@@ -1,6 +1,6 @@
 {
-  "Author": "Steel Crate Games",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "Steel Crate Games" ] },
   "DefuserDifficulty": "Easy",
   "Description": "Cut wires in four stages of this module where the expert must keep track of the number of wires of each color seen so far. Tags: 1-to-3, a, b, c, up-arrow, down-arrow, red, blue, black",
   "ExpertDifficulty": "Medium",
@@ -13,9 +13,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": null,
   "Symbol": "Wseq",
-  "TutorialVideoUrl": {
-    "default": "https://www.youtube.com/watch?v=4EWPHmpDnfc",
-    "Français": "https://youtu.be/68Xhe-kHMwk"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=4EWPHmpDnfc"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/68Xhe-kHMwk"
+    }
+  ],
   "Type": "Regular"
 }

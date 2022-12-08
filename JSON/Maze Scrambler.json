@@ -2,9 +2,7 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "McNiko67" ],
-    "Maintainer": [ "Riverbui" ],
-    "Manual": [ "McNiko67" ],
-    "Twitch Plays": [ "Riverbui" ]
+    "Maintainer": [ "Riverbui" ]
   },
   "DefuserDifficulty": "Easy",
   "Description": "Navigate a maze while using buttons whose function changes with every step. Tags: 4-squares, colors, 9-dots, reset",
@@ -18,6 +16,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1423743791",
   "Symbol": "Mzs",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=ZjnNkTKJhKs" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=ZjnNkTKJhKs"
+  } ],
   "Type": "Regular"
 }

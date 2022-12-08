@@ -1,6 +1,6 @@
 {
-  "Author": "Steel Crate Games",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "Steel Crate Games" ] },
   "DefuserDifficulty": "Easy",
   "Description": "Navigate from one location to another in a 6×6 square maze. Tags: 2-green-circles, red-triangle, white-square, 6x6-grid, up-arrow, left-arrow, right-arrow, down-arrow",
   "ExpertDifficulty": "Easy",
@@ -13,9 +13,15 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": null,
   "Symbol": "Mz",
-  "TutorialVideoUrl": {
-    "default": "https://www.youtube.com/watch?v=EJ9MzXqM4UY",
-    "Français": "https://youtu.be/spSL0y_xKuU"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=EJ9MzXqM4UY"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/spSL0y_xKuU"
+    }
+  ],
   "Type": "Regular"
 }

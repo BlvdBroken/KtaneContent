@@ -1,0 +1,23 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Anonymous" ],
+    "Maintainer": [ "eXish" ]
+  },
+  "DefuserDifficulty": "VeryEasy",
+  "Description": "Perform a simple decimal to binary conversion and submit using color-coded buttons.",
+  "ExpertDifficulty": "Easy",
+  "ModuleID": "popufur",
+  "Name": "Popufur",
+  "Origin": "Mods",
+  "Published": "2020-08-15",
+  "SortKey": "POPUFUR",
+  "Souvenir": { "Status": "NotACandidate" },
+  "SteamID": "2198153865",
+  "Symbol": "Owo",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/IrkA7Vej4ww"
+  } ],
+  "Type": "Regular"
+}

@@ -2,7 +2,7 @@
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "Speakingevil" ],
-    "Twitch Plays": [ "Danny7007" ]
+    "Twitch Plays": [ "tandyCake" ]
   },
   "DefuserDifficulty": "VeryHard",
   "Description": "Keep up to four modules from striking at the same time.",
@@ -10,22 +10,23 @@
   "Ignore": [
     "+SolvesAtEnd",
     "+NeedsOtherSolves",
-    "+TimeSensitive",
+    "+TimeDependent",
     "The Heart"
   ],
-  "IsPseudoNeedy": true,
   "ModuleID": "multitask",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Multitask",
-  "NeedsOtherSolves": true,
   "Origin": "Mods",
   "Published": "2020-05-24",
-  "SolvesBeforeSome": true,
+  "Quirks": "NeedsOtherSolves, WillSolveSuddenly, PseudoNeedy",
   "SortKey": "MULTITASK",
   "SourceUrl": "https://github.com/Speakingevil/multitask",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2108171611",
   "Symbol": "Mul",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=h4ktkR35A0U" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=h4ktkR35A0U"
+  } ],
   "Type": "Regular"
 }

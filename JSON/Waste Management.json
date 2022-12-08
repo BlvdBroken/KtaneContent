@@ -1,6 +1,12 @@
 {
-  "Author": "red031000, Inova, AppleSlice",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "red031000" ],
+    "Manual": [
+      "Inova",
+      "AppleSlice"
+    ]
+  },
   "DefuserDifficulty": "Medium",
   "Description": "Manage waste by recycling or wasting based on material and edgework. Tags: i, v, x, l, w, r, paper, grey-module",
   "ExpertDifficulty": "Hard",
@@ -14,6 +20,15 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1310880245",
   "Symbol": "Wm",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=figL373fA0g" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/Te0DIkAhWQ0"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/figL373fA0g"
+    }
+  ],
   "Type": "Regular"
 }

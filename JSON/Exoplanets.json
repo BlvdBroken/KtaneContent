@@ -1,7 +1,7 @@
 {
   "Compatibility": "Compatible",
   "Contributors": {
-    "Developer": [ "TasThing" ],
+    "Developer": [ "TasThiluna" ],
     "Manual": [ "EpicToast" ]
   },
   "DefuserDifficulty": "Hard",
@@ -16,6 +16,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2041536146",
   "Symbol": "Xpn",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=TxjdD1UVON8" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=TxjdD1UVON8"
+  } ],
   "Type": "Regular"
 }

@@ -2,7 +2,7 @@
   "Author": "EpicToast",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "VeryEasy",
-  "Description": "Play a game of Candy Land. Tags: deck-of-cards, seven-segment-display, arrows",
+  "Description": "Play a game of Candy Land. Tags: cards, seven-segment-display, arrows",
   "ExpertDifficulty": "Easy",
   "ModuleID": "candyLand",
   "Name": "Candy Land",
@@ -12,5 +12,9 @@
   "SourceUrl": "https://github.com/EpicToastTM/ktaneCandyLand",
   "SteamID": "2538222177",
   "Symbol": "Can",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/QWP4tA6DmUs"
+  } ],
   "Type": "Regular"
 }

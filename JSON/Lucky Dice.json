@@ -1,6 +1,11 @@
 {
   "Author": "TheThirdMan, Panoptes (Xel)",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "TheThirdMan" ],
+    "Maintainer": [ "VFlyer" ],
+    "Manual": [ "Panoptes (Xel)" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Select the only die that obeys its rules. Tags: 3-dice, die, roll",
   "ExpertDifficulty": "Easy",
@@ -17,6 +22,9 @@
   },
   "SteamID": "2394510163",
   "Symbol": "Ld",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=WaUCwaNRueg" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=WaUCwaNRueg"
+  } ],
   "Type": "Regular"
 }

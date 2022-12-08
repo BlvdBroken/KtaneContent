@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>星座 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+         body{
+            -webkit-print-color-adjust:exact;
+        }
+
+        .dark table, table {
+            margin: 1em auto;
+            border: none;
+        }
+
+        .symbolTd {
+            padding: 0;
+            text-align: center;
+        }
+
+        td img { width: 30%; }
+        .consT {
+            width: 100%;
+            border: none;
+        }
+
+        .consT td {
+            width: 25%;
+        }
+
+        .consT td p {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 90%;
+        }
+        .consT td p img { width: 20%; }
+        .consT td > img { width: 100%; }
+
+        .dark .consTh, .consTh {
+            border: none;
+            text-align: left;
+        }
+
+        .ack {
+            font-size: 70%;
+            margin: 0 2em 0 2em;
+        }
+
+        .map {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+        .dark img:not(.diagram) { filter: invert(90%); }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Constellations.svg" class="diagram">
+                <h2>モジュール詳細：星座</h2>
+                <p class="flavour-text">処理側に必要なツール一覧</p><ol class="flavour-text"><li>防護服</li><li>ワイヤーカッター</li><li>アストロラーベ</li><li>...</li></ol>
+
+                <ul>
+                    <li>このモジュールは、星座を表示するディスプレーと星座の記号が付いた４つのボタンで構成されている。</li>
+                    <li>モジュールを解除するには、ディスプレーに表示されている星座と同じグループの記号のボタンを押す必要がある。他のボタンを押すとミスが記録される。</li>
+                    <li>ディスプレーに表示されている星座を特定するには、星の数を使用して表１・２からシンボルを取得する。</li>
+                    <li>シンボルを特定した後、そのシンボルのグループにある記号を見て、押すボタンを決定する。</li>
+                </ul>
+
+                <div style="height: 120mm"></div>
+                <p class="ack"><b>補足:</b>既存の星座シンボルはパブリックドメインである。こと座、オリオン座、ペルセウス座、しぶんぎ座、おおぐま座、こぐま座のシンボルはDenis Moskowitz and Alec Finlayが「One Hundred Year Star-Diary」において作成しており、パブリックドメインで公開している。その他のシンボルは、Denis Moskowitzが作成し、パブリックドメインで公開している。シンボルは<a href="https://www.suberic.net/~dmm/astro/constellations.html">このサイト</a>で調べられる。</p>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/13</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <h3>グループマップ</h3>
+                <img class="map" src="img/Constellations/mapNorth.svg">
+                <img class="map" src="img/Constellations/mapSouth.svg">
+            </div>
+            <div class="page-footer relative-footer">ページ 2/13</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <h3>表１:星座一覧表</h3>
+
+                <div style="display: flex">
+                    <table>
+                        <tr>
+                            <th>星座</th>
+                            <th>シンボル</th>
+                            <th>星の数</th>
+                        </tr>
+                        <tr>
+                            <td>アンドロメダ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Andromeda.png"></td>
+                            <td class="symbolTd">16</td>
+                        </tr>
+                        <tr>
+                            <td>ポンプ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Antlia.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>ふうちょう座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Apus.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>みずがめ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Aquarius.png"></td>
+                            <td class="symbolTd">13</td>
+                        </tr>
+                        <tr>
+                            <td>わし座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Aquila.png"></td>
+                            <td class="symbolTd">9</td>
+                        </tr>
+                        <tr>
+                            <td>さいだん座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Ara.png"></td>
+                            <td class="symbolTd">8</td>
+                        </tr>
+                        <tr>
+                            <td>おひつじ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Aries.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>ぎょしゃ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Auriga.png"></td>
+                            <td class="symbolTd">7</td>
+                        </tr>
+                        <tr>
+                            <td>うしかい座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Bootes.png"></td>
+                            <td class="symbolTd">11</td>
+                        </tr>
+                        <tr>
+                            <td>ちょうこくぐ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Caelum.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>きりん座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Camelopardalis.png"></td>
+                            <td class="symbolTd">8</td>
+                        </tr>
+                        <tr>
+                            <td>かに座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Cancer.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>りょうけん座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/CanesVenatici.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>おおいぬ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/CanisMajor.png"></td>
+                            <td class="symbolTd">12</td>
+                        </tr>
+                        <tr>
+                            <td>こいぬ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/CanisMinor.png"></td>
+                            <td class="symbolTd">2</td>
+                        </tr>
+                        <tr>
+                            <td>やぎ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Capricorn.png"></td>
+                            <td class="symbolTd">10</td>
+                        </tr>
+                        <tr>
+                            <td>りゅうこつ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Carina.png"></td>
+                            <td class="symbolTd">11</td>
+                        </tr>
+                        <tr>
+                            <td>カシオペヤ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Cassiopeia.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>ケンタウルス座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Centaurus.png"></td>
+                            <td class="symbolTd">20</td>
+                        </tr>
+                        <tr>
+                            <td>ケフェウス座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Cepheus.png"></td>
+                            <td class="symbolTd">7</td>
+                        </tr>
+                        <tr>
+                            <td>くじら座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Cetus.png"></td>
+                            <td class="symbolTd">14</td>
+                        </tr>
+                        <tr>
+                            <td>カメレオン座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Chamaeleon.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <th>星座</th>
+                            <th>シンボル</th>
+                            <th>星の数</th>
+                        </tr>
+                        <tr>
+                            <td>コンパス座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Circinus.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>はと座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Columba.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 80%">かみのけ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/ComaBerenices.png"></td>
+                            <td class="symbolTd">3</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 80%">みなみのかんむり座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/CoronaAustralis.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 80%">かんむり座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/CoronaBorealis.png"></td>
+                            <td class="symbolTd">7</td>
+                        </tr>
+                        <tr>
+                            <td>からす座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Corvus.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>コップ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Crater.png"></td>
+                            <td class="symbolTd">8</td>
+                        </tr>
+                        <tr>
+                            <td>みなみじゅうじ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Crux.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>はくちょう座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Cygnus.png"></td>
+                            <td class="symbolTd">9</td>
+                        </tr>
+                        <tr>
+                            <td>いるか座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Delphinus.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>かじき座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Dorado.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td>りゅう座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Draco.png"></td>
+                            <td class="symbolTd">13</td>
+                        </tr>
+                        <tr>
+                            <td>こうま座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Equuleus.png"></td>
+                            <td class="symbolTd">3</td>
+                        </tr>
+                        <tr>
+                            <td>エリダヌス座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Eridanus.png"></td>
+                            <td class="symbolTd">31</td>
+                        </tr>
+                        <tr>
+                            <td>ろ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Fornax.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>ふたご座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Gemini.png"></td>
+                            <td class="symbolTd">18</td>
+                        </tr>
+                        <tr>
+                            <td>つる座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Grus.png"></td>
+                            <td class="symbolTd">10</td>
+                        </tr>
+                        <tr>
+                            <td>ヘルクレス座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Hercules.png"></td>
+                            <td class="symbolTd">19</td>
+                        </tr>
+                        <tr>
+                            <td>とけい座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Horologium.png"></td>
+                            <td class="symbolTd">7</td>
+                        </tr>
+                        <tr>
+                            <td>うみへび座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Hydra.png"></td>
+                            <td class="symbolTd">20</td>
+                        </tr>
+                        <tr>
+                            <td>みずへび座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Hydrus.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td>インディアン座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Indus.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 3/13</div>
+        </div>
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <div style="display: flex">
+                    <table>
+                        <tr>
+                            <th>星座</th>
+                            <th>シンボル</th>
+                            <th>星の数</th>
+                        </tr>
+                        <tr>
+                            <td>とかげ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Lacerta.png"></td>
+                            <td class="symbolTd">9</td>
+                        </tr>
+                        <tr>
+                            <td>しし座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Leo.png"></td>
+                            <td class="symbolTd">9</td>
+                        </tr>
+                        <tr>
+                            <td>こじし座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/LeoMinor.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>うさぎ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Lepus.png"></td>
+                            <td class="symbolTd">11</td>
+                        </tr>
+                        <tr>
+                            <td>てんびん座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Libra.png"></td>
+                            <td class="symbolTd">9</td>
+                        </tr>
+                        <tr>
+                            <td>おおかみ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Lupus.png"></td>
+                            <td class="symbolTd">9</td>
+                        </tr>
+                        <tr>
+                            <td>やまねこ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Lynx.png"></td>
+                            <td class="symbolTd">8</td>
+                        </tr>
+                        <tr>
+                            <td>こと座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Lyra.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td>テーブルさん座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Mensa.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>けんびきょう座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Microscopium.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>いっかくじゅう座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Monoceros.png"></td>
+                            <td class="symbolTd">7</td>
+                        </tr>
+                        <tr>
+                            <td>はえ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Musca.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td>じょうぎ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Norma.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>はちぶんぎ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Octans.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>へびつかい座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Ophiuchus.png"></td>
+                            <td class="symbolTd">22</td>
+                        </tr>
+                        <tr>
+                            <td>オリオン座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Orion.png"></td>
+                            <td class="symbolTd">15</td>
+                        </tr>
+                        <tr>
+                            <td>くじゃく座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Pavo.png"></td>
+                            <td class="symbolTd">11</td>
+                        </tr>
+                        <tr>
+                            <td>ペガスス座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Pegasus.png"></td>
+                            <td class="symbolTd">15</td>
+                        </tr>
+                        <tr>
+                            <td>ペルセウス座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Perseus.png"></td>
+                            <td class="symbolTd">17</td>
+                        </tr>
+                        <tr>
+                            <td>ほうおう座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Phoenix.png"></td>
+                            <td class="symbolTd">13</td>
+                        </tr>
+                        <tr>
+                            <td>がか座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Pictor.png"></td>
+                            <td class="symbolTd">3</td>
+                        </tr>
+                        <tr>
+                            <td>うお座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Pisces.png"></td>
+                            <td class="symbolTd">19</td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <th>星座</th>
+                            <th>シンボル</th>
+                            <th>星の数</th>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 80%">みなみのうお座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/PiscisAustrinus.png"></td>
+                            <td class="symbolTd">7</td>
+                        </tr>
+                        <tr>
+                            <td>とも座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Puppis.png"></td>
+                            <td class="symbolTd">9</td>
+                        </tr>
+                        <tr>
+                            <td>らしんばん座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Pyxis.png"></td>
+                            <td class="symbolTd">3</td>
+                        </tr>
+                        <tr>
+                            <td>レチクル座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Reticulum.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td>や座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Sagitta.png"></td>
+                            <td class="symbolTd">5</td>
+                        </tr>
+                        <tr>
+                            <td>いて座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Sagittarius.png"></td>
+                            <td class="symbolTd">12</td>
+                        </tr>
+                        <tr>
+                            <td>さそり座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Scorpio.png"></td>
+                            <td class="symbolTd">17</td>
+                        </tr>
+                        <tr>
+                            <td>ちょうこくしつ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Sculptor.png"></td>
+                            <td class="symbolTd">8</td>
+                        </tr>
+                        <tr>
+                            <td>たて座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Scutum.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>へび座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Serpens.png"></td>
+                            <td class="symbolTd">13</td>
+                        </tr>
+                        <tr>
+                            <td>ろくぶんぎ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Sextans.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>おうし座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Taurus.png"></td>
+                            <td class="symbolTd">14</td>
+                        </tr>
+                        <tr>
+                            <td>ぼうえんきょう座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Telescopium.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td>さんかく座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Triangulum.png"></td>
+                            <td class="symbolTd">3</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 70%">みなみのさんかく座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/TriangulumAustrale.png"></td>
+                            <td class="symbolTd">4</td>
+                        </tr>
+                        <tr>
+                            <td>きょしちょう座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Tucana.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td>おおぐま座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/UrsaMajor.png"></td>
+                            <td class="symbolTd">19</td>
+                        </tr>
+                        <tr>
+                            <td>こぐま座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/UrsaMinor.png"></td>
+                            <td class="symbolTd">7</td>
+                        </tr>
+                        <tr>
+                            <td>ほ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Vela.png"></td>
+                            <td class="symbolTd">8</td>
+                        </tr>
+                        <tr>
+                            <td>おとめ座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Virgo.png"></td>
+                            <td class="symbolTd">14</td>
+                        </tr>
+                        <tr>
+                            <td>とびうお座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Volans.png"></td>
+                            <td class="symbolTd">6</td>
+                        </tr>
+                        <tr>
+                            <td>こぎつね座</td>
+                            <td class="symbolTd"><img src="img/Constellations/Symbols/Vulpecula.png"></td>
+                            <td class="symbolTd">7</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 4/13</div>
+        </div>
+        <div class="page page-bg-05">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <h3>表２:星の数順に並べ替えられた星座</h3>
+                <table class="consT">
+                    <tr>
+                        <th class="consTh"> <p>星の数:2</p></th><td colspan="3" class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td><p>こいぬ座<img src="img/Constellations/Symbols/CanisMinor.png"></p><img src="img/Constellations/Constellations/CanisMinor.png"></td>
+                        <td colspan="3" class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:3</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>かみのけ座<img src="img/Constellations/Symbols/ComaBerenices.png"></p><img src="img/Constellations/Constellations/ComaBerenices.png"></td>
+                        <td><p>こうま座<img src="img/Constellations/Symbols/Equuleus.png"></p><img src="img/Constellations/Constellations/Equuleus.png"></td>
+                        <td><p>がか座<img src="img/Constellations/Symbols/Pictor.png"></p><img src="img/Constellations/Constellations/Pictor.png"></td>
+                        <td><p>らしんばん座<img src="img/Constellations/Symbols/Pyxis.png"></p><img src="img/Constellations/Constellations/Pyxis.png"></td>
+                    </tr>
+                    <tr>
+                        <td><p>さんかく座<img src="img/Constellations/Symbols/Triangulum.png"></p><img src="img/Constellations/Constellations/Triangulum.png"></td>
+                        <td colspan="3" class="empty"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 5/13</div>
+        </div>
+        <div class="page page-bg-06">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <table class="consT">
+                    <tr>
+                        <th class="consTh"> <p>星の数:4</p></th><td colspan="3" class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td><p>ポンプ座<img src="img/Constellations/Symbols/Antlia.png"></p><img src="img/Constellations/Constellations/Antlia.png"></td>
+                        <td><p>ふうちょう座<img src="img/Constellations/Symbols/Apus.png"></p><img src="img/Constellations/Constellations/Apus.png"></td>
+                        <td><p>おひつじ座<img src="img/Constellations/Symbols/Aries.png"></p><img src="img/Constellations/Constellations/Aries.png"></td>
+                        <td><p>ちょうこくぐ座<img src="img/Constellations/Symbols/Caelum.png"></p><img src="img/Constellations/Constellations/Caelum.png"></td>
+                    </tr>
+                    <tr>
+                        <td><p>みなみじゅうじ座<img src="img/Constellations/Symbols/Crux.png"></p><img src="img/Constellations/Constellations/Crux.png"></td>
+                        <td><p>ろ座<img src="img/Constellations/Symbols/Fornax.png"></p><img src="img/Constellations/Constellations/Fornax.png"></td>
+                        <td><p>テーブルさん座<img src="img/Constellations/Symbols/Mensa.png"></p><img src="img/Constellations/Constellations/Mensa.png"></td>
+                        <td><p>じょうぎ座<img src="img/Constellations/Symbols/Norma.png"></p><img src="img/Constellations/Constellations/Norma.png"></td>
+                    </tr>
+                    <tr>
+                        <td><p>たて座<img src="img/Constellations/Symbols/Scutum.png"></p><img src="img/Constellations/Constellations/Scutum.png"></td>
+                        <td><p>ろくぶんぎ座<img src="img/Constellations/Symbols/Sextans.png"></p><img src="img/Constellations/Constellations/Sextans.png"></td>
+                        <td><p>みなみのさんかく座<img src="img/Constellations/Symbols/TriangulumAustrale.png"></p><img src="img/Constellations/Constellations/TriangulumAustrale.png"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:5</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>かに座<img src="img/Constellations/Symbols/Cancer.png"></p><img src="img/Constellations/Constellations/Cancer.png"></td>
+                        <td><p>りょうけん座<img src="img/Constellations/Symbols/CanesVenatici.png"></p><img src="img/Constellations/Constellations/CanesVenatici.png"></td>
+                        <td><p>カシオペヤ座<img src="img/Constellations/Symbols/Cassiopeia.png"></p><img src="img/Constellations/Constellations/Cassiopeia.png"></td>
+                        <td><p>コンパス座<img src="img/Constellations/Symbols/Circinus.png"></p><img src="img/Constellations/Constellations/Circinus.png"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 6/13</div>
+        </div>
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <table class="consT">
+                    <tr>
+                        <td><p>からす座<img src="img/Constellations/Symbols/Corvus.png"></p><img src="img/Constellations/Constellations/Corvus.png"></td>
+                        <td><p>いるか座<img src="img/Constellations/Symbols/Delphinus.png"></p><img src="img/Constellations/Constellations/Delphinus.png"></td>
+                        <td><p>インディアン座<img src="img/Constellations/Symbols/Indus.png"></p><img src="img/Constellations/Constellations/Indus.png"></td>
+                        <td><p>こじし座<img src="img/Constellations/Symbols/LeoMinor.png"></p><img src="img/Constellations/Constellations/LeoMinor.png"></td>
+                    </tr>
+                    <tr>
+                        <td><p>けんびきょう座<img src="img/Constellations/Symbols/Microscopium.png"></p><img src="img/Constellations/Constellations/Microscopium.png"></td>
+                        <td><p>はちぶんぎ座<img src="img/Constellations/Symbols/Octans.png"></p><img src="img/Constellations/Constellations/Octans.png"></td>
+                        <td><p>や座<img src="img/Constellations/Symbols/Sagitta.png"></p><img src="img/Constellations/Constellations/Sagitta.png"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:6</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>カメレオン座<img src="img/Constellations/Symbols/Chamaeleon.png"></p><img src="img/Constellations/Constellations/Chamaeleon.png"></td>
+                        <td><p>はと座<img src="img/Constellations/Symbols/Columba.png"></p><img src="img/Constellations/Constellations/Columba.png"></td>
+                        <td><p>みなみのかんむり座<img src="img/Constellations/Symbols/CoronaAustralis.png"></p><img src="img/Constellations/Constellations/CoronaAustralis.png"></td>
+                        <td><p>かじき座<img src="img/Constellations/Symbols/Dorado.png"></p><img src="img/Constellations/Constellations/Dorado.png"></td>
+                    </tr>
+                    <tr>
+                        <td><p>みずへび座<img src="img/Constellations/Symbols/Hydrus.png"></p><img src="img/Constellations/Constellations/Hydrus.png"></td>
+                        <td><p>こと座<img src="img/Constellations/Symbols/Lyra.png"></p><img src="img/Constellations/Constellations/Lyra.png"></td>
+                        <td><p>はえ座<img src="img/Constellations/Symbols/Musca.png"></p><img src="img/Constellations/Constellations/Musca.png"></td>
+                        <td><p>レチクル座<img src="img/Constellations/Symbols/Reticulum.png"></p><img src="img/Constellations/Constellations/Reticulum.png"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 7/13</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <table class="consT">
+                    <tr>
+                        <td><p>ぼうえんきょう座<img src="img/Constellations/Symbols/Telescopium.png"></p><img src="img/Constellations/Constellations/Telescopium.png"></td>
+                        <td><p>きょしちょう座<img src="img/Constellations/Symbols/Tucana.png"></p><img src="img/Constellations/Constellations/Tucana.png"></td>
+                        <td><p>とびうお座<img src="img/Constellations/Symbols/Volans.png"></p><img src="img/Constellations/Constellations/Volans.png"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:7</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>ぎょしゃ座<img src="img/Constellations/Symbols/Auriga.png"></p><img src="img/Constellations/Constellations/Auriga.png"></td>
+                        <td><p>ケフェウス座<img src="img/Constellations/Symbols/Cepheus.png"></p><img src="img/Constellations/Constellations/Cepheus.png"></td>
+                        <td><p>かんむり座<img src="img/Constellations/Symbols/CoronaBorealis.png"></p><img src="img/Constellations/Constellations/CoronaBorealis.png"></td>
+                        <td><p>とけい座<img src="img/Constellations/Symbols/Horologium.png"></p><img src="img/Constellations/Constellations/Horologium.png"></td>
+                    </tr>
+                    <tr>
+                        <td><p>いっかくじゅう座<img src="img/Constellations/Symbols/Monoceros.png"></p><img src="img/Constellations/Constellations/Monoceros.png"></td>
+                        <td><p>みなみのうお座<img src="img/Constellations/Symbols/PiscisAustrinus.png"></p><img src="img/Constellations/Constellations/PiscisAustrinus.png"></td>
+                        <td><p>こぐま座<img src="img/Constellations/Symbols/UrsaMinor.png"></p><img src="img/Constellations/Constellations/UrsaMinor.png"></td>
+                        <td><p>こぎつね座<img src="img/Constellations/Symbols/Vulpecula.png"></p><img src="img/Constellations/Constellations/Vulpecula.png"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 8/13</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <table class="consT">
+                    <tr>
+                        <th class="consTh"> <p>星の数:8</p></th><td colspan="3" class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td><p>さいだん座<img src="img/Constellations/Symbols/Ara.png"></p><img src="img/Constellations/Constellations/Ara.png"></td>
+                        <td><p>きりん座<img src="img/Constellations/Symbols/Camelopardalis.png"></p><img src="img/Constellations/Constellations/Camelopardalis.png"></td>
+                        <td><p>コップ座<img src="img/Constellations/Symbols/Crater.png"></p><img src="img/Constellations/Constellations/Crater.png"></td>
+                        <td><p>やまねこ座<img src="img/Constellations/Symbols/Lynx.png"></p><img src="img/Constellations/Constellations/Lynx.png"></td>
+                    </tr>
+                    <tr>
+                        <td><p>ちょうこくしつ座<img src="img/Constellations/Symbols/Sculptor.png"></p><img src="img/Constellations/Constellations/Sculptor.png"></td>
+                        <td><p>ほ座<img src="img/Constellations/Symbols/Vela.png"></p><img src="img/Constellations/Constellations/Vela.png"></td>
+                        <td colspan="2" class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:9</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>わし座<img src="img/Constellations/Symbols/Aquila.png"></p><img src="img/Constellations/Constellations/Aquila.png"></td>
+                        <td><p>はくちょう座<img src="img/Constellations/Symbols/Cygnus.png"></p><img src="img/Constellations/Constellations/Cygnus.png"></td>
+                        <td><p>とかげ座<img src="img/Constellations/Symbols/Lacerta.png"></p><img src="img/Constellations/Constellations/Lacerta.png"></td>
+                        <td><p>しし座<img src="img/Constellations/Symbols/Leo.png"></p><img src="img/Constellations/Constellations/Leo.png"></td>
+                    </tr>
+                    <tr>
+                        <td><p>てんびん座<img src="img/Constellations/Symbols/Libra.png"></p><img src="img/Constellations/Constellations/Libra.png"></td>
+                        <td><p>おおかみ座<img src="img/Constellations/Symbols/Lupus.png"></p><img src="img/Constellations/Constellations/Lupus.png"></td>
+                        <td><p>とも座<img src="img/Constellations/Symbols/Puppis.png"></p><img src="img/Constellations/Constellations/Puppis.png"></td>
+                        <td class="empty"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 9/13</div>
+        </div>
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <table class="consT">
+                    <tr>
+                        <th class="consTh"> <p>星の数:10</p></th><td colspan="3" class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td><p>やぎ座<img src="img/Constellations/Symbols/Capricorn.png"></p><img src="img/Constellations/Constellations/Capricornus.png"></td>
+                        <td><p>つる座<img src="img/Constellations/Symbols/Grus.png"></p><img src="img/Constellations/Constellations/Grus.png"></td>
+                        <td colspan="2" class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:11</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>うしかい座<img src="img/Constellations/Symbols/Bootes.png"></p><img src="img/Constellations/Constellations/Bootes.png"></td>
+                        <td><p>りゅうこつ座<img src="img/Constellations/Symbols/Carina.png"></p><img src="img/Constellations/Constellations/Carina.png"></td>
+                        <td><p>うさぎ座<img src="img/Constellations/Symbols/Lepus.png"></p><img src="img/Constellations/Constellations/Lepus.png"></td>
+                        <td><p>くじゃく座<img src="img/Constellations/Symbols/Pavo.png"></p><img src="img/Constellations/Constellations/Pavo.png"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:12</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>おおいぬ座<img src="img/Constellations/Symbols/CanisMajor.png"></p><img src="img/Constellations/Constellations/CanisMajor.png"></td>
+                        <td><p>いて座<img src="img/Constellations/Symbols/Sagittarius.png"></p><img src="img/Constellations/Constellations/Sagittarius.png"></td>
+                        <td colspan="2" class="empty"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 10/13</div>
+        </div>
+        <div class="page page-bg-05">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <table class="consT">
+                    <tr>
+                        <th class="consTh"> <p>星の数:13</p></th><td colspan="3" class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td><p>みずがめ座<img src="img/Constellations/Symbols/Aquarius.png"></p><img src="img/Constellations/Constellations/Aquarius.png"></td>
+                        <td><p>りゅう座<img src="img/Constellations/Symbols/Draco.png"></p><img src="img/Constellations/Constellations/Draco.png"></td>
+                        <td><p>ほうおう座<img src="img/Constellations/Symbols/Phoenix.png"></p><img src="img/Constellations/Constellations/Phoenix.png"></td>
+                        <td><p>へび座<img src="img/Constellations/Symbols/Serpens.png"></p><img src="img/Constellations/Constellations/Serpens.png"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:14</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>くじら座<img src="img/Constellations/Symbols/Cetus.png"></p><img src="img/Constellations/Constellations/Cetus.png"></td>
+                        <td><p>おうし座<img src="img/Constellations/Symbols/Taurus.png"></p><img src="img/Constellations/Constellations/Taurus.png"></td>
+                        <td><p>おとめ座<img src="img/Constellations/Symbols/Virgo.png"></p><img src="img/Constellations/Constellations/Virgo.png"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:15</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>オリオン座<img src="img/Constellations/Symbols/Orion.png"></p><img src="img/Constellations/Constellations/Orion.png"></td>
+                        <td><p>ペガスス座<img src="img/Constellations/Symbols/Pegasus.png"></p><img src="img/Constellations/Constellations/Pegasus.png"></td>
+                        <td colspan="2" class="empty"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 11/13</div>
+        </div>
+        <div class="page page-bg-06">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <table class="consT">
+                    <tr>
+                        <th class="consTh"> <p>星の数:16</p></th><td colspan="3" class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td><p>アンドロメダ坐<img src="img/Constellations/Symbols/Andromeda.png"></p><img src="img/Constellations/Constellations/Andromeda.png"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:17</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>ペルセウス座<img src="img/Constellations/Symbols/Perseus.png"></p><img src="img/Constellations/Constellations/Perseus.png"></td>
+                        <td><p>さそり座<img src="img/Constellations/Symbols/Scorpio.png"></p><img src="img/Constellations/Constellations/Scorpius.png"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:18</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>ふたご座<img src="img/Constellations/Symbols/Gemini.png"></p><img src="img/Constellations/Constellations/Gemini.png"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 12/13</div>
+        </div>
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">星座</span>
+            </div>
+            <div class="page-content">
+                <table class="consT">
+                    <tr>
+                        <th class="consTh"> <p>星の数:19</p></th><td colspan="3" class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td><p>ヘルクレス座<img src="img/Constellations/Symbols/Hercules.png"></p><img src="img/Constellations/Constellations/Hercules.png"></td>
+                        <td><p>うお座<img src="img/Constellations/Symbols/Pisces.png"></p><img src="img/Constellations/Constellations/Pisces.png"></td>
+                        <td><p>おおぐま座<img src="img/Constellations/Symbols/UrsaMajor.png"></p><img src="img/Constellations/Constellations/UrsaMajor.png"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:20</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>ケンタウルス座<img src="img/Constellations/Symbols/Centaurus.png"></p><img src="img/Constellations/Constellations/Centaurus.png"></td>
+                        <td><p>うみへび座<img src="img/Constellations/Symbols/Hydra.png"></p><img src="img/Constellations/Constellations/Hydra.png"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr><td class="empty"><br></td></tr>
+                    <tr>
+                        <th class="consTh"> <p>星の数:22</p></th>
+                        <td class="empty"></td>
+                        <th class="consTh"> <p>星の数:31</p></th>
+                    </tr>
+                    <tr>
+                        <td><p>へびつかい座<img src="img/Constellations/Symbols/Ophiuchus.png"></p><img src="img/Constellations/Constellations/Ophiuchus.png"></td>
+                        <td class="empty"></td>
+                        <td><p>エリダヌス座<img src="img/Constellations/Symbols/Eridanus.png"></p><img src="img/Constellations/Constellations/Eridanus.png"></td>
+                        <td class="empty"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 13/13</div>
+        </div>
+    </div>
+</body>
+</html>

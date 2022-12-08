@@ -10,7 +10,12 @@
   "Published": "2021-04-12",
   "SortKey": "EIGHT",
   "SourceUrl": "https://github.com/nicklatkovich/ktane_eight",
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "2455349923",
   "Symbol": "8",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/-q1S6kbTSyg"
+  } ],
   "Type": "Regular"
 }

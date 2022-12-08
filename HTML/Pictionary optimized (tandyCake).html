@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Pictionary — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        table {
+            text-align: center;
+            margin: 1em auto;
+        }
+        .picopt {
+            width: 1.5cm;
+            
+            margin: 0;
+        }
+        .picopt td {
+            width: 0.75cm;
+            height: 0.75cm;
+            padding: 0;
+            border: .25mm solid #AAA;
+        }
+        .w { background-color: white; }
+        .k { background-color: black; }
+        .dark .w { background-color: #F8F8F8; }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Pictionary</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Pictionary.svg" class="diagram">
+                <h2>On the Subject of Pictionary</h2>
+                <p class="flavour-text">"What do you mean you don’t see it?! Its Obvious!"</p>
+
+                <p>Pictionary Modules have two main parts:</p>
+                <ul>
+                    <li>The Screen: This is a 4×4 grid of black and white pixels.</li>
+                    <li>The Keypad: Use this to enter the code.</li>
+                </ul><p>Based on the pixels of each 2×2 corner region, use the table below to get 4 digits, concatenate those digits in the order top-left, top-right, bottom-left, bottom-right and submit it as your code.<p>
+                <p style="text-align: center;"><strong>Top-Left Corner</strong></p>
+                <table>
+                    <tr>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='k'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='k'></td> </tr> </table></td>
+                    </tr>
+                    <tr>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>9</td>
+                </table>
+                <p style="text-align: center;"><strong>Top-Right Corner</strong></p>
+                <table>
+                    <tr>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='k'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='k'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='k'></td> </tr> <tr> <td class='w'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='k'></td> </tr> </table></td>
+                    </tr>
+                    <tr>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>8</td>
+                </table>
+                <p style="text-align: center;"><strong>Bottom-Left Corner</strong></p>
+                <table>
+                    <tr>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='k'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='k'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='w'></td> </tr> <tr> <td class='k'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='k'></td> </tr> </table></td>
+                    </tr>
+                    <tr>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>7</td>
+                </table>
+                <p style="text-align: center;"><strong>Bottom-Right Corner</strong></p>
+                <table>
+                    <tr>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='w'></td> </tr> <tr> <td class='k'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='k'></td> </tr> <tr> <td class='w'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='w'></td> </tr> <tr> <td class='w'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='w'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='w'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='k'></td> </tr> </table></td>
+                        <td><table class='picopt'> <tr> <td class='k'></td> <td class='k'></td> </tr> <tr> <td class='k'></td> <td class='k'></td> </tr> </table></td>
+                    </tr>
+                    <tr>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>6</td>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 2</div>
+        </div>
+    </div>
+</body>
+</html>

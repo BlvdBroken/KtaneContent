@@ -6,20 +6,22 @@
   "ExpertDifficulty": "Easy",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+TimeDependent"
   ],
-  "IsPseudoNeedy": true,
   "ModuleID": "veryAnnoyingButton",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "The Very Annoying Button",
   "Origin": "Mods",
   "Published": "2019-09-08",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd, PseudoNeedy",
   "SortKey": "VERYANNOYINGBUTTON",
   "SourceUrl": "https://github.com/Speakingevil/the-very-annoying-button",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1857076591",
   "Symbol": "Tvab",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=dGfdU0_fp4g" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=dGfdU0_fp4g"
+  } ],
   "Type": "Regular"
 }

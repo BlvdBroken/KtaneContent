@@ -11,16 +11,16 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="js/ktane-utils.js"></script>
   <style>
-    @media screen (min-width: 900px) {
-      body {
-        background:
-          linear-gradient(#fff, #444 12.5%),
-          linear-gradient(#fff, #444 100%),
-          url('img/web-background.jpg');
-        background-size: cover;
-        background-blend-mode: multiply;
-      }
-    }
+        @media screen and (min-width: 900px) {
+            body {
+                background:
+                    linear-gradient(#fff, #444 12.5%),
+                    linear-gradient(#fff, #444 100%),
+                    url('img/web-background.jpg');
+                background-size: cover;
+                background-blend-mode: multiply;
+            }
+        }
 
     @media print {
       select {
@@ -29,10 +29,6 @@
 
       label {
         display: none;
-      }
-
-      a[href]:after {
-        content: none !important;
       }
     }
 
@@ -61,9 +57,8 @@
       width: 35%;
     }
 
-    .odd {
-      background-color: #ccc;
-    }
+    .odd { background-color: #ccc; }
+    .dark .odd { background-color: #444; }
 
     .vertical-separator {
       background-color: white;
@@ -75,15 +70,20 @@
     }
 
     .page {
-      filter: invert(0.8);
-      color: black;
-      font-weight: bold;
+        filter: invert(0.8);
+        color: black;
+        font-weight: bold;
+    }
+    .dark .page {
+        filter: invert(0);
+        color: #DDD;
     }
 
     .first-page {
-      filter: invert(0);
-      color: #222;
+        filter: invert(0);
+        color: #222;
     }
+    .dark .first-page svg text { fill: #DDD; }
 
     .glitch-text {
       -webkit-animation: chromatic-aberration 5s both infinite;
@@ -131,7 +131,7 @@
         <img src="img/Component/The Octadecayotton.svg" class="diagram">
         <h2>モジュール詳細：9次元超立方体</h2>
         <p class="flavour-text">「これは何かの間違いでは？」 - 今のあなた。</p>
-        <p class="appendix-reference" id="appendix-reference" style="font-weight: normal;"><a href="Blind%20Alley%20translated%20(日本語%20—%20ブラインド・アレイ%20)%20(tepel).html">ブラインド・アレイ</a>の付録BLANKを参照し、空白モジュールの特定をする。</p>
+        <p class="appendix-reference" id="appendix-reference" style="font-weight: normal;"><a href="Blind%20Alley%20translated%20(日本語%20—%20ブラインド・アレイ%20)%20(tchen).html">ブラインド・アレイ</a>の付録BLANKを参照し、空白モジュールの特定をする。</p>
         <p style="font-size: 17px;">このモジュールの見た目は、始めは空白の状態である。</p>
         <svg viewBox="0 0 250 275">
           <path id="curve"
@@ -303,7 +303,7 @@
               <li>もう一度2次元の正方形を例に出すと、左下は右下と隣接しており、これはXのみが異なるからである。左下は、Z軸によって左上とも隣接している。</li>
             </ul>
           </li>
-          <li>この理論は逆に、球体がある軸の正の方向かどうか調べる方法にも適応できる。
+          <li>この理論は逆に、球体がある軸の正の方向かどうか調べる方法にも適用できる。
             <ul>
               <li>例えば、ある球体の位置が他の球体からちょうど(左,下,奥)=(0.8,0.2,0.5)にある場合、その球体は-Wに位置していると分かる。
                 なぜなら、それはW軸が存在するであろう位置からさらに左,下,後に位置しており、+Wと隣接していると分かるからである。</li>
@@ -423,7 +423,7 @@
             </ul>
           </li>
         </ul>
-        <p><sup><i>* 2軸の変形であっても、このルールは適用される。+R-Yの二次変形では+R-Yと-T+Rのペアを得る。</i></sup></p>
+        <p><sup><i>* 2軸の変形であっても、このルールは適用される。+R-Yの二次変形では+R-Yと-Y+Rのペアを得る。</i></sup></p>
         <table>
           <tr>
             <th class="corner" rowspan="2" colspan="2"></th>
@@ -676,11 +676,11 @@
         <ul>
           <li>変形が0の場合、このページと次のページをスキップする。ゴールボールは全てが負の位置にある(黒色)。</li>
           <li>それぞれの変形について、数列a<sub>x</sub>を作る。xは変形が何番目かを指す。全てのa<sub>x</sub>の初期値は<span class="dim-a-start"></span>である。</li>
-          <li>a<sub>x</sub>に2進数のp<sub>x</sub>を配置する。つまり「10進数 &lt;-&gt; 2進数」からp<sub>x</sub>以下の最大の数を探して変形値から引き, a<sub>x</sub>の左からx番目を1にする。xは引いた数から求めた位置の数である。引き算と桁の配置をp<sub>x</sub>が0になるまで繰り返す。</li>
+          <li>a<sub>x</sub>に二進数のp<sub>x</sub>を配置する。つまり「十進数 &lt;-&gt; 二進数」からp<sub>x</sub>以下の最大の数を探して変形値から引き, a<sub>x</sub>の左からx番目を1にする。xは引いた数から求めた位置の数である。引き算と桁の配置をp<sub>x</sub>が0になるまで繰り返す。</li>
         </ul>
         <table>
           <tr>
-            <th class="odd">10進数 &lt;-&gt; 2進数</th>
+            <th class="odd">十進数 &lt;-&gt; 二進数</th>
           </tr>
           <tr>
             <td>
@@ -789,7 +789,7 @@
       <div class="page-content">
         <h3>ゴールボール(続き)</h3>
         <ul>
-          <li>全ての値を設定できたら、以下の条件に沿ってa<sub>0</sub>を求める。(条件の数よりも変形数が低い場合、このaの値は存在しないことに注意)
+          <li>全ての値を設定できたら、以下の条件に沿ってa<sub>0</sub>を求める。(注意：条件の数よりも変形数が低い場合、あるaの値が存在しないことがある)
             <ol>
               <li>a<sub>1</sub>が存在し, かつa<sub>1</sub>の<span class="dim-a0-check"></span>番目の桁が1なら、a<sub>0</sub>の<span class="dim-a0-set"></span>番目は1である。</li>
               <li>a<sub>2</sub>が存在し, かつa<sub>2</sub>の<span class="dim-a0-check"></span>
@@ -807,10 +807,10 @@
           </li>
         </ul>
         <ul>
-          <li>a<sub>0</sub>を含む全てのaの値はグレイコードとなっている。全てのグレイコードをバイナリコードに変換する:
+          <li>a<sub>0</sub>を除く全てのaの値はグレイコードとなっている。全てのグレイコードをバイナリコードに変換する:
             <ol>
               <li>バイナリコードの最初の桁はグレイコードの最初の桁と一致する。</li>
-              <li>バイナリコードの次の桁は、2進数の前の桁と現在のグレイコードの和が1であれば1である。そうでない場合は0である。</li>
+              <li>バイナリコードの次の桁は、バイナリコードの前の桁と現在のグレイコードの和が1であれば1である。そうでない場合は0である。</li>
               <li><span class="dim-number"></span>桁になるまでステップ2を繰り返す。これがバイナリコードである。
               </li>
             </ol>
@@ -870,7 +870,7 @@
     </div>
   </div>
   <script>
-    // I am so sorry for this code. I have commited too many sins here. At the very least I didn't use 'var'.
+    // I am so sorry for this code. I have commited too many sins here. At the very least I didn’t use 'var'.
     const dimension = document.getElementById('dimensions');
     const diagrams = document.querySelectorAll('.diagram');
     const horizontalSeparators = document.querySelectorAll('.horizontal-separator');

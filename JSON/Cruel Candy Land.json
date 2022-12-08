@@ -2,7 +2,7 @@
   "Author": "EpicToast",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
-  "Description": "Play a game of Candy Land where the cards aren't actually Candy Land cards. Tags: deck-of-cards, seven-segment-display, arrows",
+  "Description": "Play a game of Candy Land where the cards aren't actually Candy Land cards. Tags: cards, seven-segment-display, arrows, red-background, uno, against-humanity, codenames, baseball-card, credit-card, cardi-b",
   "ExpertDifficulty": "Medium",
   "ModuleID": "cruelCandyLand",
   "Name": "Cruel Candy Land",
@@ -12,5 +12,9 @@
   "SourceUrl": "https://github.com/EpicToastTM/ktaneCandyLand",
   "SteamID": "2538222177",
   "Symbol": "Ccan",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/1WrPenBHDzc"
+  } ],
   "Type": "Regular"
 }

@@ -1,5 +1,5 @@
 {
-  "Author": "TasThing",
+  "Author": "TasThiluna",
   "Compatibility": "Compatible",
   "DefuserDifficulty": "VeryHard",
   "Description": "Identify the rotation of a tesseract, without edges. Tags: 5-buttons, hypercube, 16-floating-discs, octagonal-button",
@@ -10,9 +10,11 @@
   "Published": "2020-01-20",
   "SortKey": "HYPERNEEDY",
   "SourceUrl": "https://github.com/tasthing/Needy-Pack",
-  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1974393045",
   "Symbol": "Hnd",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=--We4ZREWEo" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=--We4ZREWEo"
+  } ],
   "Type": "Needy"
 }

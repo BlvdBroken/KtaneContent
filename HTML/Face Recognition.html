@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,13 +8,27 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/ktane-utils.js"></script>
+    <script src="js/jquery.3.1.1.min.js"></script>
+    <script src="js/Utilities/svg-utils.js"></script>
     <style>
-    .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
+        .dark table, table {
+            border: none;
+            margin: 0 auto;
+            width: 72%;
+        }
+        .dark td, td, .dark th, th {
+            text-align: center;
+            padding: 0;
+            border: none;
+            font-family: "zoftfrakt eYe/FS";
+            font-size: 23pt;
+            line-height: 1.2;
+        }
+        td img {
+            height: 106px;
+        }
+        .dark td img { filter: invert(80%); }
+    </style>
 </head>
 <body>
     <div class="section">
@@ -25,16 +39,65 @@
             </div>
             <div class="page-content">
                 <img src="img/Component/Face Recognition.svg" class="diagram">
-                <h2>On the Subject of Face Recognition</h2>
-                <p class="flavour-text">A version of this technology is used by "the government", as well as the "alien dinosaur illuminati", according to sources on Facebook.</p>
+                <h2>On the Subject of Face Recognitions</h2>
+                <p class="flavour-text">A version of this technology is used by “the government”, as well as the “alien dinosaur illuminati”, according to sources on Facebook.</p>
 
                 <p>The module has a display that cycles through five face images, as well as a text label that displays names. Based on the faces and the names attached to them, press the submit button when the display is showing the correct face to solve the module.</p>
 
                 <p>Each face is shifted by some amount, which may be 0, on each axis relative to the its name in the table below. The correct face is the one whose shift amount is different from each other face.</p>
-                
+
                 <p>Submitting an incorrect face will record a strike and generate a new set of faces and names.</p>
-                <img width="450" class="center" src="img/Face Recognition/Face Table.svg">
-              </div>
+                <table>
+                    <tr>
+                        <td><img src="img/Face Recognition/Glen.svg"/></td>
+                        <td><img src="img/Face Recognition/Bill.svg"/></td>
+                        <td><img src="img/Face Recognition/Mary.svg"/></td>
+                        <td><img src="img/Face Recognition/Ben.svg"/></td>
+                    </tr>
+                    <tr>
+                        <th>Glen</th>
+                        <th>Bill</th>
+                        <th>Mary</th>
+                        <th>Ben</th>
+                    </tr>
+                    <tr>
+                        <td><img src="img/Face Recognition/Clem.svg"/></td>
+                        <td><img src="img/Face Recognition/Gary.svg"/></td>
+                        <td><img src="img/Face Recognition/Jen.svg"/></td>
+                        <td><img src="img/Face Recognition/Mel.svg"/></td>
+                    </tr>
+                    <tr>
+                        <th>Clem</th>
+                        <th>Gary</th>
+                        <th>Jen</th>
+                        <th>Mel</th>
+                    </tr>
+                    <tr>
+                        <td><img src="img/Face Recognition/Phil.svg"/></td>
+                        <td><img src="img/Face Recognition/Larry.svg"/></td>
+                        <td><img src="img/Face Recognition/Len.svg"/></td>
+                        <td><img src="img/Face Recognition/Jill.svg"/></td>
+                    </tr>
+                    <tr>
+                        <th>Phil</th>
+                        <th>Larry</th>
+                        <th>Len</th>
+                        <th>Jill</th>
+                    </tr>
+                    <tr>
+                        <td><img src="img/Face Recognition/Perry.svg"/></td>
+                        <td><img src="img/Face Recognition/Del.svg"/></td>
+                        <td><img src="img/Face Recognition/Harry.svg"/></td>
+                        <td><img src="img/Face Recognition/Teri.svg"/></td>
+                    </tr>
+                    <tr>
+                        <th>Perry</th>
+                        <th>Del</th>
+                        <th>Harry</th>
+                        <th>Teri</th>
+                    </tr>
+                </table>
+            </div>
             <div class="page-footer relative-footer">Page 1 of 1</div>
         </div>
     </div>

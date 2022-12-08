@@ -1,27 +1,32 @@
 {
+  "BossStatus": "FullBoss",
   "Compatibility": "Compatible",
   "Contributors": {
     "Developer": [ "VFlyer" ],
-    "Manual": [ "TasThing" ]
+    "Manual": [ "TasThiluna" ]
   },
   "DefuserDifficulty": "Easy",
-  "Description": "Memorize a sequence of arrows shown on each stage and keep track of numbers being visited to input a series of arrows at the end. Partially inspired by Tallordered Keys and based off of Kusane's arrow modules. Tags: black, arrows, flashing",
+  "Description": "Remember a sequence of arrows shown on each stage and keep track of numbers being visited to input a series of arrows at the end. Tags: black, arrows, flashing",
   "ExpertDifficulty": "Medium",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+SolvesWithOthers",
+    "+TimeDependent"
   ],
-  "IsFullBoss": true,
   "ModuleID": "blackArrowsModule",
   "MysteryModule": "MustNotBeHiddenOrKey",
   "Name": "Black Arrows",
   "Origin": "Mods",
   "Published": "2020-11-29",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd",
   "SortKey": "BLACKARROWS",
   "SourceUrl": "https://github.com/VFlyer/ktane-multi-uncolored-arrows",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2303374775",
   "Symbol": "Karr",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/4tO48mID0rM"
+  } ],
   "Type": "Regular"
 }

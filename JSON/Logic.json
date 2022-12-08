@@ -1,6 +1,6 @@
 {
-  "Author": "SL7205",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "SL7205" ] },
   "DefuserDifficulty": "Medium",
   "Description": "Evaluate two boolean expressions involving operators and variables whose values are determined by edgework. Tags: letters, red, green, yellow, symbols, arrows, submit",
   "ExpertDifficulty": "Hard",
@@ -13,10 +13,19 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "746188921",
   "Symbol": "Lo",
-  "TutorialVideoUrl": {
-    "Čeština": "https://www.youtube.com/watch?v=GDO73osfGFg",
-    "default": "https://www.youtube.com/watch?v=MZ1lsaWFJDU",
-    "Français": "https://youtu.be/8h6vvH2w_Lk"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://www.youtube.com/watch?v=GDO73osfGFg"
+    },
+    {
+      "Language": "English",
+      "Url": "https://www.youtube.com/watch?v=MZ1lsaWFJDU"
+    },
+    {
+      "Language": "Français",
+      "Url": "https://youtu.be/8h6vvH2w_Lk"
+    }
+  ],
   "Type": "Regular"
 }

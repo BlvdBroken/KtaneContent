@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>ボウリング — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        table {
+            margin: 1em auto;
+        }
+        .left {
+            float: left;
+        }
+        .wrapped {
+            height: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">ボウリング</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Bowling.svg" class="diagram">
+                <h2>モジュール詳細：ボウリング</h2>
+                <p class="flavour-text">なぜボウリングがそれほど複雑になるんだ？ピンにボールを投げるだけじゃないか！</p>
+                <p><b>ステージ１の表</b>を使用してどのピンが立っているかを判断し、<b>ステージ２の表</b>を使用して詳細な手順を決定する。</p>
+                <p><b>ステージ１</b>：エッジワークを使用し、立っているピンを判断する。</p>
+                <table class="left">
+                    <tr>
+                        <th>ピン番号</th>
+                        <th>条件(真なら立っている)</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><b>シリアルナンバー</b>に母音が含まれている</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>インジケーターの数が多くとも３つある</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><b>シリアルナンバー</b>の最後の桁が偶数</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><b>シリアルポート</b>がある</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><b>FRQ</b>インジケーターがある</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>少なくとも３つのバッテリーホルダーがある</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><b>DVI-Dポート</b>がある</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>空ではないポートプレートが２つ以上ある</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><b>単１バッテリー</b>が２つを超える</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>他に立っているピンがない</td>
+                    </tr>
+                </table>
+                <div style="clear: both"></div>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+<span class="page-header-section-title">ボウリング</span>
+            </div>
+            <div class="page-content">
+                <p><b>ステージ2:</b>ピンの色に基づいて正しい表を使用し、上から見て該当する最初の条件を適用する。</p>
+                <table>
+                    <tr>
+                        <th>赤色のピン</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="wrapped"><b>1:ピン</b>１０が立っている場合、<b>Position 2</b>／<b>Angle 0°</b>を使用する。</p>
+                            <p class="wrapped"><b>2:ピン</b> １，３及び７が立っている場合、<b>Position 9</b>／<b>Angle -5°</b>を使用する。</p>
+                            <p class="wrapped"><b>3:ピン</b> ４、６及び７が立っている場合、<b>Position 1</b>／<b>Angle -20°</b>を使用する。</p>
+                            <p class="wrapped"><b>4:ピン</b> ３、５及び６が立っている場合、<b>Position 1</b>／<b>Angle 45°</b>を使用する。</p>
+                            <p class="wrapped"><b>5:ピン</b> ２、５及び９が立って<em>いない</em>場合、<b>Position 9</b>／<b>Angle -40°</b>を使用する。</p>
+                            <p class="wrapped"><b>6:ピン</b> １及び４が立っている場合、<b>Position 8</b>／<b>Angle 10°</b>を使用する。</p>
+                            <p class="wrapped"><b>7:ピン</b> ３及び６が立っている場合、<b>Position 1</b>／<b>Angle -15°</b>を使用する。</p>
+                            <p class="wrapped"><b>8:ピン</b> ４及び７が立っている場合、<b>Position 2</b>／<b>Angle 30°</b>を使用する。</p>
+                            <p class="wrapped"><b>9:ピン</b> １及び８が立って<em>いない</em>場合、<b>Position 2</b>／<b>Angle -35°</b>を使用する。</p>
+                            <p class="wrapped"><b>10:いずれの条件にも該当しない場合、<b>Position 4</b>／<b>Angle 15°</b>を使用する。</p>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>青色のピン</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="wrapped"><b>1:ピン</b>１０が立っている場合、<b>Position 10</b>／<b>Angle -5°</b>を使用する。</p>
+                            <p class="wrapped"><b>2:ピン</b> 3, 7及び9が立っている場合、<b>Position 9</b>／<b>Angle -30°</b>を使用する。</p>
+                            <p class="wrapped"><b>3:ピン</b> 2, 5及び8が立っている場合、<b>Position 8</b>／<b>Angle 20°</b>を使用する。</p>
+                            <p class="wrapped"><b>4:ピン</b> 2, 5及び7が立っている場合、<b>Position 5</b>／<b>Angle 15°</b>を使用する。</p>
+                            <p class="wrapped"><b>5:ピン</b> 1, 2及び3が立って<em>いない</em>場合、<b>Position 6</b>／<b>Angle 30°</b>を使用する。</p>
+                            <p class="wrapped"><b>6:ピン</b> 2及び7が立っている場合、<b>Position 1</b>／<b>Angle -20°</b>を使用する。</p>
+                            <p class="wrapped"><b>7:ピン</b> 3及び6が立っている場合、<b>Position 9</b>／<b>Angle -30°</b>を使用する。</p>
+                            <p class="wrapped"><b>8:ピン</b> 8及び9が立っている場合、<b>Position 4</b>／<b>Angle -45°</b>を使用する。</p>
+                            <p class="wrapped"><b>9:ピン</b> 8及び9が立って<em>いない</em>場合、<b>Position 4</b>／<b>Angle -10°</b>を使用する。</p>
+                            <p class="wrapped"><b>10:いずれの条件にも該当しない場合、<b>Position 3</b>／<b>Angle 35°</b>を使用する。</p>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>緑色のピン</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="wrapped"><b>1:ピン</b>１０が立っている場合、<b>Position 10</b>／<b>Angle 25°</b>を使用する。</p>
+                            <p class="wrapped"><b>2:ピン</b> ４、８及び９が立っている場合、<b>Position 8</b>／<b>Angle -45°</b>を使用する。</p>
+                            <p class="wrapped"><b>3:ピン</b> ３、７及び８が立っている場合、<b>Position 6</b>／<b>Angle 0°</b>を使用する。</p>
+                            <p class="wrapped"><b>4:ピン</b> １、５及び６が立っている場合、<b>Position 1</b>／<b>Angle -15°</b>を使用する。</p>
+                            <p class="wrapped"><b>5:ピン</b> ２，６及び９が立って<em>いない</em>場合、<b>Position 5</b>／<b>Angle 45°</b>を使用する。</p>
+                            <p class="wrapped"><b>6:ピン</b> ２及び８が立っている場合、<b>Position 2</b>／<b>Angle -35°</b>を使用する。</p>
+                            <p class="wrapped"><b>7:ピン</b> １及び４が立っている場合、<b>Position 4</b>／<b>Angle 10°</b>を使用する。</p>
+                            <p class="wrapped"><b>8:ピン</b> ５及び９が立っている場合、<b>Position 5</b>／<b>Angle -20°</b>を使用する。</p>
+                            <p class="wrapped"><b>9:ピン</b> ３及び７が立って<em>いない</em>場合、<b>Position 9</b>／<b>Angle 35°</b>を使用する。</p>
+                            <p class="wrapped"><b>10:いずれの条件にも該当しない場合、<b>Position 3</b>／<b>Angle -45°</b>を使用する。</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">ページ 2/2</div>
+        </div>
+    </div>
+</body>
+</html>

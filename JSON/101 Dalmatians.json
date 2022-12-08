@@ -1,6 +1,6 @@
 {
-  "Author": "Timwi",
   "Compatibility": "Compatible",
+  "Contributors": { "Developer": [ "Timwi" ] },
   "DefuserDifficulty": "Hard",
   "Description": "Identify the fur pattern and submit the name of the corresponding dalmatian. Tags: black-and-white, white-background, red-background, 3-buttons, name",
   "ExpertDifficulty": "Medium",
@@ -14,6 +14,9 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1563555397",
   "Symbol": "101",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=tXg2xNbnlkY" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=tXg2xNbnlkY"
+  } ],
   "Type": "Regular"
 }

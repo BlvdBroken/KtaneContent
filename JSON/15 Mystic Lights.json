@@ -9,13 +9,19 @@
   "Origin": "Mods",
   "Published": "2019-12-18",
   "SortKey": "15MYSTICLIGHTS",
-  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules",
+  "SourceUrl": "https://github.com/VFlyer/FlyersOtherModules/tree/master/Assets/15%20Mystic%20Lights",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1940164898",
   "Symbol": "15ml",
-  "TutorialVideoUrl": {
-    "Čeština": "https://youtu.be/gn8aI_YgeM8",
-    "default": "https://youtu.be/mnJQzkRfgFQ"
-  },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/gn8aI_YgeM8"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/mnJQzkRfgFQ"
+    }
+  ],
   "Type": "Regular"
 }

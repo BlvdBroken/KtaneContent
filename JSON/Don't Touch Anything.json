@@ -7,19 +7,22 @@
   "ExpertDifficulty": "VeryEasy",
   "Ignore": [
     "+SolvesAtEnd",
-    "+TimeSensitive"
+    "+TimeDependent"
   ],
-  "IsSolveOrderSensitive": true,
   "ModuleID": "dontTouchAnything",
   "MysteryModule": "MustNotBeKey",
   "Name": "Don't Touch Anything",
   "Origin": "Mods",
   "Published": "2020-06-27",
-  "SolvesAtEnd": true,
+  "Quirks": "SolvesAtEnd",
   "SortKey": "DONTTOUCHANYTHING",
   "SourceUrl": "https://github.com/AnAverageArceus/Dont_Touch_Anything",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2145112890",
   "Symbol": "Dta",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/PIBG9uu4LIg"
+  } ],
   "Type": "Regular"
 }

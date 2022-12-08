@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>色変え格子 — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/font-japanese.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <script src="js/ruleseed.js"></script>
+    <style>
+        ul {
+            padding-left: 1.5em;
+        }
+        table.order {
+            display: inline-block;
+            margin-right: .7cm;
+            border: none;
+        }
+            table.order td {
+                padding: .3em 0 .2em;
+                text-align: center;
+                width: 2.1em;
+            }
+        table#rules {
+            width: 100%;
+            font-size: 11pt;
+        }
+        caption {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #orders {
+            text-align: center;
+        }
+        .instr {
+            float: left;
+            width: 1.125cm;
+            height: 1.125cm;
+            margin-right: .2cm;
+            background-image: url('img/Discolored%20Squares/Motion.svg');
+            background-size: 4.5cm 4.5cm;
+            background-repeat: no-repeat;
+        }
+            .instr-0 { background-position: 0cm 0cm; }
+            .instr-1 { background-position: -1.125cm 0cm; }
+            .instr-2 { background-position: -2.25cm 0cm; }
+            .instr-3 { background-position: -3.375cm 0cm; }
+            .instr-4 { background-position: 0cm -1.125cm; }
+            .instr-5 { background-position: -1.125cm -1.125cm; }
+            .instr-6 { background-position: -2.25cm -1.125cm; }
+            .instr-7 { background-position: -3.375cm -1.125cm; }
+            .instr-8 { background-position: 0cm -2.25cm; }
+            .instr-9 { background-position: -1.125cm -2.25cm; }
+            .instr-10 { background-position: -2.25cm -2.25cm; }
+            .instr-11 { background-position: -3.375cm -2.25cm; }
+            .instr-12 { background-position: 0cm -3.375cm; }
+            .instr-13 { background-position: -1.125cm -3.375cm; }
+            .instr-14 { background-position: -2.25cm -3.375cm; }
+            .instr-15 { background-position: -3.375cm -3.375cm; }
+        .dark .instr { filter: invert(87%); }
+    </style>
+    <script>
+        var _instructions = [
+            "北西に移動<br>(ループする)",
+            "北に移動<br>(ループする)",
+            "北東に移動<br>(ループする)",
+            "東に移動<br>(ループする)",
+            "南東に移動<br>(ループする)",
+            "南に移動<br>(ループする)",
+            "南西に移動<br>(ループする)",
+            "西に移動<br>(ループする)",
+            "|の線で<br>折り返す",
+            "—の線で<br>折り返す",
+            "\\の線で<br>折り返す",
+            "/の線で<br>折り返す",
+            "90°時計<br>回りに回転",
+            "90°反時計<br>回りに回転",
+            "180°回転",
+            "その場に<br>留まる"
+        ];
+
+        function setDefaultRules(rnd) { setRules(rnd); }
+
+        function setRules(rnd)
+        {
+            var skip = rnd.next(0, 6);
+            for (var i = 0; i < skip; i++)
+                rnd.nextDouble();
+            var four = [0, 1, 2, 3];
+            var numbers = [];
+            for (var i = 0; i < 16; i++)
+                numbers.push(i);
+            rnd.shuffleFisherYates(numbers);
+            document.getElementById('rules').innerHTML = '<caption>命令テーブル</caption>' + four.map(row =>
+                `<tr>${four.map(col => `<td><div class='instr instr-${numbers[col + 4*row]}'></div>${_instructions[numbers[col + 4*row]]}</td>`).join('')}</tr>`
+            ).join('');
+
+            numbers = [];
+            for (var i = 0; i < 16; i++)
+                numbers.push(i);
+            var html = '';
+            for (var stage = 0; stage < 4; stage++)
+            {
+                rnd.shuffleFisherYates(numbers);
+                html += `<table class='order'><caption>ステージ${(stage + 1)}</caption>${four.map(row => `<tr>${four.map(col => `<td>${numbers[col + 4*row] + 1}</td>`).join('')}</tr>`).join('')}</table>`;
+            }
+            document.getElementById('orders').innerHTML = html;
+        }
+    </script>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">色変え格子</span>
+            </div>
+            <div class="page-content">
+                <img class="diagram" src="img/Component/Discolored Squares (Japanese).svg">
+                <h2>モジュール詳細：色変え格子</h2>
+                <p class="flavour-text">秩序はエントロピーに取って代わられる。エントロピーは秩序の消失である。真のカオスへようこそ。</p>
+
+                <ul>
+                    <li>開始時に、4つの異なる色がちょうど一度のみ出現していない場合、間違ったモジュールを参照している。</li>
+                    <li>その4つの色の正方形を押して開始する。<em>押した順番で、位置と色を覚える。</em>そして、ステージ1が開始する。もし、覚えた色の正方形がステージ1で表れない場合、間違ったモジュールを参照している。</li>
+                    <li>各ステージで、命令テーブルを見て、ステージ数に対応した押した順番の<em>覚えた位置</em>のセルを参照する。</li>
+                </ul>
+                <table id="rules">
+                    <caption>命令テーブル</caption>
+                    <tbody>
+                        <tr>
+                            <td><div class="instr instr-0"></div>北西に移動<br>(ループする)</td>
+                            <td><div class="instr instr-2"></div>北東に移動<br>(ループする)</td>
+                            <td><div class="instr instr-1"></div>北に移動<br>(ループする)</td>
+                            <td><div class="instr instr-14"></div>180°回転</td>
+                        </tr>
+                        <tr>
+                            <td><div class="instr instr-10"></div>\の線で<br>折り返す</td>
+                            <td><div class="instr instr-6"></div>南西に移動<br>(ループする)</td>
+                            <td><div class="instr instr-8"></div>|の線で<br>折り返す</td>
+                            <td><div class="instr instr-15"></div>その場に<br>留まる</td>
+                        </tr>
+                        <tr>
+                            <td><div class="instr instr-11"></div>/の線で<br>折り返す</td>
+                            <td><div class="instr instr-3"></div>Move E<br>(ループする)</td>
+                            <td><div class="instr instr-12"></div>90°時計<br>回りに回転</td>
+                            <td><div class="instr instr-7"></div>西に移動<br>(ループする)</td>
+                        </tr>
+                        <tr>
+                            <td><div class="instr instr-9"></div>—の線で<br>折り返す</td>
+                            <td><div class="instr instr-5"></div>南に移動<br>(ループする)</td>
+                            <td><div class="instr instr-13"></div>90°反時計<br>回りに回転</td>
+                            <td><div class="instr instr-4"></div>南東に移動<br>(ループする)</td>
+                        </tr></tbody>
+                </table>
+                <ul>
+                    <li>ステージ数に対応した押した順番の<em>覚えた色</em>と同じ色の全ての正方形について、後述の順序で次の手順を踏む:
+                        <ul>
+                            <li>命令テーブルの命令のとおりに位置を調整する。</li>
+                            <li>調整された位置が既に白い正方形である場合は、白い正方形でなくなるまで同じ調整を行う。</li>
+                            <li>最初に当てはまったの白以外の正方形を押す。</li>
+                            <li>押した正方形が現在の<em>覚えた色</em>である場合、このステージ中ではその正方形に関する手順を踏まない。</li>
+                        </ul>
+                    </li>
+                    <li>正方形の手順は次の順序で行う:</li>
+                </ul>
+                <div id="orders">
+                    <table class="order">
+                        <caption>ステージ1</caption>
+                        <tbody>
+                            <tr><td>5</td><td>12</td><td>1</td><td>15</td></tr>
+                            <tr><td>14</td><td>13</td><td>7</td><td>3</td></tr>
+                            <tr><td>9</td><td>4</td><td>6</td><td>10</td></tr>
+                            <tr><td>16</td><td>2</td><td>8</td><td>11</td></tr>
+                        </tbody>
+                    </table>
+                    <table class="order">
+                        <caption>ステージ2</caption>
+                        <tbody>
+                            <tr><td>1</td><td>14</td><td>6</td><td>7</td></tr>
+                            <tr><td>12</td><td>15</td><td>3</td><td>10</td></tr>
+                            <tr><td>16</td><td>4</td><td>2</td><td>11</td></tr>
+                            <tr><td>9</td><td>8</td><td>13</td><td>5</td></tr>
+                        </tbody>
+                    </table>
+                    <table class="order">
+                        <caption>ステージ3</caption>
+                        <tbody>
+                            <tr><td>16</td><td>9</td><td>7</td><td>12</td></tr>
+                            <tr><td>6</td><td>15</td><td>3</td><td>5</td></tr>
+                            <tr><td>11</td><td>8</td><td>13</td><td>14</td></tr>
+                            <tr><td>2</td><td>10</td><td>1</td><td>4</td></tr>
+                        </tbody>
+                    </table>
+                    <table class="order">
+                        <caption>ステージ4</caption>
+                        <tbody>
+                            <tr><td>4</td><td>11</td><td>3</td><td>14</td></tr>
+                            <tr><td>16</td><td>12</td><td>7</td><td>8</td></tr>
+                            <tr><td>5</td><td>2</td><td>6</td><td>9</td></tr>
+                            <tr><td>1</td><td>13</td><td>15</td><td>10</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">ページ 1/1</div>
+        </div>
+    </div>
+</body>
+</html>

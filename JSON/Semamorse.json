@@ -1,8 +1,8 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [ "TasThing" ] },
+  "Contributors": { "Developer": [ "TasThiluna" ] },
   "DefuserDifficulty": "Medium",
-  "Description": "Identify Morse code and semaphore letters displayed through rotating dots. Tags: 8-dots, arrow-buttons, 10-buttons, black",
+  "Description": "Do calculations with Morse code and semaphore letters displayed through rotating dots. Tags: 8-dots, arrow-buttons, 10-buttons, black",
   "ExpertDifficulty": "Medium",
   "ModuleID": "semamorse",
   "Name": "Semamorse",
@@ -13,6 +13,9 @@
   "Souvenir": { "Status": "Supported" },
   "SteamID": "1978998933",
   "Symbol": "Smm",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=UHUc4fzeaw4" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=UHUc4fzeaw4"
+  } ],
   "Type": "Regular"
 }

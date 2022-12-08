@@ -1,6 +1,9 @@
 {
-  "Author": "Royal_Flu$h, Monopoly",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Royal_Flu$h" ],
+    "Manual": [ "Monopoly" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Use the ticket serial number to fill in the correct details for your European rail journey. Tags: bell, 5-circles, orange, price, seat",
   "ExpertDifficulty": "Easy",
@@ -13,6 +16,15 @@
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "1326285431",
   "Symbol": "Eut",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=BISxoqZXZbg" },
+  "TutorialVideos": [
+    {
+      "Language": "Čeština",
+      "Url": "https://youtu.be/EZNQ_vEPhQA"
+    },
+    {
+      "Language": "English",
+      "Url": "https://youtu.be/BISxoqZXZbg"
+    }
+  ],
   "Type": "Regular"
 }

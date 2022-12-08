@@ -1,7 +1,6 @@
 {
   "Author": "KingBranBran",
-  "Compatibility": "Unplayable",
-  "CompatibilityExplanation": "Can be clicked from the opposite side of the bomb.",
+  "Compatibility": "Compatible",
   "DefuserDifficulty": "Medium",
   "Description": "Some of the hinges on the module are missing, take all of them off of the module! Tags: blank, missing, hinges, clamps",
   "ExpertDifficulty": "Hard",
@@ -17,6 +16,9 @@
   },
   "SteamID": "1938142226",
   "Symbol": "Hg",
-  "TutorialVideoUrl": { "default": "https://www.youtube.com/watch?v=AqTpqBcL3Bg" },
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://www.youtube.com/watch?v=AqTpqBcL3Bg"
+  } ],
   "Type": "Regular"
 }

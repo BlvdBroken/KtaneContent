@@ -1,6 +1,9 @@
 {
-  "Author": "Andrio Celos, Kusane",
   "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "Andrio Celos" ],
+    "Manual": [ "Kusane Hexaku" ]
+  },
   "DefuserDifficulty": "Easy",
   "Description": "Press the correct buttons according to the sequence of flashing lights and the symbols on the buttons. Tags: 4-buttons, 4-lights",
   "ExpertDifficulty": "Easy",
@@ -9,9 +12,13 @@
   "Origin": "Mods",
   "Published": "2020-03-06",
   "SortKey": "NOTKEYPAD",
-  "SourceUrl": "https://github.com/AndrioCelos/KtaneNotVanillaModules",
+  "SourceUrl": "https://github.com/AndrioCelos/KtaneNotVanillaModules/tree/main/Assets/Modules/Not%20Keypad",
   "Souvenir": { "Status": "Supported" },
   "SteamID": "2003251353",
   "Symbol": "Nkp",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/PG2B_-4bnyg"
+  } ],
   "Type": "Regular"
 }

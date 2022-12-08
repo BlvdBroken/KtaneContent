@@ -1,0 +1,23 @@
+{
+  "Compatibility": "Compatible",
+  "Contributors": {
+    "Developer": [ "TasThiluna" ],
+    "Manual": [ "Pruz" ]
+  },
+  "DefuserDifficulty": "Easy",
+  "Description": "Press the button when timer displays 0. Tags: 1-button, traffic-light, go, wait",
+  "ExpertDifficulty": "Easy",
+  "ModuleID": "patience",
+  "Name": "Patience",
+  "Origin": "Mods",
+  "Published": "2020-01-20",
+  "SortKey": "PATIENCE",
+  "SourceUrl": "https://github.com/tasthing/Needy-Pack",
+  "SteamID": "1974393045",
+  "Symbol": "Pat",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/W-utHhrULpc"
+  } ],
+  "Type": "Needy"
+}

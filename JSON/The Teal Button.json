@@ -1,9 +1,12 @@
 {
   "Compatibility": "Compatible",
-  "Contributors": { "Developer": [
-    "Quinn Wuest",
-    "Timwi"
-  ] },
+  "Contributors": {
+    "Developer": [
+      "Quinn Wuest",
+      "Timwi"
+    ],
+    "Maintainer": [ "Quinn Wuest" ]
+  },
   "DefuserDifficulty": "VeryEasy",
   "Description": "Input the correct sequence of letters by cycling through each letter. Tags: teal-button, 3-letters, 4-leds, blue-text",
   "ExpertDifficulty": "Easy",
@@ -13,9 +16,13 @@
   "Published": "2021-09-09",
   "RuleSeedSupport": "Supported",
   "SortKey": "TEALBUTTON",
-  "SourceUrl": "https://github.com/JakkOfKlubs/KtaneBundleOfABunchOfButtons",
+  "SourceUrl": "https://github.com/QuinnWuest/KtaneBundleOfABunchOfButtons/tree/master/Assets/Modules/Teal",
   "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2597569498",
   "Symbol": "Tbtn",
+  "TutorialVideos": [ {
+    "Language": "English",
+    "Url": "https://youtu.be/0wicImydHC8"
+  } ],
   "Type": "Regular"
 }

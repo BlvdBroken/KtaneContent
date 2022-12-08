@@ -18,11 +18,8 @@
         table {
             break-inside: avoid;
         }
-
-        @media print {
-            a[href]:after {
-                content: none !important;
-            }
+        .dark table svg {
+            filter: invert(80%);
         }
     </style>
 </head>
@@ -38,7 +35,7 @@
                 <h2>On the Subject of Polygons</h2>
                 <p class="flavour-text">People often say that you don’t need geometry in the real world. Those people are now blown up.</p>
 
-                <p class="appendix-reference" id="appendix-reference">See Appendix BLANK in <a href="Blind%20Alley.html">Blind Alley</a> for blank modules identification.</p>
+                <p class="appendix-reference" id="appendix-reference">See Appendix BLANK in <a href="Blind%20Alley.html#app-blank-modules">Blind Alley</a> for blank modules identification.</p>
 
                 <p>Feel the module to obtain four shapes. Determine whether each shape’s condition in the table below is true or false. Touch the shape whose truth value is different from the other three.</p>
 
@@ -96,7 +93,7 @@
                         <tr><td><svg class='polygon halftrapezoid' viewBox='-1.05 -1.05 2.1 2.1'><path d='M -0.79980465,-0.79980465 V 0.7998047 H 0.2001953 0.7998047 l -0.5,-1.59960935 z' /></svg></td><td>A serial port is present.</td></tr>
                         <tr><td><svg class='polygon shorttrapezoid' viewBox='-1.05 -1.05 2.1 2.1'><path d='M -0.40039061,-0.49999999 -0.99999999,0.50000003 H 1 L 0.40039064,-0.49999999 Z' /></svg></td><td>The number of batteries is odd.</td></tr>
                         <tr><td><svg class='polygon talltrapezoid' viewBox='-1.05 -1.05 2.1 2.1'><path d='M -0.49999998,-0.99999998 -0.99999999,1 H 1 L 0.50000004,-0.99999998 Z' /></svg></td><td>The number of ports is odd.</td></tr>
-                        <tr><td><svg class='polygon parallelogram' viewBox='0.05 0.05 2.1 2.1'><path d='M 0.90039062 0.59960938 L 0.099609375 1.5996094 L 1.3007812 1.5996094 L 2.0996094 0.59960938 L 0.90039062 0.59960938 z ' /></svg></td><td>An SIG indicator is present.</td></tr>
+                        <tr><td><svg class='polygon parallelogram' viewBox='0.05 0.05 2.1 2.1'><path d='M 0.90039062 0.59960938 L 0.099609375 1.5996094 L 1.3007812 1.5996094 L 2.0996094 0.59960938 L 0.90039062 0.59960938 z ' /></svg></td><td>A SIG indicator is present.</td></tr>
                         <tr><td><svg class='polygon t' viewBox='-1.05 -1.05 2.1 2.1'><path d='M -1,-1 V -0.5 h 0.70117188 V 1 H 0.30078124 V -0.5 H 1 v -0.49999998 z' /></svg></td><td>The number of battery holders is odd.</td></tr>
                     </table>
                 </div>
